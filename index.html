@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nodewise | Smarter Code. Better Solutions.</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Nodewise is a high-performance digital product studio building custom corporate websites, optimized dashboards, and automated software workflows tailored for business growth.">
+  <meta name="keywords" content="Nodewise, nodewise.cc, web development, custom software, digital product studio, dashboards, automation, freelance developers">
+  <meta name="author" content="Nodewise Team">
+  <link rel="canonical" href="https://nodewise.cc">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nodewise.cc">
+  <meta property="og:title" content="Nodewise | Smarter Code. Better Solutions.">
+  <meta property="og:description" content="Nodewise is an agile digital product studio building custom web applications and business software optimized for profitability and speed.">
+  <meta property="og:image" content="assets/logo-full.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nodewise.cc">
+  <meta property="twitter:title" content="Nodewise | Smarter Code. Better Solutions.">
+  <meta property="twitter:description" content="Nodewise is an agile digital product studio building custom web applications and business software optimized for profitability and speed.">
+  <meta property="twitter:image" content="assets/logo-full.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-icon.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans for Headers & Outfit for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="loading">
+
+  <!-- 3D Preloader / Intro Sequence -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-canvas-container">
+      <canvas id="preloader-canvas"></canvas>
+    </div>
+    <div class="preloader-ui">
+      <div id="loader-text-popup" class="loader-brand-text">
+        <span class="letter">n</span><span class="letter">o</span><span class="letter">d</span><span class="letter">e</span><span class="letter">w</span><span class="letter">i</span><span class="letter">s</span><span class="letter">e</span><span class="letter">.</span><span class="letter">c</span><span class="letter">c</span>
+      </div>
+      <div class="loader-bar-container">
+        <div id="loader-progress-bar" class="loader-progress-bar"></div>
+      </div>
+      <p class="loader-status">Assembling architectural nodes...</p>
+    </div>
+  </div>
+
+  <!-- Ambient Interactive 3D Background Canvas -->
+  <div class="canvas-container">
+    <canvas id="bg-canvas"></canvas>
+  </div>
+
+  <!-- Main Website Container (Hidden during preload) -->
+  <div id="app-container" class="app-hidden">
+
+    <!-- Header / Navigation -->
+    <header class="main-header">
+      <div class="header-container">
+        <a href="#" class="logo" id="nav-logo-link">
+          <img src="assets/logo-full.png" alt="Nodewise.cc Logo" class="logo-image" id="logo-img">
+        </a>
+        
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#capabilities" class="nav-link" id="nav-lnk-capabilities">Capabilities</a>
+          <a href="#about" class="nav-link" id="nav-lnk-about">About Us</a>
+          <a href="#quality" class="nav-link" id="nav-lnk-quality">Quality Standards</a>
+          <a href="#work" class="nav-link" id="nav-lnk-work">Case Studies</a>
+          <a href="#process" class="nav-link" id="nav-lnk-process">Our Process</a>
+          <a href="#team" class="nav-link" id="nav-lnk-team">The Founders</a>
+          <a href="#contact" class="btn btn-secondary nav-btn-cta" id="nav-btn-schedule">Schedule Consultation</a>
+        </nav>
+
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      
+      <!-- Section I: Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <span class="badge" id="hero-badge">Digital Product Studio</span>
+            <h1 class="hero-title" id="hero-main-title">
+              Smarter Code. <span class="gradient-text">Better Solutions.</span>
+            </h1>
+            <p class="hero-subtitle" id="hero-sub-text">
+              We design and build clean, high-performance web platforms and custom software tools engineered to elevate your business presence and maximize profitability. Just reliable, premium code built for results.
+            </p>
+            <div class="hero-ctas">
+              <a href="#work" class="btn btn-primary" id="btn-hero-view-work">
+                <span>View Our Work</span>
+                <i data-lucide="arrow-right" class="btn-icon"></i>
+              </a>
+              <a href="#contact" class="link-cta" id="link-hero-consult">
+                <span>Schedule a Consultation</span>
+                <i data-lucide="calendar" class="link-icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual">
+          </div>
+        </div>
+      </section>
+
+      <!-- Section II: Core Operational Capabilities -->
+      <section id="capabilities" class="capabilities-section">
+        <div class="container">
+          <div class="section-header center">
+            <span class="section-subtitle">What We Build</span>
+            <h2 class="section-title">Core Operational Capabilities</h2>
+            <div class="section-divider"></div>
+          </div>
+          
+          <div class="grid capabilities-grid">
+            <!-- Card 1 -->
+            <div class="card capability-card" id="card-capability-web">
+              <div class="card-icon-container">
+                <i data-lucide="layout" class="card-icon"></i>
+              </div>
+              <h3 class="card-title">Premium Web Presences</h3>
+              <p class="card-description">
+                Custom corporate websites and optimized landing pages crafted to turn organic site visitors into active, paying clients. (Tailored for restaurants, gym chains, real estate, and modern service ventures).
+              </p>
+              <div class="card-hover-border"></div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card capability-card" id="card-capability-portals">
+              <div class="card-icon-container">
+                <i data-lucide="dashboard" class="card-icon"></i>
+              </div>
+              <h3 class="card-title">Custom Portals & Dashboards</h3>
+              <p class="card-description">
+                Reliable user panels, booking structures, and internal optimization tools built to smooth out your daily business workflows and protect your revenue margins.
+              </p>
+              <div class="card-hover-border"></div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card capability-card" id="card-capability-automation">
+              <div class="card-icon-container">
+                <i data-lucide="cpu" class="card-icon"></i>
+              </div>
+              <h3 class="card-title">Advanced Automation Layers</h3>
+              <p class="card-description">
+                Integrating tailored automated features, interactive components, and smart software interfaces to eliminate repetitive manual tasks and scale customer volume smoothly.
+              </p>
+              <div class="card-hover-border"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: About Us (The Brand Summary) -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="grid about-grid">
+            <div class="about-visual">
+              <div class="floating-nodes-mock">
+                <!-- Glowing node representations built in CSS -->
+                <div class="node-circle nc-1"></div>
+                <div class="node-circle nc-2"></div>
+                <div class="node-circle nc-3"></div>
+                <div class="node-line nl-1"></div>
+                <div class="node-line nl-2"></div>
+                <div class="about-visual-overlay"></div>
+              </div>
+            </div>
+            <div class="about-content">
+              <span class="section-subtitle">Who We Are</span>
+              <h2 class="section-title">The Brand Summary</h2>
+              <p class="about-lead-text">
+                Nodewise is an agile, multi-disciplinary digital product studio specializing in building modern web applications, high-converting business websites, and tailored software solutions.
+              </p>
+              <p class="about-body-text">
+                We partner closely with startups, local businesses, and entrepreneurs to transform complex operational challenges into smooth, scalable, and highly functional digital assets.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Work Quality (Our Definition of Work Quality) -->
+      <section id="quality" class="quality-section">
+        <div class="container">
+          <div class="section-header center">
+            <span class="section-subtitle">Our Standards</span>
+            <h2 class="section-title">Our Definition of Work Quality</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="grid quality-grid">
+            <!-- Quality Block 1 -->
+            <div class="quality-item" id="quality-item-hackathon">
+              <div class="quality-num">01</div>
+              <div class="quality-details">
+                <h3 class="quality-title">Rapid, High-Fidelity Execution</h3>
+                <p class="quality-description">
+                  Our roots are grounded in competitive, high-intensity technical hackathons. This background trained our team to engineer advanced logic, clean interfaces, and scalable system architectures rapidly without compromising stability.
+                </p>
+              </div>
+            </div>
+
+            <!-- Quality Block 2 -->
+            <div class="quality-item" id="quality-item-architecture">
+              <div class="quality-num">02</div>
+              <div class="quality-details">
+                <h3 class="quality-title">Clean Architectural Hygiene</h3>
+                <p class="quality-description">
+                  We don't rely on generic page builders or clunky, bloated templates. Every line of code we write is custom, optimized for lightning-fast page speeds, mobile responsiveness, and clean code maintenance.
+                </p>
+              </div>
+            </div>
+
+            <!-- Quality Block 3 -->
+            <div class="quality-item" id="quality-item-jargon">
+              <div class="quality-num">03</div>
+              <div class="quality-details">
+                <h3 class="quality-title">Zero Technical Jargon</h3>
+                <p class="quality-description">
+                  We speak the language of business growth, not confusing code languages. We focus entirely on how our software creates operational efficiency, establishes your market authority, and unlocks new paths to profit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section III: The Portfolio Case Studies -->
+      <section id="work" class="portfolio-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Our Engineering Artifacts</span>
+            <h2 class="section-title">The Portfolio Case Studies</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="portfolio-list">
+            <!-- Case Study 01 -->
+            <div class="portfolio-item-card grid" id="portfolio-case-01">
+              <div class="portfolio-media">
+                <div class="portfolio-mockup clickable-mockup" data-project-id="case-01">
+                  <!-- Custom CSS mockup styling inside -->
+                  <div class="mockup-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="mockup-url">mavenix.cc</span>
+                  </div>
+                  <div class="mockup-viewport">
+                    <img src="assets/mavenix-hero.png" alt="Mavenix Landing Page Showcase" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                  </div>
+                  <div class="mockup-hover-overlay">
+                    <i data-lucide="expand" class="overlay-icon"></i>
+                    <span>Open 3D Showcase</span>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="case-meta">Case Study 01 // Digital Agency Platform</span>
+                <h3 class="case-title">Mavenix: High-Conversion Digital Marketing Agency Showcase</h3>
+                <p class="case-description">
+                  A modern, high-performance presentation engine engineered for Mavenix Studio. The page focuses on turning small businesses into big brands through custom strategy audits and sleek conversion funnels.
+                </p>
+                <div class="portfolio-ctas">
+                  <a href="https://mavenixstudio.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-verify-case-01">
+                    <i data-lucide="external-link" class="btn-icon"></i>
+                    <span>Visit the Link</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 02 -->
+            <div class="portfolio-item-card grid inverted" id="portfolio-case-02">
+              <div class="portfolio-media">
+                <div class="portfolio-mockup clickable-mockup" data-project-id="case-02">
+                  <div class="mockup-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="mockup-url">titan.nodewise.cc</span>
+                  </div>
+                  <div class="mockup-viewport">
+                    <img src="assets/titan-hero.png" alt="Titan Residences Showcase" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                  </div>
+                  <div class="mockup-hover-overlay">
+                    <i data-lucide="expand" class="overlay-icon"></i>
+                    <span>Open 3D Showcase</span>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="case-meta">Case Study 02 // 3D Interactive Real Estate</span>
+                <h3 class="case-title">Titan Residences: Interactive 3D Luxury Real Estate Prototype</h3>
+                <p class="case-description">
+                  Ascending 24 stories above the metropolitan skyline, Titan stands as an architectural sculpture. An interactive 3D web platform enabling prospective buyers to explore layout blueprints, floor plan hotspots, amenities, and residences in real time.
+                </p>
+                <div class="portfolio-ctas">
+                  <a href="https://github.com/Induchoodan8546/Titan" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-verify-case-02">
+                    <i data-lucide="github" class="btn-icon"></i>
+                    <span>Visit the Link</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 03 -->
+            <div class="portfolio-item-card grid" id="portfolio-case-03">
+              <div class="portfolio-media">
+                <div class="portfolio-mockup clickable-mockup" data-project-id="case-03">
+                  <div class="mockup-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="mockup-url">fossceal.org</span>
+                  </div>
+                  <div class="mockup-viewport">
+                    <img src="assets/fossceal-landing.png" alt="FOSS CEAL Linktree Showcase" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                  </div>
+                  <div class="mockup-hover-overlay">
+                    <i data-lucide="expand" class="overlay-icon"></i>
+                    <span>Open 3D Showcase</span>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="case-meta">Case Study 03 // Open Source Community Hub</span>
+                <h3 class="case-title">FOSS CEAL: Open Source College Club Platform</h3>
+                <p class="case-description">
+                  A modular, grid-based community hub built for FOSS CEAL (College of Engineering Attingal). The web platform coordinates training chambers like Create 101 and Train 303, club events, open-source resources, and brand kits.
+                </p>
+                <div class="portfolio-ctas">
+                  <a href="https://foss.ceal.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-verify-case-03">
+                    <i data-lucide="external-link" class="btn-icon"></i>
+                    <span>Visit the Link</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section IV: The Collaboration Path (Our Process) -->
+      <section id="process" class="process-section">
+        <div class="container">
+          <div class="section-header center">
+            <span class="section-subtitle">Workflow</span>
+            <h2 class="section-title">The Collaboration Path</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="process-timeline">
+            <!-- Timeline Path SVG -->
+            <div class="timeline-line-bg"></div>
+            <div class="timeline-line-progress" id="timeline-progress-bar"></div>
+
+            <!-- Step 1 -->
+            <div class="process-step" id="process-step-1">
+              <div class="step-marker">
+                <span class="step-num">1</span>
+              </div>
+              <div class="step-content card">
+                <h3 class="step-title">Strategic Alignment</h3>
+                <p class="step-description">
+                  We analyze your business model, target audience, and operations to pinpoint exactly where custom software will add the most value to your bottom line.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step" id="process-step-2">
+              <div class="step-marker">
+                <span class="step-num">2</span>
+              </div>
+              <div class="step-content card">
+                <h3 class="step-title">Precision Engineering</h3>
+                <p class="step-description">
+                  Our team builds a tailored, responsive digital asset utilizing clean modern code, ensuring your platform loads instantly on every device.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step" id="process-step-3">
+              <div class="step-marker">
+                <span class="step-num">3</span>
+              </div>
+              <div class="step-content card">
+                <h3 class="step-title">Deployment & Growth</h3>
+                <p class="step-description">
+                  We launch your platform seamlessly and provide continuous consultation on how to leverage your new digital asset to capture more clients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: The Founders -->
+      <section id="team" class="team-section">
+        <div class="container">
+          <div class="section-header center">
+            <span class="section-subtitle">Our Team</span>
+            <h2 class="section-title">The Nodewise Founders</h2>
+            <div class="section-divider"></div>
+            <p class="section-lead-desc">
+              We are a core team of hackathon-trained builders, structuring operations to build fast and deliver high-performance results.
+            </p>
+          </div>
+
+          <div class="grid team-grid">
+            <!-- Founder 1 -->
+            <div class="founder-card card" id="founder-lead-engineer">
+              <div class="founder-avatar">
+                <div class="founder-avatar-icon">
+                  <i data-lucide="terminal" class="avatar-svg"></i>
+                </div>
+              </div>
+              <h3 class="founder-name">Lead Engineer</h3>
+              <p class="founder-title">Systems Architecture & Core Logic</p>
+              <p class="founder-bio">
+                Oversees system backend logic, state structures, and infrastructure pipelines. Focused on speed, clean database patterns, and modular scaling.
+              </p>
+            </div>
+
+            <!-- Founder 2 -->
+            <div class="founder-card card" id="founder-designer">
+              <div class="founder-avatar">
+                <div class="founder-avatar-icon">
+                  <i data-lucide="palette" class="avatar-svg"></i>
+                </div>
+              </div>
+              <h3 class="founder-name">UI/UX Designer</h3>
+              <p class="founder-title">Visual Systems & Micro-Interactions</p>
+              <p class="founder-bio">
+                Translates abstract product constraints into beautiful, flowing layouts. Focused on typography, fluid web dynamics, and immersive 3D canvas assets.
+              </p>
+            </div>
+
+            <!-- Founder 3 -->
+            <div class="founder-card card" id="founder-strategist">
+              <div class="founder-avatar">
+                <div class="founder-avatar-icon">
+                  <i data-lucide="trending-up" class="avatar-svg"></i>
+                </div>
+              </div>
+              <h3 class="founder-name">Product Strategist</h3>
+              <p class="founder-title">Business Alignment & Optimization</p>
+              <p class="founder-bio">
+                Directs feature scaling to align with concrete business KPIs. Bridges code metrics directly into conversion pathways and operational workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Contact / Consultation Booking -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="card contact-form-card grid">
+            <div class="contact-pitch">
+              <span class="badge light">Let's Connect</span>
+              <h2 class="pitch-title">Ready to Engineer Your Business Growth?</h2>
+              <p class="pitch-text">
+                Book a brief consultation with our engineering team. We'll identify operational bottlenecks and map out a custom digital asset designed to scale your margins.
+              </p>
+              <div class="contact-meta-info">
+                <div class="c-meta-item">
+                  <i data-lucide="check-circle" class="meta-icon"></i>
+                  <span>Free Initial Architecture Review</span>
+                </div>
+                <div class="c-meta-item">
+                  <i data-lucide="clock" class="meta-icon"></i>
+                  <span>Replies within 1 business day</span>
+                </div>
+                <div class="c-meta-item">
+                  <i data-lucide="mail" class="meta-icon"></i>
+                  <span>hello@nodewise.cc</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-container">
+              <form id="contact-consult-form" class="contact-form" onsubmit="event.preventDefault(); alert('Consultation Request Submitted! We will contact you soon.');">
+                <div class="form-group">
+                  <label for="form-name">Full Name</label>
+                  <input type="text" id="form-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Business Email</label>
+                  <input type="email" id="form-email" placeholder="john@company.com" required>
+                </div>
+                <div class="form-row grid">
+                  <div class="form-group">
+                    <label for="form-company">Company Name</label>
+                    <input type="text" id="form-company" placeholder="Ventures Ltd.">
+                  </div>
+                  <div class="form-group">
+                    <label for="form-interest">Primary Objective</label>
+                    <select id="form-interest">
+                      <option value="web-presence">Premium Web Presence</option>
+                      <option value="portal-dashboard">Portal & Dashboard</option>
+                      <option value="automation">Process Automation</option>
+                      <option value="other">Other Software Needs</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="form-message">Brief Project Description</label>
+                  <textarea id="form-message" rows="4" placeholder="Tell us about the challenges you're facing and what you want to achieve..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="btn-submit-consult">
+                  <span>Send Consultation Request</span>
+                  <i data-lucide="send" class="btn-icon"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container footer-container grid">
+        <div class="footer-brand">
+          <img src="assets/logo-full.png" alt="Nodewise Logo" class="footer-logo">
+          <p class="footer-tagline">Smarter Code. Better Solutions.</p>
+          <p class="footer-about">
+            An agile, multi-disciplinary digital product studio engineering custom, lightning-fast digital assets.
+          </p>
+        </div>
+        
+        <div class="footer-links-group grid">
+          <div class="footer-nav-col">
+            <h4 class="footer-col-title">Navigation</h4>
+            <a href="#hero" class="footer-link">Home</a>
+            <a href="#capabilities" class="footer-link">Capabilities</a>
+            <a href="#about" class="footer-link">About Us</a>
+            <a href="#work" class="footer-link">Case Studies</a>
+          </div>
+          <div class="footer-nav-col">
+            <h4 class="footer-col-title">Process & Team</h4>
+            <a href="#quality" class="footer-link">Quality Standards</a>
+            <a href="#process" class="footer-link">Our Process</a>
+            <a href="#team" class="footer-link">The Founders</a>
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+          <div class="footer-nav-col">
+            <h4 class="footer-col-title">Core Coordinates</h4>
+            <span class="footer-link text-muted">nodewise.cc</span>
+            <span class="footer-link text-muted">Based Worldwide</span>
+            <span class="footer-link text-muted">&copy; 2026 Nodewise Team.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Portfolio Modal Showcase -->
+  <div class="portfolio-modal" id="portfolio-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-window">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-meta" id="modal-project-meta">Case Study</span>
+          <h2 class="modal-title" id="modal-project-title">Project Title</h2>
+          <p class="modal-description" id="modal-project-description">Detailed review of the product architecture.</p>
+          
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-visit-link" id="modal-project-link">
+            <span>Visit Live Website</span>
+            <i data-lucide="external-link" class="btn-icon"></i>
+          </a>
+        </div>
+        
+        <!-- 3D Carousel Stage -->
+        <div class="carousel-3d-stage">
+          <div class="carousel-3d-ring" id="carousel-ring">
+            <!-- Dynamic project cards will be injected by main.js -->
+          </div>
+        </div>
+        
+        <!-- Slide Controls -->
+        <div class="carousel-controls">
+          <button class="control-btn prev" id="carousel-prev-btn" aria-label="Previous Slide">
+            <i data-lucide="chevron-left" class="btn-icon"></i>
+          </button>
+          <span class="carousel-counter" id="carousel-counter-text">1 / 5</span>
+          <button class="control-btn next" id="carousel-next-btn" aria-label="Next Slide">
+            <i data-lucide="chevron-right" class="btn-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Overlay -->
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Lightbox">&times;</button>
+    <img src="" alt="Full size screenshot" class="lightbox-img" id="lightbox-img">
+  </div>
+
+  <!-- CDN scripts: GSAP + ScrollTrigger + Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Local Script Files -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
