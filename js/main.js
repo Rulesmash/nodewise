@@ -58,13 +58,12 @@ function initMobileMenu() {
    INTERACTIVE 3D CARD TILT EFFECT
    ========================================================================== */
 function initCardTilts() {
-  const cards = document.querySelectorAll(".capability-card, .founder-card, .portfolio-mockup, .contact-form-card");
+  const cards = document.querySelectorAll(".capability-card, .founder-card, .portfolio-mockup");
   
   cards.forEach(card => {
     // Determine tilt intensity based on size
     const isMockup = card.classList.contains("portfolio-mockup");
-    const isBigCard = card.classList.contains("contact-form-card");
-    const intensity = isMockup ? 12 : (isBigCard ? 3 : 8);
+    const intensity = isMockup ? 12 : 8;
 
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
@@ -93,12 +92,7 @@ function initCardTilts() {
       // Return to base state with smooth animation transition
       card.style.transition = "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
       card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-      
-      if (card.classList.contains("contact-form-card")) {
-        card.style.boxShadow = "var(--shadow-sm)";
-      } else {
-        card.style.boxShadow = "var(--shadow-sm)";
-      }
+      card.style.boxShadow = "var(--shadow-sm)";
     });
 
     card.addEventListener("mouseenter", () => {
