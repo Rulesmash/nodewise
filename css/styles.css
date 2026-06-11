@@ -705,6 +705,16 @@ section {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.about-visual img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .floating-nodes-mock {
@@ -1323,8 +1333,9 @@ section {
    THE FOUNDERS (TEAM)
    ========================================================================== */
 .team-grid {
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 4rem auto 0 auto;
 }
 
 .founder-card {
