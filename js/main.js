@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initCardTilts();
   initPortfolioModal();
+  initContactForm();
+  initThemeToggle();
   
   // Register GSAP ScrollTrigger
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -580,4 +582,103 @@ function initPortfolioModal() {
   stage.addEventListener("touchend", () => {
     onDragEnd();
   }, { passive: true });
+}
+
+/* ==========================================================================
+   CONTACT FORM SUBMISSION WITH AJAX (NO REDIRECT)
+   ========================================================================== */
+function initContactForm() {
+  const form = document.getElementById("contact-consult-form");
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Disable button to prevent double submit
+    const submitBtn = form.querySelector("button[type='submit']");
+    if (!submitBtn) return;
+    
+    const originalBtnHTML = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "<span>Sending Request...</span>";
+
+    const formData = new FormData(form);
+    
+    const actionUrl = form.getAttribute("action") || "https://formsubmit.co/rulesmashpros@gmail.com";
+    const ajaxUrl = actionUrl.includes("/ajax/") ? actionUrl : actionUrl.replace("formsubmit.co/", "formsubmit.co/ajax/");
+    
+    fetch(ajaxUrl, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHTML;
+      
+      // Reset form
+      form.reset();
+
+      // Show beautiful realistic success message popup
+      alert("Consultation request submitted successfully! Our engineering team will review your project details and get back to you within one business day.");
+    })
+    .catch(error => {
+      console.error("Error submitting form:", error);
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHTML;
+      
+      // Fallback message
+      alert("Oops! There was an issue submitting your request. Please try again or reach out directly at +919446998827.");
+    });
+  });
+}
+
+/* ==========================================================================
+   THEME TOGGLE (DARK / LIGHT MODE - AUTOMATIC + MANUAL OVERRIDE)
+   ========================================================================== */
+function initThemeToggle() {
+  const themeToggle = document.getElementById("theme-toggle");
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const applyTheme = (isDark) => {
+    if (isDark) {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  };
+
+  // 1. Initialize automatically based on browser preference (or saved override)
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    applyTheme(savedTheme === "dark");
+  } else {
+    applyTheme(mediaQuery.matches);
+  }
+
+  // 2. Listen for automatic system/browser theme changes and update
+  mediaQuery.addEventListener("change", (e) => {
+    // Only update automatically if user hasn't set a manual override in this session
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches);
+    }
+  });
+
+  // 3. Keep manual click toggle as an override options
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme");
+      const isDark = document.body.classList.contains("dark-theme");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  }
 }
