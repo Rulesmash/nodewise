@@ -91,6 +91,7 @@ body.dark-theme {
   /* Inputs & Form Elements (Dark Theme) */
   --bg-input: #161722;
   --border-input: rgba(255, 255, 255, 0.08);
+  --text-input: var(--text-primary);
 
   /* Header & Navigation scrolled state (Dark Theme) */
   --bg-header: rgba(11, 12, 16, 0.85);
@@ -1675,6 +1676,11 @@ section {
   font-family: var(--font-body);
   font-size: 0.95rem;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group option {
+  background-color: var(--bg-input);
+  color: var(--text-input);
 }
 
 .form-group input:focus,
