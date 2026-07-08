@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPortfolioModal();
   initContactForm();
   initThemeToggle();
+  initCapabilitiesCarousel();
   
   // Register GSAP ScrollTrigger
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -22,6 +23,39 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ==========================================================================
    NAVIGATION & HEADER INTERACTION
    ========================================================================== */
+function initCapabilitiesCarousel() {
+  const track = document.getElementById("capabilities-track");
+  const prevBtn = document.getElementById("cap-prev-btn");
+  const nextBtn = document.getElementById("cap-next-btn");
+  const dots = document.querySelectorAll(".cap-dot");
+  if (!track || !prevBtn || !nextBtn || dots.length === 0) return;
+
+  let currentIndex = 0;
+  const totalSlides = dots.length;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+}
 function initHeaderScroll() {
   const header = document.querySelector(".main-header");
   if (!header) return;
@@ -40,19 +74,28 @@ function initMobileMenu() {
   const menu = document.getElementById("nav-menu");
   if (!toggle || !menu) return;
 
-  // Toggle active class
+  const closeMenu = () => {
+    toggle.classList.remove("active");
+    menu.classList.remove("active");
+  };
+
+  // Toggle sidebar open/close
   toggle.addEventListener("click", () => {
     toggle.classList.toggle("active");
     menu.classList.toggle("active");
   });
 
-  // Close menu when clicking nav links
-  const links = menu.querySelectorAll(".nav-link");
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      toggle.classList.remove("active");
-      menu.classList.remove("active");
-    });
+  // Close menu when clicking any link inside (nav-link or CTA button)
+  const allLinks = menu.querySelectorAll("a");
+  allLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Close sidebar when clicking outside it (on the backdrop area)
+  document.addEventListener("click", (e) => {
+    if (menu.classList.contains("active") && !menu.contains(e.target) && !toggle.contains(e.target)) {
+      closeMenu();
+    }
   });
 }
 
@@ -60,7 +103,7 @@ function initMobileMenu() {
    INTERACTIVE 3D CARD TILT EFFECT
    ========================================================================== */
 function initCardTilts() {
-  const cards = document.querySelectorAll(".capability-card, .founder-card, .portfolio-mockup");
+  const cards = document.querySelectorAll(".founder-card, .portfolio-mockup");
   
   cards.forEach(card => {
     // Determine tilt intensity based on size
@@ -348,9 +391,9 @@ function initPortfolioModal() {
       
       let translateZ = 320;
       if (window.innerWidth <= 480) {
-        translateZ = 125;
+        translateZ = 200;
       } else if (window.innerWidth <= 768) {
-        translateZ = 190;
+        translateZ = 230;
       }
 
       data.images.forEach((imgSrc, idx) => {
