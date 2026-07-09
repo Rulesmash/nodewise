@@ -308,7 +308,7 @@ const portfolioShowcases = {
     meta: "Case Study 02 // 3D Interactive Real Estate",
     title: "Titan Residences: Interactive 3D Luxury Real Estate Prototype",
     description: "An immersive digital showcase designed for Titan Residences. The interactive platform features 3D floor plan hotspots, a live sky-mansion showroom, dynamic day-to-night lighting simulation, and real-time residential availability tracking.",
-    link: "https://github.com/Induchoodan8546/Titan",
+    link: "https://titan-bigs.vercel.app",
     images: [
       "assets/titan-hero.png",
       "assets/titan-blueprint.png",
