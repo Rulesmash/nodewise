@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Brand colors converted to HEX colors for Three.js (matching user specifications)
 const colors = {
-  purple: 0x6652F4,      // Node 1 (Top-Left)
-  royalBlue: 0x3763F3,   // Node 2 (Bottom-Left)
-  blueViolet: 0x4E5BF4,  // Node 3 (Center)
-  brightBlue: 0x2C8FF3,  // Node 4 (Bottom-Right)
-  cyanBlue: 0x27A7F3     // Node 5 (Top-Right)
+  silver1: 0xE0E0E0,      // Node 1
+  silver2: 0xC0C0C0,      // Node 2
+  silver3: 0xD0D0D0,      // Node 3
+  silver4: 0xA8A8A8,      // Node 4
+  silver5: 0xB8B8B8       // Node 5
 };
 
 /* ==========================================================================
@@ -66,11 +66,11 @@ function initPreloader() {
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
   scene.add(ambientLight);
 
-  const pointLight1 = new THREE.PointLight(0x7a2ff7, 4.0, 50);
+  const pointLight1 = new THREE.PointLight(0xffffff, 3.0, 50);
   pointLight1.position.set(-6, 6, 6);
   scene.add(pointLight1);
 
-  const pointLight2 = new THREE.PointLight(0x00b0ff, 4.0, 50);
+  const pointLight2 = new THREE.PointLight(0xe0e0e0, 3.0, 50);
   pointLight2.position.set(6, -6, 6);
   scene.add(pointLight2);
 
@@ -81,11 +81,11 @@ function initPreloader() {
   // Define Target Coordinates for the "N" Logo Centered at (0, 0, 0)
   // Perfectly matching the geometry proportions of the real logo-full.png
   const targetNodes = [
-    { pos: new THREE.Vector3(-1.3, 1.6, 0), color: colors.purple },      // Node 1 (Top-Left)
-    { pos: new THREE.Vector3(-1.3, -1.6, 0), color: colors.royalBlue },  // Node 2 (Bottom-Left)
-    { pos: new THREE.Vector3(0, 0, 0), color: colors.blueViolet },       // Node 3 (Center)
-    { pos: new THREE.Vector3(1.3, -1.6, 0), color: colors.brightBlue },  // Node 4 (Bottom-Right)
-    { pos: new THREE.Vector3(1.3, 1.6, 0), color: colors.cyanBlue }      // Node 5 (Top-Right)
+    { pos: new THREE.Vector3(-1.3, 1.6, 0), color: colors.silver1 },
+    { pos: new THREE.Vector3(-1.3, -1.6, 0), color: colors.silver2 },
+    { pos: new THREE.Vector3(0, 0, 0), color: colors.silver3 },
+    { pos: new THREE.Vector3(1.3, -1.6, 0), color: colors.silver4 },
+    { pos: new THREE.Vector3(1.3, 1.6, 0), color: colors.silver5 }
   ];
 
   // Create Torus Meshes for Nodes (Hollow Rings!)
@@ -170,10 +170,10 @@ function initPreloader() {
   // Node 3 (2) -> Node 4 (3) (Diagonal Lower-Right)
   // Node 4 (3) -> Node 5 (4) (Vertical Right)
   const solidConnectionsData = [
-    { from: 0, to: 1, color1: colors.purple, color2: colors.royalBlue },
-    { from: 0, to: 2, color1: colors.purple, color2: colors.blueViolet },
-    { from: 2, to: 3, color1: colors.blueViolet, color2: colors.brightBlue },
-    { from: 3, to: 4, color1: colors.brightBlue, color2: colors.cyanBlue }
+    { from: 0, to: 1, color1: colors.silver1, color2: colors.silver2 },
+    { from: 0, to: 2, color1: colors.silver1, color2: colors.silver3 },
+    { from: 2, to: 3, color1: colors.silver3, color2: colors.silver4 },
+    { from: 3, to: 4, color1: colors.silver4, color2: colors.silver5 }
   ];
 
   const connections = [];
@@ -362,7 +362,7 @@ function initBackgroundNetwork() {
       ),
       size: Math.random() * 0.1 + 0.05,
       // Assign gradient colors from colors list
-      color: i % 2 === 0 ? new THREE.Color(colors.purple) : new THREE.Color(colors.cyanBlue)
+      color: i % 2 === 0 ? new THREE.Color(colors.silver1) : new THREE.Color(colors.silver5)
     });
 
     positions[i * 3] = x;

@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initCardTilts();
   initPortfolioModal();
   initContactForm();
-    initCapabilitiesCarousel();
-  
+  initCapabilitiesCarousel();
+
   // Register GSAP ScrollTrigger
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -103,7 +103,7 @@ function initMobileMenu() {
    ========================================================================== */
 function initCardTilts() {
   const cards = document.querySelectorAll(".founder-card, .portfolio-mockup");
-  
+
   cards.forEach(card => {
     // Determine tilt intensity based on size
     const isMockup = card.classList.contains("portfolio-mockup");
@@ -113,17 +113,17 @@ function initCardTilts() {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left; // cursor x position inside element
       const y = e.clientY - rect.top;  // cursor y position inside element
-      
+
       const xc = rect.width / 2;
       const yc = rect.height / 2;
-      
+
       const dx = x - xc;
       const dy = y - yc;
-      
+
       // Calculate rotation angle (max degree = intensity)
       const tiltX = -(dy / yc) * intensity;
       const tiltY = (dx / xc) * intensity;
-      
+
       // Apply transform with perspective for depth
       card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
       card.style.boxShadow = `
@@ -152,12 +152,12 @@ function initCardTilts() {
 function initScrollAnimations() {
   // Fade-in sections
   const fadeUpSections = document.querySelectorAll(".section-header, .capabilities-grid, .about-grid, .quality-grid, .founder-card");
-  
+
   fadeUpSections.forEach(section => {
-    gsap.fromTo(section, 
+    gsap.fromTo(section,
       { opacity: 0, y: 40 },
       {
-        opacity: 1, 
+        opacity: 1,
         y: 0,
         duration: 1.0,
         ease: "power2.out",
@@ -191,8 +191,8 @@ function initScrollAnimations() {
   portfolioItems.forEach(item => {
     const media = item.querySelector(".portfolio-media");
     const info = item.querySelector(".portfolio-info");
-    
-    gsap.fromTo(media, 
+
+    gsap.fromTo(media,
       { opacity: 0, x: item.classList.contains("inverted") ? 40 : -40 },
       {
         opacity: 1,
@@ -225,7 +225,7 @@ function initScrollAnimations() {
   const processTimeline = document.querySelector(".process-timeline");
   if (processTimeline) {
     const timelineProgress = document.getElementById("timeline-progress-bar");
-    
+
     gsap.fromTo(timelineProgress,
       { height: "0%" },
       {
@@ -270,7 +270,7 @@ function initScrollAnimations() {
       }
     }
   );
-  
+
   // Hero elements entering
   gsap.fromTo(".hero-content > *",
     { opacity: 0, y: 30 },
@@ -338,13 +338,13 @@ function initPortfolioModal() {
   const mockups = document.querySelectorAll(".clickable-mockup");
   const closeBtn = document.getElementById("modal-close-btn");
   const backdrop = document.getElementById("modal-backdrop");
-  
+
   const modalMeta = document.getElementById("modal-project-meta");
   const modalTitle = document.getElementById("modal-project-title");
   const modalDesc = document.getElementById("modal-project-description");
   const modalLink = document.getElementById("modal-project-link");
   const ring = document.getElementById("carousel-ring");
-  
+
   const prevBtn = document.getElementById("carousel-prev-btn");
   const nextBtn = document.getElementById("carousel-next-btn");
   const counterText = document.getElementById("carousel-counter-text");
@@ -354,7 +354,7 @@ function initPortfolioModal() {
   let rotationAngle = 0;
   let numCards = 5;
   let angleStep = 360 / 5;
-  
+
   // Dragging states
   let isDragging = false;
   let startX = 0;
@@ -387,7 +387,7 @@ function initPortfolioModal() {
 
       // Generate 5 3D cards
       ring.innerHTML = "";
-      
+
       let translateZ = 320;
       if (window.innerWidth <= 480) {
         translateZ = 200;
@@ -399,15 +399,15 @@ function initPortfolioModal() {
         const card = document.createElement("div");
         card.className = `carousel-card ${idx === 0 ? 'active-card' : ''}`;
         card.setAttribute("data-card-index", idx);
-        
+
         const angle = idx * angleStep;
         card.style.transform = `rotateY(${angle}deg) translateZ(${translateZ}px)`;
-        
+
         const img = document.createElement("img");
         img.src = imgSrc;
         img.alt = `${data.title} slide ${idx + 1}`;
         img.loading = "lazy";
-        
+
         card.appendChild(img);
         ring.appendChild(card);
 
@@ -426,9 +426,9 @@ function initPortfolioModal() {
       // Show modal
       modal.classList.add("active");
       document.body.classList.add("modal-open");
-      
+
       updateCounter();
-      
+
       // Reset rotation Angle directly on initial open
       rotationAngle = 0;
       alignRingToActiveIndex();
@@ -490,11 +490,11 @@ function initPortfolioModal() {
 
     const currentWrappedAngle = rotationAngle % 360;
     const targetWrappedAngle = -activeIndex * angleStep;
-    
+
     let diff = targetWrappedAngle - currentWrappedAngle;
     if (diff > 180) diff -= 360;
     if (diff < -180) diff += 360;
-    
+
     rotationAngle = rotationAngle + diff;
     alignRingToActiveIndex();
   }
@@ -548,7 +548,7 @@ function initPortfolioModal() {
 
   const onDragMove = (xPos) => {
     const deltaX = xPos - startX;
-    
+
     // Lazy disable transitions ONLY when active dragging starts (prevents blocking simple clicks)
     if (Math.abs(deltaX) > 5 && !isDragging) {
       isDragging = true;
@@ -558,7 +558,7 @@ function initPortfolioModal() {
         card.style.transition = "none";
       });
     }
-    
+
     if (isDragging) {
       const angleOffset = deltaX * dragSensitivity;
       rotationAngle = startAngle + angleOffset;
@@ -576,12 +576,12 @@ function initPortfolioModal() {
 
       const rawIndex = -rotationAngle / angleStep;
       const roundedIndex = Math.round(rawIndex);
-      
+
       rotationAngle = -roundedIndex * angleStep;
       activeIndex = ((roundedIndex % numCards) + numCards) % numCards;
-      
+
       alignRingToActiveIndex();
-      
+
       setTimeout(() => {
         isDragging = false;
       }, 50);
@@ -593,17 +593,17 @@ function initPortfolioModal() {
   // Mouse bindings
   stage.addEventListener("mousedown", (e) => {
     onDragStart(e.clientX);
-    
+
     const onMouseMove = (moveEvent) => {
       onDragMove(moveEvent.clientX);
     };
-    
+
     const onMouseUp = () => {
       onDragEnd();
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mouseup", onMouseUp);
     };
-    
+
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("mouseup", onMouseUp);
   });
@@ -639,16 +639,16 @@ function initContactForm() {
     // Disable button to prevent double submit
     const submitBtn = form.querySelector("button[type='submit']");
     if (!submitBtn) return;
-    
+
     const originalBtnHTML = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = "<span>Sending Request...</span>";
 
     const formData = new FormData(form);
-    
+
     const actionUrl = form.getAttribute("action") || "https://formsubmit.co/rulesmashpros@gmail.com";
     const ajaxUrl = actionUrl.includes("/ajax/") ? actionUrl : actionUrl.replace("formsubmit.co/", "formsubmit.co/ajax/");
-    
+
     fetch(ajaxUrl, {
       method: "POST",
       body: formData,
@@ -656,31 +656,31 @@ function initContactForm() {
         'Accept': 'application/json'
       }
     })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then(data => {
-      // Re-enable submit button
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnHTML;
-      
-      // Reset form
-      form.reset();
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
 
-      // Show beautiful realistic success message popup
-      alert("Consultation request submitted successfully! Our engineering team will review your project details and get back to you within one business day.");
-    })
-    .catch(error => {
-      console.error("Error submitting form:", error);
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnHTML;
-      
-      // Fallback message
-      alert("Oops! There was an issue submitting your request. Please try again or reach out directly at +919446998827.");
-    });
+        // Reset form
+        form.reset();
+
+        // Show beautiful realistic success message popup
+        alert("Consultation request submitted successfully! Our engineering team will get back to you within one business day.");
+      })
+      .catch(error => {
+        console.error("Error submitting form:", error);
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+
+        // Fallback message
+        alert("Oops! There was an issue submitting your request. Please try again or reach out directly at +919446998827.");
+      });
   });
 }
 
