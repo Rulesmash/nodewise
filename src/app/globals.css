@@ -529,8 +529,8 @@ body.dark-theme .theme-toggle-btn .theme-icon-sun {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding-top: 100px;
+  align-items: flex-start;
+  padding-top: 180px;
   overflow: hidden;
 }
 
@@ -2039,12 +2039,12 @@ section {
 
   .hero-container {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
     gap: 1.5rem;
   }
 
   .hero-content {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .hero-title {

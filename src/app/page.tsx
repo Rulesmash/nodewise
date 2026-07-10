@@ -17,7 +17,7 @@ export default function Home() {
             <h1 className="hero-title" id="hero-main-title">
               Smarter Code. Better Solutions.
             </h1>
-            <div className="hero-subtitle" id="hero-sub-text" style={{ textAlign: "left", display: "inline-block" }}>
+            <div className="hero-subtitle" id="hero-sub-text">
               <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: "0.5rem" }}>▪ High-performance custom web platforms</li>
                 <li style={{ marginBottom: "0.5rem" }}>▪ Reliable software engineered for growth</li>
