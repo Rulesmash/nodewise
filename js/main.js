@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCardTilts();
   initPortfolioModal();
   initContactForm();
-  initThemeToggle();
-  initCapabilitiesCarousel();
+    initCapabilitiesCarousel();
   
   // Register GSAP ScrollTrigger
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -685,43 +684,4 @@ function initContactForm() {
   });
 }
 
-/* ==========================================================================
-   THEME TOGGLE (DARK / LIGHT MODE - AUTOMATIC + MANUAL OVERRIDE)
-   ========================================================================== */
-function initThemeToggle() {
-  const themeToggle = document.getElementById("theme-toggle");
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-  const applyTheme = (isDark) => {
-    if (isDark) {
-      document.body.classList.add("dark-theme");
-    } else {
-      document.body.classList.remove("dark-theme");
-    }
-  };
-
-  // 1. Initialize automatically based on browser preference (or saved override)
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    applyTheme(savedTheme === "dark");
-  } else {
-    applyTheme(mediaQuery.matches);
-  }
-
-  // 2. Listen for automatic system/browser theme changes and update
-  mediaQuery.addEventListener("change", (e) => {
-    // Only update automatically if user hasn't set a manual override in this session
-    if (!localStorage.getItem("theme")) {
-      applyTheme(e.matches);
-    }
-  });
-
-  // 3. Keep manual click toggle as an override options
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-theme");
-      const isDark = document.body.classList.contains("dark-theme");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-  }
-}

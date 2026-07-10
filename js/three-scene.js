@@ -5,7 +5,28 @@
 
 // Initialize scenes when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  initPreloader();
+  const preloader = document.getElementById("preloader");
+  const appContainer = document.getElementById("app-container");
+  
+  if (sessionStorage.getItem("nodewise_preloaded") === "true") {
+    // Skip preloader on subsequent visits
+    if (preloader) preloader.style.display = "none";
+    document.body.classList.remove("loading");
+    if (appContainer) {
+      appContainer.classList.remove("app-hidden");
+      appContainer.classList.add("app-visible");
+    }
+    
+    // Still need to init icons if skipped
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  } else {
+    // First visit in this session
+    initPreloader();
+    sessionStorage.setItem("nodewise_preloaded", "true");
+  }
+  
   initBackgroundNetwork();
 });
 

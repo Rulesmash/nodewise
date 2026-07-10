@@ -4,37 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nodewise | Smarter Code. Better Solutions.</title>
+  <title>Packages | Nodewise</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Nodewise is a high-performance digital product studio building custom corporate websites, optimized dashboards, and automated software workflows tailored for business growth.">
+    content="Nodewise Pricing Packages: Minimum, Standard, and Enterprise solutions for businesses of all sizes.">
   <meta name="keywords"
-    content="Nodewise, nodewise.cc, web development, custom software, digital product studio, dashboards, automation, freelance developers">
+    content="Nodewise pricing, web development packages, software pricing, custom development tiers">
   <meta name="author" content="Nodewise Team">
-  <link rel="canonical" href="https://nodewise.cc">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nodewise.cc">
-  <meta property="og:title" content="Nodewise | Smarter Code. Better Solutions.">
-  <meta property="og:description"
-    content="Nodewise is an agile digital product studio building custom web applications and business software optimized for profitability and speed.">
-  <meta property="og:image" content="assets/logo-icon.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://nodewise.cc">
-  <meta property="twitter:title" content="Nodewise | Smarter Code. Better Solutions.">
-  <meta property="twitter:description"
-    content="Nodewise is an agile digital product studio building custom web applications and business software optimized for profitability and speed.">
-  <meta property="twitter:image" content="assets/logo-icon.jpg">
+  <link rel="canonical" href="https://nodewise.cc/packages.html">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo-icon.jpg">
 
-  <!-- Google Fonts: Plus Jakarta Sans for Headers & Outfit for Body -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -48,35 +32,13 @@
   <script src="https://unpkg.com/lucide@0.439.0/dist/umd/lucide.min.js"></script>
 </head>
 
-<body class="loading">
-
-  <!-- 3D Preloader / Intro Sequence -->
-  <div id="preloader" class="preloader">
-    <div class="preloader-canvas-container">
-      <canvas id="preloader-canvas"></canvas>
-    </div>
-    <div class="preloader-ui">
-      <div id="loader-text-popup" class="loader-brand-text">
-        <span class="letter">n</span><span class="letter">o</span><span class="letter">d</span><span
-          class="letter">e</span><span class="letter">w</span><span class="letter">i</span><span
-          class="letter">s</span><span class="letter">e</span><span class="letter">.</span><span
-          class="letter">c</span><span class="letter">c</span>
-      </div>
-      <div class="loader-bar-container">
-        <div id="loader-progress-bar" class="loader-progress-bar"></div>
-      </div>
-      <p class="loader-status">Assembling architectural nodes...</p>
-    </div>
-  </div>
-
+<body>
   <!-- Ambient Interactive 3D Background Canvas -->
   <div class="canvas-container">
     <canvas id="bg-canvas"></canvas>
   </div>
 
-  <!-- Main Website Container (Hidden during preload) -->
-  <div id="app-container" class="app-hidden">
-
+  <div id="app-container" class="app-visible">
     <!-- Header / Navigation -->
     <header class="main-header">
       <div class="header-container">
@@ -84,7 +46,6 @@
           <img src="assets/logo-icon.jpg" alt="Nodewise.cc Logo" class="logo-image" id="logo-img">
           <span class="logo-text">Nodewise.cc</span>
         </a>
-
         <div class="header-right">
           <nav class="nav-menu" id="nav-menu">
             <a href="capabilities.html" class="nav-link" id="nav-lnk-capabilities">Capabilities</a>
@@ -92,7 +53,7 @@
             <a href="quality.html" class="nav-link" id="nav-lnk-quality">Quality Standards</a>
             <a href="portfolio.html" class="nav-link" id="nav-lnk-work">Case Studies</a>
             <a href="process.html" class="nav-link" id="nav-lnk-process">Our Process</a>
-            <a href="packages.html" class="nav-link" id="nav-lnk-packages">Packages</a>
+            <a href="packages.html" class="nav-link active" id="nav-lnk-packages">Packages</a>
             <a href="contact.html" class="btn btn-secondary nav-btn-cta" id="nav-btn-schedule">Schedule Consultation</a>
           </nav>
 
@@ -108,43 +69,22 @@
     </header>
 
     <main>
-
-      <!-- Section I: Hero Section -->
-      <section id="hero" class="hero-section">
-        <div class="container hero-container">
-          <div class="hero-content">
-            <span class="badge" id="hero-badge">Digital Product Studio</span>
-            <h1 class="hero-title" id="hero-main-title">
-              Smarter Code. <span class="gradient-text">Better Solutions.</span>
-            </h1>
-            <p class="hero-subtitle" id="hero-sub-text">
-              We design and build clean, high-performance web platforms and custom software tools engineered to elevate
-              your business presence and maximize profitability. Just reliable, premium code built for results.
+      <!-- Page Hero Banner -->
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero-content">
+            <span class="section-subtitle">Transparent Pricing</span>
+            <h1 class="page-hero-title">Service <span class="gradient-text">Packages</span></h1>
+            <p class="page-hero-subtitle">
+              Choose the right tier to scale your operations, from basic web presence to advanced enterprise software.
             </p>
-            <div class="hero-ctas">
-              <a href="portfolio.html" class="btn btn-primary" id="btn-hero-view-work">
-                <span>View Our Work</span>
-                <i data-lucide="arrow-right" class="btn-icon"></i>
-              </a>
-              <a href="contact.html" class="link-cta" id="link-hero-consult">
-                <span>Schedule a Consultation</span>
-                <i data-lucide="calendar" class="link-icon"></i>
-              </a>
-            </div>
-          </div>
-          <div class="hero-visual">
           </div>
         </div>
       </section>
 
       <!-- Section: Packages -->
-      <section id="packages" class="packages-section" style="padding-top: 5rem; padding-bottom: 4rem;">
+      <section id="packages" class="packages-section" style="padding-top: 1rem; padding-bottom: 4rem;">
         <div class="container">
-          <div class="section-header center">
-            <span class="section-subtitle">Transparent Pricing</span>
-            <h2 class="section-title">Service Packages</h2>
-            <div class="section-divider"></div>
-          </div>
           <div class="packages-grid">
 
             <!-- Tier 1: Minimum -->
@@ -235,7 +175,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- Footer -->
@@ -249,7 +188,7 @@
           </p>
           <div class="footer-socials">
             <a href="https://www.linkedin.com/company/nodewise-cc" target="_blank" rel="noopener noreferrer"
-              class="footer-social-link" id="footer-linkedin" aria-label="Nodewise on LinkedIn">
+              class="footer-social-link" aria-label="Nodewise on LinkedIn">
               <i data-lucide="linkedin" class="footer-social-icon"></i>
             </a>
           </div>
@@ -270,36 +209,14 @@
             <a href="about.html" class="footer-link">About Us</a>
             <a href="contact.html" class="footer-link">Contact</a>
           </div>
-          <div class="footer-nav-col">
-            <h4 class="footer-col-title">Core Coordinates</h4>
-            <span class="footer-link text-muted">nodewise.cc</span>
-            <span class="footer-link text-muted">Based Worldwide</span>
-            <span class="footer-link text-muted">&copy; 2026 Nodewise Team.</span>
-          </div>
         </div>
       </div>
     </footer>
-
   </div>
 
-
-
-  <!-- Floating WhatsApp FAB -->
-  <a href="https://wa.me/919446998827" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
-    id="whatsapp-fab" aria-label="Chat on WhatsApp">
-    <svg class="whatsapp-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-    </svg>
-    <span class="whatsapp-tooltip">Reach us out</span>
-  </a>
-
-  <!-- CDN scripts: GSAP + ScrollTrigger + Three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- Local Script Files -->
   <script src="js/three-scene.js?v=1"></script>
   <script src="js/main.js?v=12"></script>
 </body>
