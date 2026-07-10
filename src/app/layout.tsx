@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ThreeBackground from "@/components/ThreeBackground";
 import GlobalInteractions from "@/components/GlobalInteractions";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function RootLayout({
         <Footer />
         <GlobalInteractions />
         <ThreeBackground />
+        <FloatingWhatsApp />
         
         <Analytics />
       </body>
