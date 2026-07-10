@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://nodewise.cc/sitemap.xml
