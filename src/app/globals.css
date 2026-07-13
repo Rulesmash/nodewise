@@ -3185,3 +3185,288 @@ body.loading .whatsapp-float {
     height: 28px;
   }
 }
+
+/* ==========================================================================
+   ZERO TO MVP STYLES
+   ========================================================================== */
+
+/* Landing Page Highlight Section */
+.mvp-highlight-section {
+  position: relative;
+  background: var(--bg-surface-solid);
+}
+
+.mvp-highlight-card {
+  display: flex;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.mvp-highlight-content {
+  flex: 1.5;
+  padding: 4rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.mvp-highlight-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.mvp-feature-grid {
+  display: flex;
+  gap: 3rem;
+}
+
+.mvp-feature-column {
+  flex: 1;
+}
+
+.mvp-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mvp-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.icon-check {
+  color: #10B981; /* Green */
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.icon-x {
+  color: #EF4444; /* Red */
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.mvp-feature-list.excluded li {
+  color: var(--text-muted);
+}
+
+.mvp-highlight-pricing {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(122, 47, 247, 0.05) 0%, rgba(122, 47, 247, 0.15) 100%);
+}
+
+.mvp-pricing-box {
+  text-align: center;
+  width: 100%;
+}
+
+.mvp-price-big {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-light);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.mvp-price-label {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.mvp-timeline-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.mvp-cta-btn {
+  margin-bottom: 1rem;
+}
+
+.mvp-learn-more-link {
+  display: inline-block;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: color var(--transition-fast);
+}
+
+.mvp-learn-more-link:hover {
+  color: var(--primary-accent);
+}
+
+/* Dedicated Zero to MVP Page */
+.mvp-split-layout {
+  display: flex;
+  gap: 4rem;
+  position: relative;
+}
+
+.mvp-content-col {
+  flex: 1.8;
+}
+
+.mvp-pricing-col {
+  flex: 1;
+}
+
+.mvp-feature-block {
+  margin-bottom: 4rem;
+}
+
+.mvp-block-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.mvp-block-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.icon-target {
+  color: var(--primary-accent);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.excluded-block {
+  opacity: 0.8;
+}
+
+.sticky-card {
+  position: sticky;
+  top: 100px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mvp-card-header {
+  padding: 2.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mvp-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  background: rgba(122, 47, 247, 0.2);
+  color: var(--primary-accent);
+  margin-bottom: 1.5rem;
+}
+
+.mvp-price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.mvp-price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.mvp-timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.mvp-card-body {
+  padding: 2.5rem;
+}
+
+.mvp-card-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.mvp-card-footer {
+  padding: 2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.mvp-card-footer h4 {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .mvp-split-layout {
+    flex-direction: column;
+  }
+  
+  .sticky-card {
+    position: static;
+  }
+  
+  .mvp-highlight-card {
+    flex-direction: column;
+  }
+  
+  .mvp-highlight-content,
+  .mvp-highlight-pricing {
+    border-right: none;
+    padding: 3rem;
+  }
+  
+  .mvp-feature-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mvp-highlight-content,
+  .mvp-highlight-pricing {
+    padding: 2rem;
+  }
+  
+  .mvp-price-big {
+    font-size: 2.5rem;
+  }
+}

@@ -18,6 +18,7 @@ export default function Header() {
         <div className="header-right">
           <nav className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`} id="nav-menu">
             <Link href="/portfolio" className="nav-link" id="nav-lnk-work" onClick={() => setMobileMenuOpen(false)}>Work</Link>
+            <Link href="/zero-to-mvp" className="nav-link mvp-nav-link" id="nav-lnk-mvp" onClick={() => setMobileMenuOpen(false)}>Zero to MVP</Link>
             <Link href="/packages" className="nav-link" id="nav-lnk-packages" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
             <Link href="/process" className="nav-link" id="nav-lnk-process" onClick={() => setMobileMenuOpen(false)}>Process</Link>
             <Link href="/capabilities" className="nav-link" id="nav-lnk-capabilities" onClick={() => setMobileMenuOpen(false)}>Services</Link>

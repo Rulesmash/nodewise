@@ -27,6 +27,7 @@ export default function Footer() {
           <div className="footer-nav-col">
             <h4 className="footer-col-title">Navigation</h4>
             <Link href="/" className="footer-link">Home</Link>
+            <Link href="/zero-to-mvp" className="footer-link" style={{ color: 'var(--primary-accent)' }}>Zero to MVP</Link>
             <Link href="/packages" className="footer-link">Packages</Link>
             <Link href="/capabilities" className="footer-link">Capabilities</Link>
             <Link href="/portfolio" className="footer-link">Case Studies</Link>

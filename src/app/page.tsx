@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, Check } from "lucide-react";
+import { ArrowRight, Calendar, Check, X, Clock } from "lucide-react";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -40,8 +40,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section: Zero to MVP Highlight */}
+      <section id="zero-to-mvp-highlight" className="mvp-highlight-section" style={{ paddingTop: "5rem", paddingBottom: "2rem" }}>
+        <div className="container">
+          <div className="mvp-highlight-card">
+            <div className="mvp-highlight-content">
+              <span className="section-subtitle">Zero to MVP</span>
+              <h2 className="section-title" style={{ marginBottom: "1rem" }}>Turn your idea into a working product in just 10–14 days</h2>
+              <p className="mvp-highlight-desc">Get a live, showcase-ready Minimum Viable Product (MVP) that you can show to users, investors, or test in the market. Perfect for early-stage founders.</p>
+              
+              <div className="mvp-feature-grid">
+                <div className="mvp-feature-column">
+                  <h4 style={{ color: "var(--text-light)", marginBottom: "1rem" }}>What You Get</h4>
+                  <ul className="mvp-feature-list included">
+                    <li><Check className="icon-check" size={16} /> <span>30-minute idea consultation</span></li>
+                    <li><Check className="icon-check" size={16} /> <span>Core MVP with essential features</span></li>
+                    <li><Check className="icon-check" size={16} /> <span>Clean, responsive web app (live)</span></li>
+                    <li><Check className="icon-check" size={16} /> <span>Full source code + docs</span></li>
+                    <li><Check className="icon-check" size={16} /> <span>Complete ownership transferred</span></li>
+                    <li><Check className="icon-check" size={16} /> <span>2 rounds of revisions</span></li>
+                  </ul>
+                </div>
+                <div className="mvp-feature-column">
+                  <h4 style={{ color: "var(--text-light)", marginBottom: "1rem" }}>Not Included</h4>
+                  <ul className="mvp-feature-list excluded">
+                    <li><X className="icon-x" size={16} /> <span>Complex enterprise integrations</span></li>
+                    <li><X className="icon-x" size={16} /> <span>Native mobile apps</span></li>
+                    <li><X className="icon-x" size={16} /> <span>Massive scalable cloud architecture</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mvp-highlight-pricing">
+              <div className="mvp-pricing-box">
+                <h3 className="mvp-price-big">₹9,599</h3>
+                <span className="mvp-price-label">(one-time)</span>
+                
+                <div className="mvp-timeline-box">
+                  <Clock size={16} />
+                  <span><strong>Timeline:</strong> 10–14 days</span>
+                </div>
+                
+                <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B99%2C599)."
+                  target="_blank" rel="noopener noreferrer" className="btn btn-primary mvp-cta-btn" id="lnk-home-mvp-whatsapp">
+                  <span>Start Your MVP</span>
+                  <ArrowRight className="btn-icon" />
+                </a>
+                <Link href="/zero-to-mvp" className="mvp-learn-more-link" id="lnk-home-mvp-details">
+                  View Full MVP Details &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section: Packages */}
-      <section id="packages" className="packages-section" style={{ paddingTop: "5rem", paddingBottom: "4rem" }}>
+      <section id="packages" className="packages-section" style={{ paddingTop: "2rem", paddingBottom: "4rem" }}>
         <div className="container">
           <div className="section-header center">
             <span className="section-subtitle">Transparent Pricing</span>
