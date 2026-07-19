@@ -74,7 +74,7 @@ export default function Home() {
             
             <div className="mvp-highlight-pricing">
               <div className="mvp-pricing-box">
-                <h3 className="mvp-price-big">₹9,599</h3>
+                <h3 className="mvp-price-big">₹29,999</h3>
                 <span className="mvp-price-label">(one-time)</span>
                 
                 <div className="mvp-timeline-box">
@@ -82,7 +82,7 @@ export default function Home() {
                   <span><strong>Timeline:</strong> 10–14 days</span>
                 </div>
                 
-                <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B99%2C599)."
+                <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
                   target="_blank" rel="noopener noreferrer" className="btn btn-primary mvp-cta-btn" id="lnk-home-mvp-whatsapp">
                   <span>Start Your MVP</span>
                   <ArrowRight className="btn-icon" />

@@ -72,7 +72,7 @@ export default function ZeroToMVP() {
               <div className="mvp-pricing-card sticky-card">
                 <div className="mvp-card-header">
                   <span className="mvp-badge">Most Popular for Founders</span>
-                  <h2 className="mvp-price">₹9,599 <span>(one-time)</span></h2>
+                  <h2 className="mvp-price">₹29,999 <span>(one-time)</span></h2>
                   <div className="mvp-timeline">
                     <Clock size={18} />
                     <span><strong>Timeline:</strong> 10–14 days <br/><small>(depending on complexity)</small></span>
@@ -81,7 +81,7 @@ export default function ZeroToMVP() {
                 
                 <div className="mvp-card-body">
                   <p className="mvp-card-desc">Lock in your spot and let's start building your product this week.</p>
-                  <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B99%2C599)."
+                  <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
                     target="_blank" rel="noopener noreferrer" className="btn btn-primary mvp-cta-btn" id="lnk-dedicated-mvp-whatsapp">
                     <span>Start Your MVP</span>
                     <ArrowRight className="btn-icon" />
