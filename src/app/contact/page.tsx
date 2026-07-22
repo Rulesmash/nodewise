@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { CheckCircle, Clock, Phone, Send } from "lucide-react";
+import { Suspense } from "react";
+import { CheckCircle, Clock, Phone } from "lucide-react";
 import type { Metadata } from 'next';
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Nodewise | Schedule a Technical Consultation",
@@ -51,31 +52,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="contact-form-container">
-              <form id="contact-consult-form" className="contact-form"
-                action="https://formsubmit.co/rulesmashpros@gmail.com" method="POST">
-                {/*  FormSubmit Configuration  */}
-                <input type="hidden" name="_subject" value="Nodewise - New Consultation Request" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-
-                <div className="form-group">
-                  <label htmlFor="form-name">Full Name</label>
-                  <input type="text" id="form-name" name="name" placeholder="Enter your name" spellCheck="false"
-                    required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="form-contact">Contact (Email or Phone)</label>
-                  <input type="text" id="form-contact" name="contact" placeholder="Enter your email or phone number"
-                    spellCheck="false" required />
-                </div>
-
-                <button type="submit" className="btn btn-primary btn-block" id="btn-submit-consult">
-                  <span>Send Consultation Request</span>
-                  <Send className="btn-icon" />
-                </button>
-              </form>
-            </div>
+            <Suspense fallback={<div className="contact-form-container"><p style={{ color: "var(--text-muted)" }}>Loading consultation form...</p></div>}>
+              <ContactForm />
+            </Suspense>
           </div>
         </div>
       </section>

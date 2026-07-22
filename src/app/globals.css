@@ -1872,6 +1872,185 @@ section {
   gap: 1.5rem;
 }
 
+/* Autocomplete & Requirements Form Field Extensions */
+.autocomplete-container {
+  position: relative;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.label-hint {
+  font-size: 0.75rem;
+  color: var(--primary-accent);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.inline-icon {
+  display: inline-block;
+}
+
+/* Selected Chips / Badges */
+.selected-chips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.selected-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(122, 47, 247, 0.15);
+  border: 1px solid rgba(122, 47, 247, 0.35);
+  color: var(--text-light);
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.chip-remove {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 50%;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.chip-remove:hover {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+}
+
+.input-with-autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+/* Autocomplete Suggestions Dropdown */
+.autocomplete-suggestions-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #0d0e15;
+  border: 1px solid rgba(122, 47, 247, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(122, 47, 247, 0.15);
+  border-radius: 6px;
+  max-height: 240px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0.35rem;
+  margin: 0;
+  backdrop-filter: blur(12px);
+}
+
+.autocomplete-suggestion-item {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.autocomplete-suggestion-item:hover,
+.autocomplete-suggestion-item.highlighted {
+  background-color: rgba(122, 47, 247, 0.25);
+  color: #ffffff;
+}
+
+/* Quick Select Presets / Tag Cloud */
+.quick-presets-section {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.presets-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+.preset-chips-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.preset-chip-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.preset-chip-btn:hover {
+  background: rgba(122, 47, 247, 0.12);
+  border-color: rgba(122, 47, 247, 0.3);
+  color: #ffffff;
+}
+
+.preset-chip-btn.active {
+  background: rgba(122, 47, 247, 0.25);
+  border-color: var(--primary-accent, #7a2ff7);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 0 8px rgba(122, 47, 247, 0.3);
+}
+
+/* Success Message Container */
+.form-success-message {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: rgba(122, 47, 247, 0.05);
+  border: 1px solid rgba(122, 47, 247, 0.2);
+  border-radius: 8px;
+}
+
+.form-success-message .success-icon {
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.form-success-message h3 {
+  font-size: 1.5rem;
+  color: var(--text-light, #ffffff);
+  margin-bottom: 0.5rem;
+}
+
+.form-success-message p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */

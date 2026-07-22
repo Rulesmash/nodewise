@@ -253,18 +253,7 @@ export default function GlobalInteractions() {
 
     const portfolioShowcases: any = {
       "case-01": {
-        meta: "Case Study 01 // Digital Agency Platform",
-        title: "Mavenix: High-Conversion Digital Marketing Agency Showcase",
-        description: "A high-performance presentation engine engineered for Mavenix Studio. The page focuses on turning small businesses into big brands through custom strategy audits, creative social campaigns, paid ad overlays, and sleek conversion funnels.",
-        link: "https://mavenixstudio.netlify.app/",
-        images: [
-          "/assets/mavenix-hero.png",
-          "/assets/mavenix-about.png",
-          "/assets/mavenix-services.png"
-        ]
-      },
-      "case-02": {
-        meta: "Case Study 02 // 3D Interactive Real Estate",
+        meta: "Case Study 01 // 3D Interactive Real Estate",
         title: "Titan Residences: Interactive 3D Luxury Real Estate Prototype",
         description: "An immersive digital showcase designed for Titan Residences. The interactive platform features 3D floor plan hotspots, a live sky-mansion showroom, dynamic day-to-night lighting simulation, and real-time residential availability tracking.",
         link: "https://titan-bigs.vercel.app",
@@ -274,6 +263,17 @@ export default function GlobalInteractions() {
           "/assets/titan-features.png",
           "/assets/titan-amenities.png",
           "/assets/titan-residence.png"
+        ]
+      },
+      "case-02": {
+        meta: "Case Study 02 // MVP & Basic Landing Page",
+        title: "Mavenix: High-Conversion Digital Marketing Agency MVP",
+        description: "A modern, high-performance landing page engineered for Mavenix Studio. Perfect for MVP builders and businesses requiring a basic yet premium landing page. It focuses on turning small businesses into big brands through custom strategy audits and sleek conversion funnels.",
+        link: "https://mavenixstudio.netlify.app/",
+        images: [
+          "/assets/mavenix-hero.png",
+          "/assets/mavenix-about.png",
+          "/assets/mavenix-services.png"
         ]
       },
       "case-03": {
