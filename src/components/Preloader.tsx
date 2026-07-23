@@ -282,8 +282,8 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   if (!isVisible) return null;
 
   return (
-    <div id="preloader" className="preloader" ref={containerRef}>
-      <div className="preloader-canvas-container">
+    <div id="preloader" className="preloader" ref={containerRef} role="status" aria-label="Loading Nodewise platform" aria-live="polite">
+      <div className="preloader-canvas-container" aria-hidden="true">
         <canvas id="preloader-canvas" ref={canvasRef}></canvas>
       </div>
       <div className="preloader-ui">

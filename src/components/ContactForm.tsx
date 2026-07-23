@@ -6,18 +6,13 @@ import { useSearchParams } from "next/navigation";
 
 const PRESET_REQUIREMENTS = [
   "⚡ Zero to MVP (10–14 Days Development)",
-  "💻 Full Custom Web Platform / Web App",
-  "🎨 Modern Website Redesign & UI/UX System",
-  "⚙️ Workflow Automation & Third-Party API Integration",
-  "📊 Business Dashboard & Multi-user Portal",
-  "🚀 SEO & Conversion Funnel Optimization",
-  "🛡️ System Architecture Review & Code Audit",
-  "🔄 Growth & Technical Maintenance Retainer"
+  "💻 Full Custom Web Platform / Web App"
 ];
 
 export default function ContactForm() {
   const searchParams = useSearchParams();
   const [name, setName] = useState("");
+  const [submittedName, setSubmittedName] = useState("");
   const [contact, setContact] = useState("");
   const [requirements, setRequirements] = useState("");
   
@@ -138,6 +133,7 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
+        setSubmittedName(name);
         setStatus("success");
         setName("");
         setContact("");
@@ -160,7 +156,7 @@ export default function ContactForm() {
           <CheckCircle className="success-icon" size={48} />
           <h3>Consultation Requested!</h3>
           <p>
-            Thank you, <strong>{name || "there"}</strong>. Our engineering team will review your project details and reach out within 1 business day.
+            Thank you, <strong>{submittedName || "there"}</strong>. Our engineering team will review your project details and reach out within 1 business day.
           </p>
           <button
             type="button"

@@ -102,10 +102,10 @@ export default function Capabilities() {
               <h2 className="cta-banner-title">Need a Custom Solution?</h2>
               <p className="cta-banner-text">Book a free consultation and let's discuss your project's architecture.</p>
             </div>
-            <a href="/contact" className="btn btn-primary cta-banner-btn">
+            <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Schedule Consultation</span>
-              <ArrowRight className="btn-icon" />
-            </a>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

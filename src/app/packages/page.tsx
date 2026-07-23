@@ -38,17 +38,18 @@ export default function Packages() {
               </p>
 
               <ul className="package-features">
-                <li><Check  /> <span>Basic Web Development</span></li>
-                <li><Check  /> <span>Simple Landing Pages</span></li>
-                <li><Check  /> <span>Entry-level SEO Setup</span></li>
-                <li><Check  /> <span>Basic Marketing Setup</span></li>
-                <li><Check  /> <span>Initial Architecture Consultation</span></li>
+                <li><Check aria-hidden="true" /> <span>Basic Web Development</span></li>
+                <li><Check aria-hidden="true" /> <span>Simple Landing Pages</span></li>
+                <li><Check aria-hidden="true" /> <span>Entry-level SEO Setup</span></li>
+                <li><Check aria-hidden="true" /> <span>Basic Marketing Setup</span></li>
+                <li><Check aria-hidden="true" /> <span>Initial Architecture Consultation</span></li>
               </ul>
 
               <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Minimum%20package%20(12-15k%20INR)."
                 target="_blank" rel="noopener noreferrer" className="btn btn-secondary package-btn">
                 <span>Inquire via WhatsApp</span>
-                <ArrowRight className="btn-icon" />
+                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>
             </div>
 
@@ -61,17 +62,18 @@ export default function Packages() {
               </p>
 
               <ul className="package-features">
-                <li><Check  /> <span>Full Custom Web Development</span></li>
-                <li><Check  /> <span>Moderate Custom Solutions</span></li>
-                <li><Check  /> <span>Basic–Medium Dashboards & Portals</span></li>
-                <li><Check  /> <span>SEO + Conversion-focused Marketing</span></li>
-                <li><Check  /> <span>Light Workflow Automation</span></li>
+                <li><Check aria-hidden="true" /> <span>Full Custom Web Development</span></li>
+                <li><Check aria-hidden="true" /> <span>Moderate Custom Solutions</span></li>
+                <li><Check aria-hidden="true" /> <span>Basic–Medium Dashboards & Portals</span></li>
+                <li><Check aria-hidden="true" /> <span>SEO + Conversion-focused Marketing</span></li>
+                <li><Check aria-hidden="true" /> <span>Light Workflow Automation</span></li>
               </ul>
 
               <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Standard%20package%20(25k%2B%20INR)."
                 target="_blank" rel="noopener noreferrer" className="btn btn-primary package-btn">
                 <span>Inquire via WhatsApp</span>
-                <ArrowRight className="btn-icon" />
+                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>
             </div>
 
@@ -84,17 +86,18 @@ export default function Packages() {
                 operations.</p>
 
               <ul className="package-features">
-                <li><Check  /> <span>Advanced Custom Software Platforms</span></li>
-                <li><Check  /> <span>Complex Dashboards & Multi-user Portals</span></li>
-                <li><Check  /> <span>Heavy Workflow Automation</span></li>
-                <li><Check  /> <span>Strategic Consultation & Integrations</span></li>
-                <li><Check  /> <span>Ongoing Technical Support</span></li>
+                <li><Check aria-hidden="true" /> <span>Advanced Custom Software Platforms</span></li>
+                <li><Check aria-hidden="true" /> <span>Complex Dashboards & Multi-user Portals</span></li>
+                <li><Check aria-hidden="true" /> <span>Heavy Workflow Automation</span></li>
+                <li><Check aria-hidden="true" /> <span>Strategic Consultation & Integrations</span></li>
+                <li><Check aria-hidden="true" /> <span>Ongoing Technical Support</span></li>
               </ul>
 
               <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Enterprise%20custom%20software%20package."
                 target="_blank" rel="noopener noreferrer" className="btn btn-secondary package-btn">
                 <span>Inquire via WhatsApp</span>
-                <ArrowRight className="btn-icon" />
+                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>
             </div>
 
@@ -110,10 +113,10 @@ export default function Packages() {
               <h2 className="cta-banner-title">Need a Custom Quote?</h2>
               <p className="cta-banner-text">If you're unsure which tier fits your project, let's discuss it directly.</p>
             </div>
-            <a href="/contact" className="btn btn-primary cta-banner-btn">
+            <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Contact Us</span>
-              <ArrowRight className="btn-icon" />
-            </a>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

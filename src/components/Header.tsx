@@ -8,15 +8,22 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="main-header">
+    <header className="main-header" role="banner">
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
       <div className="header-container">
-        <Link href="/" className="logo" id="nav-logo-link">
-          <img src="/favicon.ico" alt="Nodewise.cc Logo" className="logo-image" id="logo-img" />
+        <Link href="/" className="logo" id="nav-logo-link" aria-label="Nodewise Homepage">
+          <img src="/favicon.ico" alt="" aria-hidden="true" className="logo-image" id="logo-img" />
           <span className="logo-text">Nodewise.cc</span>
         </Link>
 
         <div className="header-right">
-          <nav className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`} id="nav-menu">
+          <nav
+            className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}
+            id="nav-menu"
+            aria-label="Main Navigation"
+          >
             <Link href="/portfolio" className="nav-link" id="nav-lnk-work" onClick={() => setMobileMenuOpen(false)}>Work</Link>
             <Link href="/zero-to-mvp" className="nav-link mvp-nav-link" id="nav-lnk-mvp" onClick={() => setMobileMenuOpen(false)}>Zero to MVP</Link>
             <Link href="/packages" className="nav-link" id="nav-lnk-packages" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
@@ -30,12 +37,14 @@ export default function Header() {
           <button 
             className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`} 
             id="mobile-menu-toggle" 
-            aria-label="Toggle Menu"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="nav-menu"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+            <span className="bar" aria-hidden="true"></span>
+            <span className="bar" aria-hidden="true"></span>
+            <span className="bar" aria-hidden="true"></span>
           </button>
         </div>
       </div>

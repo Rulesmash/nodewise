@@ -59,7 +59,7 @@ export default function RootLayout({
     <html lang="en" className={`${plusJakartaSans.variable} ${outfit.variable}`}>
       <body>
         <Header />
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
         <GlobalInteractions />
         <ThreeBackground />

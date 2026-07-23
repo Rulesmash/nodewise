@@ -36,22 +36,22 @@ export default function ZeroToMVP() {
               <div className="mvp-feature-block">
                 <h3 className="mvp-block-title">What You Get</h3>
                 <ul className="mvp-feature-list included">
-                  <li><Check className="icon-check" /> <span><strong>30-minute idea consultation</strong> to refine your scope</span></li>
-                  <li><Check className="icon-check" /> <span><strong>Core MVP</strong> with your most important features built</span></li>
-                  <li><Check className="icon-check" /> <span><strong>Clean, responsive web app</strong> deployed with a live link</span></li>
-                  <li><Check className="icon-check" /> <span><strong>Full source code</strong> + comprehensive documentation</span></li>
-                  <li><Check className="icon-check" /> <span><strong>Complete ownership</strong> seamlessly transferred to you</span></li>
-                  <li><Check className="icon-check" /> <span><strong>2 rounds of revisions</strong> to polish the final product</span></li>
+                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>30-minute idea consultation</strong> to refine your scope</span></li>
+                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Core MVP</strong> with your most important features built</span></li>
+                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Clean, responsive web app</strong> deployed with a live link</span></li>
+                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Full source code</strong> + comprehensive documentation</span></li>
+                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Complete ownership</strong> seamlessly transferred to you</span></li>
+                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>2 rounds of revisions</strong> to polish the final product</span></li>
                 </ul>
               </div>
 
               <div className="mvp-feature-block">
                 <h3 className="mvp-block-title">Perfect For</h3>
                 <ul className="mvp-feature-list perfect-for">
-                  <li><Target className="icon-target" /> <span>Validating your idea quickly in the real market</span></li>
-                  <li><Shield className="icon-target" /> <span>Showing investors a tangible, working product</span></li>
-                  <li><Rocket className="icon-target" /> <span>Testing with real users to gather actionable feedback</span></li>
-                  <li><Clock className="icon-target" /> <span>Starting your business without huge upfront costs</span></li>
+                  <li><Target className="icon-target" aria-hidden="true" /> <span>Validating your idea quickly in the real market</span></li>
+                  <li><Shield className="icon-target" aria-hidden="true" /> <span>Showing investors a tangible, working product</span></li>
+                  <li><Rocket className="icon-target" aria-hidden="true" /> <span>Testing with real users to gather actionable feedback</span></li>
+                  <li><Clock className="icon-target" aria-hidden="true" /> <span>Starting your business without huge upfront costs</span></li>
                 </ul>
               </div>
 
@@ -59,9 +59,9 @@ export default function ZeroToMVP() {
                 <h3 className="mvp-block-title">Not Included</h3>
                 <p className="mvp-block-desc">To keep timelines tight and costs low, this package excludes:</p>
                 <ul className="mvp-feature-list excluded">
-                  <li><X className="icon-x" /> <span>Complex integrations (e.g. enterprise CRMs, banking APIs)</span></li>
-                  <li><X className="icon-x" /> <span>Native mobile apps (iOS/Android App Store publishing)</span></li>
-                  <li><X className="icon-x" /> <span>Massive scalable cloud architecture (designed for MVP traffic)</span></li>
+                  <li><X className="icon-x" aria-hidden="true" /> <span>Complex integrations (e.g. enterprise CRMs, banking APIs)</span></li>
+                  <li><X className="icon-x" aria-hidden="true" /> <span>Native mobile apps (iOS/Android App Store publishing)</span></li>
+                  <li><X className="icon-x" aria-hidden="true" /> <span>Massive scalable cloud architecture (designed for MVP traffic)</span></li>
                 </ul>
               </div>
 
@@ -74,7 +74,7 @@ export default function ZeroToMVP() {
                   <span className="mvp-badge">Most Popular for Founders</span>
                   <h2 className="mvp-price">₹29,999 <span>(one-time)</span></h2>
                   <div className="mvp-timeline">
-                    <Clock size={18} />
+                    <Clock size={18} aria-hidden="true" />
                     <span><strong>Timeline:</strong> 10–14 days <br/><small>(depending on complexity)</small></span>
                   </div>
                 </div>
@@ -84,7 +84,8 @@ export default function ZeroToMVP() {
                   <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
                     target="_blank" rel="noopener noreferrer" className="btn btn-primary mvp-cta-btn" id="lnk-dedicated-mvp-whatsapp">
                     <span>Start Your MVP</span>
-                    <ArrowRight className="btn-icon" />
+                    <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                    <ArrowRight className="btn-icon" aria-hidden="true" />
                   </a>
                 </div>
 

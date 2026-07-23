@@ -148,10 +148,10 @@ export default function Portfolio() {
               <p className="cta-banner-text">Book a free consultation and let's map out the digital asset that scales your
                 business.</p>
             </div>
-            <a href="/contact" className="btn btn-primary cta-banner-btn">
+            <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Schedule Consultation</span>
-              <ArrowRight className="btn-icon" />
-            </a>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

@@ -27,11 +27,11 @@ export default function Home() {
             <div className="hero-ctas">
               <Link href="/portfolio" className="btn btn-primary" id="btn-hero-view-work">
                 <span>View Our Work</span>
-                <ArrowRight className="btn-icon" />
+                <ArrowRight className="btn-icon" aria-hidden="true" />
               </Link>
               <Link href="/contact" className="link-cta" id="link-hero-consult">
                 <span>Schedule a Consultation</span>
-                <Calendar className="link-icon" />
+                <Calendar className="link-icon" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -51,22 +51,22 @@ export default function Home() {
               
               <div className="mvp-feature-grid">
                 <div className="mvp-feature-column">
-                  <h4 style={{ color: "var(--text-light)", marginBottom: "1rem" }}>What You Get</h4>
+                  <h3 style={{ color: "var(--text-light)", marginBottom: "1rem", fontSize: "1.1rem" }}>What You Get</h3>
                   <ul className="mvp-feature-list included">
-                    <li><Check className="icon-check" size={16} /> <span>30-minute idea consultation</span></li>
-                    <li><Check className="icon-check" size={16} /> <span>Core MVP with essential features</span></li>
-                    <li><Check className="icon-check" size={16} /> <span>Clean, responsive web app (live)</span></li>
-                    <li><Check className="icon-check" size={16} /> <span>Full source code + docs</span></li>
-                    <li><Check className="icon-check" size={16} /> <span>Complete ownership transferred</span></li>
-                    <li><Check className="icon-check" size={16} /> <span>2 rounds of revisions</span></li>
+                    <li><Check className="icon-check" size={16} aria-hidden="true" /> <span>30-minute idea consultation</span></li>
+                    <li><Check className="icon-check" size={16} aria-hidden="true" /> <span>Core MVP with essential features</span></li>
+                    <li><Check className="icon-check" size={16} aria-hidden="true" /> <span>Clean, responsive web app (live)</span></li>
+                    <li><Check className="icon-check" size={16} aria-hidden="true" /> <span>Full source code + docs</span></li>
+                    <li><Check className="icon-check" size={16} aria-hidden="true" /> <span>Complete ownership transferred</span></li>
+                    <li><Check className="icon-check" size={16} aria-hidden="true" /> <span>2 rounds of revisions</span></li>
                   </ul>
                 </div>
                 <div className="mvp-feature-column">
-                  <h4 style={{ color: "var(--text-light)", marginBottom: "1rem" }}>Not Included</h4>
+                  <h3 style={{ color: "var(--text-light)", marginBottom: "1rem", fontSize: "1.1rem" }}>Not Included</h3>
                   <ul className="mvp-feature-list excluded">
-                    <li><X className="icon-x" size={16} /> <span>Complex enterprise integrations</span></li>
-                    <li><X className="icon-x" size={16} /> <span>Native mobile apps</span></li>
-                    <li><X className="icon-x" size={16} /> <span>Massive scalable cloud architecture</span></li>
+                    <li><X className="icon-x" size={16} aria-hidden="true" /> <span>Complex enterprise integrations</span></li>
+                    <li><X className="icon-x" size={16} aria-hidden="true" /> <span>Native mobile apps</span></li>
+                    <li><X className="icon-x" size={16} aria-hidden="true" /> <span>Massive scalable cloud architecture</span></li>
                   </ul>
                 </div>
               </div>
@@ -74,18 +74,19 @@ export default function Home() {
             
             <div className="mvp-highlight-pricing">
               <div className="mvp-pricing-box">
-                <h3 className="mvp-price-big">₹29,999</h3>
+                <p className="mvp-price-big" style={{ fontSize: "2rem", fontWeight: 700, margin: 0 }}>₹29,999</p>
                 <span className="mvp-price-label">(one-time)</span>
                 
                 <div className="mvp-timeline-box">
-                  <Clock size={16} />
+                  <Clock size={16} aria-hidden="true" />
                   <span><strong>Timeline:</strong> 10–14 days</span>
                 </div>
                 
                 <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
                   target="_blank" rel="noopener noreferrer" className="btn btn-primary mvp-cta-btn" id="lnk-home-mvp-whatsapp">
                   <span>Start Your MVP</span>
-                  <ArrowRight className="btn-icon" />
+                  <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                  <ArrowRight className="btn-icon" aria-hidden="true" />
                 </a>
                 <Link href="/zero-to-mvp" className="mvp-learn-more-link" id="lnk-home-mvp-details">
                   View Full MVP Details &rarr;
@@ -114,17 +115,18 @@ export default function Home() {
               <p className="package-desc">Ideal for small businesses launching their first digital footprint.</p>
 
               <ul className="package-features">
-                <li><Check size={16} /> <span>Basic Web Development</span></li>
-                <li><Check size={16} /> <span>Simple Landing Pages</span></li>
-                <li><Check size={16} /> <span>Entry-level SEO Setup</span></li>
-                <li><Check size={16} /> <span>Basic Marketing Setup</span></li>
-                <li><Check size={16} /> <span>Initial Architecture Consultation</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Basic Web Development</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Simple Landing Pages</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Entry-level SEO Setup</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Basic Marketing Setup</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Initial Architecture Consultation</span></li>
               </ul>
 
               <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Minimum%20package%20(12-15k%20INR)."
                 target="_blank" rel="noopener noreferrer" className="btn btn-secondary package-btn">
                 <span>Inquire via WhatsApp</span>
-                <ArrowRight className="btn-icon" />
+                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>
             </div>
 
@@ -136,17 +138,18 @@ export default function Home() {
               <p className="package-desc">For growing ventures needing optimized funnels and light automation.</p>
 
               <ul className="package-features">
-                <li><Check size={16} /> <span>Full Custom Web Development</span></li>
-                <li><Check size={16} /> <span>Moderate Custom Solutions</span></li>
-                <li><Check size={16} /> <span>Basic–Medium Dashboards & Portals</span></li>
-                <li><Check size={16} /> <span>SEO + Conversion-focused Marketing</span></li>
-                <li><Check size={16} /> <span>Light Workflow Automation</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Full Custom Web Development</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Moderate Custom Solutions</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Basic–Medium Dashboards & Portals</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>SEO + Conversion-focused Marketing</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Light Workflow Automation</span></li>
               </ul>
 
               <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Standard%20package%20(25k%2B%20INR)."
                 target="_blank" rel="noopener noreferrer" className="btn btn-primary package-btn">
                 <span>Inquire via WhatsApp</span>
-                <ArrowRight className="btn-icon" />
+                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>
             </div>
 
@@ -158,17 +161,18 @@ export default function Home() {
               <p className="package-desc">Advanced software and multi-user portals for large-scale operations.</p>
 
               <ul className="package-features">
-                <li><Check size={16} /> <span>Advanced Custom Software Platforms</span></li>
-                <li><Check size={16} /> <span>Complex Dashboards & Multi-user Portals</span></li>
-                <li><Check size={16} /> <span>Heavy Workflow Automation</span></li>
-                <li><Check size={16} /> <span>Strategic Consultation & Integrations</span></li>
-                <li><Check size={16} /> <span>Ongoing Technical Support</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Advanced Custom Software Platforms</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Complex Dashboards & Multi-user Portals</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Heavy Workflow Automation</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Strategic Consultation & Integrations</span></li>
+                <li><Check size={16} aria-hidden="true" /> <span>Ongoing Technical Support</span></li>
               </ul>
 
               <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Enterprise%20custom%20software%20package."
                 target="_blank" rel="noopener noreferrer" className="btn btn-secondary package-btn">
                 <span>Inquire via WhatsApp</span>
-                <ArrowRight className="btn-icon" />
+                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>
             </div>
 
@@ -186,7 +190,7 @@ export default function Home() {
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Contact Us</span>
-              <ArrowRight className="btn-icon" />
+              <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
           </div>
         </div>

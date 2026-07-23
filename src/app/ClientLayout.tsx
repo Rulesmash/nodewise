@@ -20,7 +20,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       
       <div id="app-container" className={loading ? "app-hidden" : "app-visible"}>
         <Header />
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
         <GlobalInteractions />
       </div>

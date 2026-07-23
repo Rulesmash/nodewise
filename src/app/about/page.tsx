@@ -10,8 +10,6 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-
-
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">
@@ -40,15 +38,15 @@ export default function About() {
               </p>
               <div className="about-highlights">
                 <div className="about-highlight-item">
-                  <Zap className="about-highlight-icon" />
+                  <Zap className="about-highlight-icon" aria-hidden="true" />
                   <span>Lightning-fast, custom-coded platforms</span>
                 </div>
                 <div className="about-highlight-item">
-                  <Target className="about-highlight-icon" />
+                  <Target className="about-highlight-icon" aria-hidden="true" />
                   <span>Conversion-focused design & UX</span>
                 </div>
                 <div className="about-highlight-item">
-                  <TrendingUp className="about-highlight-icon" />
+                  <TrendingUp className="about-highlight-icon" aria-hidden="true" />
                   <span>Scalable solutions for growing businesses</span>
                 </div>
               </div>
@@ -72,13 +70,14 @@ export default function About() {
             {/*  Founder 1  */}
             <div className="founder-card card" id="founder-induchoodan">
               <a href="https://www.linkedin.com/in/induchoodan-v-s-027513291" target="_blank" rel="noopener noreferrer"
-                className="founder-avatar-link">
+                className="founder-avatar-link" aria-label="Induchoodan V S on LinkedIn">
+                <span className="sr-only">(opens in a new tab)</span>
                 <div className="founder-avatar">
                   <div className="founder-avatar-image-container">
                     <img src="/assets/induchoodan.png" alt="Induchoodan V S" className="founder-photo" />
                   </div>
                   <div className="founder-linkedin-badge">
-                    <Linkedin className="badge-icon" />
+                    <Linkedin className="badge-icon" aria-hidden="true" />
                   </div>
                 </div>
               </a>
@@ -88,13 +87,14 @@ export default function About() {
             {/*  Founder 2  */}
             <div className="founder-card card" id="founder-aalif">
               <a href="https://www.linkedin.com/in/aalif-mohammad-r-s?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                target="_blank" rel="noopener noreferrer" className="founder-avatar-link">
+                target="_blank" rel="noopener noreferrer" className="founder-avatar-link" aria-label="Aalif Mohammad R S on LinkedIn">
+                <span className="sr-only">(opens in a new tab)</span>
                 <div className="founder-avatar">
                   <div className="founder-avatar-image-container">
                     <img src="/assets/aalif.png" alt="Aalif Mohammad R S" className="founder-photo" />
                   </div>
                   <div className="founder-linkedin-badge">
-                    <Linkedin className="badge-icon" />
+                    <Linkedin className="badge-icon" aria-hidden="true" />
                   </div>
                 </div>
               </a>
@@ -112,10 +112,10 @@ export default function About() {
               <h2 className="cta-banner-title">Let's Build Something Great</h2>
               <p className="cta-banner-text">Have a project in mind? Let's talk about how we can help you grow.</p>
             </div>
-            <a href="/contact" className="btn btn-primary cta-banner-btn">
+            <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Get in Touch</span>
-              <ArrowRight className="btn-icon" />
-            </a>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

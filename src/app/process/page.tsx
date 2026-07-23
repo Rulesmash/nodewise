@@ -85,10 +85,10 @@ export default function Process() {
               <h2 className="cta-banner-title">Ready to Begin?</h2>
               <p className="cta-banner-text">Let's align your operations with custom software.</p>
             </div>
-            <a href="/contact" className="btn btn-primary cta-banner-btn">
+            <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Schedule Consultation</span>
-              <ArrowRight className="btn-icon" />
-            </a>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

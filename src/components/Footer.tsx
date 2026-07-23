@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="main-footer">
       <div className="container footer-container grid">
         <div className="footer-brand">
-          <img src="/favicon.ico" alt="Nodewise Logo" className="footer-logo" />
+          <img src="/favicon.ico" alt="" aria-hidden="true" className="footer-logo" />
           <p className="footer-tagline">Smarter Code. Better Solutions.</p>
           <ul className="footer-about" style={{ listStyle: 'none', padding: 0 }}>
             <li>▪ Custom Web Platforms</li>
@@ -18,7 +18,8 @@ export default function Footer() {
           <div className="footer-socials">
             <a href="https://www.linkedin.com/company/nodewise-cc" target="_blank" rel="noopener noreferrer"
               className="footer-social-link" id="footer-linkedin" aria-label="Nodewise on LinkedIn">
-              <Linkedin className="footer-social-icon" />
+              <Linkedin className="footer-social-icon" aria-hidden="true" />
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
           </div>
         </div>

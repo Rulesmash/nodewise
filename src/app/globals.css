@@ -17,7 +17,7 @@
   /* Typography Colors */
   --text-primary: #f8f9fc;
   --text-secondary: #c5c9db;
-  --text-muted: #797e93;
+  --text-muted: #a3a8be; /* Increased contrast ratio from 3.8:1 to 6.5:1 for WCAG 2.1 AA */
   --text-light: #ffffff;
 
   /* Borders, Shadows, and Blurs */
@@ -124,6 +124,54 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & WCAG 2.1 AA UTILITIES
+   ========================================================================== */
+/* High-contrast focus visible ring for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 4px rgba(122, 47, 247, 0.4) !important;
+}
+
+/* Skip to main content link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: #ffffff;
+  color: #0b0c10;
+  padding: 0.75rem 1.25rem;
+  z-index: 10000;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+  outline: 3px solid #7a2ff7 !important;
+}
+
+/* Screen reader only utility class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Grid & Layout System */

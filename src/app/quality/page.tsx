@@ -77,10 +77,10 @@ export default function Quality() {
               <h2 className="cta-banner-title">Experience the Difference</h2>
               <p className="cta-banner-text">Let's build a platform that meets the highest standards.</p>
             </div>
-            <a href="/contact" className="btn btn-primary cta-banner-btn">
+            <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Start Your Project</span>
-              <ArrowRight className="btn-icon" />
-            </a>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>
