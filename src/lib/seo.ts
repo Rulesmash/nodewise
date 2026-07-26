@@ -318,13 +318,14 @@ export function itemListJsonLd(
 }
 
 export const ROUTES = [
-  { path: "/", priority: 1, changeFrequency: "weekly" as const, name: "Home" },
+  { path: "/", priority: 1.0, changeFrequency: "weekly" as const, name: "Home" },
   { path: "/portfolio", priority: 0.9, changeFrequency: "monthly" as const, name: "Portfolio" },
-  { path: "/zero-to-mvp", priority: 0.95, changeFrequency: "weekly" as const, name: "Zero to MVP" },
+  { path: "/zero-to-mvp", priority: 0.9, changeFrequency: "weekly" as const, name: "Zero to MVP" },
   { path: "/packages", priority: 0.9, changeFrequency: "monthly" as const, name: "Packages" },
-  { path: "/capabilities", priority: 0.85, changeFrequency: "monthly" as const, name: "Services" },
-  { path: "/process", priority: 0.75, changeFrequency: "monthly" as const, name: "Process" },
+  { path: "/capabilities", priority: 0.8, changeFrequency: "monthly" as const, name: "Services" },
+  { path: "/process", priority: 0.7, changeFrequency: "monthly" as const, name: "Process" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" as const, name: "About" },
-  { path: "/quality", priority: 0.65, changeFrequency: "yearly" as const, name: "Quality" },
+  { path: "/quality", priority: 0.6, changeFrequency: "yearly" as const, name: "Quality" },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const, name: "Contact" },
 ];
+
