@@ -1,17 +1,62 @@
 import Link from "next/link";
 import { ChevronLeft, Layout, LayoutGrid, Cpu, ChevronRight, ArrowRight } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  serviceJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Services | Custom Portals & Advanced Automation",
-  description: "Explore Nodewise's core capabilities: Premium web presences, custom portals, dashboards, and advanced automation layers.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Services — Web Platforms, Portals & Automation",
+  description:
+    "Nodewise services: premium web presences, custom business portals, dashboards, and advanced automation. High-performance platforms engineered to scale your operations.",
+  path: "/capabilities",
+  keywords: [
+    "custom web portals",
+    "business dashboard development",
+    "process automation software",
+    "web application services",
+  ],
+});
 
 export default function Capabilities() {
   return (
     <>
-
-
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Core Capabilities",
+            description:
+              "Premium web presences, custom portals, dashboards, and automation layers.",
+            path: "/capabilities",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/capabilities" },
+          ]),
+          serviceJsonLd({
+            name: "Premium Web Presence",
+            description:
+              "High-performance marketing sites and brand platforms built for conversion.",
+            path: "/capabilities",
+          }),
+          serviceJsonLd({
+            name: "Custom Portals & Dashboards",
+            description:
+              "Internal tools, client portals, and operational dashboards tailored to your workflow.",
+            path: "/capabilities",
+          }),
+          serviceJsonLd({
+            name: "Advanced Automation",
+            description:
+              "Software automation layers that reduce manual work and scale business processes.",
+            path: "/capabilities",
+          }),
+        ]}
+      />
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">

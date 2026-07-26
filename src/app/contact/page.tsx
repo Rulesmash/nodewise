@@ -1,17 +1,66 @@
 import { Suspense } from "react";
 import { CheckCircle, Clock, Phone } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import JsonLd from "@/components/JsonLd";
+import {
+  SITE,
+  buildMetadata,
+  breadcrumbJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Nodewise | Schedule a Technical Consultation",
-  description: "Get in touch with Nodewise to discuss your software architecture, web platforms, and digital product needs.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Contact — Schedule a Free Technical Consultation",
+  description:
+    "Book a consultation with Nodewise. Discuss MVP builds, custom web platforms, and business software. WhatsApp +91 94469 98827 or send a project brief online.",
+  path: "/contact",
+  keywords: [
+    "contact web developers India",
+    "hire MVP developers",
+    "schedule software consultation",
+  ],
+});
 
 export default function Contact() {
   return (
     <>
-
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Contact Nodewise",
+            description:
+              "Schedule a technical consultation for web platforms, MVPs, and custom software.",
+            path: "/contact",
+            type: "ContactPage",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contact Nodewise",
+            url: `${SITE.url}/contact`,
+            mainEntity: {
+              "@type": "Organization",
+              "@id": `${SITE.url}/#organization`,
+              name: SITE.name,
+              email: SITE.email,
+              telephone: SITE.phone,
+              url: SITE.url,
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: SITE.phone,
+                contactType: "sales",
+                availableLanguage: ["English", "Hindi", "Malayalam"],
+                url: `${SITE.url}/contact`,
+              },
+            },
+          },
+        ]}
+      />
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">

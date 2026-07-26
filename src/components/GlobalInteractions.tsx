@@ -572,7 +572,7 @@ export default function GlobalInteractions() {
       submitBtn.innerHTML = "<span>Sending Request...</span>";
 
       const formData = new FormData(form);
-      const actionUrl = form.getAttribute("action") || "https://formsubmit.co/rulesmashpros@gmail.com";
+      const actionUrl = form.getAttribute("action") || "https://formsubmit.co/contact@nodewise.cc";
       const ajaxUrl = actionUrl.includes("/ajax/") ? actionUrl : actionUrl.replace("formsubmit.co/", "formsubmit.co/ajax/");
 
       fetch(ajaxUrl, {

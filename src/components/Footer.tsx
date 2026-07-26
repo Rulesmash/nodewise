@@ -42,9 +42,14 @@ export default function Footer() {
           </div>
           <div className="footer-nav-col">
             <h4 className="footer-col-title">Core Coordinates</h4>
-            <span className="footer-link text-muted">nodewise.cc</span>
-            <span className="footer-link text-muted">Based Worldwide</span>
-            <span className="footer-link text-muted">&copy; {new Date().getFullYear()} Nodewise Team.</span>
+            <a href="https://nodewise.cc" className="footer-link">nodewise.cc</a>
+            <a href="mailto:contact@nodewise.cc" className="footer-link">contact@nodewise.cc</a>
+            <a href="https://wa.me/919446998827" className="footer-link" target="_blank" rel="noopener noreferrer">
+              +91 94469 98827
+              <span className="sr-only">(WhatsApp, opens in a new tab)</span>
+            </a>
+            <span className="footer-link text-muted">India · Worldwide</span>
+            <span className="footer-link text-muted">&copy; {new Date().getFullYear()} Nodewise.</span>
           </div>
         </div>
       </div>

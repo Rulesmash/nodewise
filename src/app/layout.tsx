@@ -1,54 +1,115 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ThreeBackground from "@/components/ThreeBackground";
 import GlobalInteractions from "@/components/GlobalInteractions";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import JsonLd from "@/components/JsonLd";
+import {
+  SITE,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: '--font-header',
-  weight: ['300', '400', '500', '600', '700', '800']
+  variable: "--font-header",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 const outfit = Outfit({
   subsets: ["latin"],
-  variable: '--font-body',
-  weight: ['300', '400', '500', '600', '700']
+  variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0b0c10" },
+    { media: "(prefers-color-scheme: light)", color: "#0b0c10" },
+  ],
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nodewise.cc"),
+  metadataBase: new URL(SITE.url),
   title: {
-    default: "Nodewise | Smarter Code. Better Solutions.",
-    template: "%s | Nodewise"
+    default: `${SITE.name} | ${SITE.tagline}`,
+    template: `%s | ${SITE.name}`,
   },
-  description: "Nodewise is an agile digital product studio building custom web applications and business software optimized for profitability and speed.",
+  description:
+    "Nodewise is an agile digital product studio building custom web applications, MVPs, and business software optimized for profitability and speed. Transparent INR pricing. India-based, worldwide delivery.",
+  applicationName: SITE.name,
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  category: "technology",
+  keywords: [...SITE.keywords],
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: SITE.url,
+    languages: {
+      "en-IN": SITE.url,
+      en: SITE.url,
+    },
+  },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://nodewise.cc",
-    title: "Nodewise | Smarter Code. Better Solutions.",
-    description: "Nodewise is an agile digital product studio building custom web applications and business software optimized for profitability and speed.",
-    siteName: "Nodewise",
-    images: [{
-      url: "/assets/logo-full.png",
-      width: 1200,
-      height: 630,
-      alt: "Nodewise Logo"
-    }]
+    locale: SITE.locale,
+    url: SITE.url,
+    title: `${SITE.name} | ${SITE.tagline}`,
+    description:
+      "Custom web platforms, MVPs, and business software engineered for growth. Transparent pricing from India.",
+    siteName: SITE.name,
+    images: [
+      {
+        url: SITE.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${SITE.name} Logo`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nodewise | Smarter Code. Better Solutions.",
-    description: "Nodewise is an agile digital product studio building custom web applications and business software.",
-    images: ["/assets/logo-full.png"],
-  }
+    title: `${SITE.name} | ${SITE.tagline}`,
+    description:
+      "Custom web platforms, MVPs, and business software engineered for growth.",
+    images: [SITE.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+    apple: [{ url: SITE.logoIcon }],
+  },
+  other: {
+    "geo.region": "IN",
+    "geo.placename": "India",
+  },
 };
-
-import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
@@ -56,15 +117,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} ${outfit.variable}`}>
+    <html
+      lang="en"
+      className={`${plusJakartaSans.variable} ${outfit.variable}`}
+    >
       <body>
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <Header />
-        <main id="main-content" tabIndex={-1}>{children}</main>
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
         <GlobalInteractions />
         <ThreeBackground />
         <FloatingWhatsApp />
-        
         <Analytics />
       </body>
     </html>

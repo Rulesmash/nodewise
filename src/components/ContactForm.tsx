@@ -124,7 +124,7 @@ export default function ContactForm() {
     formData.append("requirements", combinedRequirements || "General Consultation Request");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/rulesmashpros@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/contact@nodewise.cc", {
         method: "POST",
         body: formData,
         headers: {

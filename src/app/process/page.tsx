@@ -1,16 +1,75 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Process | Fast, Reliable Software Engineering",
-  description: "Learn about Nodewise's agile engineering process: discovery, architecture, sprinting, and launch.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Our Process — Discovery to Launch",
+  description:
+    "How Nodewise builds software: discovery, architecture, agile sprints, and reliable launch. A clear collaboration path from bottleneck to scalable product.",
+  path: "/process",
+  keywords: [
+    "agile software process",
+    "web development workflow",
+    "MVP development process",
+  ],
+});
 
 export default function Process() {
   return (
     <>
-
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Our Process",
+            description:
+              "Discovery, architecture, sprinting, and launch — how Nodewise delivers software.",
+            path: "/process",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Process", path: "/process" },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How Nodewise Builds Custom Software",
+            description:
+              "Our collaboration path from operational bottleneck to scalable software.",
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: "Discovery",
+                text: "Map goals, constraints, and success metrics in a focused consultation.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: "Architecture",
+                text: "Design the technical blueprint and product scope for speed and scale.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: "Build Sprints",
+                text: "Ship iteratively with transparent progress and rapid feedback loops.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 4,
+                name: "Launch",
+                text: "Deploy, hand over source code, and support a clean go-live.",
+              },
+            ],
+          },
+        ]}
+      />
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">

@@ -1,16 +1,65 @@
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  serviceJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Pricing & Packages | Transparent Web Development Cost",
-  description: "View Nodewise's transparent pricing for custom websites, growth engines, and enterprise web architecture.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Pricing & Packages — Transparent Web Development Cost",
+  description:
+    "Nodewise web development pricing in INR: Starter ₹12k–15k, Growth from ₹25k, Enterprise custom. Transparent packages for websites, portals, and business software.",
+  path: "/packages",
+  keywords: [
+    "web development pricing India",
+    "website package cost",
+    "affordable web development",
+    "custom software pricing",
+  ],
+});
 
 export default function Packages() {
   return (
     <>
-
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Pricing & Packages",
+            description:
+              "Transparent INR pricing for starter websites, growth platforms, and enterprise architecture.",
+            path: "/packages",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Packages", path: "/packages" },
+          ]),
+          serviceJsonLd({
+            name: "Starter Foundation",
+            description:
+              "Premium digital footprint for small businesses establishing their first web presence.",
+            path: "/packages",
+            price: 12000,
+            priceMax: 15000,
+          }),
+          serviceJsonLd({
+            name: "Growth Engine",
+            description:
+              "Conversion-focused web platforms and software tools for growing businesses.",
+            path: "/packages",
+            price: 25000,
+          }),
+          serviceJsonLd({
+            name: "Enterprise Architecture",
+            description:
+              "Custom enterprise web architecture and advanced business software systems.",
+            path: "/packages",
+          }),
+        ]}
+      />
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">

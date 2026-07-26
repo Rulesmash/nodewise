@@ -1,15 +1,61 @@
 import Link from "next/link";
 import { Zap, Target, TrendingUp, Linkedin, ArrowRight } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  SITE,
+  absoluteUrl,
+  buildMetadata,
+  breadcrumbJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Nodewise | Agile Digital Product Studio",
-  description: "Learn about Nodewise, a multi-disciplinary digital product studio engineering custom, lightning-fast digital assets.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "About Us — Agile Digital Product Studio",
+  description:
+    "Meet Nodewise: founders Induchoodan V S and Aalif Mohammad R S. A sharp digital product studio building high-performance web platforms and custom software for real business results.",
+  path: "/about",
+  keywords: [
+    "about Nodewise",
+    "digital product studio India",
+    "web development team",
+  ],
+});
 
 export default function About() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "About Nodewise",
+            description:
+              "A small, sharp team building digital products that drive real business results.",
+            path: "/about",
+            type: "AboutPage",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            mainEntity: {
+              "@id": `${SITE.url}/#organization`,
+            },
+            mentions: SITE.founders.map((f) => ({
+              "@type": "Person",
+              name: f.name,
+              url: f.url,
+              image: absoluteUrl(f.image),
+              jobTitle: "Founder",
+              worksFor: { "@id": `${SITE.url}/#organization` },
+              sameAs: [f.url],
+            })),
+          },
+        ]}
+      />
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">

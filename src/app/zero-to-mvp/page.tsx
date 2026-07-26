@@ -1,15 +1,77 @@
 import Link from "next/link";
 import { Check, X, ArrowRight, Clock, Rocket, Shield, Target } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  faqJsonLd,
+  serviceJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Zero to MVP | Build Your Idea in 10-14 Days",
-  description: "Get a live, showcase-ready Minimum Viable Product (MVP) that you can show to users, investors, or test in the market.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Zero to MVP — Build Your Idea in 10–14 Days for ₹29,999",
+  description:
+    "Turn your startup idea into a live, investor-ready MVP in 10–14 days. Fixed price ₹29,999 INR. Includes consultation, core features, responsive web app, source code, and full ownership.",
+  path: "/zero-to-mvp",
+  keywords: [
+    "MVP development India",
+    "build MVP fast",
+    "startup MVP package",
+    "affordable MVP development",
+    "MVP in 2 weeks",
+    "₹29999 MVP",
+  ],
+});
 
 export default function ZeroToMVP() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Zero to MVP — Build Your Idea in 10–14 Days",
+            description:
+              "Live, showcase-ready Minimum Viable Product in 10–14 days for ₹29,999.",
+            path: "/zero-to-mvp",
+            type: "Service",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Zero to MVP", path: "/zero-to-mvp" },
+          ]),
+          serviceJsonLd({
+            name: "Zero to MVP Package",
+            description:
+              "30-minute consultation, core MVP features, clean responsive web app, full source code and docs, ownership transfer, and 2 revision rounds. Delivered in 10–14 days.",
+            path: "/zero-to-mvp",
+            price: 29999,
+          }),
+          faqJsonLd([
+            {
+              question: "What is included in Zero to MVP?",
+              answer:
+                "A 30-minute idea consultation, core MVP with essential features, a live responsive web app, full source code and documentation, complete ownership transfer, and 2 rounds of revisions.",
+            },
+            {
+              question: "What is not included in the MVP package?",
+              answer:
+                "Complex enterprise integrations, native mobile apps, and massive scalable cloud architecture are not included in the base ₹29,999 package.",
+            },
+            {
+              question: "How long does Zero to MVP take?",
+              answer:
+                "Delivery is typically 10–14 days from scope confirmation.",
+            },
+            {
+              question: "Who owns the MVP code?",
+              answer:
+                "You receive complete ownership of the source code and documentation upon delivery.",
+            },
+          ]),
+        ]}
+      />
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">

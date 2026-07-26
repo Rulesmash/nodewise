@@ -1,15 +1,66 @@
 import Link from "next/link";
 import { ArrowRight, Calendar, Check, X, Clock } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  faqJsonLd,
+  serviceJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Nodewise | Custom Web Platforms & Business Software",
-  description: "We build reliable, high-performance web platforms and custom software engineered to maximize your profitability.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Custom Web Platforms, MVPs & Business Software",
+  description:
+    "Nodewise builds high-performance custom web platforms, startup MVPs, and business software engineered for growth. Transparent INR pricing. Ship faster with an agile digital product studio.",
+  path: "/",
+  keywords: [
+    "custom web platforms",
+    "business software India",
+    "hire MVP developers",
+    "web development agency India",
+  ],
+});
 
 export default function Home() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Custom Web Platforms, MVPs & Business Software",
+            description:
+              "High-performance custom web platforms and business software engineered for profitability and speed.",
+            path: "/",
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }]),
+          serviceJsonLd({
+            name: "Zero to MVP",
+            description:
+              "Live, showcase-ready Minimum Viable Product in 10–14 days with full source code and ownership.",
+            path: "/zero-to-mvp",
+            price: 29999,
+          }),
+          faqJsonLd([
+            {
+              question: "How fast can Nodewise build an MVP?",
+              answer:
+                "Our Zero to MVP package delivers a live, showcase-ready product in 10–14 days, including consultation, core features, source code, and ownership transfer.",
+            },
+            {
+              question: "What does web development cost at Nodewise?",
+              answer:
+                "Starter packages start at ₹12,000–15,000 INR. Growth packages from ₹25,000+. Enterprise architecture is custom-quoted. Zero to MVP is a fixed ₹29,999.",
+            },
+            {
+              question: "What does Nodewise build?",
+              answer:
+                "Custom web platforms, high-converting landing pages, startup MVPs, business portals, dashboards, and automation software.",
+            },
+          ]),
+        ]}
+      />
       {/* Section I: Hero Section */}
       <section id="hero" className="hero-section">
         <div className="container hero-container">

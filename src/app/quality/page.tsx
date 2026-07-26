@@ -1,16 +1,42 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Quality Standards | Performance, Security & Clean Code",
-  description: "Nodewise's commitment to quality: optimized performance, robust security, and clean, scalable code architecture.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Quality Standards — Performance, Security & Clean Code",
+  description:
+    "Nodewise engineering standards: rapid high-fidelity execution, performance optimization, secure architecture, and clean scalable code you can own and extend.",
+  path: "/quality",
+  keywords: [
+    "software quality standards",
+    "performance-focused development",
+    "clean code agency",
+  ],
+});
 
 export default function Quality() {
   return (
     <>
-
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Quality Standards",
+            description:
+              "Performance, security, and clean architecture standards at Nodewise.",
+            path: "/quality",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Quality", path: "/quality" },
+          ]),
+        ]}
+      />
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">

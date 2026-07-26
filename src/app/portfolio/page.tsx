@@ -1,17 +1,70 @@
 import Link from "next/link";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  itemListJsonLd,
+  webPageJsonLd,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Portfolio & Case Studies | MVP Builders & Landing Page Development",
-  description: "Explore our portfolio of Minimum Viable Products (MVPs), high-converting landing pages, and custom web applications for startups and businesses.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Portfolio & Case Studies — MVPs & Landing Pages",
+  description:
+    "Explore Nodewise case studies: Titan Residences 3D real estate, Mavenix marketing MVP, and FOSS CEAL community platform. MVPs and high-converting landing pages for startups.",
+  path: "/portfolio",
+  keywords: [
+    "web development portfolio",
+    "MVP case studies",
+    "landing page examples",
+    "startup web projects",
+  ],
+  image: "/assets/titan-hero.png",
+  imageAlt: "Nodewise portfolio — Titan Residences case study",
+});
 
 export default function Portfolio() {
   return (
     <>
-
-
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Portfolio & Case Studies",
+            description:
+              "MVPs, high-converting landing pages, and custom web applications built by Nodewise.",
+            path: "/portfolio",
+            type: "CollectionPage",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Portfolio", path: "/portfolio" },
+          ]),
+          itemListJsonLd("Nodewise Portfolio", [
+            {
+              name: "Titan Residences",
+              url: "https://titan-bigs.vercel.app",
+              description:
+                "Interactive 3D luxury real estate prototype with floor plans and amenities.",
+              image: "/assets/titan-hero.png",
+            },
+            {
+              name: "Mavenix Studio",
+              url: "https://mavenixstudio.netlify.app/",
+              description:
+                "High-conversion digital marketing agency MVP landing page.",
+              image: "/assets/mavenix-hero.png",
+            },
+            {
+              name: "FOSS CEAL",
+              url: "https://foss.ceal.in/",
+              description:
+                "Open source college club platform for events, training, and resources.",
+              image: "/assets/fossceal-landing.png",
+            },
+          ]),
+        ]}
+      />
       {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">
