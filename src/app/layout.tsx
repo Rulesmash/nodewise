@@ -59,16 +59,16 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: SITE.url,
+    canonical: `${SITE.url}/`,
     languages: {
-      "en-IN": SITE.url,
-      en: SITE.url,
+      "en-IN": `${SITE.url}/`,
+      en: `${SITE.url}/`,
     },
   },
   openGraph: {
     type: "website",
     locale: SITE.locale,
-    url: SITE.url,
+    url: `${SITE.url}/`,
     title: `${SITE.name} | ${SITE.tagline}`,
     description:
       "Custom web platforms, MVPs, and business software engineered for growth. Transparent pricing from India.",

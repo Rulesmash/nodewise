@@ -61,10 +61,13 @@ export type PageSeoInput = {
   noIndex?: boolean;
 };
 
+/** Always apex host, no www. Root uses trailing slash; other paths do not. */
 export function absoluteUrl(path = "/"): string {
-  if (!path || path === "/") return SITE.url;
-  return `${SITE.url}${path.startsWith("/") ? path : `/${path}`}`;
+  if (!path || path === "/") return `${SITE.url}/`;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${SITE.url}${normalized.replace(/\/+$/, "")}`;
 }
+
 
 export function buildMetadata({
   title,

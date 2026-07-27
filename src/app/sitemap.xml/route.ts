@@ -1,4 +1,4 @@
-import { ROUTES, SITE } from "@/lib/seo";
+import { ROUTES, absoluteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 export const revalidate = 86400;
@@ -25,8 +25,7 @@ export function GET() {
   const lastmod = formatDate(new Date());
 
   const urls = ROUTES.map((route) => {
-    const loc =
-      route.path === "/" ? `${SITE.url}/` : `${SITE.url}${route.path}`;
+    const loc = absoluteUrl(route.path);
 
     return [
       "  <url>",
