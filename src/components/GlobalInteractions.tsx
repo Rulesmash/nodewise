@@ -135,20 +135,22 @@ export default function GlobalInteractions() {
       );
     });
 
-    gsap.fromTo(".capability-card",
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".capabilities-grid",
-          start: "top 80%"
+    if (document.querySelector(".capability-card")) {
+      gsap.fromTo(".capability-card",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".capabilities-grid",
+            start: "top 80%"
+          }
         }
-      }
-    );
+      );
+    }
 
     const portfolioItems = document.querySelectorAll(".portfolio-item-card");
     portfolioItems.forEach(item => {
@@ -215,21 +217,23 @@ export default function GlobalInteractions() {
       });
     }
 
-    gsap.fromTo(".founder-card",
-      { opacity: 0, scale: 0.95, y: 20 },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: "back.out(1.2)",
-        scrollTrigger: {
-          trigger: ".team-grid",
-          start: "top 80%"
+    if (document.querySelector(".founder-card")) {
+      gsap.fromTo(".founder-card",
+        { opacity: 0, scale: 0.95, y: 20 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 0.8,
+          ease: "back.out(1.2)",
+          scrollTrigger: {
+            trigger: ".team-grid",
+            start: "top 80%"
+          }
         }
-      }
-    );
+      );
+    }
 
     gsap.fromTo(".hero-content > *",
       { opacity: 0, y: 30 },
