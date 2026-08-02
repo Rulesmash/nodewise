@@ -1,0 +1,732 @@
+/* Homepage redesign — canon craft + video motion language */
+
+.home-page {
+  position: relative;
+  isolation: isolate;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --glass-bg: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.03) 48%,
+    rgba(120, 150, 200, 0.04) 100%
+  );
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-blur: blur(22px) saturate(1.35);
+  --home-radius: 14px;
+  --accent-soft: rgba(100, 150, 255, 0.14);
+}
+
+.home-page .hero-section {
+  min-height: min(100vh, 920px);
+  padding-top: 7.5rem;
+  padding-bottom: 4rem;
+  align-items: center;
+}
+
+.home-page .hero-container {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.home-page .hero-title {
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  max-width: 12ch;
+  opacity: 1;
+  color: var(--text-primary, #f8f9fc);
+}
+
+.home-page .hero-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 2.25rem;
+  max-width: 36ch;
+  opacity: 1;
+}
+
+.home-page .hero-content,
+.home-page .hero-ctas {
+  opacity: 1;
+}
+
+.home-page .hero-subtitle li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.55rem;
+  color: var(--text-secondary);
+}
+
+.home-page .hero-subtitle li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+}
+
+.home-page .hero-ctas {
+  gap: 0.85rem 1.1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home-page .hero-ctas .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--text-primary);
+}
+
+.home-page .hero-ctas .link-cta {
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+
+.home-page .hero-visual {
+  /* Fluid stage: scales with viewport, never overflows column */
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1.05;
+  height: auto;
+  min-height: clamp(240px, 42vw, 320px);
+  max-height: min(560px, 70vh);
+  position: relative;
+  container-type: size;
+  container-name: hero-stage;
+}
+
+/* —— Hero stage (3D + glass) —— */
+.hero-stage {
+  position: absolute;
+  inset: 0;
+  border-radius: clamp(12px, 2.5cqi, 20px);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 48%, rgba(70, 100, 160, 0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 70% 30%, rgba(255, 255, 255, 0.04) 0%, transparent 55%),
+    linear-gradient(165deg, #12161f 0%, #0a0c12 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 clamp(12px, 3cqi, 24px) clamp(32px, 8cqi, 80px) rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.hero-stage-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  touch-action: none;
+}
+
+.hero-stage-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: -15%;
+  background: radial-gradient(circle at 50% 55%, rgba(120, 160, 255, 0.12), transparent 55%);
+  mix-blend-mode: screen;
+  animation: heroGlowPulse 8s var(--ease-out-expo) infinite alternate;
+}
+
+@keyframes heroGlowPulse {
+  from { opacity: 0.55; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1.04); }
+}
+
+.hero-glass-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  /* Safe padding so cards never clip stage edge */
+  padding: clamp(0.45rem, 2.5cqi, 1rem);
+  box-sizing: border-box;
+}
+
+.hero-glass-card {
+  position: absolute;
+  width: min(42%, 11.5rem);
+  min-width: 0;
+  max-width: 11.75rem;
+  padding: clamp(0.5rem, 1.8cqi, 0.85rem) clamp(0.55rem, 2cqi, 1rem);
+  border-radius: clamp(8px, 1.8cqi, 12px);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.14) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(120, 150, 200, 0.06) 100%
+    ),
+    rgba(12, 14, 22, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow:
+    0 clamp(6px, 2cqi, 12px) clamp(16px, 5cqi, 40px) rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  transform: translate3d(var(--float-x, 0px), var(--float-y, 0px), 0);
+  will-change: transform;
+  opacity: 1 !important;
+  visibility: visible !important;
+  box-sizing: border-box;
+}
+
+.hero-glass-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+  min-width: 0;
+}
+
+.hero-glass-card__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: rgba(200, 215, 255, 0.9);
+}
+
+.hero-glass-card__icon svg {
+  width: clamp(11px, 2.4cqi, 14px);
+  height: clamp(11px, 2.4cqi, 14px);
+}
+
+.hero-glass-card__label {
+  font-size: clamp(0.58rem, 1.7cqi, 0.68rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(210, 220, 240, 0.88);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.hero-glass-card__value {
+  font-family: var(--font-header, inherit);
+  font-size: clamp(0.88rem, 3.2cqi, 1.15rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f8f9fc;
+  line-height: 1.15;
+  margin: 0;
+  opacity: 1 !important;
+  overflow-wrap: anywhere;
+}
+
+.hero-glass-card__meta {
+  margin: 0.15rem 0 0;
+  font-size: clamp(0.62rem, 1.8cqi, 0.75rem);
+  color: rgba(200, 210, 230, 0.9);
+  opacity: 1 !important;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Desktop / large: floating corners */
+.hero-glass-card--price {
+  top: 10%;
+  left: 4%;
+}
+
+.hero-glass-card--time {
+  top: 14%;
+  right: 3%;
+  left: auto;
+}
+
+.hero-glass-card--own {
+  bottom: 14%;
+  left: 5%;
+  top: auto;
+}
+
+.hero-glass-card--core {
+  bottom: 10%;
+  right: 4%;
+  left: auto;
+  top: auto;
+}
+
+/* Container queries: adapt cards to stage size, not only viewport */
+@container hero-stage (max-width: 420px) {
+  .hero-glass-layer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.4rem;
+    align-content: end;
+    padding: 0.5rem;
+    /* Leave top ~55% for 3D sculpture */
+    padding-top: 52%;
+  }
+
+  .hero-glass-card {
+    position: relative;
+    inset: auto !important;
+    width: 100%;
+    max-width: none;
+    transform: none !important;
+  }
+
+  .hero-glass-card--price,
+  .hero-glass-card--time,
+  .hero-glass-card--own,
+  .hero-glass-card--core {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+
+@container hero-stage (max-width: 300px) {
+  .hero-glass-layer {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+    padding: 0.4rem;
+    padding-top: 48%;
+  }
+
+  .hero-glass-card__meta {
+    display: none;
+  }
+
+  .hero-glass-card {
+    padding: 0.45rem 0.5rem;
+  }
+}
+
+@container hero-stage (max-height: 300px) {
+  .hero-glass-layer {
+    padding-top: 40%;
+  }
+
+  .hero-glass-card__meta {
+    display: none;
+  }
+}
+
+/* —— MVP highlight —— */
+.home-page .mvp-highlight-section {
+  background: transparent;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.home-page .mvp-highlight-section,
+.home-page .packages-section,
+.home-page .cta-banner-section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Content must never flash invisible — motion is transform-only */
+.home-page [data-reveal],
+.home-page [data-reveal-item],
+.home-page .mvp-highlight-card,
+.home-page .mvp-highlight-content,
+.home-page .mvp-highlight-pricing,
+.home-page .mvp-pricing-box,
+.home-page .mvp-price-big,
+.home-page .mvp-feature-list,
+.home-page .mvp-feature-list li {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.home-page .mvp-highlight-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border-radius: var(--home-radius);
+  /* Solid base — pure glass reads as empty on dark mobile backgrounds */
+  background-color: #12141c !important;
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(100, 140, 200, 0.04) 100%
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  opacity: 1 !important;
+}
+
+.home-page .mvp-highlight-content {
+  flex: 1.5 1 auto;
+  min-width: 0;
+  padding: clamp(1.75rem, 4vw, 3.25rem);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+
+.home-page .mvp-highlight-content .section-title {
+  font-size: clamp(1.65rem, 3vw, 2.15rem);
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+}
+
+.home-page .mvp-product-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-header);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(220, 230, 255, 0.92);
+  margin-bottom: 0.85rem;
+}
+
+.home-page .mvp-product-name::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5b9cff;
+  box-shadow: 0 0 12px rgba(91, 156, 255, 0.7);
+}
+
+.home-page .mvp-highlight-pricing {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: clamp(1.75rem, 4vw, 3.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important;
+  background-color: #0e1018 !important;
+  background-image: radial-gradient(
+    ellipse 90% 80% at 50% 0%,
+    rgba(120, 160, 255, 0.12),
+    transparent 68%
+  ) !important;
+}
+
+.home-page .mvp-pricing-box {
+  padding: 1.5rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #181c28 !important;
+  backdrop-filter: none !important;
+  width: 100%;
+  opacity: 1 !important;
+}
+
+.home-page .mvp-highlight-content,
+.home-page .mvp-highlight-pricing,
+.home-page .mvp-price-big,
+.home-page .mvp-feature-list li {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.home-page .mvp-price-big {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+.home-page .mvp-timeline-box {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.home-page .mvp-cta-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* —— Packages —— */
+.home-page .packages-section {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.home-page .packages-section .section-header {
+  margin-bottom: 2.5rem;
+}
+
+.home-page .packages-section .section-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  letter-spacing: -0.03em;
+}
+
+.home-page .packages-pricing-note {
+  margin: 0.65rem auto 0;
+  max-width: 36ch;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.home-page .section-divider {
+  display: none;
+}
+
+.home-page .packages-grid {
+  gap: 1.25rem;
+  margin-top: 0;
+}
+
+.home-page .package-card {
+  border-radius: var(--home-radius);
+  background: var(--glass-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(1.15);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+  padding: 1.75rem 1.6rem 1.6rem;
+  transition:
+    transform 0.45s var(--ease-out-expo),
+    border-color 0.35s var(--ease-out-expo),
+    box-shadow 0.45s var(--ease-out-expo);
+}
+
+.home-page .package-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 28px 64px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.home-page .package-card.highlighted {
+  border-color: rgba(140, 170, 255, 0.28);
+  background:
+    linear-gradient(165deg, rgba(100, 140, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 55%),
+    var(--glass-bg);
+}
+
+.home-page .package-card.highlighted::before {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(160, 190, 255, 0.55), transparent);
+}
+
+.home-page .package-badge {
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.1rem;
+}
+
+.home-page .package-title {
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.home-page .package-price {
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+/* —— CTA banner —— */
+.home-page .cta-banner {
+  border-radius: var(--home-radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  padding: clamp(1.5rem, 3vw, 2.25rem) clamp(1.5rem, 4vw, 2.75rem);
+}
+
+.home-page .cta-banner::before {
+  opacity: 0.5;
+  background: radial-gradient(ellipse at 20% 50%, rgba(100, 150, 255, 0.15), transparent 60%);
+}
+
+/* —— Buttons on home —— */
+.home-page .btn-primary {
+  border-radius: 999px;
+  transition:
+    transform 0.25s var(--ease-out-expo),
+    box-shadow 0.35s var(--ease-out-expo),
+    background 0.25s ease;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.home-page .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
+.home-page .btn-secondary {
+  border-radius: 999px;
+  transition: transform 0.25s var(--ease-out-expo), border-color 0.25s ease;
+}
+
+.home-page .btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Soften global particle field under the hero stage */
+.home-page ~ * .canvas-container,
+body:has(.home-page) .canvas-container {
+  opacity: 0.45;
+}
+
+body:has(.home-page) .canvas-container canvas {
+  opacity: 0.55;
+}
+
+/* —— Reduced motion —— */
+@media (prefers-reduced-motion: reduce) {
+  .hero-stage-glow {
+    animation: none;
+  }
+
+  .hero-glass-card {
+    opacity: 1;
+    transform: none;
+  }
+
+  .home-page .package-card:hover,
+  .home-page .btn-primary:hover,
+  .home-page .btn-secondary:hover {
+    transform: none;
+  }
+}
+
+/* —— Responsive —— */
+@media (max-width: 960px) {
+  .home-page .hero-container {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-page .hero-content {
+    position: relative;
+    z-index: 3;
+    order: 1;
+  }
+
+  .home-page .hero-title {
+    max-width: none;
+    font-size: clamp(2rem, 8.5vw, 2.6rem);
+  }
+
+  .home-page .hero-visual {
+    order: 2;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: min(100%, 440px);
+    margin-inline: auto;
+    aspect-ratio: 1 / 1.02;
+    height: auto;
+    min-height: 260px;
+    max-height: min(440px, 58vh);
+    overflow: hidden;
+    border-radius: clamp(12px, 3vw, 16px);
+  }
+
+  .home-page .hero-section {
+    padding-top: calc(4.5rem + env(safe-area-inset-top, 0px));
+    min-height: auto;
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+
+  .home-page .hero-ctas {
+    width: 100%;
+  }
+
+  .home-page .hero-ctas .btn-primary,
+  .home-page .hero-ctas .link-cta {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .hero-stage {
+    border-radius: 20px;
+  }
+
+  .hero-glass-card {
+    min-width: 120px;
+    max-width: 142px;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .hero-glass-card__value {
+    font-size: 0.95rem;
+  }
+
+  .hero-glass-card--price { top: 10%; left: 5%; }
+  .hero-glass-card--time { top: 12%; right: 4%; }
+  .hero-glass-card--own { bottom: 14%; left: 6%; }
+  /* core card kept */
+}
+
+@media (max-width: 1024px) {
+  .home-page .mvp-highlight-card {
+    flex-direction: column;
+  }
+
+  /* Kill desktop flex-grow that leaves hollow empty panels when stacked */
+  .home-page .mvp-highlight-content,
+  .home-page .mvp-highlight-pricing {
+    flex: 0 0 auto !important;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-page .mvp-highlight-content {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 1.25rem;
+  }
+
+  .home-page .mvp-highlight-pricing {
+    padding: 1.35rem 1.25rem;
+  }
+
+  .home-page .mvp-feature-grid {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* all four offer cards stay visible via stage grid */
+
+  .home-page .mvp-highlight-content,
+  .home-page .mvp-highlight-pricing {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .home-page .mvp-price-big {
+    font-size: 2.15rem !important;
+  }
+
+  .home-page .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .home-page .hero-ctas .btn-primary {
+    justify-content: center;
+  }
+}

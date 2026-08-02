@@ -11,14 +11,14 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us — Agile Digital Product Studio",
+  title: "About Nodewise — Digital Product Studio Founders",
   description:
-    "Meet Nodewise: founders Induchoodan V S and Aalif Mohammad R S. A sharp digital product studio building high-performance web platforms and custom software for real business results.",
+    "Meet Nodewise founders Induchoodan V S and Aalif Mohammad R S. A sharp India-based studio building MVPs and custom web software for real business results.",
   path: "/about",
   keywords: [
     "about Nodewise",
     "digital product studio India",
-    "web development team",
+    "web development founders",
   ],
 });
 

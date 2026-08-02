@@ -2,31 +2,156 @@ import Link from "next/link";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import ProjectCarousel, {
+  type CarouselSlide,
+} from "@/components/ProjectCarousel";
 import {
   buildMetadata,
   breadcrumbJsonLd,
   itemListJsonLd,
   webPageJsonLd,
 } from "@/lib/seo";
+import "./portfolio.css";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Portfolio & Case Studies — MVPs & Landing Pages",
+  title: "Work & Case Studies — MVPs and Landing Pages",
   description:
-    "Explore Nodewise case studies: Titan Residences 3D real estate, Mavenix marketing MVP, and FOSS CEAL community platform. MVPs and high-converting landing pages for startups.",
+    "See Nodewise work: Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
   path: "/portfolio",
   keywords: [
-    "web development portfolio",
+    "web development portfolio India",
     "MVP case studies",
     "landing page examples",
-    "startup web projects",
+    "startup product examples",
   ],
   image: "/assets/titan-hero.png",
   imageAlt: "Nodewise portfolio — Titan Residences case study",
 });
 
+type Project = {
+  id: string;
+  name: string;
+  meta: string;
+  title: string;
+  description: string;
+  tags: string[];
+  url: string;
+  host: string;
+  flip?: boolean;
+  slides: CarouselSlide[];
+};
+
+const PROJECTS: Project[] = [
+  {
+    id: "case-01",
+    name: "Titan Residences",
+    meta: "3D Interactive Real Estate",
+    title: "Interactive 3D showcase for a luxury residence brand",
+    description:
+      "Shipped a live web experience buyers can explore—floor-plan hotspots, amenities, and residence views—without a sales call. Built as a high-fidelity product demo, not a static brochure.",
+    tags: ["3D Web", "Real Estate", "Live product"],
+    url: "https://titan-bigs.vercel.app",
+    host: "titan-bigs.vercel.app",
+    slides: [
+      {
+        src: "/assets/titan-hero.png",
+        alt: "Titan Residences hero showcase",
+        label: "Hero",
+      },
+      {
+        src: "/assets/titan-features.png",
+        alt: "Titan Residences features section",
+        label: "Features",
+      },
+      {
+        src: "/assets/titan-blueprint.png",
+        alt: "Titan Residences floor plan blueprints",
+        label: "Blueprint",
+      },
+      {
+        src: "/assets/titan-amenities.png",
+        alt: "Titan Residences amenities",
+        label: "Amenities",
+      },
+      {
+        src: "/assets/titan-residence.png",
+        alt: "Titan Residences residence detail",
+        label: "Residence",
+      },
+    ],
+  },
+  {
+    id: "case-02",
+    name: "Mavenix Studio",
+    meta: "MVP & Landing Page",
+    title: "Launch-ready marketing site for a digital studio",
+    description:
+      "A focused landing MVP: clear offer hierarchy, services, and conversion path. Designed so a new studio can go live and look credible from day one.",
+    tags: ["MVP", "Landing page", "Marketing"],
+    url: "https://mavenixstudio.netlify.app/",
+    host: "mavenixstudio.netlify.app",
+    flip: true,
+    slides: [
+      {
+        src: "/assets/mavenix-hero.png",
+        alt: "Mavenix landing page hero",
+        label: "Hero",
+      },
+      {
+        src: "/assets/mavenix-services.png",
+        alt: "Mavenix services section",
+        label: "Services",
+      },
+      {
+        src: "/assets/mavenix-about.png",
+        alt: "Mavenix about section",
+        label: "About",
+      },
+    ],
+  },
+  {
+    id: "case-03",
+    name: "FOSS CEAL",
+    meta: "Open Source Community Hub",
+    title: "Community platform for a college open-source club",
+    description:
+      "Modular hub for FOSS CEAL—training chambers, events, resources, and brand kits in one place. Built for students and organizers to navigate without hand-holding.",
+    tags: ["Community", "Open source", "Platform"],
+    url: "https://foss.ceal.in/",
+    host: "foss.ceal.in",
+    slides: [
+      {
+        src: "/assets/fossceal-landing.png",
+        alt: "FOSS CEAL landing page",
+        label: "Landing",
+      },
+      {
+        src: "/assets/fossceal-portal.png",
+        alt: "FOSS CEAL portal",
+        label: "Portal",
+      },
+      {
+        src: "/assets/fossceal-create.png",
+        alt: "FOSS CEAL Create 101",
+        label: "Create 101",
+      },
+      {
+        src: "/assets/fossceal-train.png",
+        alt: "FOSS CEAL Train 303",
+        label: "Train 303",
+      },
+      {
+        src: "/assets/fossceal-branding.png",
+        alt: "FOSS CEAL brand kit",
+        label: "Branding",
+      },
+    ],
+  },
+];
+
 export default function Portfolio() {
   return (
-    <>
+    <div className="portfolio-page">
       <JsonLd
         data={[
           webPageJsonLd({
@@ -40,176 +165,101 @@ export default function Portfolio() {
             { name: "Home", path: "/" },
             { name: "Portfolio", path: "/portfolio" },
           ]),
-          itemListJsonLd("Nodewise Portfolio", [
-            {
-              name: "Titan Residences",
-              url: "https://titan-bigs.vercel.app",
-              description:
-                "Interactive 3D luxury real estate prototype with floor plans and amenities.",
-              image: "/assets/titan-hero.png",
-            },
-            {
-              name: "Mavenix Studio",
-              url: "https://mavenixstudio.netlify.app/",
-              description:
-                "High-conversion digital marketing agency MVP landing page.",
-              image: "/assets/mavenix-hero.png",
-            },
-            {
-              name: "FOSS CEAL",
-              url: "https://foss.ceal.in/",
-              description:
-                "Open source college club platform for events, training, and resources.",
-              image: "/assets/fossceal-landing.png",
-            },
-          ]),
+          itemListJsonLd(
+            "Nodewise Portfolio",
+            PROJECTS.map((p) => ({
+              name: p.name,
+              url: p.url,
+              description: p.description,
+              image: p.slides[0]?.src,
+            }))
+          ),
         ]}
       />
-      {/*  Page Hero Banner  */}
+
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="section-subtitle">Our Engineering Artifacts</span>
-            <h1 className="page-hero-title">MVPs & Landing Pages</h1>
+            <h1 className="page-hero-title">Selected work</h1>
             <p className="page-hero-subtitle">
-              Showcasing rapid Minimum Viable Products (MVPs), high-converting landing pages, and web applications built for startups and growing businesses.
+              Live products you can open and click through—MVPs, landing pages,
+              and platforms we shipped.
             </p>
           </div>
         </div>
       </section>
 
-      {/*  Portfolio Case Studies  */}
       <section id="work" className="portfolio-section">
         <div className="container">
-
-          <div className="portfolio-list">
-            {/*  Case Study 01  */}
-            <div className="portfolio-item-card grid" id="portfolio-case-01">
-              <div className="portfolio-media">
-                <a href="https://titan-bigs.vercel.app" target="_blank" rel="noopener noreferrer" className="portfolio-mockup" style={{ display: "block", textDecoration: "none" }} data-project-id="case-01">
-                  <div className="mockup-header">
-                    <span className="dot red"></span><span className="dot yellow"></span><span className="dot green"></span>
-                    <span className="mockup-url">titan.nodewise.cc</span>
-                  </div>
-                  <div className="mockup-viewport">
-                    <img src="/assets/titan-hero.png" alt="Titan Residences Showcase"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  </div>
-                  <div className="mockup-hover-overlay">
-                    <ExternalLink className="overlay-icon" />
-                    <span>Visit Live Site</span>
-                  </div>
-                </a>
-              </div>
-              <div className="portfolio-info">
-                <span className="case-meta">Case Study 01 // 3D Interactive Real Estate</span>
-                <h3 className="case-title">Titan Residences: Interactive 3D Luxury Real Estate Prototype</h3>
-                <p className="case-description">
-                  Ascending 24 stories above the metropolitan skyline, Titan stands as an architectural sculpture. An
-                  interactive 3D web platform enabling prospective buyers to explore layout blueprints, floor plan
-                  hotspots, amenities, and residences in real time.
-                </p>
-                <div className="portfolio-ctas">
-                  <a href="https://titan-bigs.vercel.app" target="_blank" rel="noopener noreferrer"
-                    className="btn btn-primary" id="btn-verify-case-01">
-                    <ExternalLink className="btn-icon" />
-                    <span>Visit the Link</span>
-                  </a>
+          <div className="project-stack">
+            {PROJECTS.map((project) => (
+              <article
+                key={project.id}
+                className={`project-block${project.flip ? " is-flip" : ""}`}
+                id={`portfolio-${project.id}`}
+              >
+                <div className="project-mobile-head">
+                  <p className="project-meta">{project.meta}</p>
                 </div>
-              </div>
-            </div>
 
-            {/*  Case Study 02  */}
-            <div className="portfolio-item-card grid inverted" id="portfolio-case-02">
-              <div className="portfolio-media">
-                <a href="https://mavenixstudio.netlify.app/" target="_blank" rel="noopener noreferrer" className="portfolio-mockup" style={{ display: "block", textDecoration: "none" }} data-project-id="case-02">
-                  <div className="mockup-header">
-                    <span className="dot red"></span><span className="dot yellow"></span><span className="dot green"></span>
-                    <span className="mockup-url">mavenixstudio.netlify.app</span>
+                <div className="project-info">
+                  <p className="project-meta">{project.meta}</p>
+                  <h2 className="project-title">{project.title}</h2>
+                  <p className="project-desc">{project.description}</p>
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="project-tag">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <div className="mockup-viewport">
-                    <img src="/assets/mavenix-hero.png" alt="Mavenix Landing Page MVP Showcase"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <div className="project-ctas">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                      id={`btn-verify-${project.id}`}
+                    >
+                      <ExternalLink className="btn-icon" aria-hidden="true" />
+                      <span>Open live site</span>
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
                   </div>
-                  <div className="mockup-hover-overlay">
-                    <ExternalLink className="overlay-icon" />
-                    <span>Visit Live Site</span>
-                  </div>
-                </a>
-              </div>
-              <div className="portfolio-info">
-                <span className="case-meta">Case Study 02 // MVP & Basic Landing Page</span>
-                <h3 className="case-title">Mavenix: High-Conversion Digital Marketing Agency MVP</h3>
-                <p className="case-description">
-                  A modern, high-performance landing page engineered for Mavenix Studio. Perfect for MVP builders and businesses requiring a basic yet premium landing page. It focuses on turning small businesses into big brands through custom strategy audits and sleek conversion funnels.
-                </p>
-                <div className="portfolio-ctas">
-                  <a href="https://mavenixstudio.netlify.app/" target="_blank" rel="noopener noreferrer"
-                    className="btn btn-primary" id="btn-verify-case-02">
-                    <ExternalLink className="btn-icon" />
-                    <span>Visit the Link</span>
-                  </a>
                 </div>
-              </div>
-            </div>
 
-            {/*  Case Study 03  */}
-            <div className="portfolio-item-card grid" id="portfolio-case-03">
-              <div className="portfolio-media">
-                <a href="https://foss.ceal.in/" target="_blank" rel="noopener noreferrer" className="portfolio-mockup" style={{ display: "block", textDecoration: "none" }} data-project-id="case-03">
-                  <div className="mockup-header">
-                    <span className="dot red"></span><span className="dot yellow"></span><span className="dot green"></span>
-                    <span className="mockup-url">foss.ceal.in</span>
-                  </div>
-                  <div className="mockup-viewport">
-                    <img src="/assets/fossceal-landing.png" alt="FOSS CEAL Linktree Showcase"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  </div>
-                  <div className="mockup-hover-overlay">
-                    <ExternalLink className="overlay-icon" />
-                    <span>Visit Live Site</span>
-                  </div>
-                </a>
-              </div>
-              <div className="portfolio-info">
-                <span className="case-meta">Case Study 03 // Open Source Community Hub</span>
-                <h3 className="case-title">FOSS CEAL: Open Source College Club Platform</h3>
-                <p className="case-description">
-                  A modular, grid-based community hub built for FOSS CEAL (College of Engineering Attingal). The web
-                  platform coordinates training chambers like Create 101 and Train 303, club events, open-source
-                  resources, and brand kits.
-                </p>
-                <div className="portfolio-ctas">
-                  <a href="https://foss.ceal.in/" target="_blank" rel="noopener noreferrer" className="btn btn-primary"
-                    id="btn-verify-case-03">
-                    <ExternalLink className="btn-icon" />
-                    <span>Visit the Link</span>
-                  </a>
+                <div className="project-carousel-wrap">
+                  <ProjectCarousel
+                    projectId={project.id}
+                    slides={project.slides}
+                    liveUrl={project.url}
+                    liveHost={project.host}
+                    displayName={project.name}
+                  />
                 </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/*  CTA Banner  */}
       <section className="cta-banner-section">
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Ready to Build Your Project?</h2>
-              <p className="cta-banner-text">Book a free consultation and let's map out the digital asset that scales your
-                business.</p>
+              <h2 className="cta-banner-title">Want to go deeper?</h2>
+              <p className="cta-banner-text">
+                Open any live site above, or reach out if you want the story
+                behind a build.
+              </p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
-              <span>Schedule Consultation</span>
+              <span>Get in touch</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
           </div>
         </div>
       </section>
-
-    
-    </>
+    </div>
   );
 }

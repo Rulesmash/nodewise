@@ -1,0 +1,78 @@
+{
+  "title": "Choose the visual world",
+  "question": "Homepage redesign for founders. Motion principles from your glass+sculpture video are pinned on every option. The roll assigned Mission Control Launch Board.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Mission Control Launch Board",
+      "kicker": "THE ROLL",
+      "lineage": "NASA/spacecraft go-no-go boards, T-minus countdown walls, telemetry glass",
+      "thesis": "Your idea is on the pad: a live countdown to a shipped MVP, with glass telemetry cards orbiting a metallic payload.",
+      "palette": ["#07090f", "#0e1420", "#c8d4e8", "#f4f7fb", "#3d8bfd", "#e8a23a"],
+      "materials": [
+        "matte void black console",
+        "frosted glass telemetry panels",
+        "brushed metallic payload sculpture",
+        "soft cyan instrument glow",
+        "amber go/hold status lamps"
+      ],
+      "viewport": "Left: big T-minus / ₹29,999 / 10–14 days as mission readouts. Right: slow-orbiting metallic form with floating glass cards (features, ownership, live). Primary GO = Start Your MVP.",
+      "risk": "Can feel sci-fi theater if the offer numbers are not the loudest instruments on the board.",
+      "sketch": ".impeccable/sketches/assigned.webp"
+    },
+    {
+      "id": "challenger-tensegrity",
+      "label": "Tensegrity Breathing Column",
+      "lineage": "kinetic sculpture / carbon rods and tension cord",
+      "thesis": "The MVP is a structure held by opposing forces: scope in, bloat out—rigid because tension is honest.",
+      "case": "Strong audience ID for craft-aware founders; product clarity loses slightly—price/timeline need pinned force labels or the metaphor eats the offer.",
+      "palette": ["#111214", "#f2f0eb", "#c41218", "#8a8f98", "#e8e6e1"],
+      "materials": ["matte carbon rods", "red tension cord", "pale concrete ground", "ash slack members"],
+      "viewport": "A breathing strut network as hero; WhatsApp CTA as LOCK; inclusions as compression members, exclusions as slack.",
+      "risk": "Engineering beauty can outrank conversion if force labels bury ₹29,999.",
+      "sketch": ".impeccable/sketches/challenger-tensegrity.webp",
+      "hero": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-tensegrity-breathing-column-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-tensegrity-breathing-column.webp"
+    },
+    {
+      "id": "challenger-multiplane",
+      "label": "Multiplane Cel Dawn",
+      "lineage": "cinema multiplane cel animation",
+      "thesis": "Scroll sinks the camera through painted depth planes toward a lit cottage—the shipped product waiting in the mist.",
+      "case": "Memorable Experience craft; weaker founder identification and slower path to price/CTA than a launch board.",
+      "palette": ["#1a2430", "#2f4a3c", "#7a8f9c", "#c9a66b", "#e8dcc8"],
+      "materials": ["gouache forest planes", "mist blue-gray", "lamp amber accent", "clear title cel"],
+      "viewport": "Banded depth layers; product name on nearest cel; cottage light = live MVP; CTA on the foreground cel.",
+      "risk": "Storybook warmth can soften urgency to ship.",
+      "sketch": ".impeccable/sketches/challenger-multiplane.webp",
+      "hero": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn.webp"
+    },
+    {
+      "id": "challenger-transit",
+      "label": "Midnight Transit Diagram",
+      "lineage": "enamel metropolitan rail map mural",
+      "thesis": "Zero to MVP is the scarlet express line: stations are days, interchanges are decisions, destination is live product.",
+      "case": "Excellent product clarity for journey/timeline; audience ID solid for operators, slightly cooler for visionary founders.",
+      "palette": ["#0a1628", "#f4f7fb", "#e31c23", "#1f6feb", "#f5a524", "#2da44e"],
+      "materials": ["midnight enamel", "porcelain station ticks", "disciplined 45° line geometry"],
+      "viewport": "Full-bleed route diagram; founder origin → LIVE station in 10–14 stops; fare badge ₹29,999; GO rides the chosen line.",
+      "risk": "Map density can crowd the hero if the whole network shows at once.",
+      "sketch": ".impeccable/sketches/challenger-transit.webp",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram.webp"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "Dark premium agency landing: bold headline, glass cards, package grid, WhatsApp CTA—executed at full craft with your pinned motion language.",
+    "viewport": "Hero left copy / right 3D, MVP highlight, three packages, contact banner—the arrangement founders already scan.",
+    "palette": ["#0b0c10", "#12131a", "#f8f9fc", "#e8e8e8", "#3d8bfd"],
+    "materials": ["dark void", "frosted glass cards", "metallic 3D accent", "soft white type"],
+    "risk": "Familiar category silhouette; wins only on motion and finish.",
+    "sketch": ".impeccable/sketches/canon.webp"
+  }
+}

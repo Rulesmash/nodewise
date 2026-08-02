@@ -11,14 +11,15 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact — Schedule a Free Technical Consultation",
+  title: "Contact Nodewise — Free MVP & Web Consultation",
   description:
-    "Book a consultation with Nodewise. Discuss MVP builds, custom web platforms, and business software. WhatsApp +91 94469 98827 or send a project brief online.",
+    "Talk to Nodewise about your MVP or custom web platform. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
   path: "/contact",
   keywords: [
-    "contact web developers India",
-    "hire MVP developers",
+    "contact MVP developers India",
+    "hire web developers India",
     "schedule software consultation",
+    "WhatsApp web agency",
   ],
 });
 

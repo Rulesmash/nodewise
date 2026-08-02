@@ -1,0 +1,133 @@
+/* Site-wide glass system alignment (subpages + chrome) */
+
+/* Kill purple brand leaks → cool instrument */
+:root {
+  --focus-ring: rgba(91, 156, 255, 0.45);
+}
+
+*:focus-visible {
+  outline: 2px solid #8eb6ff !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 4px var(--focus-ring) !important;
+}
+
+.skip-to-content:focus {
+  outline: 3px solid #8eb6ff !important;
+}
+
+/* Subpage heroes — left-aligned, tighter, no kicker dominance */
+.page-hero {
+  text-align: left;
+}
+
+.page-hero-content {
+  max-width: 42rem;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.page-hero .section-subtitle {
+  display: none; /* craft floor: no decorative kickers */
+}
+
+.page-hero-title {
+  letter-spacing: -0.03em;
+}
+
+/* Shared glass cards */
+.card,
+.package-card,
+.capability-card,
+.quality-card,
+.process-step .step-content,
+.founder-card,
+.contact-form-card,
+.contact-pitch {
+  border-radius: 14px !important;
+  background-color: #12141c !important;
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 55%,
+    rgba(100, 140, 200, 0.04) 100%
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28) !important;
+}
+
+.package-card.highlighted {
+  border-color: rgba(140, 170, 255, 0.28) !important;
+  background-image: linear-gradient(
+    165deg,
+    rgba(100, 140, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.03) 55%
+  ) !important;
+  background-color: #12141c !important;
+}
+
+.package-card.highlighted::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(160, 190, 255, 0.55),
+    transparent
+  ) !important;
+  height: 1px !important;
+  width: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.package-badge,
+.mvp-badge {
+  border-radius: 999px !important;
+  background: rgba(91, 156, 255, 0.12) !important;
+  border: 1px solid rgba(91, 156, 255, 0.25) !important;
+  color: #c8dcff !important;
+}
+
+/* Buttons stay pill */
+.btn,
+.btn-primary,
+.btn-secondary {
+  border-radius: 999px !important;
+}
+
+/* Contact chips — cool blue not purple */
+.requirement-chip,
+.suggestion-chip,
+.contact-form .chip,
+button.chip {
+  background: rgba(91, 156, 255, 0.1) !important;
+  border-color: rgba(91, 156, 255, 0.28) !important;
+  color: #dce8ff !important;
+}
+
+.requirement-chip.active,
+.suggestion-chip.active,
+button.chip.active,
+button.chip[aria-pressed="true"] {
+  background: rgba(91, 156, 255, 0.22) !important;
+  border-color: rgba(140, 180, 255, 0.45) !important;
+}
+
+/* Nav active */
+.nav-link[aria-current="page"] {
+  color: #fff !important;
+  opacity: 1;
+}
+
+.nav-link[aria-current="page"]::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 0.2rem;
+  border-radius: 2px;
+  background: rgba(160, 190, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .nav-link[aria-current="page"]::after {
+    width: 2rem;
+  }
+}

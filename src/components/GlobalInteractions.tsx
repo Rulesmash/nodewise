@@ -116,75 +116,45 @@ export default function GlobalInteractions() {
   }
 
   function initScrollAnimations() {
-    const fadeUpSections = document.querySelectorAll(".section-header, .capabilities-grid, .about-grid, .quality-grid, .founder-card");
+    const fadeUpSections = document.querySelectorAll(
+      ".capabilities-grid, .about-grid, .quality-grid, .founder-card, body:not(:has(.home-page)) .section-header, .home-page .section-header:not([data-reveal])"
+    );
 
     fadeUpSections.forEach(section => {
-      gsap.fromTo(section,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.0,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 85%",
-            toggleActions: "play none none none"
-          }
-        }
-      );
+      if ((section as HTMLElement).closest?.(".home-page [data-reveal], .home-page [data-reveal-stagger]")) {
+        return;
+      }
+      // Transform-only — never opacity (content flash/invisible risk)
+      gsap.from(section, {
+        y: 28,
+        duration: 0.75,
+        ease: "power2.out",
+        immediateRender: false,
+        clearProps: "transform",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+          toggleActions: "play none none none",
+          once: true,
+        },
+      });
     });
 
     if (document.querySelector(".capability-card")) {
-      gsap.fromTo(".capability-card",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".capabilities-grid",
-            start: "top 80%"
-          }
-        }
-      );
+      gsap.from(".capability-card", {
+        y: 24,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: "power2.out",
+        immediateRender: false,
+        clearProps: "transform",
+        scrollTrigger: {
+          trigger: ".capabilities-grid",
+          start: "top 80%",
+          once: true,
+        },
+      });
     }
-
-    const portfolioItems = document.querySelectorAll(".portfolio-item-card");
-    portfolioItems.forEach(item => {
-      const media = item.querySelector(".portfolio-media");
-      const info = item.querySelector(".portfolio-info");
-
-      gsap.fromTo(media,
-        { opacity: 0, x: item.classList.contains("inverted") ? 40 : -40 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 75%"
-          }
-        }
-      );
-
-      gsap.fromTo(info,
-        { opacity: 0, x: item.classList.contains("inverted") ? -40 : 40 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 75%"
-          }
-        }
-      );
-    });
 
     const processTimeline = document.querySelector(".process-timeline");
     if (processTimeline) {
@@ -218,37 +188,20 @@ export default function GlobalInteractions() {
     }
 
     if (document.querySelector(".founder-card")) {
-      gsap.fromTo(".founder-card",
-        { opacity: 0, scale: 0.95, y: 20 },
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          stagger: 0.2,
-          duration: 0.8,
-          ease: "back.out(1.2)",
-          scrollTrigger: {
-            trigger: ".team-grid",
-            start: "top 80%"
-          }
-        }
-      );
-    }
-
-    gsap.fromTo(".hero-content > *",
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
+      gsap.from(".founder-card", {
+        y: 18,
+        duration: 0.7,
         stagger: 0.15,
-        duration: 1.2,
-        ease: "power3.out",
-        delay: 0.2,
+        ease: "power2.out",
+        immediateRender: false,
+        clearProps: "transform",
         scrollTrigger: {
-          trigger: "#hero"
-        }
-      }
-    );
+          trigger: ".team-grid",
+          start: "top 80%",
+          once: true,
+        },
+      });
+    }
   }
 
   function initPortfolioModal() {

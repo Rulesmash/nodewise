@@ -1,0 +1,417 @@
+/* Site-wide mobile adaptation — thumbs-first, safe areas, no horizontal bleed */
+
+:root {
+  --mobile-pad: max(1rem, env(safe-area-inset-left, 0px));
+  --mobile-pad-r: max(1rem, env(safe-area-inset-right, 0px));
+  --header-h-m: 64px;
+  --touch: 44px;
+}
+
+/* Prevent iOS rubber-band horizontal scroll */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@media (max-width: 768px) {
+  /* —— Header / drawer —— */
+  .main-header {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .header-container {
+    height: var(--header-h-m);
+    min-height: var(--header-h-m);
+    padding-left: var(--mobile-pad);
+    padding-right: var(--mobile-pad-r);
+  }
+
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  .mobile-toggle {
+    width: var(--touch);
+    height: var(--touch);
+    min-width: var(--touch);
+    min-height: var(--touch);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 120;
+    position: relative;
+  }
+
+  .mobile-toggle .bar {
+    width: 22px;
+    height: 2px;
+    display: block;
+    background: var(--text-primary);
+    border-radius: 1px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .mobile-toggle .bar + .bar {
+    margin-top: 5px;
+  }
+
+  /* Drawer: transform so it never expands document width */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(86vw, 320px);
+    max-width: 320px;
+    height: 100dvh;
+    height: 100vh;
+    padding: calc(var(--header-h-m) + env(safe-area-inset-top, 0px) + 0.5rem) 0
+      calc(2rem + env(safe-area-inset-bottom, 0px));
+    transform: translateX(105%);
+    right: 0;
+    visibility: visible;
+    pointer-events: none;
+    z-index: 110;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+    pointer-events: auto;
+    right: 0;
+  }
+
+  /* Kill old right:-70% positioning bleed */
+  .nav-menu:not(.active) {
+    right: 0;
+  }
+
+  .nav-menu .nav-link {
+    min-height: var(--touch);
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.35rem;
+    font-size: 1.05rem;
+  }
+
+  .nav-menu .nav-btn-cta,
+  .nav-menu .btn {
+    margin: 1.25rem 1.35rem 0;
+    width: calc(100% - 2.7rem);
+    min-height: var(--touch);
+    justify-content: center;
+  }
+
+  /* Backdrop as body sibling class toggled via header */
+  .nav-backdrop {
+    display: none;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  body.nav-open .main-header {
+    z-index: 5000;
+  }
+
+  body.nav-open .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 5005;
+    background: rgba(0, 0, 0, 0.72);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  body.nav-open .nav-menu.active {
+    z-index: 5010;
+    background-color: #12131a;
+    box-shadow: -12px 0 40px rgba(0, 0, 0, 0.55);
+  }
+
+  body.nav-open .mobile-toggle {
+    z-index: 5020;
+  }
+
+  /* —— Layout density —— */
+  section {
+    padding: 3.25rem 0;
+  }
+
+  .container {
+    padding-left: var(--mobile-pad);
+    padding-right: var(--mobile-pad-r);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-hero {
+    padding-top: calc(var(--header-h-m) + env(safe-area-inset-top, 0px) + 2rem);
+    padding-bottom: 2rem;
+  }
+
+  .page-hero-title {
+    font-size: clamp(1.75rem, 7.5vw, 2.15rem);
+    letter-spacing: -0.03em;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .page-hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Decorative eyebrows eat vertical space on small screens */
+  .page-hero .section-subtitle,
+  .page-hero > .container > .section-subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.45rem, 6vw, 1.85rem);
+    overflow-wrap: anywhere;
+  }
+
+  /* —— Buttons / CTAs —— */
+  .btn {
+    min-height: var(--touch);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    gap: 1.25rem;
+    padding: 1.35rem 1.25rem;
+  }
+
+  .cta-banner-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-banner-title {
+    font-size: 1.35rem;
+  }
+
+  /* —— Cards / grids —— */
+  .packages-grid,
+  .capabilities-grid,
+  .quality-grid,
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .package-card,
+  .capability-card,
+  .card {
+    padding: 1.35rem 1.2rem;
+  }
+
+  .package-btn {
+    min-height: var(--touch);
+  }
+
+  /* —— MVP highlight —— */
+  .mvp-highlight-card {
+    flex-direction: column !important;
+    background-color: #12141c !important;
+  }
+
+  .mvp-highlight-content,
+  .mvp-highlight-pricing {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.35rem 1.2rem !important;
+    border-right: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .mvp-highlight-pricing {
+    background-color: #0e1018 !important;
+  }
+
+  .mvp-pricing-box {
+    background: #181c28 !important;
+    opacity: 1 !important;
+  }
+
+  .mvp-feature-grid {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mvp-price-big {
+    font-size: 2.15rem !important;
+    opacity: 1 !important;
+    color: #fff !important;
+  }
+
+  /* —— Contact —— */
+  .contact-form-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-pitch,
+  .contact-form-container {
+    padding: 1.35rem 1.2rem !important;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .contact-form input,
+  .contact-form textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 16px !important; /* prevent iOS zoom */
+    min-height: var(--touch);
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  .suggestion-chips,
+  .requirement-chips,
+  [class*="chip"] {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .suggestion-chips button,
+  .requirement-chips button,
+  button[class*="chip"] {
+    min-height: 40px;
+    font-size: 0.85rem;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.3;
+    max-width: 100%;
+  }
+
+  /* —— Process timeline —— */
+  .process-step {
+    gap: 1rem;
+  }
+
+  .step-content {
+    padding: 1.1rem;
+    min-width: 0;
+  }
+
+  .step-content h3,
+  .step-content p {
+    overflow-wrap: anywhere;
+  }
+
+  /* —— About / founders —— */
+  .founder-card {
+    max-width: 100%;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem;
+  }
+
+  /* —— Footer —— */
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .footer-links-group {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-col a,
+  .footer-links a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* —— Floating WhatsApp —— */
+  .floating-wa-wrapper {
+    bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+    right: max(1rem, env(safe-area-inset-right, 0px));
+  }
+
+  .floating-wa-button {
+    width: var(--touch);
+    height: var(--touch);
+    min-width: var(--touch);
+    min-height: var(--touch);
+  }
+
+  .wa-tooltip {
+    display: none !important; /* hover-only chrome; useless on touch */
+  }
+
+  /* —— Misc overflow —— */
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2.75rem 0;
+  }
+
+  .footer-links-group {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .page-hero-title {
+    font-size: 1.7rem;
+  }
+
+  .mvp-highlight-content,
+  .mvp-highlight-pricing,
+  .contact-pitch,
+  .contact-form-container,
+  .package-card {
+    padding: 1.15rem 1rem !important;
+  }
+}
+
+/* Prefer reduced motion: kill WA vibration on mobile too */
+@media (prefers-reduced-motion: reduce) {
+  .floating-wa-button,
+  .wa-tooltip {
+    animation: none !important;
+  }
+}

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Check, X, ArrowRight, Clock, Rocket, Shield, Target } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
@@ -7,27 +6,28 @@ import {
   breadcrumbJsonLd,
   faqJsonLd,
   serviceJsonLd,
+  productOfferJsonLd,
   webPageJsonLd,
 } from "@/lib/seo";
+import "./ztm.css";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Zero to MVP — Build Your Idea in 10–14 Days for ₹29,999",
+  title: "Zero to MVP — Live Product in 10–14 Days for ₹29,999",
   description:
-    "Turn your startup idea into a live, investor-ready MVP in 10–14 days. Fixed price ₹29,999 INR. Includes consultation, core features, responsive web app, source code, and full ownership.",
+    "Turn your idea into a live, investor-ready MVP in 10–14 days. Fixed ₹29,999: consultation, core features, responsive web app, source code, docs and full ownership transfer.",
   path: "/zero-to-mvp",
   keywords: [
     "MVP development India",
-    "build MVP fast",
+    "build MVP in 2 weeks",
+    "fixed price MVP",
     "startup MVP package",
-    "affordable MVP development",
-    "MVP in 2 weeks",
-    "₹29999 MVP",
+    "investor ready MVP",
   ],
 });
 
 export default function ZeroToMVP() {
   return (
-    <>
+    <div className="ztm-page">
       <JsonLd
         data={[
           webPageJsonLd({
@@ -41,6 +41,13 @@ export default function ZeroToMVP() {
             { name: "Home", path: "/" },
             { name: "Zero to MVP", path: "/zero-to-mvp" },
           ]),
+          productOfferJsonLd({
+            name: "Zero to MVP",
+            description:
+              "Live showcase-ready Minimum Viable Product in 10–14 days for ₹29,999 with full source code and ownership.",
+            path: "/zero-to-mvp",
+            price: 29999,
+          }),
           serviceJsonLd({
             name: "Zero to MVP Package",
             description:
@@ -72,96 +79,162 @@ export default function ZeroToMVP() {
           ]),
         ]}
       />
-      {/* Hero Section */}
+
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="section-subtitle">Zero to MVP</span>
-            <h1 className="page-hero-title" style={{ maxWidth: '800px', margin: '0 auto 1.5rem' }}>
-              Turn your idea into a working product in just 10–14 days
+            <p className="ztm-product-name">Zero to MVP</p>
+            <h1 className="page-hero-title">
+              Turn your idea into a working product in 10–14 days
             </h1>
-            <p className="page-hero-subtitle" style={{ maxWidth: '700px', margin: '0 auto' }}>
-              Get a live, showcase-ready Minimum Viable Product (MVP) that you can show to users, investors, or test in the market. Perfect for early-stage founders.
+            <p className="page-hero-subtitle">
+              A live, showcase-ready MVP you can show users or investors—fixed
+              price, full ownership, no agency bloat.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content & Pricing */}
-      <section className="mvp-dedicated-section" style={{ paddingTop: "2rem", paddingBottom: "5rem" }}>
+      <section className="ztm-section">
         <div className="container">
-          <div className="mvp-split-layout">
-            
-            {/* Left Content Column */}
-            <div className="mvp-content-col">
-              
-              <div className="mvp-feature-block">
-                <h3 className="mvp-block-title">What You Get</h3>
-                <ul className="mvp-feature-list included">
-                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>30-minute idea consultation</strong> to refine your scope</span></li>
-                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Core MVP</strong> with your most important features built</span></li>
-                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Clean, responsive web app</strong> deployed with a live link</span></li>
-                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Full source code</strong> + comprehensive documentation</span></li>
-                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>Complete ownership</strong> seamlessly transferred to you</span></li>
-                  <li><Check className="icon-check" aria-hidden="true" /> <span><strong>2 rounds of revisions</strong> to polish the final product</span></li>
+          <div className="ztm-layout">
+            <div className="ztm-main">
+              <div className="ztm-panel">
+                <h2>What you get</h2>
+                <ul className="ztm-list">
+                  <li>
+                    <Check className="icon-check" size={18} aria-hidden="true" />
+                    <span>
+                      <strong>30-minute idea consultation</strong> to refine
+                      your scope
+                    </span>
+                  </li>
+                  <li>
+                    <Check className="icon-check" size={18} aria-hidden="true" />
+                    <span>
+                      <strong>Core MVP</strong> with your most important
+                      features built
+                    </span>
+                  </li>
+                  <li>
+                    <Check className="icon-check" size={18} aria-hidden="true" />
+                    <span>
+                      <strong>Clean, responsive web app</strong> deployed with a
+                      live link
+                    </span>
+                  </li>
+                  <li>
+                    <Check className="icon-check" size={18} aria-hidden="true" />
+                    <span>
+                      <strong>Full source code</strong> + documentation
+                    </span>
+                  </li>
+                  <li>
+                    <Check className="icon-check" size={18} aria-hidden="true" />
+                    <span>
+                      <strong>Complete ownership</strong> transferred to you
+                    </span>
+                  </li>
+                  <li>
+                    <Check className="icon-check" size={18} aria-hidden="true" />
+                    <span>
+                      <strong>2 rounds of revisions</strong> to polish the
+                      product
+                    </span>
+                  </li>
                 </ul>
               </div>
 
-              <div className="mvp-feature-block">
-                <h3 className="mvp-block-title">Perfect For</h3>
-                <ul className="mvp-feature-list perfect-for">
-                  <li><Target className="icon-target" aria-hidden="true" /> <span>Validating your idea quickly in the real market</span></li>
-                  <li><Shield className="icon-target" aria-hidden="true" /> <span>Showing investors a tangible, working product</span></li>
-                  <li><Rocket className="icon-target" aria-hidden="true" /> <span>Testing with real users to gather actionable feedback</span></li>
-                  <li><Clock className="icon-target" aria-hidden="true" /> <span>Starting your business without huge upfront costs</span></li>
+              <div className="ztm-panel">
+                <h2>Perfect for</h2>
+                <ul className="ztm-list">
+                  <li>
+                    <Target className="icon-meta" size={18} aria-hidden="true" />
+                    <span>Validating your idea quickly in the real market</span>
+                  </li>
+                  <li>
+                    <Shield className="icon-meta" size={18} aria-hidden="true" />
+                    <span>Showing investors a tangible, working product</span>
+                  </li>
+                  <li>
+                    <Rocket className="icon-meta" size={18} aria-hidden="true" />
+                    <span>Testing with real users for actionable feedback</span>
+                  </li>
+                  <li>
+                    <Clock className="icon-meta" size={18} aria-hidden="true" />
+                    <span>Starting without huge upfront costs</span>
+                  </li>
                 </ul>
               </div>
 
-              <div className="mvp-feature-block excluded-block">
-                <h3 className="mvp-block-title">Not Included</h3>
-                <p className="mvp-block-desc">To keep timelines tight and costs low, this package excludes:</p>
-                <ul className="mvp-feature-list excluded">
-                  <li><X className="icon-x" aria-hidden="true" /> <span>Complex integrations (e.g. enterprise CRMs, banking APIs)</span></li>
-                  <li><X className="icon-x" aria-hidden="true" /> <span>Native mobile apps (iOS/Android App Store publishing)</span></li>
-                  <li><X className="icon-x" aria-hidden="true" /> <span>Massive scalable cloud architecture (designed for MVP traffic)</span></li>
+              <div className="ztm-panel">
+                <h2>Not included</h2>
+                <p>
+                  To keep timelines tight and costs low, this package excludes:
+                </p>
+                <ul className="ztm-list">
+                  <li>
+                    <X className="icon-x" size={18} aria-hidden="true" />
+                    <span>
+                      Complex integrations (enterprise CRMs, banking APIs)
+                    </span>
+                  </li>
+                  <li>
+                    <X className="icon-x" size={18} aria-hidden="true" />
+                    <span>
+                      Native mobile apps (iOS/Android store publishing)
+                    </span>
+                  </li>
+                  <li>
+                    <X className="icon-x" size={18} aria-hidden="true" />
+                    <span>
+                      Massive scalable cloud architecture (MVP traffic scale)
+                    </span>
+                  </li>
                 </ul>
               </div>
-
             </div>
 
-            {/* Right Pricing Column */}
-            <div className="mvp-pricing-col">
-              <div className="mvp-pricing-card sticky-card">
-                <div className="mvp-card-header">
-                  <span className="mvp-badge">Most Popular for Founders</span>
-                  <h2 className="mvp-price">₹29,999 <span>(one-time)</span></h2>
-                  <div className="mvp-timeline">
-                    <Clock size={18} aria-hidden="true" />
-                    <span><strong>Timeline:</strong> 10–14 days <br/><small>(depending on complexity)</small></span>
-                  </div>
+            <aside className="ztm-side">
+              <div className="ztm-price-card">
+                <span className="ztm-badge">For early-stage founders</span>
+                <p className="ztm-price">
+                  ₹29,999 <span>(one-time)</span>
+                </p>
+                <div className="ztm-timeline">
+                  <Clock size={18} aria-hidden="true" />
+                  <span>
+                    <strong>Timeline:</strong> 10–14 days
+                    <br />
+                    <small>from scope confirmation</small>
+                  </span>
                 </div>
-                
-                <div className="mvp-card-body">
-                  <p className="mvp-card-desc">Lock in your spot and let's start building your product this week.</p>
-                  <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
-                    target="_blank" rel="noopener noreferrer" className="btn btn-primary mvp-cta-btn" id="lnk-dedicated-mvp-whatsapp">
-                    <span>Start Your MVP</span>
-                    <span className="sr-only"> (opens WhatsApp in a new tab)</span>
-                    <ArrowRight className="btn-icon" aria-hidden="true" />
-                  </a>
-                </div>
-
-                <div className="mvp-card-footer">
-                  <h4>After your MVP:</h4>
-                  <p>We also offer a <strong>Growth Retainer plan</strong> if you want us to continue building features, fix bugs, and scale your product post-launch.</p>
+                <a
+                  href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary ztm-cta"
+                  id="lnk-dedicated-mvp-whatsapp"
+                >
+                  <span>Start Your MVP</span>
+                  <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                  <ArrowRight className="btn-icon" aria-hidden="true" />
+                </a>
+                <p className="ztm-price-note">
+                  Lock in your spot and start building this week.
+                </p>
+                <div className="ztm-after">
+                  <h3>After your MVP</h3>
+                  <p>
+                    Optional Growth Retainer for ongoing features, fixes, and
+                    scaling after launch—quoted separately when you need it.
+                  </p>
                 </div>
               </div>
-            </div>
-
+            </aside>
           </div>
         </div>
       </section>
-
-    </>
+    </div>
   );
 }

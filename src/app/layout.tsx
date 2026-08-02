@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
+import localFont from "next/font/local";
+import { Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "./site-system.css";
+import "./mobile-adapt.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ThreeBackground from "@/components/ThreeBackground";
@@ -14,17 +17,17 @@ import {
   websiteJsonLd,
 } from "@/lib/seo";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
   variable: "--font-header",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: "100 900",
   display: "swap",
 });
 
-const outfit = Outfit({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -41,11 +44,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | ${SITE.tagline}`,
+    default: `${SITE.name} | Startup MVP & Custom Web Development`,
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Nodewise is an agile digital product studio building custom web applications, MVPs, and business software optimized for profitability and speed. Transparent INR pricing. India-based, worldwide delivery.",
+    "Nodewise builds startup MVPs and custom web platforms. Zero to MVP from ₹29,999 in 10–14 days with full ownership. Transparent INR pricing. India-based, worldwide delivery.",
   applicationName: SITE.name,
   authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
@@ -63,15 +66,16 @@ export const metadata: Metadata = {
     languages: {
       "en-IN": `${SITE.url}/`,
       en: `${SITE.url}/`,
+      "x-default": `${SITE.url}/`,
     },
   },
   openGraph: {
     type: "website",
     locale: SITE.locale,
     url: `${SITE.url}/`,
-    title: `${SITE.name} | ${SITE.tagline}`,
+    title: `${SITE.name} | Startup MVP & Custom Web Development`,
     description:
-      "Custom web platforms, MVPs, and business software engineered for growth. Transparent pricing from India.",
+      "Fixed-price MVPs from ₹29,999 in 10–14 days. Custom web platforms and business software. Transparent pricing from India.",
     siteName: SITE.name,
     images: [
       {
@@ -84,9 +88,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} | ${SITE.tagline}`,
+    title: `${SITE.name} | Startup MVP & Custom Web Development`,
     description:
-      "Custom web platforms, MVPs, and business software engineered for growth.",
+      "Fixed-price MVPs from ₹29,999 in 10–14 days. Custom web platforms. India-based, worldwide.",
     images: [SITE.ogImage],
   },
   robots: {
@@ -105,6 +109,12 @@ export const metadata: Metadata = {
     icon: [{ url: "/favicon.ico" }],
     apple: [{ url: SITE.logoIcon }],
   },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: SITE.name,
+    statusBarStyle: "black-translucent",
+  },
   other: {
     "geo.region": "IN",
     "geo.placename": "India",
@@ -118,10 +128,18 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${plusJakartaSans.variable} ${outfit.variable}`}
+      lang="en-IN"
+      className={`${geistSans.variable} ${manrope.variable}`}
     >
       <body>
+        {/*
+          THESIS: Category-standard founder homepage elevated by cinematic product motion—glass telemetry cards orbit a metallic sculpture; refuse generic particle wallpaper as the hero.
+          OWN-WORLD: Void charcoal, frosted glass panels, brushed metal 3D, soft cyan instrument light, pill CTAs, Geist + Manrope.
+          STORY: Founder grasps Zero to MVP (₹29,999 / 10–14 days / ownership) and acts via WhatsApp or consultation.
+          FIRST VIEWPORT: Left headline + bullets + CTAs; right HeroStage (orbiting metal + floating glass offer cards). Primary: View Our Work / Start Your MVP below.
+          FORM: Canon category standard; seed 70d60cdf; craft bar Raycast+Arc+Resend; motion pinned to design-inspo video.
+          FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+        */}
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"

@@ -9,14 +9,14 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Quality Standards — Performance, Security & Clean Code",
+  title: "Quality Standards — Performance, Security & Ownership",
   description:
-    "Nodewise engineering standards: rapid high-fidelity execution, performance optimization, secure architecture, and clean scalable code you can own and extend.",
+    "Nodewise engineering bar: performance-first delivery, secure architecture, clean code you own, and documentation so your team can extend the product.",
   path: "/quality",
   keywords: [
     "software quality standards",
-    "performance-focused development",
-    "clean code agency",
+    "performance focused development",
+    "clean code ownership",
   ],
 });
 

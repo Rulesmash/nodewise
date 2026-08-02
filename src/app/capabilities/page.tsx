@@ -12,12 +12,12 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Services — Web Platforms, Portals & Automation",
   description:
-    "Nodewise services: premium web presences, custom business portals, dashboards, and advanced automation. High-performance platforms engineered to scale your operations.",
+    "Nodewise services: high-converting web presence, custom business portals and dashboards, and workflow automation. Built for speed, clarity, and growth.",
   path: "/capabilities",
   keywords: [
-    "custom web portals",
-    "business dashboard development",
-    "process automation software",
+    "custom web portal development",
+    "business dashboard software",
+    "process automation India",
     "web application services",
   ],
 });

@@ -9,14 +9,14 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Process — Discovery to Launch",
+  title: "Our Process — Discovery, Build & Launch",
   description:
-    "How Nodewise builds software: discovery, architecture, agile sprints, and reliable launch. A clear collaboration path from bottleneck to scalable product.",
+    "How Nodewise ships software: discovery, architecture, focused sprints, and reliable launch. A clear path from idea or bottleneck to a live product.",
   path: "/process",
   keywords: [
-    "agile software process",
-    "web development workflow",
     "MVP development process",
+    "agile web development workflow",
+    "software delivery process",
   ],
 });
 

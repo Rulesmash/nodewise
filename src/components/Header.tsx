@@ -1,11 +1,73 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { ArrowRight, Calendar } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+
+const NAV = [
+  { href: "/portfolio", label: "Work", id: "nav-lnk-work" },
+  { href: "/zero-to-mvp", label: "Zero to MVP", id: "nav-lnk-mvp" },
+  { href: "/packages", label: "Pricing", id: "nav-lnk-packages" },
+  { href: "/about", label: "About", id: "nav-lnk-about" },
+] as const;
+
+const MOBILE_MQ = "(max-width: 768px)";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const navRef = useRef<HTMLElement | null>(null);
+  const pathname = usePathname() || "/";
+
+  const closeMenu = () => setMobileMenuOpen(false);
+  const toggleMenu = () => setMobileMenuOpen((o) => !o);
+
+  const isActive = (href: string) =>
+    mounted &&
+    (pathname === href || (href !== "/" && pathname.startsWith(href)));
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Close drawer on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.classList.toggle("nav-open", mobileMenuOpen);
+    return () => document.body.classList.remove("nav-open");
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mobileMenuOpen]);
+
+  // inert ONLY when mobile drawer is closed — never on desktop (was blocking clicks)
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+
+    const syncInert = () => {
+      const isMobile = window.matchMedia(MOBILE_MQ).matches;
+      if (isMobile && !mobileMenuOpen) {
+        nav.setAttribute("inert", "");
+      } else {
+        nav.removeAttribute("inert");
+      }
+    };
+
+    syncInert();
+    const mq = window.matchMedia(MOBILE_MQ);
+    mq.addEventListener("change", syncInert);
+    return () => mq.removeEventListener("change", syncInert);
+  }, [mobileMenuOpen]);
 
   return (
     <header className="main-header" role="banner">
@@ -13,41 +75,81 @@ export default function Header() {
         Skip to main content
       </a>
       <div className="header-container">
-        <Link href="/" className="logo" id="nav-logo-link" aria-label="Nodewise Homepage">
-          <img src="/favicon.ico" alt="" aria-hidden="true" className="logo-image" id="logo-img" />
+        <Link
+          href="/"
+          className="logo"
+          id="nav-logo-link"
+          aria-label="Nodewise Homepage"
+          onClick={closeMenu}
+        >
+          <img
+            src="/favicon.ico"
+            alt=""
+            aria-hidden="true"
+            className="logo-image"
+            id="logo-img"
+          />
           <span className="logo-text">Nodewise.cc</span>
         </Link>
 
         <div className="header-right">
           <nav
-            className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}
+            ref={navRef}
+            className={`nav-menu${mobileMenuOpen ? " active" : ""}`}
             id="nav-menu"
             aria-label="Main Navigation"
           >
-            <Link href="/portfolio" className="nav-link" id="nav-lnk-work" onClick={() => setMobileMenuOpen(false)}>Work</Link>
-            <Link href="/zero-to-mvp" className="nav-link mvp-nav-link" id="nav-lnk-mvp" onClick={() => setMobileMenuOpen(false)}>Zero to MVP</Link>
-            <Link href="/packages" className="nav-link" id="nav-lnk-packages" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-            <Link href="/process" className="nav-link" id="nav-lnk-process" onClick={() => setMobileMenuOpen(false)}>Process</Link>
-            <Link href="/capabilities" className="nav-link" id="nav-lnk-capabilities" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/about" className="nav-link" id="nav-lnk-about" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link href="/quality" className="nav-link" id="nav-lnk-quality" onClick={() => setMobileMenuOpen(false)}>Quality</Link>
-            <Link href="/contact" className="btn btn-secondary nav-btn-cta" id="nav-btn-schedule" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            {NAV.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`nav-link${
+                  item.href === "/zero-to-mvp" ? " mvp-nav-link" : ""
+                }`}
+                id={item.id}
+                onClick={closeMenu}
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="btn btn-secondary nav-btn-cta"
+              id="nav-btn-schedule"
+              onClick={closeMenu}
+              aria-current={isActive("/contact") ? "page" : undefined}
+            >
+              Contact
+            </Link>
           </nav>
 
-          <button 
-            className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`} 
-            id="mobile-menu-toggle" 
-            aria-label="Toggle navigation menu"
+          <button
+            type="button"
+            className={`mobile-toggle${mobileMenuOpen ? " active" : ""}`}
+            id="mobile-menu-toggle"
+            aria-label={
+              mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             aria-expanded={mobileMenuOpen}
             aria-controls="nav-menu"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={toggleMenu}
           >
-            <span className="bar" aria-hidden="true"></span>
-            <span className="bar" aria-hidden="true"></span>
-            <span className="bar" aria-hidden="true"></span>
+            <span className="bar" aria-hidden="true" />
+            <span className="bar" aria-hidden="true" />
+            <span className="bar" aria-hidden="true" />
           </button>
         </div>
       </div>
+
+      {mobileMenuOpen ? (
+        <button
+          type="button"
+          className="nav-backdrop"
+          aria-label="Close navigation menu"
+          onClick={closeMenu}
+        />
+      ) : null}
     </header>
   );
 }

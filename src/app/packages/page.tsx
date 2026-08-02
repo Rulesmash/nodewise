@@ -6,19 +6,20 @@ import {
   buildMetadata,
   breadcrumbJsonLd,
   serviceJsonLd,
+  offerCatalogJsonLd,
   webPageJsonLd,
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Pricing & Packages — Transparent Web Development Cost",
+  title: "Web Development Pricing India — Packages from ₹12k",
   description:
-    "Nodewise web development pricing in INR: Starter ₹12k–15k, Growth from ₹25k, Enterprise custom. Transparent packages for websites, portals, and business software.",
+    "Transparent Nodewise pricing: Starter ₹12,000–15,000, Growth from ₹25,000, Enterprise custom. Clear packages for websites, portals and business software.",
   path: "/packages",
   keywords: [
-    "web development pricing India",
-    "website package cost",
-    "affordable web development",
-    "custom software pricing",
+    "web development cost India",
+    "website package price",
+    "affordable custom software",
+    "INR web development pricing",
   ],
 });
 
@@ -52,6 +53,26 @@ export default function Packages() {
             path: "/packages",
             price: 25000,
           }),
+          offerCatalogJsonLd("Nodewise Service Packages", [
+            {
+              name: "Starter Foundation",
+              description: "Premium digital footprint for small businesses.",
+              path: "/packages",
+              price: 12000,
+              priceMax: 15000,
+            },
+            {
+              name: "Growth Engine",
+              description: "Conversion-focused platforms for growing businesses.",
+              path: "/packages",
+              price: 25000,
+            },
+            {
+              name: "Enterprise Architecture",
+              description: "Custom enterprise web architecture and advanced systems.",
+              path: "/packages",
+            },
+          ]),
           serviceJsonLd({
             name: "Enterprise Architecture",
             description:
