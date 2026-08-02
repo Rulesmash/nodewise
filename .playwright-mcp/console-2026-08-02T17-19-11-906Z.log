@@ -1,0 +1,95 @@
+[     102ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[     104ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/portfolio:0
+[     311ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[     413ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[     413ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/portfolio:0
+[     420ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/portfolio:0
+[    7946ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[    7947ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/packages:0
+[    8129ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[    8204ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[    8204ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/packages:0
+[    8208ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/packages:0
+[    9437ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[    9437ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/about:0
+[    9622ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[    9699ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[    9699ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/about:0
+[    9703ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/about:0
+[    9996ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[    9996ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/:0
+[   10206ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[   10330ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   10330ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/:0
+[   10358ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/:0
+[  255132ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  255133ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/portfolio:0
+[  255313ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  255444ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  255444ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/portfolio:0
+[  255453ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/portfolio:0
+[  259233ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  259233ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/:0
+[  259417ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  259603ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  259603ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/:0
+[  259607ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/:0
+[  259701ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  259701ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/zero-to-mvp:0
+[  259890ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  259972ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  259972ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/zero-to-mvp:0
+[  259975ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/zero-to-mvp:0
+[  260087ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  260087ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/packages:0
+[  260271ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  260351ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  260351ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/packages:0
+[  260354ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/packages:0
+[  260473ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  260474ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/capabilities:0
+[  260674ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  260740ms] [WARNING] Element not found: .capabilities-grid @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/Observer.js:138
+[  260761ms] [WARNING] Element not found: .capabilities-grid @ webpack-internal:///(app-pages-browser)/./node_modules/gsap/Observer.js:138
+[  260767ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  260768ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/capabilities:0
+[  260774ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/capabilities:0
+[  260854ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  260855ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/process:0
+[  261057ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  261177ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  261177ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/process:0
+[  261183ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/process:0
+[  261257ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  261257ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/about:0
+[  261469ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  261560ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  261560ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/about:0
+[  261564ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/about:0
+[  261625ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  261625ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/quality:0
+[  261857ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  261939ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  261939ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/quality:0
+[  261940ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/quality:0
+[  261990ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  261990ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/contact:0
+[  262189ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  262264ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  262264ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/contact:0
+[  262265ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/contact:0
+[  262393ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  262393ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/:0
+[  262573ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  262713ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  262713ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/:0
+[  262718ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/:0
+[  263055ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  263055ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/portfolio:0
+[  263055ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/portfolio:0
+[  616301ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  616301ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/portfolio:0
+[  616488ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  616617ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3010/manifest.webmanifest:0
+[  616617ms] [ERROR] Manifest fetch from http://localhost:3010/manifest.webmanifest failed, code 500 @ http://localhost:3010/portfolio:0
+[  616623ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3010/portfolio:0

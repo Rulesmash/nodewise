@@ -1,0 +1,218 @@
+- generic [active] [ref=f26e1]:
+  - banner [ref=f26e2]:
+    - link "Skip to main content" [ref=f26e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=f26e4]:
+      - link "Nodewise Homepage" [ref=f26e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f26e7]: Nodewise.cc
+      - navigation "Main Navigation" [ref=f26e9]:
+        - link "Work" [ref=f26e10] [cursor=pointer]:
+          - /url: /portfolio
+        - link "Zero to MVP" [ref=f26e11] [cursor=pointer]:
+          - /url: /zero-to-mvp
+        - link "Pricing" [ref=f26e12] [cursor=pointer]:
+          - /url: /packages
+        - link "About" [ref=f26e13] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=f26e14] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=f26e15]:
+    - generic [ref=f26e16]:
+      - generic [ref=f26e18]:
+        - generic [ref=f26e19]:
+          - heading "Smarter Code. Better Solutions." [level=1] [ref=f26e20]
+          - list [ref=f26e22]:
+            - listitem [ref=f26e23]: ▪ High-performance custom web platforms
+            - listitem [ref=f26e24]: ▪ Reliable software engineered for growth
+            - listitem [ref=f26e25]: ▪ Premium code built for maximum profitability
+          - generic [ref=f26e26]:
+            - link "Start Your MVP (opens WhatsApp in a new tab)" [ref=f26e27] [cursor=pointer]:
+              - /url: https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999).
+              - generic [ref=f26e28]: Start Your MVP
+              - generic [ref=f26e29]: (opens WhatsApp in a new tab)
+            - link "View Our Work" [ref=f26e32] [cursor=pointer]:
+              - /url: /portfolio
+            - link "Schedule a Consultation" [ref=f26e34] [cursor=pointer]:
+              - /url: /contact
+        - generic [ref=f26e39]:
+          - generic:
+            - generic:
+              - generic: Zero to MVP
+              - paragraph: ₹29,999
+              - paragraph: one-time
+            - generic:
+              - generic: Timeline
+              - paragraph: 10–14 days
+              - paragraph: live and showcase-ready
+            - generic:
+              - generic: Ownership
+              - paragraph: Full source
+              - paragraph: code + docs transferred
+            - generic:
+              - generic: Core MVP
+              - paragraph: Essential features
+              - paragraph: responsive web app
+      - generic [ref=f26e43]:
+        - generic [ref=f26e44]:
+          - paragraph [ref=f26e45]: Zero to MVP
+          - heading "Turn your idea into a working product in just 10–14 days" [level=2] [ref=f26e46]
+          - paragraph [ref=f26e47]: Get a live, showcase-ready Minimum Viable Product (MVP) that you can show to users, investors, or test in the market. Perfect for early-stage founders.
+          - generic [ref=f26e48]:
+            - generic [ref=f26e49]:
+              - heading "What You Get" [level=3] [ref=f26e50]
+              - list [ref=f26e51]:
+                - listitem [ref=f26e52]:
+                  - generic [ref=f26e55]: 30-minute idea consultation
+                - listitem [ref=f26e56]:
+                  - generic [ref=f26e59]: Core MVP with essential features
+                - listitem [ref=f26e60]:
+                  - generic [ref=f26e63]: Clean, responsive web app (live)
+                - listitem [ref=f26e64]:
+                  - generic [ref=f26e67]: Full source code + docs
+                - listitem [ref=f26e68]:
+                  - generic [ref=f26e71]: Complete ownership transferred
+                - listitem [ref=f26e72]:
+                  - generic [ref=f26e75]: 2 rounds of revisions
+            - generic [ref=f26e76]:
+              - heading "Not Included" [level=3] [ref=f26e77]
+              - list [ref=f26e78]:
+                - listitem [ref=f26e79]:
+                  - generic [ref=f26e83]: Complex enterprise integrations
+                - listitem [ref=f26e84]:
+                  - generic [ref=f26e88]: Native mobile apps
+                - listitem [ref=f26e89]:
+                  - generic [ref=f26e93]: Massive scalable cloud architecture
+        - generic [ref=f26e95]:
+          - paragraph [ref=f26e96]: ₹29,999
+          - generic [ref=f26e97]: (one-time)
+          - generic [ref=f26e102]:
+            - strong [ref=f26e103]: "Timeline:"
+            - text: 10–14 days
+          - link "Start Your MVP (opens WhatsApp in a new tab)" [ref=f26e104] [cursor=pointer]:
+            - /url: https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999).
+            - generic [ref=f26e105]: Start Your MVP
+            - generic [ref=f26e106]: (opens WhatsApp in a new tab)
+          - link "View Full MVP Details →" [ref=f26e109] [cursor=pointer]:
+            - /url: /zero-to-mvp
+      - generic [ref=f26e111]:
+        - generic [ref=f26e112]:
+          - heading "Service Packages" [level=2] [ref=f26e113]
+          - paragraph [ref=f26e114]: Transparent Pricing
+        - generic [ref=f26e115]:
+          - generic [ref=f26e116]:
+            - generic [ref=f26e117]: Minimum
+            - heading "Starter Foundation" [level=3] [ref=f26e118]
+            - generic [ref=f26e119]: 12k - 15k INR
+            - paragraph [ref=f26e120]: Ideal for small businesses launching their first digital footprint.
+            - list [ref=f26e121]:
+              - listitem [ref=f26e122]:
+                - generic [ref=f26e125]: Basic Web Development
+              - listitem [ref=f26e126]:
+                - generic [ref=f26e129]: Simple Landing Pages
+              - listitem [ref=f26e130]:
+                - generic [ref=f26e133]: Entry-level SEO Setup
+              - listitem [ref=f26e134]:
+                - generic [ref=f26e137]: Basic Marketing Setup
+              - listitem [ref=f26e138]:
+                - generic [ref=f26e141]: Initial Architecture Consultation
+            - link "Inquire via WhatsApp (opens WhatsApp in a new tab)" [ref=f26e142] [cursor=pointer]:
+              - /url: https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Minimum%20package%20(12-15k%20INR).
+              - generic [ref=f26e143]: Inquire via WhatsApp
+              - generic [ref=f26e144]: (opens WhatsApp in a new tab)
+          - generic [ref=f26e147]:
+            - generic [ref=f26e148]: Standard
+            - heading "Growth Engine" [level=3] [ref=f26e149]
+            - generic [ref=f26e150]: 25k+ INR
+            - paragraph [ref=f26e151]: For growing ventures needing optimized funnels and light automation.
+            - list [ref=f26e152]:
+              - listitem [ref=f26e153]:
+                - generic [ref=f26e156]: Full Custom Web Development
+              - listitem [ref=f26e157]:
+                - generic [ref=f26e160]: Moderate Custom Solutions
+              - listitem [ref=f26e161]:
+                - generic [ref=f26e164]: Basic–Medium Dashboards & Portals
+              - listitem [ref=f26e165]:
+                - generic [ref=f26e168]: SEO + Conversion-focused Marketing
+              - listitem [ref=f26e169]:
+                - generic [ref=f26e172]: Light Workflow Automation
+            - link "Inquire via WhatsApp (opens WhatsApp in a new tab)" [ref=f26e173] [cursor=pointer]:
+              - /url: https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Standard%20package%20(25k%2B%20INR).
+              - generic [ref=f26e174]: Inquire via WhatsApp
+              - generic [ref=f26e175]: (opens WhatsApp in a new tab)
+          - generic [ref=f26e178]:
+            - generic [ref=f26e179]: Enterprise
+            - heading "Full Architecture" [level=3] [ref=f26e180]
+            - generic [ref=f26e181]: Custom Pricing
+            - paragraph [ref=f26e182]: Advanced software and multi-user portals for large-scale operations.
+            - list [ref=f26e183]:
+              - listitem [ref=f26e184]:
+                - generic [ref=f26e187]: Advanced Custom Software Platforms
+              - listitem [ref=f26e188]:
+                - generic [ref=f26e191]: Complex Dashboards & Multi-user Portals
+              - listitem [ref=f26e192]:
+                - generic [ref=f26e195]: Heavy Workflow Automation
+              - listitem [ref=f26e196]:
+                - generic [ref=f26e199]: Strategic Consultation & Integrations
+              - listitem [ref=f26e200]:
+                - generic [ref=f26e203]: Ongoing Technical Support
+            - link "Inquire via WhatsApp (opens WhatsApp in a new tab)" [ref=f26e204] [cursor=pointer]:
+              - /url: https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Enterprise%20custom%20software%20package.
+              - generic [ref=f26e205]: Inquire via WhatsApp
+              - generic [ref=f26e206]: (opens WhatsApp in a new tab)
+      - generic [ref=f26e211]:
+        - generic [ref=f26e212]:
+          - heading "Need a Custom Quote?" [level=2] [ref=f26e213]
+          - paragraph [ref=f26e214]: Unsure which tier fits? Let's discuss your project.
+        - link "Contact Us" [ref=f26e215] [cursor=pointer]:
+          - /url: /contact
+  - contentinfo [ref=f26e219]:
+    - generic [ref=f26e220]:
+      - generic [ref=f26e221]:
+        - paragraph [ref=f26e223]: Smarter Code. Better Solutions.
+        - list [ref=f26e224]:
+          - listitem [ref=f26e225]: ▪ Custom Web Platforms
+          - listitem [ref=f26e226]: ▪ High-Performance Software
+          - listitem [ref=f26e227]: ▪ Business Optimization
+        - link "Nodewise on LinkedIn" [ref=f26e229] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/nodewise-cc
+          - generic [ref=f26e234]: (opens in a new tab)
+      - generic [ref=f26e235]:
+        - generic [ref=f26e236]:
+          - heading "Explore" [level=4] [ref=f26e237]
+          - link "Home" [ref=f26e238] [cursor=pointer]:
+            - /url: /
+          - link "Work" [ref=f26e239] [cursor=pointer]:
+            - /url: /portfolio
+          - link "Zero to MVP" [ref=f26e240] [cursor=pointer]:
+            - /url: /zero-to-mvp
+          - link "Pricing" [ref=f26e241] [cursor=pointer]:
+            - /url: /packages
+        - generic [ref=f26e242]:
+          - heading "Company" [level=4] [ref=f26e243]
+          - link "About" [ref=f26e244] [cursor=pointer]:
+            - /url: /about
+          - link "Process" [ref=f26e245] [cursor=pointer]:
+            - /url: /process
+          - link "Services" [ref=f26e246] [cursor=pointer]:
+            - /url: /capabilities
+          - link "Quality" [ref=f26e247] [cursor=pointer]:
+            - /url: /quality
+          - link "Contact" [ref=f26e248] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=f26e249]:
+          - heading "Contact" [level=4] [ref=f26e250]
+          - link "nodewise.cc" [ref=f26e251] [cursor=pointer]:
+            - /url: https://nodewise.cc
+          - link "contact@nodewise.cc" [ref=f26e252] [cursor=pointer]:
+            - /url: mailto:contact@nodewise.cc
+          - link "+91 94469 98827 (WhatsApp, opens in a new tab)" [ref=f26e253] [cursor=pointer]:
+            - /url: https://wa.me/919446998827
+            - text: +91 94469 98827
+            - generic [ref=f26e254]: (WhatsApp, opens in a new tab)
+          - generic [ref=f26e255]: India · Worldwide
+          - generic [ref=f26e256]: © 2026 Nodewise.
+  - link "Chat on WhatsApp" [ref=f26e258] [cursor=pointer]:
+    - /url: https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I'd%20like%20to%20discuss%20a%20custom%20inquiry.
+    - generic [ref=f26e259]: (opens WhatsApp in a new tab)
+  - alert [ref=f26e262]

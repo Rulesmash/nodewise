@@ -1,8 +1,8 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowRight, Calendar, Check, X, Clock } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import HeroStage from "@/components/HeroStage";
 import HomeMotion from "@/components/HomeMotion";
 import {
   buildMetadata,
@@ -12,6 +12,13 @@ import {
   webPageJsonLd,
 } from "@/lib/seo";
 import "./home.css";
+
+const HeroStage = dynamic(() => import("@/components/HeroStage"), {
+  ssr: false,
+  loading: () => (
+    <div className="hero-stage hero-stage--loading" aria-hidden="true" />
+  ),
+});
 
 export const metadata: Metadata = buildMetadata({
   title: "Startup MVP & Custom Web Development in India",

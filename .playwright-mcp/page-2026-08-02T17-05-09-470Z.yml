@@ -1,0 +1,94 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: WHITEBULL.
+        - generic [ref=e8]: by Nodewise.cc
+      - generic [ref=e9]:
+        - link "Nodewise.cc" [ref=e10] [cursor=pointer]:
+          - /url: https://nodewise.cc
+        - link "Open demo" [ref=e11] [cursor=pointer]:
+          - /url: /app
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - heading "Indian equity research desk — charts, news, and structured analysis in one surface." [level=1] [ref=e16]
+      - paragraph [ref=e17]: Whitebull bridges chart terminals and news portals. Built by Nodewise.cc as a full-stack research assistant; preserved here as an interactive showcase with demo data.
+      - generic [ref=e18]:
+        - link "Open interactive demo" [ref=e19] [cursor=pointer]:
+          - /url: /app
+        - link "View capabilities" [ref=e22] [cursor=pointer]:
+          - /url: "#capabilities"
+    - paragraph [ref=e25]: Client engagement concluded. The product experience is retained as a Nodewise studio showcase — live market and AI backends removed; all figures are illustrative demo placeholders.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - heading "The gap" [level=2] [ref=e28]
+        - paragraph [ref=e29]: Chart-heavy platforms show prices and indicators without explaining the news driving them. News portals surface headlines without the technical stack. Traders and researchers stitch both together manually.
+      - generic [ref=e30]:
+        - heading "The approach" [level=2] [ref=e31]
+        - paragraph [ref=e32]: "Whitebull acts as a research assistant: market snapshots, rolling indicators, headline feeds, and structured AI-shaped reasoning — tailored by horizon and risk preference — in a single operate-density desk."
+    - generic [ref=e33]:
+      - heading "Capabilities" [level=2] [ref=e34]
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /app
+          - heading "Nifty 50 desk" [level=3] [ref=e41]
+          - paragraph [ref=e46]: Index KPIs, multi-year price history with 20 DMA, technical stack, and expandable top-company rows with horizon-aware bias tags.
+        - link [ref=e47] [cursor=pointer]:
+          - /url: /app/banknifty
+          - heading "Bank Nifty twin" [level=3] [ref=e53]
+          - paragraph [ref=e58]: Banking-sector index surface with the same indicator density and client-derived support/resistance bands.
+        - link [ref=e59] [cursor=pointer]:
+          - /url: /app/analysis
+          - heading "AI market analysis" [level=3] [ref=e65]
+          - paragraph [ref=e70]: Structured market digest, action plans for both indices, sectoral rotation chips, and a news grid layout.
+        - link [ref=e71] [cursor=pointer]:
+          - /url: /app/predictor
+          - heading "Stock predictor" [level=3] [ref=e77]
+          - paragraph [ref=e82]: Shortcut picks plus free-text resolve into a full analysis layout — entry, stops, targets, rationale, and stock news.
+    - generic [ref=e84]:
+      - heading "Product preview" [level=2] [ref=e85]
+      - paragraph [ref=e86]: Jump straight into a surface. Charts and analysis panels load from static packs — no API keys required.
+      - generic [ref=e87]:
+        - link "Index + names Nifty 50" [ref=e88] [cursor=pointer]:
+          - /url: /app
+          - generic [ref=e89]: Index + names
+          - generic [ref=e90]: Nifty 50
+        - link "Banking beta Bank Nifty" [ref=e93] [cursor=pointer]:
+          - /url: /app/banknifty
+          - generic [ref=e94]: Banking beta
+          - generic [ref=e95]: Bank Nifty
+        - link "Macro desk Analysis" [ref=e98] [cursor=pointer]:
+          - /url: /app/analysis
+          - generic [ref=e99]: Macro desk
+          - generic [ref=e100]: Analysis
+        - link "Single name Predictor" [ref=e103] [cursor=pointer]:
+          - /url: /app/predictor
+          - generic [ref=e104]: Single name
+          - generic [ref=e105]: Predictor
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - heading "Stack" [level=2] [ref=e110]
+        - paragraph [ref=e115]: Showcase is a Vite SPA. The original delivery also included FastAPI, yfinance, and Mistral structured JSON — now replaced by typed static mocks.
+        - list [ref=e116]:
+          - listitem [ref=e117]: React 19
+          - listitem [ref=e118]: Vite
+          - listitem [ref=e119]: TypeScript
+          - listitem [ref=e120]: Tailwind CSS v4
+          - listitem [ref=e121]: ECharts
+          - listitem [ref=e122]: React Router 7
+      - generic [ref=e123]:
+        - heading "Craft notes" [level=2] [ref=e124]
+        - list [ref=e125]:
+          - listitem [ref=e126]: Operate-density app shell with mono numerics and horizon/risk local prefs.
+          - listitem [ref=e127]: "Analysis UX: trade/invest strings, sector chips, confidence, news grid."
+          - listitem [ref=e128]: Predictor flow always completes — unknown queries still showcase the full layout.
+    - generic [ref=e130]:
+      - generic [ref=e131]:
+        - heading "Explore the desk" [level=2] [ref=e132]
+        - paragraph [ref=e133]: Full four-tab demo with placeholder market data. Desktop and mobile.
+      - link "Launch demo" [ref=e134] [cursor=pointer]:
+        - /url: /app
+  - contentinfo [ref=e137]:
+    - generic [ref=e138]:
+      - paragraph [ref=e139]: Demo data only. Not financial advice. Not a SEBI-registered product. Figures are illustrative placeholders for studio review.
+      - paragraph [ref=e140]: © Nodewise.cc · Product Whitebull

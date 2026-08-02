@@ -1,0 +1,100 @@
+[      34ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3003/portfolio:0
+[     194ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29889
+[     224ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[   21313ms] [ERROR] WebSocket connection to 'ws://localhost:3003/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:63
+[   24640ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   24640ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/portfolio:0
+[   24804ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691058307' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/portfolio:0
+[   24837ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691058307:0
+[   24837ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691058307' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/portfolio:0
+[   24837ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   24837ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/portfolio:0
+[   24838ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   24838ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/portfolio:0
+[   24879ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   24879ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/portfolio:0
+[   24879ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/portfolio:0
+[   26100ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   26100ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/zero-to-mvp:0
+[   26112ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691060031' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/zero-to-mvp:0
+[   26160ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691060031:0
+[   26160ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691060031' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/zero-to-mvp:0
+[   26160ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   26160ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/zero-to-mvp:0
+[   26164ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   26164ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/zero-to-mvp:0
+[   26169ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   26170ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/zero-to-mvp:0
+[   26170ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/zero-to-mvp:0
+[   27292ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   27292ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/packages:0
+[   27309ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691061252' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/packages:0
+[   27325ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691061252:0
+[   27326ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691061252' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/packages:0
+[   27326ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   27326ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/packages:0
+[   27348ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   27348ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/packages:0
+[   27352ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   27352ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/packages:0
+[   27352ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/packages:0
+[   28483ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   28483ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/contact:0
+[   28494ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691062476' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/contact:0
+[   28528ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691062476:0
+[   28528ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691062476' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/contact:0
+[   28530ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   28530ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/contact:0
+[   28533ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   28533ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/contact:0
+[   28538ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   28538ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/contact:0
+[   28539ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/contact:0
+[   29632ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   29632ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/about:0
+[   29650ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691063623' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/about:0
+[   29692ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691063623:0
+[   29692ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691063623' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/about:0
+[   29693ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   29693ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/about:0
+[   29693ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   29693ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/about:0
+[   29697ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   29697ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/about:0
+[   29698ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/about:0
+[   30824ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   30824ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/capabilities:0
+[   30846ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691064829' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/capabilities:0
+[   30866ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691064829:0
+[   30866ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691064829' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/capabilities:0
+[   30867ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   30867ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/capabilities:0
+[   30872ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   30872ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/capabilities:0
+[   30877ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   30877ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/capabilities:0
+[   30877ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/capabilities:0
+[   31977ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   31977ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/process:0
+[   31989ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691065987' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/process:0
+[   32020ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   32020ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/process:0
+[   32020ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691065987:0
+[   32020ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691065987' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/process:0
+[   32024ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   32024ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/process:0
+[   32029ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   32029ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/process:0
+[   32029ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/process:0
+[   33158ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   33159ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/quality:0
+[   33182ms] [ERROR] Refused to apply style from 'http://localhost:3004/_next/static/css/app/layout.css?v=1785691067138' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3004/quality:0
+[   33224ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/main-app.js?v=1785691067138:0
+[   33224ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/main-app.js?v=1785691067138' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/quality:0
+[   33227ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app-pages-internals.js:0
+[   33227ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/quality:0
+[   33230ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3004/_next/static/chunks/app/layout.js:0
+[   33230ms] [ERROR] Refused to execute script from 'http://localhost:3004/_next/static/chunks/app/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3004/quality:0
+[   33236ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3004/manifest.webmanifest:0
+[   33236ms] [ERROR] Manifest fetch from http://localhost:3004/manifest.webmanifest failed, code 500 @ http://localhost:3004/quality:0
+[   33237ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:3004/quality:0

@@ -1,14 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Manrope } from "next/font/google";
+import dynamic from "next/dynamic";
 import Script from "next/script";
 import "./globals.css";
 import "./site-system.css";
 import "./mobile-adapt.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ThreeBackground from "@/components/ThreeBackground";
-import GlobalInteractions from "@/components/GlobalInteractions";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import JsonLd from "@/components/JsonLd";
 import {
@@ -16,6 +15,15 @@ import {
   organizationJsonLd,
   websiteJsonLd,
 } from "@/lib/seo";
+
+const ThreeBackground = dynamic(
+  () => import("@/components/ThreeBackground"),
+  { ssr: false }
+);
+const GlobalInteractions = dynamic(
+  () => import("@/components/GlobalInteractions"),
+  { ssr: false }
+);
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

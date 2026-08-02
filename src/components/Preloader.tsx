@@ -211,11 +211,17 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       }, 1.0);
     }
 
-    tl.to("#loader-progress-bar", {
-      width: "100%",
-      duration: tl.duration(),
-      ease: "none"
-    }, 0);
+    tl.fromTo(
+      "#loader-progress-bar",
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        duration: tl.duration(),
+        ease: "none",
+        transformOrigin: "left center",
+      },
+      0
+    );
 
     tl.add(() => {
       const status = document.querySelector(".loader-status");

@@ -16,7 +16,7 @@ import "./portfolio.css";
 export const metadata: Metadata = buildMetadata({
   title: "Work & Case Studies — MVPs and Landing Pages",
   description:
-    "See Nodewise work: Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
+    "See Nodewise work: Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform, Whitebull equity research desk. Live MVPs and high-converting landing pages for startups.",
   path: "/portfolio",
   keywords: [
     "web development portfolio India",
@@ -144,6 +144,45 @@ const PROJECTS: Project[] = [
         src: "/assets/fossceal-branding.png",
         alt: "FOSS CEAL brand kit",
         label: "Branding",
+      },
+    ],
+  },
+  {
+    id: "case-04",
+    name: "Whitebull",
+    meta: "Indian Equity Research Desk",
+    title: "Charts, news, and structured analysis in one operate-density surface",
+    description:
+      "Full-stack research assistant that bridges chart terminals and news portals—Nifty 50 and Bank Nifty desks, AI market digests, and a stock predictor with entry, stops, and targets. Client engagement concluded; preserved as an interactive Nodewise showcase with demo data.",
+    tags: ["Fintech", "Research desk", "Full-stack", "Charts"],
+    url: "https://whitebull.nodewise.cc",
+    host: "whitebull.nodewise.cc",
+    flip: true,
+    slides: [
+      {
+        src: "/assets/whitebull-landing.png",
+        alt: "Whitebull landing page hero",
+        label: "Landing",
+      },
+      {
+        src: "/assets/whitebull-nifty50.png",
+        alt: "Whitebull Nifty 50 research desk",
+        label: "Nifty 50",
+      },
+      {
+        src: "/assets/whitebull-banknifty.png",
+        alt: "Whitebull Bank Nifty desk",
+        label: "Bank Nifty",
+      },
+      {
+        src: "/assets/whitebull-analysis.png",
+        alt: "Whitebull AI market analysis",
+        label: "Analysis",
+      },
+      {
+        src: "/assets/whitebull-predictor.png",
+        alt: "Whitebull stock predictor for TCS",
+        label: "Predictor",
       },
     ],
   },
