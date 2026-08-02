@@ -499,14 +499,14 @@ export const PAGE_SEO = {
   portfolio: {
     title: "Work & Case Studies — MVPs and Landing Pages",
     description:
-      "See Nodewise work: Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
+      "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
     keywords: [
       "web development portfolio India",
       "MVP case studies",
       "landing page examples",
       "startup product examples",
     ],
-    image: "/assets/titan-hero.png",
+    image: "/assets/whitebull-landing.png",
   },
   packages: {
     title: "Web Development Pricing India — Packages from ₹12k",

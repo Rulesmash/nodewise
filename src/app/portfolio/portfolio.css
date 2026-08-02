@@ -77,14 +77,16 @@ body:has(.portfolio-page) .canvas-container {
 
 .portfolio-page .project-block {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  /* Equal tracks so left/right carousels share the same vertical box */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(1.75rem, 4vw, 3rem);
-  align-items: center;
+  /* Top-align: center-align floated short copy mid-height next to tall carousels */
+  align-items: start;
   overflow: hidden;
 }
 
 .portfolio-page .project-block.is-flip {
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .portfolio-page .project-block.is-flip .project-info {
@@ -103,6 +105,9 @@ body:has(.portfolio-page) .canvas-container {
   position: relative;
   z-index: 4;
   isolation: isolate;
+  align-self: start;
+  /* Keep copy optically level with stage top (chrome + first line) */
+  padding-top: 0.35rem;
   background: linear-gradient(
     90deg,
     var(--bg-main, #0b0c10) 0%,
@@ -123,6 +128,25 @@ body:has(.portfolio-page) .canvas-container {
   padding-left: 0.5rem;
 }
 
+.portfolio-page .page-hero--compact {
+  padding-top: clamp(5.5rem, 10vw, 7rem);
+  padding-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+
+.portfolio-page .page-hero--compact .page-hero-subtitle {
+  max-width: 36ch;
+}
+
+.portfolio-page .project-name {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-header, var(--font-display));
+  font-size: clamp(1.65rem, 3vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary, #f8f9fc);
+}
+
 .portfolio-page .project-meta {
   display: inline-flex;
   align-items: center;
@@ -131,7 +155,7 @@ body:has(.portfolio-page) .canvas-container {
   font-size: 0.8rem;
   font-weight: 600;
   color: rgba(200, 215, 255, 0.85);
-  margin-bottom: 0.85rem;
+  margin: 0 0 0.75rem;
 }
 
 .portfolio-page .project-meta::before {
@@ -144,17 +168,15 @@ body:has(.portfolio-page) .canvas-container {
 }
 
 .portfolio-page .project-title {
-  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
-  margin-bottom: 0.9rem;
-  max-width: 24ch;
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  color: var(--text-secondary, #c5c9db);
+  max-width: 36ch;
   overflow-wrap: anywhere;
-  word-break: break-word;
 }
-
-
 
 .portfolio-page .project-desc {
   font-size: 1rem;
@@ -225,11 +247,13 @@ body:has(.portfolio-page) .canvas-container {
   overflow: hidden;
 }
 
-.project-carousel-wrap {
+.portfolio-page .project-carousel-wrap {
   position: relative;
   z-index: 1;
+  align-self: start;
   overflow: hidden;
   min-width: 0;
+  width: 100%;
   border-radius: var(--radius);
 }
 
@@ -529,6 +553,37 @@ body:has(.portfolio-page) .canvas-container {
   max-width: 100%;
 }
 
+/* Loading shell (dynamic import) — reserve stage height to limit CLS */
+.pc-root--loading {
+  min-height: clamp(300px, 38vw, 420px);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.07) 37%,
+    rgba(255, 255, 255, 0.03) 63%
+  );
+  background-size: 200% 100%;
+  animation: pc-shimmer 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-root--loading {
+    animation: none;
+    background: rgba(255, 255, 255, 0.04);
+  }
+}
+
+@keyframes pc-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 /* Empty / broken image states */
 .pc-root--empty,
 .pc-empty {
@@ -586,6 +641,14 @@ body:has(.portfolio-page) .canvas-container {
   background: radial-gradient(ellipse at 20% 50%, rgba(100, 150, 255, 0.14), transparent 60%);
 }
 
+.portfolio-page .cta-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 /* —— Reduced motion —— */
 @media (prefers-reduced-motion: reduce) {
   .portfolio-page .btn-primary:hover,
@@ -627,9 +690,14 @@ body:has(.portfolio-page) .canvas-container {
     max-width: none;
   }
 
-  /* Meta shown once above carousel; hide duplicate in body */
+  /* Name + meta shown once above carousel; hide duplicates in body */
+  .portfolio-page .project-info .project-name,
   .portfolio-page .project-info .project-meta {
     display: none;
+  }
+
+  .portfolio-page .project-mobile-head .project-name {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
   }
 
   .portfolio-page .project-desc {

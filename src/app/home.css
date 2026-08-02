@@ -30,22 +30,33 @@
 }
 
 .home-page .hero-title {
-  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  font-size: clamp(2.35rem, 5vw, 3.75rem);
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.05;
-  margin-bottom: 1.25rem;
-  max-width: 12ch;
+  margin-bottom: 0.85rem;
+  max-width: 16ch;
   opacity: 1;
   color: var(--text-primary, #f8f9fc);
 }
 
+.home-page .hero-offer {
+  margin: 0 0 1.15rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--text-primary, #f8f9fc);
+  max-width: 34ch;
+}
+
 .home-page .hero-subtitle {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.25rem;
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--text-secondary);
-  margin-bottom: 2.25rem;
-  max-width: 36ch;
+  max-width: 38ch;
   opacity: 1;
 }
 
@@ -622,8 +633,13 @@ body:has(.home-page) .canvas-container canvas {
   }
 
   .home-page .hero-title {
+    max-width: 14ch;
+    font-size: clamp(2rem, 8.5vw, 2.75rem);
+  }
+
+  .home-page .hero-offer {
     max-width: none;
-    font-size: clamp(2rem, 8.5vw, 2.6rem);
+    font-size: 1.05rem;
   }
 
   .home-page .hero-visual {

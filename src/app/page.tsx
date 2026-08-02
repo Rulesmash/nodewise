@@ -78,19 +78,16 @@ export default function Home() {
         <div className="container hero-container">
           <div className="hero-content">
             <h1 className="hero-title" id="hero-main-title">
-              Smarter Code. Better Solutions.
+              Ship a live MVP in 10–14 days
             </h1>
-            <div className="hero-subtitle" id="hero-sub-text">
-              <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-                <li style={{ marginBottom: "0.5rem" }}>
-                  ▪ High-performance custom web platforms
-                </li>
-                <li style={{ marginBottom: "0.5rem" }}>
-                  ▪ Reliable software engineered for growth
-                </li>
-                <li>▪ Premium code built for maximum profitability</li>
-              </ul>
-            </div>
+            <p className="hero-offer" id="hero-offer-line">
+              Zero to MVP from ₹29,999 — full source code and ownership transfer.
+            </p>
+            <ul className="hero-subtitle" id="hero-sub-text">
+              <li>Showcase-ready web app you can demo to users or investors</li>
+              <li>Fixed scope, fixed price, India-based — worldwide delivery</li>
+              <li>Consultation, core build, live deploy, and two revision rounds</li>
+            </ul>
             <div className="hero-ctas">
               <a
                 href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."

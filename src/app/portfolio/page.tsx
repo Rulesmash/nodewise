@@ -1,10 +1,9 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import ProjectCarousel, {
-  type CarouselSlide,
-} from "@/components/ProjectCarousel";
+import type { CarouselSlide } from "@/components/ProjectCarousel";
 import {
   buildMetadata,
   breadcrumbJsonLd,
@@ -13,10 +12,24 @@ import {
 } from "@/lib/seo";
 import "./portfolio.css";
 
+/** Heavy GSAP carousel — code-split from the RSC page shell (bundle-dynamic-imports). */
+const ProjectCarousel = dynamic(
+  () => import("@/components/ProjectCarousel"),
+  {
+    loading: () => (
+      <div
+        className="pc-root pc-root--loading"
+        aria-busy="true"
+        aria-label="Loading project screens"
+      />
+    ),
+  }
+);
+
 export const metadata: Metadata = buildMetadata({
   title: "Work & Case Studies — MVPs and Landing Pages",
   description:
-    "See Nodewise work: Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform, Whitebull equity research desk. Live MVPs and high-converting landing pages for startups.",
+    "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
   path: "/portfolio",
   keywords: [
     "web development portfolio India",
@@ -24,8 +37,8 @@ export const metadata: Metadata = buildMetadata({
     "landing page examples",
     "startup product examples",
   ],
-  image: "/assets/titan-hero.png",
-  imageAlt: "Nodewise portfolio — Titan Residences case study",
+  image: "/assets/whitebull-landing.png",
+  imageAlt: "Nodewise portfolio — Whitebull equity research desk",
 });
 
 type Project = {
@@ -37,11 +50,49 @@ type Project = {
   tags: string[];
   url: string;
   host: string;
-  flip?: boolean;
   slides: CarouselSlide[];
 };
 
+/** Display order: featured project first. Layout flip is derived from index. */
 const PROJECTS: Project[] = [
+  {
+    id: "case-04",
+    name: "Whitebull",
+    meta: "Indian Equity Research Desk",
+    title: "Charts, news, and structured analysis in one operate-density surface",
+    description:
+      "Full-stack research assistant that bridges chart terminals and news portals—Nifty 50 and Bank Nifty desks, AI market digests, and a stock predictor with entry, stops, and targets. Client engagement concluded; preserved as an interactive Nodewise showcase with demo data.",
+    tags: ["Fintech", "Research desk", "Full-stack", "Charts"],
+    url: "https://whitebull.nodewise.cc",
+    host: "whitebull.nodewise.cc",
+    slides: [
+      {
+        src: "/assets/whitebull-landing.png",
+        alt: "Whitebull landing page hero",
+        label: "Landing",
+      },
+      {
+        src: "/assets/whitebull-nifty50.png",
+        alt: "Whitebull Nifty 50 research desk",
+        label: "Nifty 50",
+      },
+      {
+        src: "/assets/whitebull-banknifty.png",
+        alt: "Whitebull Bank Nifty desk",
+        label: "Bank Nifty",
+      },
+      {
+        src: "/assets/whitebull-analysis.png",
+        alt: "Whitebull AI market analysis",
+        label: "Analysis",
+      },
+      {
+        src: "/assets/whitebull-predictor.png",
+        alt: "Whitebull stock predictor for TCS",
+        label: "Predictor",
+      },
+    ],
+  },
   {
     id: "case-01",
     name: "Titan Residences",
@@ -90,7 +141,6 @@ const PROJECTS: Project[] = [
     tags: ["MVP", "Landing page", "Marketing"],
     url: "https://mavenixstudio.netlify.app/",
     host: "mavenixstudio.netlify.app",
-    flip: true,
     slides: [
       {
         src: "/assets/mavenix-hero.png",
@@ -147,45 +197,6 @@ const PROJECTS: Project[] = [
       },
     ],
   },
-  {
-    id: "case-04",
-    name: "Whitebull",
-    meta: "Indian Equity Research Desk",
-    title: "Charts, news, and structured analysis in one operate-density surface",
-    description:
-      "Full-stack research assistant that bridges chart terminals and news portals—Nifty 50 and Bank Nifty desks, AI market digests, and a stock predictor with entry, stops, and targets. Client engagement concluded; preserved as an interactive Nodewise showcase with demo data.",
-    tags: ["Fintech", "Research desk", "Full-stack", "Charts"],
-    url: "https://whitebull.nodewise.cc",
-    host: "whitebull.nodewise.cc",
-    flip: true,
-    slides: [
-      {
-        src: "/assets/whitebull-landing.png",
-        alt: "Whitebull landing page hero",
-        label: "Landing",
-      },
-      {
-        src: "/assets/whitebull-nifty50.png",
-        alt: "Whitebull Nifty 50 research desk",
-        label: "Nifty 50",
-      },
-      {
-        src: "/assets/whitebull-banknifty.png",
-        alt: "Whitebull Bank Nifty desk",
-        label: "Bank Nifty",
-      },
-      {
-        src: "/assets/whitebull-analysis.png",
-        alt: "Whitebull AI market analysis",
-        label: "Analysis",
-      },
-      {
-        src: "/assets/whitebull-predictor.png",
-        alt: "Whitebull stock predictor for TCS",
-        label: "Predictor",
-      },
-    ],
-  },
 ];
 
 export default function Portfolio() {
@@ -216,13 +227,12 @@ export default function Portfolio() {
         ]}
       />
 
-      <section className="page-hero">
+      <section className="page-hero page-hero--compact">
         <div className="container">
           <div className="page-hero-content">
             <h1 className="page-hero-title">Selected work</h1>
             <p className="page-hero-subtitle">
-              Live products you can open and click through—MVPs, landing pages,
-              and platforms we shipped.
+              Live products you can open and click through.
             </p>
           </div>
         </div>
@@ -231,53 +241,59 @@ export default function Portfolio() {
       <section id="work" className="portfolio-section">
         <div className="container">
           <div className="project-stack">
-            {PROJECTS.map((project) => (
-              <article
-                key={project.id}
-                className={`project-block${project.flip ? " is-flip" : ""}`}
-                id={`portfolio-${project.id}`}
-              >
-                <div className="project-mobile-head">
-                  <p className="project-meta">{project.meta}</p>
-                </div>
-
-                <div className="project-info">
-                  <p className="project-meta">{project.meta}</p>
-                  <h2 className="project-title">{project.title}</h2>
-                  <p className="project-desc">{project.description}</p>
-                  <div className="project-tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="project-tag">
-                        {tag}
-                      </span>
-                    ))}
+            {PROJECTS.map((project, index) => {
+              // Even indices (featured first): artifact leads on desktop.
+              const artifactFirst = index % 2 === 0;
+              return (
+                <article
+                  key={project.id}
+                  className={`project-block${artifactFirst ? " is-flip" : ""}`}
+                  id={`portfolio-${project.id}`}
+                >
+                  <div className="project-mobile-head">
+                    <h2 className="project-name">{project.name}</h2>
+                    <p className="project-meta">{project.meta}</p>
                   </div>
-                  <div className="project-ctas">
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-primary"
-                      id={`btn-verify-${project.id}`}
-                    >
-                      <ExternalLink className="btn-icon" aria-hidden="true" />
-                      <span>Open live site</span>
-                      <span className="sr-only"> (opens in a new tab)</span>
-                    </a>
-                  </div>
-                </div>
 
-                <div className="project-carousel-wrap">
-                  <ProjectCarousel
-                    projectId={project.id}
-                    slides={project.slides}
-                    liveUrl={project.url}
-                    liveHost={project.host}
-                    displayName={project.name}
-                  />
-                </div>
-              </article>
-            ))}
+                  <div className="project-info">
+                    <h2 className="project-name">{project.name}</h2>
+                    <p className="project-meta">{project.meta}</p>
+                    <p className="project-title">{project.title}</p>
+                    <p className="project-desc">{project.description}</p>
+                    <div className="project-tags">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="project-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="project-ctas">
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary"
+                        id={`btn-verify-${project.id}`}
+                      >
+                        <ExternalLink className="btn-icon" aria-hidden="true" />
+                        <span>Open live site</span>
+                        <span className="sr-only"> (opens in a new tab)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="project-carousel-wrap">
+                    <ProjectCarousel
+                      projectId={project.id}
+                      slides={project.slides}
+                      liveUrl={project.url}
+                      liveHost={project.host}
+                      displayName={project.name}
+                    />
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -286,16 +302,26 @@ export default function Portfolio() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Want to go deeper?</h2>
+              <h2 className="cta-banner-title">Need a build like these?</h2>
               <p className="cta-banner-text">
-                Open any live site above, or reach out if you want the story
-                behind a build.
+                Start Zero to MVP from ₹29,999, or tell us what you want to ship.
               </p>
             </div>
-            <Link href="/contact" className="btn btn-primary cta-banner-btn">
-              <span>Get in touch</span>
-              <ArrowRight className="btn-icon" aria-hidden="true" />
-            </Link>
+            <div className="cta-banner-actions">
+              <a
+                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary cta-banner-btn"
+              >
+                <span>Start Your MVP</span>
+                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+                <ArrowRight className="btn-icon" aria-hidden="true" />
+              </a>
+              <Link href="/contact" className="btn btn-secondary cta-banner-btn">
+                <span>Get in touch</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,2096 @@
+{
+  "base": "http://localhost:3000",
+  "capturedAt": "2026-08-02T18:16:23.527Z",
+  "pages": [
+    {
+      "label": "home/desktop",
+      "title": "Startup MVP & Custom Web Development in India",
+      "h1": "Ship a live MVP in 10–14 days",
+      "url": "http://localhost:3000/",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "20 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 200,
+              "h": 40,
+              "name": "Schedule a Consultation"
+            },
+            {
+              "w": 179,
+              "h": 26,
+              "name": "View Full MVP Details →"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Start Your MVP (opens WhatsApp in a new ",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(11, 12, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 30,
+        "buttons": 1,
+        "images": 2,
+        "h2": 3
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "home-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "home/mobile",
+      "title": "Startup MVP & Custom Web Development in India",
+      "h1": "Ship a live MVP in 10–14 days",
+      "url": "http://localhost:3000/",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "15 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 179,
+              "h": 26,
+              "name": "View Full MVP Details →"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Start Your MVP (opens WhatsApp in a new ",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(11, 12, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 30,
+        "buttons": 1,
+        "images": 2,
+        "h2": 3
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "home-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "portfolio/desktop",
+      "title": "Work & Case Studies — MVPs and Landing Pages | Nodewise",
+      "h1": "Selected work",
+      "url": "http://localhost:3000/portfolio",
+      "firstProjectMeta": {
+        "id": "portfolio-case-04",
+        "title": "Whitebull",
+        "meta": "Indian Equity Research Desk"
+      },
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "18 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Work"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Fintech",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            },
+            {
+              "text": "Research desk",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            },
+            {
+              "text": "Full-stack",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            },
+            {
+              "text": "Charts",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 27,
+        "buttons": 45,
+        "images": 20,
+        "h2": 9
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "portfolio-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "portfolio/mobile",
+      "title": "Work & Case Studies — MVPs and Landing Pages | Nodewise",
+      "h1": "Selected work",
+      "url": "http://localhost:3000/portfolio",
+      "firstProjectMeta": {
+        "id": "portfolio-case-04",
+        "title": "Whitebull",
+        "meta": "Indian Equity Research Desk"
+      },
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "14 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Process"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Fintech",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            },
+            {
+              "text": "Research desk",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            },
+            {
+              "text": "Full-stack",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            },
+            {
+              "text": "Charts",
+              "ratio": 1.38,
+              "color": "rgba(210, 220, 240, 0.85)",
+              "bg": "rgba(0, 0, 0, 0)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 27,
+        "buttons": 45,
+        "images": 20,
+        "h2": 9
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "portfolio-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "zero-to-mvp/desktop",
+      "title": "Zero to MVP — Live Product in 10–14 Days for ₹29,999 | Nodewise",
+      "h1": "Turn your idea into a working product in 10–14 days",
+      "url": "http://localhost:3000/zero-to-mvp",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "18 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Work"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "3 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Start Your MVP (opens WhatsApp in a new ",
+              "ratio": 1.03,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(14, 16, 24)"
+            },
+            {
+              "text": "Start Your MVP",
+              "ratio": 1.03,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(14, 16, 24)"
+            },
+            {
+              "text": "(opens WhatsApp in a new tab)",
+              "ratio": 1.03,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(14, 16, 24)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 1,
+        "images": 2,
+        "h2": 3
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "zero-to-mvp-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "zero-to-mvp/mobile",
+      "title": "Zero to MVP — Live Product in 10–14 Days for ₹29,999 | Nodewise",
+      "h1": "Turn your idea into a working product in 10–14 days",
+      "url": "http://localhost:3000/zero-to-mvp",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "14 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Process"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "3 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Start Your MVP (opens WhatsApp in a new ",
+              "ratio": 1.03,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(14, 16, 24)"
+            },
+            {
+              "text": "Start Your MVP",
+              "ratio": 1.03,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(14, 16, 24)"
+            },
+            {
+              "text": "(opens WhatsApp in a new tab)",
+              "ratio": 1.03,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(14, 16, 24)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 1,
+        "images": 2,
+        "h2": 3
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "zero-to-mvp-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "packages/desktop",
+      "title": "Web Development Pricing India — Packages from ₹12k | Nodewise",
+      "h1": "Service Packages",
+      "url": "http://localhost:3000/packages",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "18 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Work"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "3 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Inquire via WhatsApp (opens WhatsApp in ",
+              "ratio": 1.01,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 20, 28)"
+            },
+            {
+              "text": "Inquire via WhatsApp",
+              "ratio": 1.01,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 20, 28)"
+            },
+            {
+              "text": "(opens WhatsApp in a new tab)",
+              "ratio": 1.01,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 20, 28)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 25,
+        "buttons": 1,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "packages-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "packages/mobile",
+      "title": "Web Development Pricing India — Packages from ₹12k | Nodewise",
+      "h1": "Service Packages",
+      "url": "http://localhost:3000/packages",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "14 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Process"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "3 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Inquire via WhatsApp (opens WhatsApp in ",
+              "ratio": 1.01,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 20, 28)"
+            },
+            {
+              "text": "Inquire via WhatsApp",
+              "ratio": 1.01,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 20, 28)"
+            },
+            {
+              "text": "(opens WhatsApp in a new tab)",
+              "ratio": 1.01,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 20, 28)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 25,
+        "buttons": 1,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "packages-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "capabilities/desktop",
+      "title": "Services — Web Platforms, Portals & Automation | Nodewise",
+      "h1": "Core Capabilities",
+      "url": "http://localhost:3000/capabilities",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "18 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Work"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 3,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "capabilities-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "capabilities/mobile",
+      "title": "Services — Web Platforms, Portals & Automation | Nodewise",
+      "h1": "Core Capabilities",
+      "url": "http://localhost:3000/capabilities",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "14 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Process"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 3,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "capabilities-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "process/desktop",
+      "title": "Our Process — Discovery, Build & Launch | Nodewise",
+      "h1": "The Collaboration Path",
+      "url": "http://localhost:3000/process",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "18 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Work"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 1,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "process-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "process/mobile",
+      "title": "Our Process — Discovery, Build & Launch | Nodewise",
+      "h1": "The Collaboration Path",
+      "url": "http://localhost:3000/process",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "14 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Process"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Schedule Consultation",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 1,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "process-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "about/desktop",
+      "title": "About Nodewise — Digital Product Studio Founders | Nodewise",
+      "h1": "About Nodewise",
+      "url": "http://localhost:3000/about",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "18 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Work"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Get in Touch",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Get in Touch",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 24,
+        "buttons": 1,
+        "images": 5,
+        "h2": 3
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "about-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "about/mobile",
+      "title": "About Nodewise — Digital Product Studio Founders | Nodewise",
+      "h1": "About Nodewise",
+      "url": "http://localhost:3000/about",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "14 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Process"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Get in Touch",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Get in Touch",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 24,
+        "buttons": 1,
+        "images": 5,
+        "h2": 3
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "about-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "quality/desktop",
+      "title": "Quality Standards — Performance, Security & Ownership | Nodewise",
+      "h1": "Work Quality",
+      "url": "http://localhost:3000/quality",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "18 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 193,
+              "h": 23,
+              "name": "Work"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "1/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Start Your Project",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Start Your Project",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 1,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "quality-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "quality/mobile",
+      "title": "Quality Standards — Performance, Security & Ownership | Nodewise",
+      "h1": "Work Quality",
+      "url": "http://localhost:3000/quality",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "14 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "About"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Process"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Start Your Project",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            },
+            {
+              "text": "Start Your Project",
+              "ratio": 1.06,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(10, 11, 16)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 1,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "quality-mobile.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "contact/desktop",
+      "title": "Contact Nodewise — Free MVP & Web Consultation | Nodewise",
+      "h1": "Schedule Consultation",
+      "url": "http://localhost:3000/contact",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "21 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 198,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 37,
+              "h": 40,
+              "name": "Work"
+            },
+            {
+              "w": 88,
+              "h": 40,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 50,
+              "h": 40,
+              "name": "Pricing"
+            },
+            {
+              "w": 44,
+              "h": 40,
+              "name": "About"
+            },
+            {
+              "w": 120,
+              "h": 22,
+              "name": "+919446998827"
+            },
+            {
+              "w": 265,
+              "h": 29,
+              "name": "⚡ Zero to MVP (10–14 Days Development)"
+            },
+            {
+              "w": 250,
+              "h": 29,
+              "name": "💻 Full Custom Web Platform / Web App"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "4/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "button",
+              "name": "Open navigation menu",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "input",
+              "name": "",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "input",
+              "name": "",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "input",
+              "name": "",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Send Consultation Request",
+              "ratio": 1,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 19, 26)"
+            },
+            {
+              "text": "Send Consultation Request",
+              "ratio": 1,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 19, 26)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 4,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "contact-desktop.png",
+      "consoleErrors": []
+    },
+    {
+      "label": "contact/mobile",
+      "title": "Contact Nodewise — Free MVP & Web Consultation | Nodewise",
+      "h1": "Schedule Consultation",
+      "url": "http://localhost:3000/contact",
+      "firstProjectMeta": null,
+      "issueCount": 3,
+      "issues": [
+        {
+          "sev": "P2",
+          "cat": "responsive",
+          "msg": "16 interactive targets < 44×44",
+          "samples": [
+            {
+              "w": 141,
+              "h": 42,
+              "name": "Nodewise Homepage"
+            },
+            {
+              "w": 120,
+              "h": 22,
+              "name": "+919446998827"
+            },
+            {
+              "w": 271,
+              "h": 40,
+              "name": "💻 Full Custom Web Platform / Web App"
+            },
+            {
+              "w": 38,
+              "h": 38,
+              "name": "Nodewise on LinkedIn"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Home"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Work"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Zero to MVP"
+            },
+            {
+              "w": 358,
+              "h": 23,
+              "name": "Pricing"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "7/12 sampled focusables lack outline/box-shadow ring",
+          "samples": [
+            {
+              "tag": "a",
+              "name": "Work",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Zero to MVP",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "Pricing",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "a",
+              "name": "About",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "input",
+              "name": "",
+              "outline": "none",
+              "boxShadow": "none"
+            },
+            {
+              "tag": "input",
+              "name": "",
+              "outline": "none",
+              "boxShadow": "none"
+            }
+          ]
+        },
+        {
+          "sev": "P1",
+          "cat": "a11y",
+          "msg": "2 text samples may be under 4.5:1 (approx)",
+          "samples": [
+            {
+              "text": "Send Consultation Request",
+              "ratio": 1,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 19, 26)"
+            },
+            {
+              "text": "Send Consultation Request",
+              "ratio": 1,
+              "color": "rgb(18, 19, 26)",
+              "bg": "rgb(18, 19, 26)"
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "links": 22,
+        "buttons": 4,
+        "images": 2,
+        "h2": 1
+      },
+      "status": 200,
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "contact-mobile.png",
+      "consoleErrors": []
+    }
+  ]
+}
