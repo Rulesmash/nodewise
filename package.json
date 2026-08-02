@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "impeccable": "impeccable",
+    "impeccable:detect": "impeccable detect src",
+    "impeccable:hooks": "node .kilo/skills/impeccable/scripts/hook-admin.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -24,6 +27,7 @@
     "@types/three": "^0.185.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
+    "impeccable": "^3.5.0",
     "typescript": "^5"
   }
 }
