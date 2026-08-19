@@ -7,11 +7,12 @@
   --touch: 44px;
 }
 
-/* Prevent iOS rubber-band horizontal scroll */
+/* Prevent iOS rubber-band horizontal scroll — keep vertical scrolling explicit */
 html,
 body {
   max-width: 100%;
   overflow-x: clip;
+  overflow-y: auto;
 }
 
 @media (max-width: 768px) {

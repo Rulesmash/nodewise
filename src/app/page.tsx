@@ -76,46 +76,46 @@ export default function Home() {
 
       <section id="hero" className="hero-section">
         <div className="container hero-container">
-          <div className="hero-content">
+          <div className="hero-content hero-copy">
             <h1 className="hero-title" id="hero-main-title">
               Ship a live MVP in 10–14 days
             </h1>
             <p className="hero-offer" id="hero-offer-line">
               Zero to MVP from ₹29,999 — full source code and ownership transfer.
             </p>
-            <ul className="hero-subtitle" id="hero-sub-text">
-              <li>Showcase-ready web app you can demo to users or investors</li>
-              <li>Fixed scope, fixed price, India-based — worldwide delivery</li>
-              <li>Consultation, core build, live deploy, and two revision rounds</li>
-            </ul>
-            <div className="hero-ctas">
-              <a
-                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                id="btn-hero-start-mvp"
-              >
-                <span>Start Your MVP</span>
-                <span className="sr-only"> (opens WhatsApp in a new tab)</span>
-                <ArrowRight className="btn-icon" aria-hidden="true" />
-              </a>
-              <Link
-                href="/portfolio"
-                className="btn btn-secondary"
-                id="btn-hero-view-work"
-              >
-                <span>View Our Work</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="link-cta"
-                id="link-hero-consult"
-              >
-                <span>Schedule a Consultation</span>
-                <Calendar className="link-icon" aria-hidden="true" />
-              </Link>
-            </div>
+          </div>
+          <ul className="hero-subtitle" id="hero-sub-text">
+            <li>Showcase-ready web app you can demo to users or investors</li>
+            <li>Fixed scope, fixed price, India-based — worldwide delivery</li>
+            <li>Consultation, core build, live deploy, and two revision rounds</li>
+          </ul>
+          <div className="hero-ctas">
+            <Link
+              href="/portfolio"
+              className="btn btn-primary"
+              id="btn-hero-view-work"
+            >
+              <span>View Our Work</span>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
+            <a
+              href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+              id="btn-hero-start-mvp"
+            >
+              <span>Start Your MVP</span>
+              <span className="sr-only"> (opens WhatsApp in a new tab)</span>
+            </a>
+            <Link
+              href="/contact"
+              className="link-cta"
+              id="link-hero-consult"
+            >
+              <span>Schedule a Consultation</span>
+              <Calendar className="link-icon" aria-hidden="true" />
+            </Link>
           </div>
           <div className="hero-visual">
             <HeroStage />

@@ -47,6 +47,7 @@ export const viewport: Viewport = {
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -144,7 +145,7 @@ export default function RootLayout({
           THESIS: Category-standard founder homepage elevated by cinematic product motion—glass telemetry cards orbit a metallic sculpture; refuse generic particle wallpaper as the hero.
           OWN-WORLD: Void charcoal, frosted glass panels, brushed metal 3D, soft cyan instrument light, pill CTAs, Geist + Manrope.
           STORY: Founder grasps Zero to MVP (₹29,999 / 10–14 days / ownership) and acts via WhatsApp or consultation.
-          FIRST VIEWPORT: Left headline + bullets + CTAs; right HeroStage (orbiting metal + floating glass offer cards). Primary: View Our Work / Start Your MVP below.
+          FIRST VIEWPORT: Headline + offer + View Our Work first; Start Your MVP secondary. HeroStage is a live Three.js studio sculpture (brushed knot, blue rim, floor glow) with glass offer cards — not a still image. Mobile stacks copy → CTAs → stage → bullets.
           FORM: Canon category standard; seed 70d60cdf; craft bar Raycast+Arc+Resend; motion pinned to design-inspo video.
           FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
         */}

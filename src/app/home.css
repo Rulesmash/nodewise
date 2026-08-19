@@ -24,9 +24,34 @@
 }
 
 .home-page .hero-container {
+  display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-areas:
+    "copy visual"
+    "sub visual"
+    "ctas visual";
+  column-gap: clamp(2rem, 4vw, 3.5rem);
+  row-gap: 0;
   align-items: center;
+}
+
+.home-page .hero-copy {
+  grid-area: copy;
+  align-self: end;
+}
+
+.home-page .hero-subtitle {
+  grid-area: sub;
+}
+
+.home-page .hero-ctas {
+  grid-area: ctas;
+  align-self: start;
+}
+
+.home-page .hero-visual {
+  grid-area: visual;
+  align-self: center;
 }
 
 .home-page .hero-title {
@@ -41,7 +66,7 @@
 }
 
 .home-page .hero-offer {
-  margin: 0 0 1.15rem;
+  margin: 0;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.45;
@@ -52,7 +77,7 @@
 .home-page .hero-subtitle {
   list-style: none;
   padding: 0;
-  margin: 0 0 2.25rem;
+  margin: 0.35rem 0 1.75rem;
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -109,7 +134,7 @@
   min-height: clamp(240px, 42vw, 320px);
   max-height: min(560px, 70vh);
   position: relative;
-  container-type: size;
+  container-type: inline-size;
   container-name: hero-stage;
 }
 
@@ -121,9 +146,8 @@
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 48%, rgba(70, 100, 160, 0.22) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 70% 30%, rgba(255, 255, 255, 0.04) 0%, transparent 55%),
-    linear-gradient(165deg, #12161f 0%, #0a0c12 100%);
+    radial-gradient(ellipse 50% 42% at 50% 48%, rgba(180, 184, 190, 0.07) 0%, transparent 68%),
+    linear-gradient(180deg, #0a0a0c 0%, #070708 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
     0 clamp(12px, 3cqi, 24px) clamp(32px, 8cqi, 80px) rgba(0, 0, 0, 0.45),
@@ -136,14 +160,25 @@
   width: 100% !important;
   height: 100% !important;
   display: block;
-  touch-action: none;
+  /* Allow the page to scroll when a finger starts on the canvas */
+  touch-action: pan-y;
+}
+
+@media (pointer: coarse) {
+  .hero-stage,
+  .hero-stage-canvas,
+  .hero-visual {
+    touch-action: pan-y;
+    /* Parallax is mouse-only; do not trap the swipe gesture */
+    pointer-events: none;
+  }
 }
 
 .hero-stage-glow {
   pointer-events: none;
   position: absolute;
   inset: -15%;
-  background: radial-gradient(circle at 50% 55%, rgba(120, 160, 255, 0.12), transparent 55%);
+  background: radial-gradient(circle at 50% 50%, rgba(210, 212, 216, 0.08), transparent 55%);
   mix-blend-mode: screen;
   animation: heroGlowPulse 8s var(--ease-out-expo) infinite alternate;
 }
@@ -246,85 +281,85 @@
   overflow: hidden;
 }
 
-/* Desktop / large: floating corners */
+/* Price + timeline sit on the top corners of the stage */
 .hero-glass-card--price {
-  top: 10%;
+  top: 6%;
   left: 4%;
+  right: auto;
+  bottom: auto;
 }
 
 .hero-glass-card--time {
-  top: 14%;
-  right: 3%;
+  top: 6%;
+  right: 4%;
   left: auto;
+  bottom: auto;
 }
 
 .hero-glass-card--own {
-  bottom: 14%;
-  left: 5%;
+  bottom: 8%;
+  left: 4%;
   top: auto;
+  right: auto;
 }
 
 .hero-glass-card--core {
-  bottom: 10%;
+  bottom: 8%;
   right: 4%;
   left: auto;
   top: auto;
 }
 
-/* Container queries: adapt cards to stage size, not only viewport */
 @container hero-stage (max-width: 420px) {
   .hero-glass-layer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 0.4rem;
-    align-content: end;
-    padding: 0.5rem;
-    /* Leave top ~55% for 3D sculpture */
-    padding-top: 52%;
+    display: block;
+    padding: 0.4rem;
   }
 
   .hero-glass-card {
-    position: relative;
-    inset: auto !important;
-    width: 100%;
-    max-width: none;
-    transform: none !important;
+    position: absolute;
+    width: min(46%, 9.4rem);
+    max-width: 9.4rem;
+    padding: 0.45rem 0.55rem;
   }
 
-  .hero-glass-card--price,
-  .hero-glass-card--time,
-  .hero-glass-card--own,
-  .hero-glass-card--core {
-    top: auto;
+  .hero-glass-card--price {
+    top: 4.5%;
+    left: 3%;
+  }
+
+  .hero-glass-card--time {
+    top: 4.5%;
+    right: 3%;
     left: auto;
-    right: auto;
-    bottom: auto;
+  }
+
+  .hero-glass-card--own {
+    bottom: 4.5%;
+    left: 3%;
+    top: auto;
+  }
+
+  .hero-glass-card--core {
+    bottom: 4.5%;
+    right: 3%;
+    left: auto;
+    top: auto;
   }
 }
 
 @container hero-stage (max-width: 300px) {
-  .hero-glass-layer {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.3rem;
-    padding: 0.4rem;
-    padding-top: 48%;
-  }
-
   .hero-glass-card__meta {
     display: none;
   }
 
   .hero-glass-card {
-    padding: 0.45rem 0.5rem;
+    padding: 0.4rem 0.45rem;
+    width: min(47%, 8.4rem);
   }
 }
 
 @container hero-stage (max-height: 300px) {
-  .hero-glass-layer {
-    padding-top: 40%;
-  }
-
   .hero-glass-card__meta {
     display: none;
   }
@@ -619,80 +654,144 @@ body:has(.home-page) .canvas-container canvas {
 
 /* —— Responsive —— */
 @media (max-width: 960px) {
-  .home-page .hero-container {
-    grid-template-columns: 1fr;
-    gap: 1.35rem;
-    display: flex;
-    flex-direction: column;
+  .home-page .hero-section {
+    padding-top: calc(4.75rem + env(safe-area-inset-top, 0px));
+    padding-bottom: 2rem;
+    min-height: auto;
+    overflow: hidden;
   }
 
-  .home-page .hero-content {
-    position: relative;
-    z-index: 3;
-    order: 1;
+  .home-page .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "ctas"
+      "visual"
+      "sub";
+    column-gap: 0;
+    row-gap: 1.1rem;
+    align-items: stretch;
+  }
+
+  .home-page .hero-copy,
+  .home-page .hero-ctas,
+  .home-page .hero-subtitle,
+  .home-page .hero-visual {
+    align-self: stretch;
   }
 
   .home-page .hero-title {
-    max-width: 14ch;
-    font-size: clamp(2rem, 8.5vw, 2.75rem);
+    max-width: none;
+    font-size: clamp(1.85rem, 8vw, 2.45rem);
+    margin-bottom: 0.65rem;
+    text-wrap: balance;
   }
 
   .home-page .hero-offer {
     max-width: none;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
   }
 
-  .home-page .hero-visual {
-    order: 2;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: min(100%, 440px);
-    margin-inline: auto;
-    aspect-ratio: 1 / 1.02;
-    height: auto;
-    min-height: 260px;
-    max-height: min(440px, 58vh);
-    overflow: hidden;
-    border-radius: clamp(12px, 3vw, 16px);
+  .home-page .hero-subtitle {
+    margin: 0;
+    max-width: none;
+    font-size: 0.98rem;
+    padding-right: 4.5rem;
+    padding-bottom: 0.35rem;
   }
 
-  .home-page .hero-section {
-    padding-top: calc(4.5rem + env(safe-area-inset-top, 0px));
-    min-height: auto;
-    overflow: hidden;
-    padding-bottom: 2rem;
+  .home-page .hero-subtitle li:last-child {
+    margin-bottom: 0;
   }
 
   .home-page .hero-ctas {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
   }
 
+  .home-page .hero-ctas .btn,
   .home-page .hero-ctas .btn-primary,
-  .home-page .hero-ctas .link-cta {
+  .home-page .hero-ctas .btn-secondary {
     width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .home-page .hero-ctas .link-cta {
+    width: auto;
+    align-self: center;
     justify-content: center;
     min-height: 44px;
   }
 
+  .home-page .hero-visual {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    aspect-ratio: 1 / 1.04;
+    height: auto;
+    min-height: 220px;
+    max-height: min(300px, 40vh);
+    overflow: hidden;
+    border-radius: clamp(12px, 3vw, 16px);
+  }
+
   .hero-stage {
-    border-radius: 20px;
+    border-radius: 16px;
+  }
+
+  .hero-stage,
+  .hero-stage-canvas,
+  .home-page .hero-visual {
+    touch-action: pan-y;
+    pointer-events: none;
+  }
+
+  .hero-glass-layer {
+    display: block;
+    padding: 0.4rem;
   }
 
   .hero-glass-card {
-    min-width: 120px;
-    max-width: 142px;
-    padding: 0.65rem 0.75rem;
+    position: absolute;
+    width: min(46%, 9.4rem);
+    max-width: 9.4rem;
+    min-width: 0;
+    padding: 0.45rem 0.55rem;
   }
 
-  .hero-glass-card__value {
-    font-size: 0.95rem;
+  .hero-glass-card--price {
+    top: 4.5% !important;
+    left: 3% !important;
+    right: auto !important;
+    bottom: auto !important;
   }
 
-  .hero-glass-card--price { top: 10%; left: 5%; }
-  .hero-glass-card--time { top: 12%; right: 4%; }
-  .hero-glass-card--own { bottom: 14%; left: 6%; }
-  /* core card kept */
+  .hero-glass-card--time {
+    top: 4.5% !important;
+    right: 3% !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+
+  .hero-glass-card--own {
+    bottom: 4.5% !important;
+    left: 3% !important;
+    top: auto !important;
+    right: auto !important;
+  }
+
+  .hero-glass-card--core {
+    bottom: 4.5% !important;
+    right: 3% !important;
+    top: auto !important;
+    left: auto !important;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -725,7 +824,24 @@ body:has(.home-page) .canvas-container canvas {
 }
 
 @media (max-width: 640px) {
-  /* all four offer cards stay visible via stage grid */
+  .home-page .hero-section {
+    padding-top: calc(4.35rem + env(safe-area-inset-top, 0px));
+    padding-bottom: max(2.25rem, calc(1.25rem + env(safe-area-inset-bottom, 0px)));
+  }
+
+  .home-page .hero-container {
+    row-gap: 0.95rem;
+  }
+
+  .home-page .hero-title {
+    font-size: clamp(1.7rem, 8.2vw, 2.15rem);
+    letter-spacing: -0.03em;
+  }
+
+  .home-page .hero-visual {
+    min-height: 200px;
+    max-height: min(280px, 38vh);
+  }
 
   .home-page .mvp-highlight-content,
   .home-page .mvp-highlight-pricing {
@@ -734,15 +850,5 @@ body:has(.home-page) .canvas-container canvas {
 
   .home-page .mvp-price-big {
     font-size: 2.15rem !important;
-  }
-
-  .home-page .hero-ctas {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .home-page .hero-ctas .btn-primary {
-    justify-content: center;
   }
 }

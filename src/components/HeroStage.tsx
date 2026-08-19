@@ -29,17 +29,109 @@ function Icon({ name }: { name: CardIcon }) {
   return <Check {...props} />;
 }
 
-function fitScene(camera: THREE.PerspectiveCamera, group: THREE.Group, w: number, h: number) {
+/** Brushed-steel grain. Grain runs along the tube (U) so the knot reads like the studio still. */
+function makeBrushedMaps(size: number) {
+  const rough = document.createElement("canvas");
+  const normal = document.createElement("canvas");
+  rough.width = rough.height = size;
+  normal.width = normal.height = size;
+  const r = rough.getContext("2d")!;
+  const n = normal.getContext("2d")!;
+  r.fillStyle = "#7a7a7a";
+  r.fillRect(0, 0, size, size);
+  n.fillStyle = "#8080ff";
+  n.fillRect(0, 0, size, size);
+  for (let y = 0; y < size; y++) {
+    const shade = 96 + ((Math.sin(y * 0.37) + 1) * 28 + Math.random() * 22);
+    r.fillStyle = `rgb(${shade},${shade},${shade})`;
+    r.fillRect(0, y, size, 1);
+    const nx = 128 + (Math.random() - 0.5) * 18;
+    n.fillStyle = `rgb(${nx | 0},128,255)`;
+    n.fillRect(0, y, size, 1);
+  }
+  const roughnessMap = new THREE.CanvasTexture(rough);
+  const normalMap = new THREE.CanvasTexture(normal);
+  for (const tex of [roughnessMap, normalMap]) {
+    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+    tex.repeat.set(1.5, 10);
+    tex.anisotropy = 4;
+    tex.colorSpace = THREE.NoColorSpace;
+  }
+  return { roughnessMap, normalMap };
+}
+
+function composeStage(
+  camera: THREE.PerspectiveCamera,
+  sculpture: THREE.Group,
+  w: number,
+  h: number
+) {
   const short = Math.min(w, h);
   const aspect = w / Math.max(h, 1);
-  camera.fov = short < 360 ? 46 : short < 480 ? 42 : 38;
-  const zBase = short < 320 ? 6.4 : short < 420 ? 5.8 : short < 520 ? 5.4 : 5.15;
-  camera.position.set(0, short < 380 ? 0.08 : 0.12, zBase + Math.max(0, 1.15 - aspect) * 0.85);
+  const compact = short < 420;
+  camera.fov = compact ? 32 : 26;
+  const z = compact ? 3.75 : 3.55;
+  camera.position.set(0, 0.02, z + Math.max(0, 1.05 - aspect) * 0.35);
+  camera.lookAt(0, 0, 0);
   camera.aspect = aspect;
   camera.updateProjectionMatrix();
-  const s = short < 280 ? 0.72 : short < 360 ? 0.82 : short < 440 ? 0.9 : short < 520 ? 0.96 : 1;
-  group.scale.setScalar(s);
+  sculpture.position.set(0, 0, 0);
+  const s = short < 280 ? 1.22 : short < 360 ? 1.32 : short < 440 ? 1.42 : 1.52;
   return s;
+}
+
+function buildStudioEnv(renderer: THREE.WebGLRenderer) {
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const env = new THREE.Scene();
+
+  env.add(
+    new THREE.Mesh(
+      new THREE.SphereGeometry(16, 20, 16),
+      new THREE.MeshBasicMaterial({ color: 0x07080c, side: THREE.BackSide })
+    )
+  );
+
+  const softbox = new THREE.Mesh(
+    new THREE.PlaneGeometry(10, 7),
+    new THREE.MeshBasicMaterial({ color: 0xe7edf6 })
+  );
+  softbox.position.set(3.8, 7.4, 5.6);
+  softbox.lookAt(0, 0, 0);
+  env.add(softbox);
+
+  const rim = new THREE.Mesh(
+    new THREE.PlaneGeometry(6.5, 9),
+    new THREE.MeshBasicMaterial({ color: 0xc8ccd2 })
+  );
+  rim.position.set(-8.2, 1.6, 1.4);
+  rim.lookAt(0, 0, 0);
+  env.add(rim);
+
+  const kick = new THREE.Mesh(
+    new THREE.PlaneGeometry(5, 3),
+    new THREE.MeshBasicMaterial({ color: 0xd8dbe0 })
+  );
+  kick.position.set(0.4, 1.2, -7);
+  kick.lookAt(0, 0, 0);
+  env.add(kick);
+
+  const bounce = new THREE.Mesh(
+    new THREE.CircleGeometry(5, 24),
+    new THREE.MeshBasicMaterial({ color: 0x1a1b1e })
+  );
+  bounce.rotation.x = -Math.PI / 2;
+  bounce.position.y = -3.2;
+  env.add(bounce);
+
+  const map = pmrem.fromScene(env, 0.02).texture;
+  env.traverse((obj) => {
+    const mesh = obj as THREE.Mesh;
+    mesh.geometry?.dispose();
+    const mat = mesh.material as THREE.Material | undefined;
+    mat?.dispose();
+  });
+  pmrem.dispose();
+  return map;
 }
 
 export default function HeroStage() {
@@ -57,138 +149,177 @@ export default function HeroStage() {
     const coarse = window.matchMedia("(pointer: coarse)").matches;
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 80);
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: !coarse,
       alpha: true,
       powerPreference: "high-performance",
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, coarse ? 1.5 : 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, coarse ? 1.35 : 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.12;
+    renderer.toneMappingExposure = 1.08;
 
-    const pmrem = new THREE.PMREMGenerator(renderer);
-    const envScene = new THREE.Scene();
-    const envGeo = new THREE.SphereGeometry(12, 24, 24);
-    const envMat = new THREE.ShaderMaterial({
-      side: THREE.BackSide,
-      vertexShader: "varying vec3 vPos;void main(){vPos=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}",
-      fragmentShader: "varying vec3 vPos;void main(){vec3 n=normalize(vPos);float h=n.y*0.5+0.5;vec3 top=vec3(0.55,0.62,0.78);vec3 mid=vec3(0.12,0.14,0.2);vec3 bot=vec3(0.04,0.05,0.08);vec3 col=mix(bot,mid,smoothstep(0.0,0.55,h));col=mix(col,top,smoothstep(0.45,1.0,h));col+=vec3(0.25,0.4,0.7)*pow(1.0-abs(n.y),3.0)*0.35;gl_FragColor=vec4(col,1.0);}",
-    });
-    envScene.add(new THREE.Mesh(envGeo, envMat));
-    const envMap = pmrem.fromScene(envScene, 0.04).texture;
+    const envMap = buildStudioEnv(renderer);
     scene.environment = envMap;
-    envGeo.dispose();
-    envMat.dispose();
-    pmrem.dispose();
 
-    const group = new THREE.Group();
-    scene.add(group);
+    const { roughnessMap, normalMap } = makeBrushedMaps(coarse ? 256 : 512);
 
-    const metal = new THREE.MeshPhysicalMaterial({ color: new THREE.Color("#c5cddb"), metalness: 1, roughness: 0.18, envMapIntensity: 1.35, clearcoat: 0.55, clearcoatRoughness: 0.2 });
-    const darkMetal = new THREE.MeshPhysicalMaterial({ color: new THREE.Color("#6b7385"), metalness: 1, roughness: 0.28, envMapIntensity: 1.1, clearcoat: 0.3, clearcoatRoughness: 0.35 });
+    const sculpture = new THREE.Group();
+    scene.add(sculpture);
 
-    const knotSeg = coarse ? 140 : 200;
-    const knot = new THREE.Mesh(new THREE.TorusKnotGeometry(0.95, 0.28, knotSeg, coarse ? 24 : 32, 2, 3), metal);
-    knot.rotation.x = 0.45;
-    knot.rotation.z = -0.25;
-    group.add(knot);
+    const metal = new THREE.MeshPhysicalMaterial({
+      color: new THREE.Color("#d4d6d9"),
+      metalness: 1,
+      roughness: 0.18,
+      roughnessMap,
+      normalMap,
+      normalScale: new THREE.Vector2(0.18, 0.18),
+      envMapIntensity: 1.65,
+      clearcoat: 0.62,
+      clearcoatRoughness: 0.12,
+    });
+    if ("anisotropy" in metal) {
+      (metal as THREE.MeshPhysicalMaterial & { anisotropy: number }).anisotropy = 0.7;
+    }
+    const ringMetal = new THREE.MeshPhysicalMaterial({
+      color: new THREE.Color("#c2c5c9"),
+      metalness: 1,
+      roughness: 0.22,
+      roughnessMap,
+      envMapIntensity: 1.45,
+      clearcoat: 0.4,
+      clearcoatRoughness: 0.22,
+    });
 
-    const ribbon = new THREE.Mesh(new THREE.TorusGeometry(1.35, 0.045, 16, coarse ? 96 : 140), darkMetal);
-    ribbon.rotation.x = Math.PI / 2.4;
-    ribbon.rotation.y = 0.4;
-    group.add(ribbon);
+    const sphereSeg = coarse ? 32 : 56;
+    const sphere = new THREE.Mesh(new THREE.SphereGeometry(0.48, sphereSeg, sphereSeg), metal);
+    sculpture.add(sphere);
 
-    const latticeMat = new THREE.MeshPhysicalMaterial({ color: new THREE.Color("#9aa6bc"), metalness: 0.95, roughness: 0.22, wireframe: true, transparent: true, opacity: 0.55, envMapIntensity: 1.2 });
-    const lattice = new THREE.Mesh(new THREE.IcosahedronGeometry(0.55, 1), latticeMat);
-    lattice.position.set(0.15, -0.1, 0.2);
-    group.add(lattice);
+    const ringTube = coarse ? 10 : 16;
+    const ringCirc = coarse ? 80 : 140;
+    const rings = [
+      { r: 0.78, rx: Math.PI / 2, ry: 0, rz: 0, spin: [0, 0.22, 0] as const },
+      { r: 0.94, rx: 0, ry: 0, rz: 0, spin: [0.18, 0, 0] as const },
+      { r: 1.1, rx: 0, ry: Math.PI / 2, rz: 0, spin: [0, 0, 0.2] as const },
+      { r: 1.26, rx: Math.PI / 3.2, ry: Math.PI / 5, rz: 0.35, spin: [0.12, 0.16, 0] as const },
+    ].map((spec) => {
+      const mesh = new THREE.Mesh(
+        new THREE.TorusGeometry(spec.r, 0.032, ringTube, ringCirc),
+        ringMetal
+      );
+      mesh.rotation.set(spec.rx, spec.ry, spec.rz);
+      mesh.userData.spin = spec.spin;
+      sculpture.add(mesh);
+      return mesh;
+    });
 
-    const key = new THREE.DirectionalLight(0xe8eef8, 2.2);
-    key.position.set(4, 5, 6);
+    sculpture.rotation.set(0.18, 0.35, -0.08);
+
+    const key = new THREE.DirectionalLight(0xf4f5f6, 2.4);
+    key.position.set(3.4, 5.2, 5.0);
     scene.add(key);
-    const fill = new THREE.DirectionalLight(0x6a8cff, 0.55);
-    fill.position.set(-5, -1, 2);
+    const fill = new THREE.DirectionalLight(0xc8cacd, 0.85);
+    fill.position.set(-5.0, 1.2, 2.2);
     scene.add(fill);
-    const rimL = new THREE.DirectionalLight(0xffffff, 0.8);
-    rimL.position.set(0, 2, -6);
-    scene.add(rimL);
-    scene.add(new THREE.AmbientLight(0x8899bb, 0.35));
+    const back = new THREE.DirectionalLight(0xe6e7e9, 0.9);
+    back.position.set(0.2, 2.4, -5.6);
+    scene.add(back);
+    scene.add(new THREE.HemisphereLight(0xdedfe1, 0x09090b, 0.32));
 
     let baseScale = 1;
-    group.scale.setScalar(0.001);
-    group.rotation.y = -0.6;
+    sculpture.scale.setScalar(0.001);
+    sculpture.rotation.y = -0.55;
 
     const resize = () => {
       const w = stage.clientWidth;
       const h = stage.clientHeight;
       if (w < 1 || h < 1) return;
-      baseScale = fitScene(camera, group, w, h);
+      baseScale = composeStage(camera, sculpture, w, h);
       renderer.setSize(w, h, false);
       stage.style.setProperty("--stage-w", w + "px");
       stage.style.setProperty("--stage-h", h + "px");
       const short = Math.min(w, h);
       stage.dataset.size = short < 320 ? "xs" : short < 420 ? "sm" : short < 520 ? "md" : "lg";
     };
-    resize();
-    const ro = new ResizeObserver(resize);
-    ro.observe(stage);
 
     const pointer = { x: 0, y: 0 };
-    const targetRot = { x: 0.1, y: -0.25 };
+    const targetRot = { x: 0.06, y: -0.2 };
     const onPointer = (e: PointerEvent) => {
-      if (coarse) return;
       const rect = stage.getBoundingClientRect();
       pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       pointer.y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
     };
-    stage.addEventListener("pointermove", onPointer);
+    if (!coarse) stage.addEventListener("pointermove", onPointer);
 
     const cardNodes = Array.from(cardsEl.querySelectorAll<HTMLElement>(".hero-glass-card"));
-    cardNodes.forEach((n) => { n.style.opacity = "1"; n.style.visibility = "visible"; });
+    cardNodes.forEach((n) => {
+      n.style.opacity = "1";
+      n.style.visibility = "visible";
+    });
 
+    gsap.ticker.lagSmoothing(0);
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    resize();
+    const ro = new ResizeObserver(resize);
+    ro.observe(stage);
+
     if (!reduceMotion) {
-      tl.to(group.scale, { x: baseScale, y: baseScale, z: baseScale, duration: 1.1, ease: "power3.out" }, 0.05);
-      tl.fromTo(group.rotation, { y: -1.15 }, { y: -0.25, duration: 1.35, ease: "power3.out" }, 0);
+      tl.to(sculpture.scale, { x: baseScale, y: baseScale, z: baseScale, duration: 1.15, ease: "power3.out" }, 0.04);
+      tl.fromTo(sculpture.rotation, { y: -1.2 }, { y: -0.2, duration: 1.4, ease: "power3.out" }, 0);
       tl.from(cardNodes, { y: 14, duration: 0.65, stagger: 0.09, ease: "power3.out", clearProps: "transform", immediateRender: false }, 0.35);
     } else {
-      group.scale.setScalar(baseScale);
+      sculpture.scale.setScalar(baseScale);
     }
 
     let frame = 0;
-    const t0 = performance.now();
+    let last = performance.now();
+    let phase = 0;
+    let tabHidden = document.hidden;
     const floatPhase = cardNodes.map((_, i) => i * 1.35);
+
+    const syncClock = () => {
+      tabHidden = document.hidden;
+      last = performance.now();
+    };
+    document.addEventListener("visibilitychange", syncClock);
+    window.addEventListener("pageshow", syncClock);
+    window.addEventListener("focus", syncClock);
 
     const tick = (now: number) => {
       frame = requestAnimationFrame(tick);
-      const t = (now - t0) * 0.001;
+      let dt = (now - last) * 0.001;
+      last = now;
+      if (tabHidden || document.hidden || dt < 0) {
+        last = now;
+        return;
+      }
+      // Drop catch-up from a backgrounded tab — never step more than ~2 frames
+      if (dt > 1 / 30) dt = 1 / 30;
+      phase += dt;
+
       if (!reduceMotion) {
         const short = Math.min(stage.clientWidth, stage.clientHeight);
         const amp = short < 360 ? 3 : short < 480 ? 4.5 : 6;
-        targetRot.y = -0.25 + pointer.x * (coarse ? 0 : 0.16);
-        targetRot.x = 0.1 + pointer.y * (coarse ? 0 : 0.09);
-        group.rotation.y += (targetRot.y + t * 0.2 - group.rotation.y) * 0.035;
-        group.rotation.x += (targetRot.x - group.rotation.x) * 0.035;
-        knot.rotation.y = t * 0.16;
-        ribbon.rotation.z = t * 0.11;
-        lattice.rotation.x = t * 0.22;
-        lattice.rotation.y = -t * 0.18;
-        const isGrid = short < 420;
+        targetRot.y = -0.2 + pointer.x * (coarse ? 0 : 0.14);
+        targetRot.x = 0.06 + pointer.y * (coarse ? 0 : 0.07);
+        sculpture.rotation.y += 0.14 * dt;
+        sculpture.rotation.x += (targetRot.x - sculpture.rotation.x) * Math.min(1, 2.2 * dt);
+        sculpture.position.y = Math.sin(phase * 0.55) * 0.05;
+        rings.forEach((mesh) => {
+          const [sx, sy, sz] = mesh.userData.spin as [number, number, number];
+          mesh.rotation.x += sx * dt;
+          mesh.rotation.y += sy * dt;
+          mesh.rotation.z += sz * dt;
+        });
         cardNodes.forEach((node, i) => {
-          if (isGrid) {
-            node.style.setProperty("--float-y", "0px");
-            node.style.setProperty("--float-x", "0px");
-            return;
-          }
-          node.style.setProperty("--float-y", Math.sin(t * 0.85 + floatPhase[i]) * amp + "px");
-          node.style.setProperty("--float-x", Math.cos(t * 0.5 + floatPhase[i]) * amp * 0.65 + "px");
+          node.style.setProperty("--float-y", Math.sin(phase * 0.85 + floatPhase[i]) * amp + "px");
+          node.style.setProperty("--float-x", Math.cos(phase * 0.5 + floatPhase[i]) * amp * 0.55 + "px");
         });
       }
-      if (!tl.isActive() && Math.abs(group.scale.x - baseScale) > 0.01) {
-        group.scale.setScalar(baseScale);
+      if (!tl.isActive() && Math.abs(sculpture.scale.x - baseScale) > 0.01) {
+        sculpture.scale.setScalar(baseScale);
       }
       renderer.render(scene, camera);
     };
@@ -197,15 +328,18 @@ export default function HeroStage() {
     return () => {
       cancelAnimationFrame(frame);
       ro.disconnect();
+      document.removeEventListener("visibilitychange", syncClock);
+      window.removeEventListener("pageshow", syncClock);
+      window.removeEventListener("focus", syncClock);
       stage.removeEventListener("pointermove", onPointer);
       tl.kill();
       renderer.dispose();
-      knot.geometry.dispose();
-      ribbon.geometry.dispose();
-      lattice.geometry.dispose();
+      sphere.geometry.dispose();
+      rings.forEach((mesh) => mesh.geometry.dispose());
       metal.dispose();
-      darkMetal.dispose();
-      latticeMat.dispose();
+      ringMetal.dispose();
+      roughnessMap.dispose();
+      normalMap.dispose();
       envMap.dispose();
     };
   }, []);
