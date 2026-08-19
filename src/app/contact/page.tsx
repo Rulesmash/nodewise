@@ -4,24 +4,15 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import JsonLd from "@/components/JsonLd";
 import {
+  PAGE_SEO,
+  SCHEMA_IDS,
   SITE,
-  buildMetadata,
   breadcrumbJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Contact Nodewise: Landing Pages and Software",
-  description:
-    "Talk to Nodewise about a B2B landing page or business software. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
-  path: "/contact",
-  keywords: [
-    "contact web developers India",
-    "hire web developers India",
-    "schedule software consultation",
-    "WhatsApp web agency",
-  ],
-});
+export const metadata: Metadata = pageMetadata("contact");
 
 export default function Contact() {
   return (
@@ -29,35 +20,31 @@ export default function Contact() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Contact Nodewise",
-            description:
-              "Schedule a technical consultation for B2B landing pages and business software.",
+            title: PAGE_SEO.contact.title,
+            description: PAGE_SEO.contact.description,
             path: "/contact",
             type: "ContactPage",
+            mainEntity: { "@id": SCHEMA_IDS.organization },
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Contact", path: "/contact" },
+            { name: "Request a project", path: "/contact" },
           ]),
           {
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "Contact Nodewise",
+            "@id": `${SITE.url}/contact#contactpage`,
+            name: PAGE_SEO.contact.title,
             url: `${SITE.url}/contact`,
-            mainEntity: {
-              "@type": "Organization",
-              "@id": `${SITE.url}/#organization`,
-              name: SITE.name,
-              email: SITE.email,
-              telephone: SITE.phone,
-              url: SITE.url,
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: SITE.phone,
-                contactType: "sales",
-                availableLanguage: ["English", "Hindi", "Malayalam"],
-                url: `${SITE.url}/contact`,
-              },
+            mainEntity: { "@id": SCHEMA_IDS.organization },
+            potentialAction: {
+              "@type": "CommunicateAction",
+              name: "Request a landing page or software project",
+              target: [
+                SITE.whatsapp,
+                `mailto:${SITE.email}`,
+                `${SITE.url}/contact`,
+              ],
             },
           },
         ]}
@@ -66,9 +53,9 @@ export default function Contact() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <h1 className="page-hero-title">Contact</h1>
+            <h1 className="page-hero-title">Request a project</h1>
             <p className="page-hero-subtitle">
-              WhatsApp, email, or a short brief.
+              Hire Nodewise for a startup website, B2B site, or custom software.
             </p>
           </div>
         </div>

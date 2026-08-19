@@ -78,7 +78,7 @@ export default function Header() {
           href="/"
           className="logo"
           id="nav-logo-link"
-          aria-label="Nodewise Homepage"
+          aria-label="Nodewise software studio home"
           onClick={closeMenu}
         >
           <img

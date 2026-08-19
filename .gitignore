@@ -4,10 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
+.pnp.cjs
 .yarn/install-state.gz
+.yarn/cache
+.pnpm-store
 
 # testing
 /coverage
+/playwright-report
+/test-results
+/blob-report
 
 # next.js
 /.next/
@@ -15,18 +21,31 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.pem
+*.bak
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # local env files
-.env*.local
+.env
+.env.*
+!.env.example
 
 # vercel
 .vercel
@@ -35,7 +54,34 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Impeccable local
-.impeccable/config.local.json
-.impeccable/hook.cache.json
-.impeccable/live/
+# caches and temporary files
+.cache/
+.turbo/
+.eslintcache
+.stylelintcache
+*.log
+
+# editor / OS
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# local agent, design, and browser tooling (do not ship)
+.grok/
+.kilo/
+.impeccable/
+.playwright-mcp/
+.claude/
+.cursor/
+.codex/
+.agent/
+.agents/
+.windsurf/
+.gemini/
+.mcp/
+.firecrawl/
+
+# screenshots and traces produced by local tooling
+traces/
+*.har

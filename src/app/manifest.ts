@@ -3,10 +3,10 @@ import { SITE } from "@/lib/seo";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE.name}: ${SITE.tagline}`,
+    name: `${SITE.studioName}: ${SITE.tagline}`,
     short_name: SITE.name,
     description:
-      "Agile digital product studio building B2B landing pages and business software.",
+      "India software studio. Request B2B landing pages and custom business software.",
     start_url: "/",
     display: "standalone",
     background_color: "#0b0c10",

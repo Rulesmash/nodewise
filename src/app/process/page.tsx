@@ -3,22 +3,13 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import {
-  buildMetadata,
+  PAGE_SEO,
   breadcrumbJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Our Process: Discovery, Build and Launch",
-  description:
-    "How Nodewise ships software: discovery, architecture, focused sprints, and reliable launch. A clear path from idea or bottleneck to a live product.",
-  path: "/process",
-  keywords: [
-    "MVP development process",
-    "agile web development workflow",
-    "software delivery process",
-  ],
-});
+export const metadata: Metadata = pageMetadata("process");
 
 export default function Process() {
   return (
@@ -26,9 +17,8 @@ export default function Process() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Our Process",
-            description:
-              "Discovery, architecture, sprinting, and launch. How Nodewise delivers software.",
+            title: PAGE_SEO.process.title,
+            description: PAGE_SEO.process.description,
             path: "/process",
           }),
           breadcrumbJsonLd([
@@ -38,9 +28,9 @@ export default function Process() {
           {
             "@context": "https://schema.org",
             "@type": "HowTo",
-            name: "How Nodewise Builds Custom Software",
+            name: "How Nodewise Builds Landing Pages and Software",
             description:
-              "Our collaboration path from idea to live software.",
+              "How our software studio takes a landing page or software request from discovery to launch.",
             step: [
               {
                 "@type": "HowToStep",

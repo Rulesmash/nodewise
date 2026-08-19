@@ -3,25 +3,14 @@ import { Check, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import {
-  buildMetadata,
+  PAGE_SEO,
+  SCHEMA_IDS,
   breadcrumbJsonLd,
-  serviceJsonLd,
-  offerCatalogJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Web Development Pricing India: Landing Pages from ₹12k",
-  description:
-    "Transparent Nodewise pricing: B2B landing pages ₹12,000–15,000, business software from ₹25,000, custom platforms quoted. Clear packages for sites and software.",
-  path: "/packages",
-  keywords: [
-    "web development cost India",
-    "B2B landing page price",
-    "business software package",
-    "INR web development pricing",
-  ],
-});
+export const metadata: Metadata = pageMetadata("packages");
 
 export default function Packages() {
   return (
@@ -29,56 +18,16 @@ export default function Packages() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Pricing & Packages",
-            description:
-              "Transparent INR pricing for B2B landing pages, business software, and custom platforms.",
+            title: PAGE_SEO.packages.title,
+            description: PAGE_SEO.packages.description,
             path: "/packages",
+            type: "CollectionPage",
+            mainEntity: { "@id": SCHEMA_IDS.offerCatalog },
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Packages", path: "/packages" },
+            { name: "Pricing", path: "/packages" },
           ]),
-          serviceJsonLd({
-            name: "Landing Pages",
-            description:
-              "Professional B2B landing pages and first-site web presence.",
-            path: "/packages",
-            price: 12000,
-            priceMax: 15000,
-          }),
-          serviceJsonLd({
-            name: "Business Software",
-            description:
-              "Custom web platforms, portals, and light automation for growing businesses.",
-            path: "/packages",
-            price: 25000,
-          }),
-          offerCatalogJsonLd("Nodewise Service Packages", [
-            {
-              name: "Landing Pages",
-              description: "Professional B2B landing pages.",
-              path: "/packages",
-              price: 12000,
-              priceMax: 15000,
-            },
-            {
-              name: "Business Software",
-              description: "Custom sites, portals, and light automation.",
-              path: "/packages",
-              price: 25000,
-            },
-            {
-              name: "Custom Platforms",
-              description: "Multi-user software platforms and integrations.",
-              path: "/packages",
-            },
-          ]),
-          serviceJsonLd({
-            name: "Custom Platforms",
-            description:
-              "Custom multi-user software platforms and advanced business systems.",
-            path: "/packages",
-          }),
         ]}
       />
       {/*  Page Hero Banner  */}
@@ -87,7 +36,7 @@ export default function Packages() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Pricing</h1>
             <p className="page-hero-subtitle">
-              Landing pages, business software, and custom platforms.
+              Website development, custom software, and platforms for startups and B2B.
             </p>
           </div>
         </div>

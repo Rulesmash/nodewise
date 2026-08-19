@@ -3,24 +3,14 @@ import { ChevronLeft, Layout, LayoutGrid, Cpu, ChevronRight, ArrowRight } from "
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import {
-  buildMetadata,
+  PAGE_SEO,
+  SCHEMA_IDS,
   breadcrumbJsonLd,
-  serviceJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Services: Web Platforms, Portals and Automation",
-  description:
-    "Nodewise services: high-converting web presence, custom business portals and dashboards, and workflow automation. Built for speed, clarity, and growth.",
-  path: "/capabilities",
-  keywords: [
-    "custom web portal development",
-    "business dashboard software",
-    "process automation India",
-    "web application services",
-  ],
-});
+export const metadata: Metadata = pageMetadata("capabilities");
 
 export default function Capabilities() {
   return (
@@ -28,33 +18,21 @@ export default function Capabilities() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Core Capabilities",
-            description:
-              "Premium web presences, custom portals, dashboards, and automation layers.",
+            title: PAGE_SEO.capabilities.title,
+            description: PAGE_SEO.capabilities.description,
             path: "/capabilities",
+            type: "CollectionPage",
+            mainEntity: [
+              { "@id": SCHEMA_IDS.landingPageService },
+              { "@id": SCHEMA_IDS.softwareStudioService },
+              { "@id": SCHEMA_IDS.websiteDevelopmentService },
+              { "@id": SCHEMA_IDS.softwareDevelopmentService },
+            ],
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
             { name: "Services", path: "/capabilities" },
           ]),
-          serviceJsonLd({
-            name: "B2B Landing Pages",
-            description:
-              "High-performance marketing sites and brand platforms built for conversion.",
-            path: "/capabilities",
-          }),
-          serviceJsonLd({
-            name: "Custom Portals & Dashboards",
-            description:
-              "Internal tools, client portals, and operational dashboards tailored to your workflow.",
-            path: "/capabilities",
-          }),
-          serviceJsonLd({
-            name: "Advanced Automation",
-            description:
-              "Software automation layers that reduce manual work and scale business processes.",
-            path: "/capabilities",
-          }),
         ]}
       />
       {/*  Page Hero Banner  */}
@@ -63,7 +41,7 @@ export default function Capabilities() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Services</h1>
             <p className="page-hero-subtitle">
-              B2B landing pages, portals, and software.
+              Website development, custom software, portals, and automation for startups and B2B.
             </p>
           </div>
         </div>
@@ -85,12 +63,12 @@ export default function Capabilities() {
                   <div className="card-icon-container">
                     <Layout className="card-icon" />
                   </div>
-                  <h3 className="card-title">B2B Landing Pages</h3>
-                  <p className="card-description">Marketing sites and landing pages that convert.</p>
+                  <h3 className="card-title">Website Development</h3>
+                  <p className="card-description">Sites and landing pages for startups and B2B companies.</p>
                   <ul className="scan-list">
                     <li>Corporate sites</li>
                     <li>Landing pages</li>
-                    <li>Service businesses</li>
+                    <li>Starting businesses</li>
                   </ul>
                   <div className="card-hover-border"></div>
                 </div>

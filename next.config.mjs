@@ -14,6 +14,18 @@ const nextConfig = {
         destination: "https://nodewise.cc/:path*",
         permanent: true,
       },
+      { source: "/services", destination: "/capabilities", permanent: true },
+      { source: "/work", destination: "/portfolio", permanent: true },
+      { source: "/pricing", destination: "/packages", permanent: true },
+      { source: "/web-development", destination: "/website-development", permanent: true },
+      { source: "/website-design", destination: "/website-development", permanent: true },
+      { source: "/startup-website", destination: "/website-development", permanent: true },
+      { source: "/b2b-website", destination: "/website-development", permanent: true },
+      { source: "/custom-software", destination: "/software-development", permanent: true },
+      { source: "/custom-software-development", destination: "/software-development", permanent: true },
+      { source: "/software-development-company", destination: "/software-development", permanent: true },
+      { source: "/mvp", destination: "/zero-to-mvp", permanent: true },
+      { source: "/hire", destination: "/contact", permanent: true },
     ];
   },
   async headers() {
@@ -32,6 +44,19 @@ const nextConfig = {
       },
       {
         source: "/sitemap.xml",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/xml; charset=utf-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, s-maxage=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/image-sitemap.xml",
         headers: [
           {
             key: "Content-Type",

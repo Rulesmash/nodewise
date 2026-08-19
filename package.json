@@ -6,10 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "impeccable": "impeccable",
-    "impeccable:detect": "impeccable detect src",
-    "impeccable:hooks": "node .kilo/skills/impeccable/scripts/hook-admin.mjs"
+    "lint": "next lint"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

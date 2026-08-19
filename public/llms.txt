@@ -1,24 +1,39 @@
 # Nodewise
 
-> India-based digital product studio. We build professional B2B landing pages and business software. Landing pages 12k-15k INR. Software from 25k+. Custom platforms quoted. Transparent INR pricing. Worldwide delivery.
+> India-based studio for website development and custom software development. We work with startups, new businesses, and B2B companies that need a professional site or internal software. Landing pages 12k-15k INR. Software from 25k+. Custom platforms quoted. Transparent INR pricing. Worldwide delivery.
 
 Site: https://nodewise.cc
 Contact: contact@nodewise.cc
 WhatsApp: https://wa.me/919446998827
 LinkedIn: https://www.linkedin.com/company/nodewise-cc
 
+## Who we help
+
+- Starting businesses that need a first website or landing page
+- B2B companies that need a conversion-focused site
+- Teams that need custom software, portals, dashboards, or light automation
+
 ## Offer
 
-- Landing Pages: 12k-15k INR. B2B landing pages and first web presence.
-- Business Software: 25k+ INR. Custom site, portals, dashboards, light automation.
-- Custom Platforms: quoted. Multi-user software and integrations.
+- Website development: 12k-15k INR. B2B websites, landing pages, and first web presence.
+- Custom software development: 25k+ INR. Web apps, portals, dashboards, light automation.
+- Custom platforms: quoted. Multi-user software and integrations.
 - Zero to MVP (side offer): ₹29,999 one-time, 10-14 days. Consult, core MVP, live responsive web app, source, docs, ownership, 2 revision rounds. Excludes complex enterprise integrations, native mobile apps, massive scalable cloud architecture.
+
+## How to request work
+
+- WhatsApp: https://wa.me/919446998827
+- Email: contact@nodewise.cc
+- Brief form: https://nodewise.cc/contact
+- Pricing: https://nodewise.cc/packages
 
 ## Pages
 
-- [Home](https://nodewise.cc/): Landing pages and business software
+- [Home](https://nodewise.cc/): Website and software development for startups and B2B
+- [Website development](https://nodewise.cc/website-development): Sites and landing pages for new businesses and B2B companies
+- [Software development](https://nodewise.cc/software-development): Custom software, portals, dashboards, and web apps
 - [Work](https://nodewise.cc/portfolio): Live case studies
-- [Pricing](https://nodewise.cc/packages): Landing Pages, Business Software, Custom Platforms
+- [Pricing](https://nodewise.cc/packages): Website, software, and platform packages
 - [Zero to MVP](https://nodewise.cc/zero-to-mvp): Timed founder MVP package
 - [Services](https://nodewise.cc/capabilities): Landing pages, portals, software
 - [Process](https://nodewise.cc/process): Discovery, build, launch
@@ -29,4 +44,5 @@ LinkedIn: https://www.linkedin.com/company/nodewise-cc
 ## Optional
 
 - [Sitemap](https://nodewise.cc/sitemap.xml)
+- [Image sitemap](https://nodewise.cc/image-sitemap.xml)
 - [Robots](https://nodewise.cc/robots.txt)

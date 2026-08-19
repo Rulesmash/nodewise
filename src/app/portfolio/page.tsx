@@ -5,9 +5,10 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import type { CarouselSlide } from "@/components/ProjectCarousel";
 import {
-  buildMetadata,
+  PAGE_SEO,
   breadcrumbJsonLd,
   itemListJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 import "./portfolio.css";
@@ -30,20 +31,7 @@ const PortfolioVideoBg = dynamic(
   { ssr: false }
 );
 
-export const metadata: Metadata = buildMetadata({
-  title: "Work and Case Studies: Landing Pages and Software",
-  description:
-    "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing site, FOSS CEAL community platform. Live products and high-converting landing pages.",
-  path: "/portfolio",
-  keywords: [
-    "web development portfolio India",
-    "MVP case studies",
-    "landing page examples",
-    "startup product examples",
-  ],
-  image: "/assets/whitebull-landing.png",
-  imageAlt: "Nodewise portfolio: Whitebull equity research desk",
-});
+export const metadata: Metadata = pageMetadata("portfolio");
 
 type Project = {
   id: string;
@@ -210,11 +198,11 @@ export default function Portfolio() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Portfolio & Case Studies",
-            description:
-              "MVPs, high-converting landing pages, and custom web applications built by Nodewise.",
+            title: PAGE_SEO.portfolio.title,
+            description: PAGE_SEO.portfolio.description,
             path: "/portfolio",
             type: "CollectionPage",
+            image: PAGE_SEO.portfolio.image,
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },

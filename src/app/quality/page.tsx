@@ -3,22 +3,13 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import {
-  buildMetadata,
+  PAGE_SEO,
   breadcrumbJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Quality Standards: Performance, Security and Ownership",
-  description:
-    "Nodewise engineering bar: performance-first delivery, secure architecture, clean code you own, and documentation so your team can extend the product.",
-  path: "/quality",
-  keywords: [
-    "software quality standards",
-    "performance focused development",
-    "clean code ownership",
-  ],
-});
+export const metadata: Metadata = pageMetadata("quality");
 
 export default function Quality() {
   return (
@@ -26,9 +17,8 @@ export default function Quality() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Quality Standards",
-            description:
-              "Performance, security, and clean architecture standards at Nodewise.",
+            title: PAGE_SEO.quality.title,
+            description: PAGE_SEO.quality.description,
             path: "/quality",
           }),
           breadcrumbJsonLd([

@@ -5,10 +5,11 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import HeroGlassCards from "@/components/HeroGlassCards";
 import {
-  buildMetadata,
+  PAGE_SEO,
+  SCHEMA_IDS,
   breadcrumbJsonLd,
   faqJsonLd,
-  serviceJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 import "./home.css";
@@ -20,19 +21,7 @@ const HomeMotion = dynamic(() => import("@/components/HomeMotion"), {
   ssr: false,
 });
 
-export const metadata: Metadata = buildMetadata({
-  title: "B2B Landing Pages and Business Software in India",
-  description:
-    "Nodewise builds professional B2B landing pages and business software. Landing pages 12k–15k INR. Software from 25k+. Custom platforms quoted. Transparent pricing. Worldwide delivery.",
-  path: "/",
-  keywords: [
-    "B2B landing pages India",
-    "business software development",
-    "custom web platforms",
-    "INR web development pricing",
-    "professional landing page",
-  ],
-});
+export const metadata: Metadata = pageMetadata("home");
 
 export default function Home() {
   return (
@@ -40,30 +29,47 @@ export default function Home() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "B2B Landing Pages and Business Software in India",
-            description:
-              "Nodewise builds professional B2B landing pages and business software. Published INR pricing. India-based, worldwide delivery.",
+            title: PAGE_SEO.home.title,
+            description: PAGE_SEO.home.description,
             path: "/",
+            mainEntity: [
+              { "@id": SCHEMA_IDS.landingPageService },
+              { "@id": SCHEMA_IDS.softwareStudioService },
+              { "@id": SCHEMA_IDS.websiteDevelopmentService },
+              { "@id": SCHEMA_IDS.softwareDevelopmentService },
+            ],
           }),
           breadcrumbJsonLd([{ name: "Home", path: "/" }]),
-          serviceJsonLd({
-            name: "Landing Pages",
-            description:
-              "Professional B2B landing pages and first-site web presence.",
-            path: "/packages",
-            price: 12000,
-            priceMax: 15000,
-          }),
           faqJsonLd([
+            {
+              question: "How do I request a landing page?",
+              answer:
+                "WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a brief on the contact page. B2B landing pages are ₹12,000–15,000 INR.",
+            },
+            {
+              question: "Is Nodewise a software studio?",
+              answer:
+                "Yes. Nodewise is an India-based software studio that builds B2B landing pages, custom web platforms, and business software, delivered worldwide.",
+            },
+            {
+              question: "Do you build websites for startups and new businesses?",
+              answer:
+                "Yes. Nodewise builds professional websites and landing pages for starting businesses and B2B companies. Website packages start at 12k–15k INR.",
+            },
+            {
+              question: "Do you build custom software for B2B companies?",
+              answer:
+                "Yes. We build custom software, portals, dashboards, and light automation for B2B teams. Software work starts from 25k INR. Custom platforms are quoted.",
+            },
             {
               question: "What does Nodewise build?",
               answer:
-                "Professional B2B landing pages, custom web platforms, business portals, dashboards, and automation software.",
+                "Website development and custom software development: B2B landing pages, company sites, web platforms, portals, dashboards, and automation software.",
             },
             {
-              question: "What does web development cost at Nodewise?",
+              question: "What does website and software development cost?",
               answer:
-                "Landing pages are 12k–15k INR. Business software from 25k+. Custom platforms are quoted. Zero to MVP remains a fixed ₹29,999 timed package.",
+                "Websites and landing pages are 12k–15k INR. Custom software from 25k+. Custom platforms are quoted. Zero to MVP remains a fixed ₹29,999 timed package.",
             },
             {
               question: "Do you still offer Zero to MVP?",
@@ -82,13 +88,13 @@ export default function Home() {
               Landing pages and business software
             </h1>
             <p className="hero-offer" id="hero-offer-line">
-              Professional B2B sites from 12k–15k INR. Software from 25k+. Source you own.
+              For startups and B2B. Sites from 12k–15k INR. Software from 25k+. Source you own.
             </p>
           </div>
           <ul className="hero-subtitle" id="hero-sub-text">
-            <li>Conversion-focused landing pages for companies</li>
-            <li>Custom platforms, portals, dashboards, and automation</li>
-            <li>India-based studio. Worldwide delivery</li>
+            <li>Websites and landing pages for new businesses and B2B companies</li>
+            <li>Custom software, portals, dashboards, and automation</li>
+            <li>India-based software studio. Worldwide delivery</li>
           </ul>
           <div className="hero-ctas">
             <Link

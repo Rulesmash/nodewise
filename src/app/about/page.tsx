@@ -3,24 +3,16 @@ import { Zap, Target, TrendingUp, Linkedin, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import {
+  PAGE_SEO,
+  SCHEMA_IDS,
   SITE,
   absoluteUrl,
-  buildMetadata,
   breadcrumbJsonLd,
+  pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "About Nodewise: Digital Product Studio Founders",
-  description:
-    "Meet Nodewise founders Induchoodan V S and Aalif Mohammad R S. A sharp India-based studio building MVPs and custom web software for real business results.",
-  path: "/about",
-  keywords: [
-    "about Nodewise",
-    "digital product studio India",
-    "web development founders",
-  ],
-});
+export const metadata: Metadata = pageMetadata("about");
 
 export default function About() {
   return (
@@ -28,11 +20,11 @@ export default function About() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "About Nodewise",
-            description:
-              "A small, sharp team building digital products that drive real business results.",
+            title: PAGE_SEO.about.title,
+            description: PAGE_SEO.about.description,
             path: "/about",
             type: "AboutPage",
+            mainEntity: { "@id": SCHEMA_IDS.organization },
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
@@ -62,7 +54,7 @@ export default function About() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">About</h1>
             <p className="page-hero-subtitle">
-              India-based studio. Worldwide delivery.
+              India-based software studio. Worldwide delivery.
             </p>
           </div>
         </div>

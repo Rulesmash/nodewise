@@ -14,18 +14,18 @@ export default function Footer() {
           />
           <p className="footer-tagline">Smarter Code. Better Solutions.</p>
           <ul className="footer-about" style={{ listStyle: "none", padding: 0 }}>
-            <li>B2B landing pages</li>
-            <li>Business software</li>
-            <li>Custom web platforms</li>
+            <li>Website development for startups</li>
+            <li>Custom software for B2B</li>
+            <li>Landing pages and platforms</li>
           </ul>
           <div className="footer-socials">
             <a
               href="https://www.linkedin.com/company/nodewise-cc"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="footer-social-link"
               id="footer-linkedin"
-              aria-label="Nodewise on LinkedIn"
+              aria-label="Nodewise software studio on LinkedIn"
             >
               <Linkedin className="footer-social-icon" aria-hidden="true" />
               <span className="sr-only">(opens in a new tab)</span>
@@ -47,6 +47,12 @@ export default function Footer() {
             </Link>
             <Link href="/packages" className="footer-link">
               Pricing
+            </Link>
+            <Link href="/website-development" className="footer-link">
+              Website development
+            </Link>
+            <Link href="/software-development" className="footer-link">
+              Software development
             </Link>
           </div>
           <div className="footer-nav-col">

@@ -12,8 +12,8 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import JsonLd from "@/components/JsonLd";
 import {
   SITE,
-  organizationJsonLd,
-  websiteJsonLd,
+  PAGE_SEO,
+  siteGraphJsonLd,
 } from "@/lib/seo";
 
 const IdleThreeBackground = dynamic(
@@ -53,54 +53,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | B2B Landing Pages and Business Software`,
+    default: `${PAGE_SEO.home.title} | ${SITE.name}`,
     template: `%s | ${SITE.name}`,
   },
-  description:
-    "Nodewise builds professional B2B landing pages and business software. Landing pages 12k–15k INR. Software from 25k+. Transparent INR pricing. India-based, worldwide delivery.",
+  description: PAGE_SEO.home.description,
   applicationName: SITE.name,
   authors: [{ name: SITE.name, url: SITE.url }],
-  creator: SITE.name,
+  creator: SITE.studioName,
   publisher: SITE.name,
   category: "technology",
+  classification: "Website development and custom software development",
   keywords: [...SITE.keywords],
   referrer: "origin-when-cross-origin",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
-  },
-  alternates: {
-    canonical: `${SITE.url}/`,
-    languages: {
-      "en-IN": `${SITE.url}/`,
-      en: `${SITE.url}/`,
-      "x-default": `${SITE.url}/`,
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: SITE.locale,
-    url: `${SITE.url}/`,
-    title: `${SITE.name} | B2B Landing Pages and Business Software`,
-    description:
-      "Professional B2B landing pages from 12k–15k INR. Business software from 25k+. Transparent pricing from India.",
-    siteName: SITE.name,
-    images: [
-      {
-        url: SITE.ogImage,
-        width: 1200,
-        height: 630,
-        alt: `${SITE.name} Logo`,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${SITE.name} | B2B Landing Pages and Business Software`,
-    description:
-      "Professional B2B landing pages and business software. India-based, worldwide.",
-    images: [SITE.ogImage],
   },
   robots: {
     index: true,
@@ -115,8 +83,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/favicon.ico" }],
-    apple: [{ url: SITE.logoIcon }],
+    icon: [
+      { url: "/favicon.ico" },
+      { url: SITE.logoIcon, type: "image/jpeg", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: SITE.logoIcon, sizes: "180x180" }],
   },
   manifest: "/manifest.webmanifest",
   appleWebApp: {
@@ -163,7 +135,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
+        <JsonLd data={siteGraphJsonLd()} />
         <Header />
         <main id="main-content" tabIndex={-1}>
           {children}

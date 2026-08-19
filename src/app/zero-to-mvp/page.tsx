@@ -2,28 +2,17 @@ import { Check, X, ArrowRight, Clock, Rocket, Shield, Target } from "lucide-reac
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import {
-  buildMetadata,
+  PAGE_SEO,
   breadcrumbJsonLd,
   faqJsonLd,
-  serviceJsonLd,
+  pageMetadata,
   productOfferJsonLd,
+  serviceJsonLd,
   webPageJsonLd,
 } from "@/lib/seo";
 import "./ztm.css";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Zero to MVP: Live Product in 10–14 Days for ₹29,999",
-  description:
-    "Turn your idea into a live, investor-ready MVP in 10–14 days. Fixed ₹29,999: consultation, core features, responsive web app, source code, docs and full ownership transfer.",
-  path: "/zero-to-mvp",
-  keywords: [
-    "MVP development India",
-    "build MVP in 2 weeks",
-    "fixed price MVP",
-    "startup MVP package",
-    "investor ready MVP",
-  ],
-});
+export const metadata: Metadata = pageMetadata("zeroToMvp");
 
 export default function ZeroToMVP() {
   return (
@@ -31,11 +20,9 @@ export default function ZeroToMVP() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Zero to MVP: Build Your Idea in 10–14 Days",
-            description:
-              "Live, showcase-ready Minimum Viable Product in 10–14 days for ₹29,999.",
+            title: PAGE_SEO.zeroToMvp.title,
+            description: PAGE_SEO.zeroToMvp.description,
             path: "/zero-to-mvp",
-            type: "Service",
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },

@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Primary: businesses shopping professional B2B landing pages and custom software on transparent INR packages. Secondary: early-stage founders who still want the timed Zero to MVP offer (₹29,999, 10–14 days), which is kept off the homepage lead.
+Primary: starting businesses and B2B companies shopping website development and custom software on transparent INR packages. Secondary: early-stage founders who still want the timed Zero to MVP offer (₹29,999, 10–14 days), which is kept off the homepage lead.
 
 ## Product Purpose
 
