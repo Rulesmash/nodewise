@@ -1,0 +1,34 @@
+# Nodewise
+
+> India-based digital product studio. We build startup MVPs and custom web platforms. Zero to MVP from ₹29,999 in 10-14 days with full source code and ownership transfer. Transparent INR pricing. Worldwide delivery.
+
+Site: https://nodewise.cc
+Contact: contact@nodewise.cc
+WhatsApp: https://wa.me/919446998827
+LinkedIn: https://www.linkedin.com/company/nodewise-cc
+
+## Offer
+
+- Zero to MVP: ₹29,999 one-time, 10-14 days
+- Includes: 30-minute consult, core MVP, live responsive web app, source code, docs, ownership transfer, 2 revision rounds
+- Excludes: complex enterprise integrations, native mobile apps, massive scalable cloud architecture
+- Starter: 12k-15k INR
+- Growth: 25k+ INR
+- Enterprise: custom pricing
+
+## Pages
+
+- [Home](https://nodewise.cc/): Zero to MVP offer and packages
+- [Work](https://nodewise.cc/portfolio): Live case studies
+- [Zero to MVP](https://nodewise.cc/zero-to-mvp): Full MVP package details
+- [Pricing](https://nodewise.cc/packages): Starter, Growth, Enterprise
+- [Services](https://nodewise.cc/capabilities): Websites, portals, automation
+- [Process](https://nodewise.cc/process): Discovery, build, launch
+- [About](https://nodewise.cc/about): Founders Induchoodan V S and Aalif Mohammad R S
+- [Quality](https://nodewise.cc/quality): Engineering standards
+- [Contact](https://nodewise.cc/contact): Consult form
+
+## Optional
+
+- [Sitemap](https://nodewise.cc/sitemap.xml)
+- [Robots](https://nodewise.cc/robots.txt)

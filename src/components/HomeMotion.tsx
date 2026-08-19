@@ -8,7 +8,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-/** Force content always readable — never leave opacity mid-tween. */
+/** Force content always readable. Never leave opacity mid-tween. */
 function solidifyHome() {
   const root = document.querySelector(".home-page");
   if (!root) return;
@@ -54,7 +54,7 @@ export default function HomeMotion() {
       const sub = document.querySelector<HTMLElement>("#hero-sub-text");
       const ctas = document.querySelector<HTMLElement>(".hero-ctas");
 
-      // Hero: transform-only intro (no opacity — avoids flash-to-invisible)
+      // Hero: transform-only intro (no opacity; avoids flash-to-invisible)
       const intro = gsap.timeline({
         defaults: { ease: "power3.out" },
         onComplete: solidifyHome,
@@ -85,11 +85,11 @@ export default function HomeMotion() {
         );
       }
 
-      // Scroll reveals: Y-only. Never opacity — MVP/pricing must stay painted.
+      // Scroll reveals: Y-only. Never opacity. MVP/pricing must stay painted.
       gsap.utils
         .toArray<HTMLElement>(".home-page [data-reveal]")
         .forEach((el) => {
-          // Skip MVP card entirely — critical conversion block stays static
+          // Skip MVP card entirely. Critical conversion block stays static.
           if (el.classList.contains("mvp-highlight-card")) return;
 
           gsap.from(el, {
@@ -141,7 +141,7 @@ export default function HomeMotion() {
       window.clearTimeout(failsafe);
       window.clearTimeout(failsafe2);
       ctx.revert();
-      // Revert undoes GSAP styles — paint solid again after teardown
+      // Revert undoes GSAP styles. Paint solid again after teardown.
       solidifyHome();
       requestAnimationFrame(solidifyHome);
     };

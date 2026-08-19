@@ -12,7 +12,7 @@ import {
 import "./ztm.css";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Zero to MVP — Live Product in 10–14 Days for ₹29,999",
+  title: "Zero to MVP: Live Product in 10–14 Days for ₹29,999",
   description:
     "Turn your idea into a live, investor-ready MVP in 10–14 days. Fixed ₹29,999: consultation, core features, responsive web app, source code, docs and full ownership transfer.",
   path: "/zero-to-mvp",
@@ -31,7 +31,7 @@ export default function ZeroToMVP() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Zero to MVP — Build Your Idea in 10–14 Days",
+            title: "Zero to MVP: Build Your Idea in 10–14 Days",
             description:
               "Live, showcase-ready Minimum Viable Product in 10–14 days for ₹29,999.",
             path: "/zero-to-mvp",
@@ -85,11 +85,10 @@ export default function ZeroToMVP() {
           <div className="page-hero-content">
             <p className="ztm-product-name">Zero to MVP</p>
             <h1 className="page-hero-title">
-              Turn your idea into a working product in 10–14 days
+              Live MVP in 10–14 days
             </h1>
             <p className="page-hero-subtitle">
-              A live, showcase-ready MVP you can show users or investors—fixed
-              price, full ownership, no agency bloat.
+              ₹29,999. Source, docs, and ownership.
             </p>
           </div>
         </div>
@@ -169,9 +168,6 @@ export default function ZeroToMVP() {
 
               <div className="ztm-panel">
                 <h2>Not included</h2>
-                <p>
-                  To keep timelines tight and costs low, this package excludes:
-                </p>
                 <ul className="ztm-list">
                   <li>
                     <X className="icon-x" size={18} aria-hidden="true" />
@@ -216,18 +212,17 @@ export default function ZeroToMVP() {
                   className="btn btn-primary ztm-cta"
                   id="lnk-dedicated-mvp-whatsapp"
                 >
-                  <span>Start Your MVP</span>
+                  <span>Start your MVP</span>
                   <span className="sr-only"> (opens WhatsApp in a new tab)</span>
                   <ArrowRight className="btn-icon" aria-hidden="true" />
                 </a>
                 <p className="ztm-price-note">
-                  Lock in your spot and start building this week.
+                  Start this week on WhatsApp.
                 </p>
                 <div className="ztm-after">
                   <h3>After your MVP</h3>
                   <p>
-                    Optional Growth Retainer for ongoing features, fixes, and
-                    scaling after launch—quoted separately when you need it.
+                    Optional retainer after launch. Quoted when you need it.
                   </p>
                 </div>
               </div>

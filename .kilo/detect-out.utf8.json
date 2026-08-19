@@ -1,0 +1,3547 @@
+[
+  {
+    "antipattern": "side-tab",
+    "name": "Side-tab accent border",
+    "description": "Thick colored border on one side of a card — the most recognizable tell of AI-generated UIs. Use a subtler accent or remove it entirely.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3009,
+    "snippet": "border-left: 8px solid var(--bg-surface-solid)"
+  },
+  {
+    "antipattern": "gradient-text",
+    "name": "Gradient text",
+    "description": "Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1656,
+    "snippet": "background-clip: text + gradient"
+  },
+  {
+    "antipattern": "side-tab",
+    "name": "Side-tab accent border",
+    "description": "Thick colored border on one side of a card — the most recognizable tell of AI-generated UIs. Use a subtler accent or remove it entirely.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3175,
+    "snippet": ".package-card.highlighted::before — absolute 4px pseudo-element stripe (top: 0)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 84,
+    "snippet": "font-size: 16px is off the DESIGN.md type ramp",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 141,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.4)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 154,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "4px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 161,
+    "snippet": "Undocumented color #7a2ff7 is outside DESIGN.md colors",
+    "ignoreValue": "#7a2ff7"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 279,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 329,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 339,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.15) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.15)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 352,
+    "snippet": "Undocumented color #e8e8e8 is outside DESIGN.md colors",
+    "ignoreValue": "#e8e8e8"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 352,
+    "snippet": "Undocumented color #d0d0d0 is outside DESIGN.md colors",
+    "ignoreValue": "#d0d0d0"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 359,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.2) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.2)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 383,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 390,
+    "snippet": "Undocumented color #232533 is outside DESIGN.md colors",
+    "ignoreValue": "#232533"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 502,
+    "snippet": "font-size: 1.5rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.5rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 517,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 551,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 607,
+    "snippet": "font-size: 3.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "3.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 614,
+    "snippet": "font-size: 1.15rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.15rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 702,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 730,
+    "snippet": "font-size: 1.1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 850,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 856,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 917,
+    "snippet": "Undocumented color #c0c0c0 is outside DESIGN.md colors",
+    "ignoreValue": "#c0c0c0"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 917,
+    "snippet": "Undocumented color #b8b8b8 is outside DESIGN.md colors",
+    "ignoreValue": "#b8b8b8"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 927,
+    "snippet": "Undocumented color #b0b0b0 is outside DESIGN.md colors",
+    "ignoreValue": "#b0b0b0"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 927,
+    "snippet": "Undocumented color #c8c8c8 is outside DESIGN.md colors",
+    "ignoreValue": "#c8c8c8"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 937,
+    "snippet": "Undocumented color #c8c8c8 is outside DESIGN.md colors",
+    "ignoreValue": "#c8c8c8"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 937,
+    "snippet": "Undocumented color #b8b8b8 is outside DESIGN.md colors",
+    "ignoreValue": "#b8b8b8"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 973,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 997,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1039,
+    "snippet": "font-size: 3.25rem is off the DESIGN.md type ramp",
+    "ignoreValue": "3.25rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1046,
+    "snippet": "font-size: 1.15rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.15rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1090,
+    "snippet": "font-size: 2rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1116,
+    "snippet": "font-size: 2.25rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2.25rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1120,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1141,
+    "snippet": "font-size: 1.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1149,
+    "snippet": "font-size: 1.5rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.5rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1177,
+    "snippet": "font-size: 4rem is off the DESIGN.md type ramp",
+    "ignoreValue": "4rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1191,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1197,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1266,
+    "snippet": "Undocumented color #ff5f56 is outside DESIGN.md colors",
+    "ignoreValue": "#ff5f56"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1270,
+    "snippet": "Undocumented color #ffbd2e is outside DESIGN.md colors",
+    "ignoreValue": "#ffbd2e"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1274,
+    "snippet": "Undocumented color #27c93f is outside DESIGN.md colors",
+    "ignoreValue": "#27c93f"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1279,
+    "snippet": "font-size: 0.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1317,
+    "snippet": "font-size: 0.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.75rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1338,
+    "snippet": "Undocumented color #a0a0a0 is outside DESIGN.md colors",
+    "ignoreValue": "#a0a0a0"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1340,
+    "snippet": "font-size: 0.5rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.5rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1364,
+    "snippet": "font-size: 0.45rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.45rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1365,
+    "snippet": "Undocumented color #b0b0b0 is outside DESIGN.md colors",
+    "ignoreValue": "#b0b0b0"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1395,
+    "snippet": "Undocumented color #b0b0b0 is outside DESIGN.md colors",
+    "ignoreValue": "#b0b0b0"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1395,
+    "snippet": "Undocumented color #909090 is outside DESIGN.md colors",
+    "ignoreValue": "#909090"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1430,
+    "snippet": "Undocumented color #25d366 is outside DESIGN.md colors",
+    "ignoreValue": "#25d366"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1432,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.6) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.6)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1441,
+    "snippet": "Undocumented color #1a1c29 is outside DESIGN.md colors",
+    "ignoreValue": "#1a1c29"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1455,
+    "snippet": "Undocumented color #e4e7eb is outside DESIGN.md colors",
+    "ignoreValue": "#e4e7eb"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1468,
+    "snippet": "Undocumented color #e4e7eb is outside DESIGN.md colors",
+    "ignoreValue": "#e4e7eb"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1529,
+    "snippet": "Undocumented color #27c93f is outside DESIGN.md colors",
+    "ignoreValue": "#27c93f"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1530,
+    "snippet": "Undocumented color rgba(39, 201, 63, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(39, 201, 63, 0.3)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1570,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1579,
+    "snippet": "font-size: 1.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1653,
+    "snippet": "font-size: 1.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1667,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1673,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1754,
+    "snippet": "Undocumented color #0077b5 is outside DESIGN.md colors",
+    "ignoreValue": "#0077b5"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1760,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.15) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.15)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1775,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.3)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1780,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1817,
+    "snippet": "font-size: 2.25rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2.25rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1865,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1881,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1941,
+    "snippet": "font-size: 0.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.75rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1965,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.15) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.15)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1966,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.35)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1969,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "4px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1970,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1988,
+    "snippet": "Undocumented color #ff4d4d is outside DESIGN.md colors",
+    "ignoreValue": "#ff4d4d"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 1989,
+    "snippet": "Undocumented color rgba(255, 77, 77, 0.15) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(255, 77, 77, 0.15)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2005,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.4)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2006,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.5) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.5)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2006,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.15) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.15)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2007,
+    "snippet": "border-radius: 6px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "6px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2018,
+    "snippet": "font-size: 0.88rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.88rem"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2021,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "4px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2029,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.25) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.25)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2042,
+    "snippet": "font-size: 0.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.75rem"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2058,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "4px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2059,
+    "snippet": "font-size: 0.78rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.78rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2066,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.12) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.12)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2067,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.3)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2072,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.25) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.25)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2073,
+    "snippet": "Undocumented color #7a2ff7 is outside DESIGN.md colors",
+    "ignoreValue": "#7a2ff7"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2076,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.3)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2084,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.2) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.2)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2085,
+    "snippet": "border-radius: 8px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "8px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2089,
+    "snippet": "Undocumented color #10b981 is outside DESIGN.md colors",
+    "ignoreValue": "#10b981"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2094,
+    "snippet": "font-size: 1.5rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.5rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2101,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2136,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2145,
+    "snippet": "font-size: 0.9rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.9rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2164,
+    "snippet": "font-size: 0.9rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.9rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2173,
+    "snippet": "font-size: 0.9rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.9rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2353,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.5) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.5)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2418,
+    "snippet": "font-size: 1.15rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.15rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2455,
+    "snippet": "font-size: 2.25rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2.25rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2459,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2480,
+    "snippet": "font-size: 1.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2488,
+    "snippet": "font-size: 1.45rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.45rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2492,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2501,
+    "snippet": "font-size: 2.0rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2.0rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2551,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.6) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.6)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2570,
+    "snippet": "font-size: 2.25rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2.25rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2596,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2607,
+    "snippet": "font-size: 1.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2616,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2631,
+    "snippet": "font-size: 0.82rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.82rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2633,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.2) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.2)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2639,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.3)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2680,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.4)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2701,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.5) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.5)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2749,
+    "snippet": "font-size: 0.82rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.82rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2796,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2828,
+    "snippet": "font-size: 1.5rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.5rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2832,
+    "snippet": "font-size: 0.9rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.9rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2856,
+    "snippet": "font-size: 1.25rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.25rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2860,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2938,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.8) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.8)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2958,
+    "snippet": "Undocumented color #25D366 is outside DESIGN.md colors",
+    "ignoreValue": "#25D366"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2963,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.3)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2963,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.4)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2988,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "4px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 2990,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3022,
+    "snippet": "Undocumented color #20ba5a is outside DESIGN.md colors",
+    "ignoreValue": "#20ba5a"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3024,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.5) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.5)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3037,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.3)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3037,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.4)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3079,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.3)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3084,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.3)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3137,
+    "snippet": "font-size: 0.78rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.78rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3166,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.3) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.3)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3182,
+    "snippet": "Undocumented color rgba(160, 190, 255, 0.45) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(160, 190, 255, 0.45)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3188,
+    "snippet": "font-size: 0.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3205,
+    "snippet": "font-size: 1.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3212,
+    "snippet": "font-size: 1.5rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.5rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3219,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3225,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3243,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3289,
+    "snippet": "Undocumented color #25D366 is outside DESIGN.md colors",
+    "ignoreValue": "#25D366"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3295,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.4)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3303,
+    "snippet": "Undocumented color rgba(37, 211, 102, 0.5) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(37, 211, 102, 0.5)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3317,
+    "snippet": "border-radius: 20px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "20px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3318,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3322,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.2) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.2)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3428,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.2) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.2)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3439,
+    "snippet": "font-size: 1.1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3465,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3470,
+    "snippet": "Undocumented color #10B981 is outside DESIGN.md colors",
+    "ignoreValue": "#10B981"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3476,
+    "snippet": "Undocumented color #EF4444 is outside DESIGN.md colors",
+    "ignoreValue": "#EF4444"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3493,
+    "snippet": "Undocumented color rgba(120, 160, 255, 0.1) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(120, 160, 255, 0.1)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3503,
+    "snippet": "font-size: 3.5rem is off the DESIGN.md type ramp",
+    "ignoreValue": "3.5rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3511,
+    "snippet": "font-size: 1.1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3526,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3566,
+    "snippet": "font-size: 1.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3575,
+    "snippet": "font-size: 1.1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.1rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3597,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.1) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.1)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3609,
+    "snippet": "font-size: 0.75rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.75rem"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3613,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "4px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3614,
+    "snippet": "Undocumented color rgba(122, 47, 247, 0.2) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(122, 47, 247, 0.2)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3620,
+    "snippet": "font-size: 3rem is off the DESIGN.md type ramp",
+    "ignoreValue": "3rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3627,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3636,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3656,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\globals.css",
+    "line": 3701,
+    "snippet": "font-size: 2.25rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2.25rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 58,
+    "snippet": "font-size: clamp(2.35rem, 5vw, 3.75rem) has fluid endpoints 2.35rem and 3.75rem off the DESIGN.md type ramp",
+    "ignoreValue": "2.35rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 70,
+    "snippet": "font-size: 1.125rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.125rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 124,
+    "snippet": "font-size: 0.92rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.92rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 145,
+    "snippet": "border-radius: 2.5cqi, is outside the DESIGN.md rounded scale",
+    "ignoreValue": "2.5cqi,",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 149,
+    "snippet": "Undocumented color rgba(180, 184, 190, 0.07) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(180, 184, 190, 0.07)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 150,
+    "snippet": "Undocumented color #070708 is outside DESIGN.md colors",
+    "ignoreValue": "#070708",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 181,
+    "snippet": "Undocumented color rgba(210, 212, 216, 0.08) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(210, 212, 216, 0.08)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 207,
+    "snippet": "border-radius: 1.8cqi, is outside the DESIGN.md rounded scale",
+    "ignoreValue": "1.8cqi,",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 240,
+    "snippet": "Undocumented color rgba(200, 215, 255, 0.9) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(200, 215, 255, 0.9)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 249,
+    "snippet": "font-size: clamp(0.58rem, 1.7cqi, 0.68rem) has fluid endpoint 0.58rem off the DESIGN.md type ramp",
+    "ignoreValue": "0.58rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 253,
+    "snippet": "Undocumented color rgba(210, 220, 240, 0.88) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(210, 220, 240, 0.88)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 262,
+    "snippet": "font-size: clamp(0.88rem, 3.2cqi, 1.15rem) has fluid endpoints 0.88rem and 1.15rem off the DESIGN.md type ramp",
+    "ignoreValue": "0.88rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 274,
+    "snippet": "font-size: clamp(0.62rem, 1.8cqi, 0.75rem) has fluid endpoints 0.62rem and 0.75rem off the DESIGN.md type ramp",
+    "ignoreValue": "0.62rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 275,
+    "snippet": "Undocumented color rgba(200, 210, 230, 0.9) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(200, 210, 230, 0.9)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 428,
+    "snippet": "font-size: clamp(1.65rem, 3vw, 2.15rem) has fluid endpoint 2.15rem off the DESIGN.md type ramp",
+    "ignoreValue": "2.15rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 438,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 440,
+    "snippet": "Undocumented color rgba(220, 230, 255, 0.92) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(220, 230, 255, 0.92)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 488,
+    "snippet": "font-size: clamp(2.25rem, 4vw, 3rem) has fluid endpoints 2.25rem and 3rem off the DESIGN.md type ramp",
+    "ignoreValue": "2.25rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 514,
+    "snippet": "font-size: clamp(1.85rem, 3.5vw, 2.5rem) has fluid endpoint 1.85rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.85rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 521,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 540,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.28) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.28)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 557,
+    "snippet": "Undocumented color rgba(140, 170, 255, 0.28) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(140, 170, 255, 0.28)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 559,
+    "snippet": "Undocumented color rgba(100, 140, 255, 0.1) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(100, 140, 255, 0.1)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 565,
+    "snippet": "Undocumented color rgba(160, 190, 255, 0.55) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(160, 190, 255, 0.55)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 578,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 583,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 594,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.35)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 600,
+    "snippet": "Undocumented color rgba(100, 150, 255, 0.15) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(100, 150, 255, 0.15)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 610,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.35)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 615,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.45) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.45)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 686,
+    "snippet": "font-size: clamp(1.85rem, 8vw, 2.45rem) has fluid endpoints 1.85rem and 2.45rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.85rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 693,
+    "snippet": "font-size: 1.02rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.02rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 699,
+    "snippet": "font-size: 0.98rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.98rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 741,
+    "snippet": "border-radius: 3vw, is outside the DESIGN.md rounded scale",
+    "ignoreValue": "3vw,",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 745,
+    "snippet": "border-radius: 16px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "16px",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 837,
+    "snippet": "font-size: clamp(1.7rem, 8.2vw, 2.15rem) has fluid endpoints 1.7rem and 2.15rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.7rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\home.css",
+    "line": 852,
+    "snippet": "font-size: 2.15rem !important is off the DESIGN.md type ramp",
+    "ignoreValue": "2.15rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 32,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 57,
+    "snippet": "border-radius: 1px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "1px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 132,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.72) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.72)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 141,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.55) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.55)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 166,
+    "snippet": "font-size: clamp(1.75rem, 7.5vw, 2.15rem) has fluid endpoints 1.75rem and 2.15rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.75rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 173,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 181,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 185,
+    "snippet": "font-size: clamp(1.45rem, 6vw, 1.85rem) has fluid endpoints 1.45rem and 1.85rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.45rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 210,
+    "snippet": "font-size: 1.35rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 264,
+    "snippet": "font-size: 2.15rem !important is off the DESIGN.md type ramp",
+    "ignoreValue": "2.15rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 287,
+    "snippet": "font-size: 16px !important is off the DESIGN.md type ramp",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 306,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\mobile-adapt.css",
+    "line": 400,
+    "snippet": "font-size: 1.7rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.7rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\page.module.css",
+    "line": 41,
+    "snippet": "font-size: 14px is off the DESIGN.md type ramp",
+    "ignoreValue": "14px"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\page.module.css",
+    "line": 55,
+    "snippet": "border-radius: 4px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "4px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\page.module.css",
+    "line": 76,
+    "snippet": "font-size: 16px is off the DESIGN.md type ramp",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\page.module.css",
+    "line": 145,
+    "snippet": "font-size: 14px is off the DESIGN.md type ramp",
+    "ignoreValue": "14px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\page.tsx",
+    "line": 152,
+    "snippet": "fontSize: 1.1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\page.tsx",
+    "line": 189,
+    "snippet": "fontSize: 1.1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.1rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\page.tsx",
+    "line": 216,
+    "snippet": "fontSize: 2rem is off the DESIGN.md type ramp",
+    "ignoreValue": "2rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 35,
+    "snippet": "Undocumented color rgba(90, 140, 255, 0.1) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(90, 140, 255, 0.1)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 47,
+    "snippet": "font-size: clamp(2.5rem, 5vw, 3.75rem) has fluid endpoint 3.75rem off the DESIGN.md type ramp",
+    "ignoreValue": "3.75rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 143,
+    "snippet": "font-size: clamp(1.65rem, 3vw, 2.15rem) has fluid endpoint 2.15rem off the DESIGN.md type ramp",
+    "ignoreValue": "2.15rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 155,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 157,
+    "snippet": "Undocumented color rgba(200, 215, 255, 0.85) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(200, 215, 255, 0.85)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 172,
+    "snippet": "font-size: clamp(1.05rem, 1.8vw, 1.2rem) has fluid endpoint 1.2rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.2rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 182,
+    "snippet": "font-size: 1rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 210,
+    "snippet": "Undocumented color rgba(210, 220, 240, 0.85) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(210, 220, 240, 0.85)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 225,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.35)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 230,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.45) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.45)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 322,
+    "snippet": "Undocumented color rgba(160, 190, 255, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(160, 190, 255, 0.4)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 350,
+    "snippet": "Undocumented color #ff5f56 is outside DESIGN.md colors",
+    "ignoreValue": "#ff5f56",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 353,
+    "snippet": "Undocumented color #ffbd2e is outside DESIGN.md colors",
+    "ignoreValue": "#ffbd2e",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 356,
+    "snippet": "Undocumented color #27c93f is outside DESIGN.md colors",
+    "ignoreValue": "#27c93f",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font",
+    "name": "Font outside DESIGN.md",
+    "description": "A font is used that is not declared in DESIGN.md typography. Use the documented type system or update DESIGN.md if this is an intentional brand addition.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 361,
+    "snippet": "font-family: Menlo is not declared in DESIGN.md typography",
+    "ignoreValue": "Menlo",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 362,
+    "snippet": "font-size: 0.62rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.62rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 363,
+    "snippet": "Undocumented color rgba(180, 190, 210, 0.7) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(180, 190, 210, 0.7)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 364,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.35)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 407,
+    "snippet": "font-size: 0.65rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.65rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 416,
+    "snippet": "Undocumented color rgba(230, 235, 245, 0.92) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(230, 235, 245, 0.92)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 433,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.35)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 444,
+    "snippet": "Undocumented color rgba(100, 150, 255, 0.14) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(100, 150, 255, 0.14)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 495,
+    "snippet": "Undocumented color rgba(160, 190, 255, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(160, 190, 255, 0.35)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 534,
+    "snippet": "Undocumented color rgba(200, 215, 255, 0.92) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(200, 215, 255, 0.92)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 540,
+    "snippet": "border-radius: 8px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "8px",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 546,
+    "snippet": "font-size: 0.78rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.78rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 618,
+    "snippet": "Undocumented color rgba(200, 210, 230, 0.75) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(200, 210, 230, 0.75)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 619,
+    "snippet": "font-size: 0.8rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.8rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 635,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.35) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.35)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 641,
+    "snippet": "Undocumented color rgba(100, 150, 255, 0.14) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(100, 150, 255, 0.14)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\portfolio\\portfolio.css",
+    "line": 700,
+    "snippet": "font-size: clamp(1.35rem, 5vw, 1.75rem) has fluid endpoints 1.35rem and 1.75rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.35rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 9,
+    "snippet": "Undocumented color #8eb6ff is outside DESIGN.md colors",
+    "ignoreValue": "#8eb6ff"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 15,
+    "snippet": "Undocumented color #8eb6ff is outside DESIGN.md colors",
+    "ignoreValue": "#8eb6ff"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 55,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.28) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.28)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 59,
+    "snippet": "Undocumented color rgba(140, 170, 255, 0.28) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(140, 170, 255, 0.28)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 86,
+    "snippet": "Undocumented color #c8dcff is outside DESIGN.md colors",
+    "ignoreValue": "#c8dcff"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 103,
+    "snippet": "Undocumented color #dce8ff is outside DESIGN.md colors",
+    "ignoreValue": "#dce8ff"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 111,
+    "snippet": "Undocumented color rgba(140, 180, 255, 0.45) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(140, 180, 255, 0.45)"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 125,
+    "snippet": "border-radius: 2px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "2px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 126,
+    "snippet": "Undocumented color rgba(160, 190, 255, 0.7) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(160, 190, 255, 0.7)"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\site-system.css",
+    "line": 162,
+    "snippet": "font-size: 0.98rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.98rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 21,
+    "snippet": "font-size: clamp(1.85rem, 4.5vw, 2.75rem) has fluid endpoint 1.85rem off the DESIGN.md type ramp",
+    "ignoreValue": "1.85rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 36,
+    "snippet": "font-size: 0.9rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.9rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 38,
+    "snippet": "Undocumented color rgba(220, 230, 255, 0.92) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(220, 230, 255, 0.92)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 85,
+    "snippet": "font-size: 1.2rem is off the DESIGN.md type ramp",
+    "ignoreValue": "1.2rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 95,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 110,
+    "snippet": "Undocumented color #f0f2f8 is outside DESIGN.md colors",
+    "ignoreValue": "#f0f2f8",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 111,
+    "snippet": "font-size: 0.98rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.98rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 121,
+    "snippet": "Undocumented color #10b981 is outside DESIGN.md colors",
+    "ignoreValue": "#10b981",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 127,
+    "snippet": "Undocumented color #ef4444 is outside DESIGN.md colors",
+    "ignoreValue": "#ef4444",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 133,
+    "snippet": "Undocumented color #8eb6ff is outside DESIGN.md colors",
+    "ignoreValue": "#8eb6ff",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 147,
+    "snippet": "Undocumented color rgba(160, 190, 255, 0.2) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(160, 190, 255, 0.2)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 150,
+    "snippet": "Undocumented color rgba(0, 0, 0, 0.4) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(0, 0, 0, 0.4)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 165,
+    "snippet": "Undocumented color #c8dcff is outside DESIGN.md colors",
+    "ignoreValue": "#c8dcff",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 170,
+    "snippet": "font-size: clamp(2.25rem, 4vw, 2.85rem) has fluid endpoints 2.25rem and 2.85rem off the DESIGN.md type ramp",
+    "ignoreValue": "2.25rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 180,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 182,
+    "snippet": "Undocumented color rgba(200, 210, 230, 0.75) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(200, 210, 230, 0.75)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 194,
+    "snippet": "Undocumented color rgba(220, 228, 245, 0.9) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(220, 228, 245, 0.9)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 195,
+    "snippet": "font-size: 0.95rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.95rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 208,
+    "snippet": "font-size: 0.9rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.9rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 220,
+    "snippet": "font-size: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 223,
+    "snippet": "Undocumented color rgba(220, 230, 255, 0.9) is outside DESIGN.md colors",
+    "ignoreValue": "rgba(220, 230, 255, 0.9)",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\app\\zero-to-mvp\\ztm.css",
+    "line": 228,
+    "snippet": "font-size: 0.88rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.88rem",
+    "importedBy": [
+      "page.tsx"
+    ]
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\components\\ContactForm.tsx",
+    "line": 305,
+    "snippet": "Undocumented color #ff4d4d is outside DESIGN.md colors",
+    "ignoreValue": "#ff4d4d"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\components\\ContactForm.tsx",
+    "line": 305,
+    "snippet": "fontSize: 0.85rem is off the DESIGN.md type ramp",
+    "ignoreValue": "0.85rem"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\components\\HeroStage.tsx",
+    "line": 157,
+    "snippet": "Undocumented color #d4d6d9 is outside DESIGN.md colors",
+    "ignoreValue": "#d4d6d9"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "D:\\Docs\\SAASDEV\\nodewise\\src\\components\\HeroStage.tsx",
+    "line": 169,
+    "snippet": "Undocumented color #c2c5c9 is outside DESIGN.md colors",
+    "ignoreValue": "#c2c5c9"
+  }
+]

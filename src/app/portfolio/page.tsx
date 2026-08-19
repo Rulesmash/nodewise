@@ -12,7 +12,7 @@ import {
 } from "@/lib/seo";
 import "./portfolio.css";
 
-/** Heavy GSAP carousel — code-split from the RSC page shell (bundle-dynamic-imports). */
+/** Heavy GSAP carousel. Code-split from the RSC page shell (bundle-dynamic-imports). */
 const ProjectCarousel = dynamic(
   () => import("@/components/ProjectCarousel"),
   {
@@ -27,7 +27,7 @@ const ProjectCarousel = dynamic(
 );
 
 export const metadata: Metadata = buildMetadata({
-  title: "Work & Case Studies — MVPs and Landing Pages",
+  title: "Work and Case Studies: MVPs and Landing Pages",
   description:
     "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
   path: "/portfolio",
@@ -38,7 +38,7 @@ export const metadata: Metadata = buildMetadata({
     "startup product examples",
   ],
   image: "/assets/whitebull-landing.png",
-  imageAlt: "Nodewise portfolio — Whitebull equity research desk",
+  imageAlt: "Nodewise portfolio: Whitebull equity research desk",
 });
 
 type Project = {
@@ -59,9 +59,9 @@ const PROJECTS: Project[] = [
     id: "case-04",
     name: "Whitebull",
     meta: "Indian Equity Research Desk",
-    title: "Charts, news, and structured analysis in one operate-density surface",
+    title: "Charts, news, and analysis in one desk",
     description:
-      "Full-stack research assistant that bridges chart terminals and news portals—Nifty 50 and Bank Nifty desks, AI market digests, and a stock predictor with entry, stops, and targets. Client engagement concluded; preserved as an interactive Nodewise showcase with demo data.",
+      "Research assistant for Nifty 50 and Bank Nifty. Showcase with demo data. Live market backends removed.",
     tags: ["Fintech", "Research desk", "Full-stack", "Charts"],
     url: "https://whitebull.nodewise.cc",
     host: "whitebull.nodewise.cc",
@@ -99,7 +99,7 @@ const PROJECTS: Project[] = [
     meta: "3D Interactive Real Estate",
     title: "Interactive 3D showcase for a luxury residence brand",
     description:
-      "Shipped a live web experience buyers can explore—floor-plan hotspots, amenities, and residence views—without a sales call. Built as a high-fidelity product demo, not a static brochure.",
+      "Buyers explore floor plans, amenities, and views in the browser. No sales call required.",
     tags: ["3D Web", "Real Estate", "Live product"],
     url: "https://titan-bigs.vercel.app",
     host: "titan-bigs.vercel.app",
@@ -137,7 +137,7 @@ const PROJECTS: Project[] = [
     meta: "MVP & Landing Page",
     title: "Launch-ready marketing site for a digital studio",
     description:
-      "A focused landing MVP: clear offer hierarchy, services, and conversion path. Designed so a new studio can go live and look credible from day one.",
+      "Landing MVP: offer, services, and a clear path to contact. Credible from day one.",
     tags: ["MVP", "Landing page", "Marketing"],
     url: "https://mavenixstudio.netlify.app/",
     host: "mavenixstudio.netlify.app",
@@ -165,7 +165,7 @@ const PROJECTS: Project[] = [
     meta: "Open Source Community Hub",
     title: "Community platform for a college open-source club",
     description:
-      "Modular hub for FOSS CEAL—training chambers, events, resources, and brand kits in one place. Built for students and organizers to navigate without hand-holding.",
+      "Club hub for training, events, resources, and brand kits.",
     tags: ["Community", "Open source", "Platform"],
     url: "https://foss.ceal.in/",
     host: "foss.ceal.in",
@@ -314,7 +314,7 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="btn btn-primary cta-banner-btn"
               >
-                <span>Start Your MVP</span>
+                <span>Start your MVP</span>
                 <span className="sr-only"> (opens WhatsApp in a new tab)</span>
                 <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>

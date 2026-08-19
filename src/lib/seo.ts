@@ -79,7 +79,7 @@ export function buildMetadata({
   path = "/",
   keywords = [],
   image = SITE.ogImage,
-  imageAlt = `${SITE.name} — ${SITE.tagline}`,
+  imageAlt = `${SITE.name}: ${SITE.tagline}`,
   type = "website",
   noIndex = false,
 }: PageSeoInput): Metadata {
@@ -485,7 +485,7 @@ export const PAGE_SEO = {
     ],
   },
   zeroToMvp: {
-    title: "Zero to MVP — Live Product in 10-14 Days for ₹29,999",
+    title: "Zero to MVP: Live Product in 10-14 Days for ₹29,999",
     description:
       "Turn your idea into a live, investor-ready MVP in 10–14 days. Fixed ₹29,999: consultation, core features, responsive web app, source code, docs and full ownership transfer.",
     keywords: [
@@ -497,7 +497,7 @@ export const PAGE_SEO = {
     ],
   },
   portfolio: {
-    title: "Work & Case Studies — MVPs and Landing Pages",
+    title: "Work and Case Studies: MVPs and Landing Pages",
     description:
       "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
     keywords: [
@@ -509,7 +509,7 @@ export const PAGE_SEO = {
     image: "/assets/whitebull-landing.png",
   },
   packages: {
-    title: "Web Development Pricing India — Packages from ₹12k",
+    title: "Web Development Pricing India: Packages from ₹12k",
     description:
       "Transparent Nodewise pricing: Starter ₹12,000–15,000, Growth from ₹25,000, Enterprise custom. Clear packages for websites, portals and business software.",
     keywords: [
@@ -520,7 +520,7 @@ export const PAGE_SEO = {
     ],
   },
   capabilities: {
-    title: "Services — Web Platforms, Portals & Automation",
+    title: "Services: Web Platforms, Portals and Automation",
     description:
       "Nodewise services: high-converting web presence, custom business portals and dashboards, and workflow automation. Built for speed, clarity, and growth.",
     keywords: [
@@ -531,7 +531,7 @@ export const PAGE_SEO = {
     ],
   },
   process: {
-    title: "Our Process — Discovery, Build & Launch",
+    title: "Our Process: Discovery, Build and Launch",
     description:
       "How Nodewise ships software: discovery, architecture, focused sprints, and reliable launch. A clear path from idea or bottleneck to a live product.",
     keywords: [
@@ -541,7 +541,7 @@ export const PAGE_SEO = {
     ],
   },
   about: {
-    title: "About Nodewise — Digital Product Studio Founders",
+    title: "About Nodewise: Digital Product Studio Founders",
     description:
       "Meet Nodewise founders Induchoodan V S and Aalif Mohammad R S. A sharp India-based studio building MVPs and custom web software for real business results.",
     keywords: [
@@ -551,7 +551,7 @@ export const PAGE_SEO = {
     ],
   },
   quality: {
-    title: "Quality Standards — Performance, Security & Ownership",
+    title: "Quality Standards: Performance, Security and Ownership",
     description:
       "Nodewise engineering bar: performance-first delivery, secure architecture, clean code you own, and documentation so your team can extend the product.",
     keywords: [
@@ -561,7 +561,7 @@ export const PAGE_SEO = {
     ],
   },
   contact: {
-    title: "Contact Nodewise — Free MVP & Web Consultation",
+    title: "Contact Nodewise: MVP and Web Consultation",
     description:
       "Talk to Nodewise about your MVP or custom web platform. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
     keywords: [

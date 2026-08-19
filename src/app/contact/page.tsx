@@ -11,7 +11,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Nodewise — Free MVP & Web Consultation",
+  title: "Contact Nodewise: MVP and Web Consultation",
   description:
     "Talk to Nodewise about your MVP or custom web platform. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
   path: "/contact",
@@ -66,10 +66,9 @@ export default function Contact() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="section-subtitle">Get in Touch</span>
-            <h1 className="page-hero-title">Schedule Consultation</h1>
+            <h1 className="page-hero-title">Contact</h1>
             <p className="page-hero-subtitle">
-              Ready to engineer your business growth? Let's talk.
+              WhatsApp, email, or a short brief.
             </p>
           </div>
         </div>
@@ -80,10 +79,9 @@ export default function Contact() {
         <div className="container">
           <div className="card contact-form-card grid">
             <div className="contact-pitch">
-              <h2 className="pitch-title">Ready to Engineer Your Business Growth?</h2>
+              <h2 className="pitch-title">Start a conversation</h2>
               <p className="pitch-text">
-                Book a brief consultation with our engineering team. We'll identify operational bottlenecks and map out
-                a custom digital asset designed to scale your margins.
+                Tell us the product. We&apos;ll reply within one business day.
               </p>
               <div className="contact-meta-info">
                 <div className="c-meta-item">

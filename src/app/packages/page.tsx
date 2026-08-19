@@ -11,7 +11,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Web Development Pricing India — Packages from ₹12k",
+  title: "Web Development Pricing India: Packages from ₹12k",
   description:
     "Transparent Nodewise pricing: Starter ₹12,000–15,000, Growth from ₹25,000, Enterprise custom. Clear packages for websites, portals and business software.",
   path: "/packages",
@@ -85,10 +85,9 @@ export default function Packages() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="section-subtitle">Transparent Pricing</span>
-            <h1 className="page-hero-title">Service Packages</h1>
+            <h1 className="page-hero-title">Pricing</h1>
             <p className="page-hero-subtitle">
-              Choose the right tier to scale your operations, from basic web presence to advanced enterprise software.
+              Three published tiers. Custom if you need more.
             </p>
           </div>
         </div>
@@ -104,8 +103,7 @@ export default function Packages() {
               <span className="package-badge">Minimum</span>
               <h3 className="package-title">Starter Foundation</h3>
               <div className="package-price">12k - 15k <span>INR</span></div>
-              <p className="package-desc">Perfect for small businesses establishing their first premium digital footprint.
-              </p>
+              <p className="package-desc">First website for a small business.</p>
 
               <ul className="package-features">
                 <li><Check aria-hidden="true" /> <span>Basic Web Development</span></li>
@@ -128,8 +126,7 @@ export default function Packages() {
               <span className="package-badge">Standard</span>
               <h3 className="package-title">Growth Engine</h3>
               <div className="package-price">25k+ <span>INR</span></div>
-              <p className="package-desc">For growing ventures that need optimized conversion funnels and light automation.
-              </p>
+              <p className="package-desc">Custom site plus light automation.</p>
 
               <ul className="package-features">
                 <li><Check aria-hidden="true" /> <span>Full Custom Web Development</span></li>
@@ -152,8 +149,7 @@ export default function Packages() {
               <span className="package-badge">Enterprise</span>
               <h3 className="package-title">Full Architecture</h3>
               <div className="package-price">Custom <span>Pricing</span></div>
-              <p className="package-desc">Advanced custom software and complex multi-user portals for large-scale
-                operations.</p>
+              <p className="package-desc">Multi-user platforms and integrations.</p>
 
               <ul className="package-features">
                 <li><Check aria-hidden="true" /> <span>Advanced Custom Software Platforms</span></li>
@@ -180,8 +176,8 @@ export default function Packages() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Need a Custom Quote?</h2>
-              <p className="cta-banner-text">If you're unsure which tier fits your project, let's discuss it directly.</p>
+              <h2 className="cta-banner-title">Need a custom quote?</h2>
+              <p className="cta-banner-text">Unsure on the tier? We&apos;ll map it in a short call.</p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Contact Us</span>

@@ -145,7 +145,7 @@ export default function ContactForm() {
     } catch (err: any) {
       console.error("Form submission error:", err);
       setStatus("error");
-      setErrorMessage("There was an issue sending your request. Please try again or contact us via WhatsApp.");
+      setErrorMessage("Could not send. Try again or WhatsApp us.");
     }
   }
 
@@ -154,9 +154,9 @@ export default function ContactForm() {
       {status === "success" ? (
         <div className="form-success-message">
           <CheckCircle className="success-icon" size={48} />
-          <h3>Consultation Requested!</h3>
+          <h3>Request received</h3>
           <p>
-            Thank you, <strong>{submittedName || "there"}</strong>. Our engineering team will review your project details and reach out within 1 business day.
+            Thanks, <strong>{submittedName || "there"}</strong>. We&apos;ll reply within one business day.
           </p>
           <button
             type="button"
@@ -164,7 +164,7 @@ export default function ContactForm() {
             onClick={() => setStatus("idle")}
             style={{ marginTop: "1.5rem" }}
           >
-            Submit Another Request
+            Send another
           </button>
         </div>
       ) : (

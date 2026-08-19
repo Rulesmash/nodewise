@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { ArrowRight, Calendar, Check, X, Clock } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import HomeMotion from "@/components/HomeMotion";
+import HeroGlassCards from "@/components/HeroGlassCards";
 import {
   buildMetadata,
   breadcrumbJsonLd,
@@ -15,9 +15,9 @@ import "./home.css";
 
 const HeroStage = dynamic(() => import("@/components/HeroStage"), {
   ssr: false,
-  loading: () => (
-    <div className="hero-stage hero-stage--loading" aria-hidden="true" />
-  ),
+});
+const HomeMotion = dynamic(() => import("@/components/HomeMotion"), {
+  ssr: false,
 });
 
 export const metadata: Metadata = buildMetadata({
@@ -81,13 +81,13 @@ export default function Home() {
               Ship a live MVP in 10–14 days
             </h1>
             <p className="hero-offer" id="hero-offer-line">
-              Zero to MVP from ₹29,999 — full source code and ownership transfer.
+              Zero to MVP from ₹29,999. Full source code and ownership transfer.
             </p>
           </div>
           <ul className="hero-subtitle" id="hero-sub-text">
-            <li>Showcase-ready web app you can demo to users or investors</li>
-            <li>Fixed scope, fixed price, India-based — worldwide delivery</li>
-            <li>Consultation, core build, live deploy, and two revision rounds</li>
+            <li>Demo-ready web app for users or investors</li>
+            <li>Fixed scope and price. India-based, worldwide delivery</li>
+            <li>Consult, build, deploy, two revision rounds</li>
           </ul>
           <div className="hero-ctas">
             <Link
@@ -95,7 +95,7 @@ export default function Home() {
               className="btn btn-primary"
               id="btn-hero-view-work"
             >
-              <span>View Our Work</span>
+              <span>View our work</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
             <a
@@ -105,7 +105,7 @@ export default function Home() {
               className="btn btn-secondary"
               id="btn-hero-start-mvp"
             >
-              <span>Start Your MVP</span>
+              <span>Start your MVP</span>
               <span className="sr-only"> (opens WhatsApp in a new tab)</span>
             </a>
             <Link
@@ -113,12 +113,16 @@ export default function Home() {
               className="link-cta"
               id="link-hero-consult"
             >
-              <span>Schedule a Consultation</span>
+              <span>Schedule a consult</span>
               <Calendar className="link-icon" aria-hidden="true" />
             </Link>
           </div>
           <div className="hero-visual">
-            <HeroStage />
+            <div className="hero-stage" data-size="lg">
+              <HeroStage />
+              <div className="hero-stage-glow" aria-hidden="true" />
+              <HeroGlassCards />
+            </div>
           </div>
         </div>
       </section>
@@ -133,12 +137,10 @@ export default function Home() {
             <div className="mvp-highlight-content">
               <p className="mvp-product-name">Zero to MVP</p>
               <h2 className="section-title" style={{ marginBottom: "1rem" }}>
-                Turn your idea into a working product in just 10–14 days
+                Live MVP in 10–14 days
               </h2>
               <p className="mvp-highlight-desc">
-                Get a live, showcase-ready Minimum Viable Product (MVP) that you
-                can show to users, investors, or test in the market. Perfect for
-                early-stage founders.
+                Showcase-ready product. Fixed ₹29,999. Source code and ownership included.
               </p>
 
               <div className="mvp-feature-grid">
@@ -231,7 +233,7 @@ export default function Home() {
                   className="btn btn-primary mvp-cta-btn"
                   id="lnk-home-mvp-whatsapp"
                 >
-                  <span>Start Your MVP</span>
+                  <span>Start your MVP</span>
                   <span className="sr-only"> (opens WhatsApp in a new tab)</span>
                   <ArrowRight className="btn-icon" aria-hidden="true" />
                 </a>
@@ -240,7 +242,7 @@ export default function Home() {
                   className="mvp-learn-more-link"
                   id="lnk-home-mvp-details"
                 >
-                  View Full MVP Details &rarr;
+                  Full MVP details &rarr;
                 </Link>
               </div>
             </div>
@@ -255,8 +257,8 @@ export default function Home() {
       >
         <div className="container">
           <div className="section-header center" data-reveal>
-            <h2 className="section-title">Service Packages</h2>
-            <p className="packages-pricing-note">Transparent Pricing</p>
+            <h2 className="section-title">Packages</h2>
+            <p className="packages-pricing-note">INR pricing, published up front</p>
           </div>
           <div className="packages-grid" data-reveal-stagger>
             <div className="package-card" id="package-minimum" data-reveal-item>
@@ -266,8 +268,7 @@ export default function Home() {
                 12k - 15k <span>INR</span>
               </div>
               <p className="package-desc">
-                Ideal for small businesses launching their first digital
-                footprint.
+                First website for a small business.
               </p>
 
               <ul className="package-features">
@@ -316,8 +317,7 @@ export default function Home() {
                 25k+ <span>INR</span>
               </div>
               <p className="package-desc">
-                For growing ventures needing optimized funnels and light
-                automation.
+                Custom site plus light automation.
               </p>
 
               <ul className="package-features">
@@ -366,8 +366,7 @@ export default function Home() {
                 Custom <span>Pricing</span>
               </div>
               <p className="package-desc">
-                Advanced software and multi-user portals for large-scale
-                operations.
+                Multi-user platforms and integrations.
               </p>
 
               <ul className="package-features">
@@ -412,9 +411,9 @@ export default function Home() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Need a Custom Quote?</h2>
+              <h2 className="cta-banner-title">Need a custom quote?</h2>
               <p className="cta-banner-text">
-                Unsure which tier fits? Let&apos;s discuss your project.
+                Unsure on the tier? We&apos;ll map it in a short call.
               </p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">

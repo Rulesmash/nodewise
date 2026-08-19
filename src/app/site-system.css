@@ -131,3 +131,50 @@ button.chip[aria-pressed="true"] {
     width: 2rem;
   }
 }
+
+/* Scannable marketing type: one idea, short measure, list over paragraph */
+.page-hero-subtitle,
+.section-lead-desc,
+.pitch-text,
+.about-lead-text,
+.mvp-highlight-desc,
+.package-desc,
+.card-description,
+.quality-description,
+.step-description,
+.project-desc,
+.cta-banner-text {
+  max-width: 36rem;
+  line-height: 1.5;
+}
+
+.scan-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+.scan-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary, #c5c9db);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.scan-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.capability-card .scan-list,
+.quality-details .scan-list {
+  margin-top: 0.65rem;
+}

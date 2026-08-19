@@ -124,7 +124,7 @@ export default function GlobalInteractions() {
       if ((section as HTMLElement).closest?.(".home-page [data-reveal], .home-page [data-reveal-stagger]")) {
         return;
       }
-      // Transform-only — never opacity (content flash/invisible risk)
+      // Transform-only. Never opacity (content flash/invisible risk).
       gsap.from(section, {
         y: 28,
         duration: 0.75,

@@ -11,7 +11,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Nodewise — Digital Product Studio Founders",
+  title: "About Nodewise: Digital Product Studio Founders",
   description:
     "Meet Nodewise founders Induchoodan V S and Aalif Mohammad R S. A sharp India-based studio building MVPs and custom web software for real business results.",
   path: "/about",
@@ -60,10 +60,9 @@ export default function About() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="section-subtitle">Who We Are</span>
-            <h1 className="page-hero-title">About Nodewise</h1>
+            <h1 className="page-hero-title">About</h1>
             <p className="page-hero-subtitle">
-              A small, sharp team building digital products that drive real business results.
+              India-based studio. Worldwide delivery.
             </p>
           </div>
         </div>
@@ -77,10 +76,9 @@ export default function About() {
               <img src="/assets/logo-full.png" alt="Nodewise Logo" />
             </div>
             <div className="about-content">
-              <span className="section-subtitle">The Brand</span>
-              <h2 className="section-title">Built for Results</h2>
+              <h2 className="section-title">Built for results</h2>
               <p className="about-lead-text">
-                We build high-performance web platforms and custom software tools engineered for business growth.
+                Custom web platforms and software, engineered to ship fast.
               </p>
               <div className="about-highlights">
                 <div className="about-highlight-item">
@@ -108,7 +106,7 @@ export default function About() {
             <h2 className="section-title">Founders</h2>
             <div className="section-divider"></div>
             <p className="section-lead-desc">
-              Hackathon-trained builders who ship fast and deliver high-performance results.
+              Two founders. We ship fast.
             </p>
           </div>
 
@@ -155,11 +153,11 @@ export default function About() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Let's Build Something Great</h2>
-              <p className="cta-banner-text">Have a project in mind? Let's talk about how we can help you grow.</p>
+              <h2 className="cta-banner-title">Have a project?</h2>
+              <p className="cta-banner-text">Tell us what you need live.</p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
-              <span>Get in Touch</span>
+              <span>Get in touch</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
           </div>

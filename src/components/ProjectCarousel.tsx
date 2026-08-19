@@ -331,7 +331,7 @@ export default function ProjectCarousel({
                   }`}
                   aria-label={
                     isActive
-                      ? `Open live site ${chromeLabel} — ${slide.label || slide.alt} (opens in a new tab)`
+                      ? `Open live site ${chromeLabel}: ${slide.label || slide.alt} (opens in a new tab)`
                       : `Show ${slide.label || slide.alt}`
                   }
                   aria-current={isActive ? "true" : undefined}

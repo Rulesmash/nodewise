@@ -9,7 +9,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Process — Discovery, Build & Launch",
+  title: "Our Process: Discovery, Build and Launch",
   description:
     "How Nodewise ships software: discovery, architecture, focused sprints, and reliable launch. A clear path from idea or bottleneck to a live product.",
   path: "/process",
@@ -28,7 +28,7 @@ export default function Process() {
           webPageJsonLd({
             title: "Our Process",
             description:
-              "Discovery, architecture, sprinting, and launch — how Nodewise delivers software.",
+              "Discovery, architecture, sprinting, and launch. How Nodewise delivers software.",
             path: "/process",
           }),
           breadcrumbJsonLd([
@@ -40,7 +40,7 @@ export default function Process() {
             "@type": "HowTo",
             name: "How Nodewise Builds Custom Software",
             description:
-              "Our collaboration path from operational bottleneck to scalable software.",
+              "Our collaboration path from idea to live software.",
             step: [
               {
                 "@type": "HowToStep",
@@ -74,10 +74,9 @@ export default function Process() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="section-subtitle">Workflow</span>
-            <h1 className="page-hero-title">The Collaboration Path</h1>
+            <h1 className="page-hero-title">How we work</h1>
             <p className="page-hero-subtitle">
-              How we turn complex operational bottlenecks into streamlined, scalable software.
+              Discovery, build, launch.
             </p>
           </div>
         </div>
@@ -97,10 +96,9 @@ export default function Process() {
                 <span className="step-num">1</span>
               </div>
               <div className="step-content card">
-                <h3 className="step-title">Strategic Alignment</h3>
+                <h3 className="step-title">Discovery</h3>
                 <p className="step-description">
-                  We analyze your business model, target audience, and operations to pinpoint exactly where custom
-                  software will add the most value to your bottom line.
+                  Goals, constraints, and success metrics in one consult.
                 </p>
               </div>
             </div>
@@ -111,10 +109,9 @@ export default function Process() {
                 <span className="step-num">2</span>
               </div>
               <div className="step-content card">
-                <h3 className="step-title">Precision Engineering</h3>
+                <h3 className="step-title">Build</h3>
                 <p className="step-description">
-                  Our team builds a tailored, responsive digital asset utilizing clean modern code, ensuring your
-                  platform loads instantly on every device.
+                  Clean, responsive software in focused sprints.
                 </p>
               </div>
             </div>
@@ -125,10 +122,9 @@ export default function Process() {
                 <span className="step-num">3</span>
               </div>
               <div className="step-content card">
-                <h3 className="step-title">Deployment & Growth</h3>
+                <h3 className="step-title">Launch</h3>
                 <p className="step-description">
-                  We launch your platform seamlessly and provide continuous consultation on how to leverage your new
-                  digital asset to capture more clients.
+                  Go live, hand over source, support the first days.
                 </p>
               </div>
             </div>
@@ -141,11 +137,11 @@ export default function Process() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Ready to Begin?</h2>
-              <p className="cta-banner-text">Let's align your operations with custom software.</p>
+              <h2 className="cta-banner-title">Ready to start?</h2>
+              <p className="cta-banner-text">Book a consult and we&apos;ll scope the first sprint.</p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
-              <span>Schedule Consultation</span>
+              <span>Schedule a consult</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
           </div>

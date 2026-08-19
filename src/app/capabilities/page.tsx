@@ -10,7 +10,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services — Web Platforms, Portals & Automation",
+  title: "Services: Web Platforms, Portals and Automation",
   description:
     "Nodewise services: high-converting web presence, custom business portals and dashboards, and workflow automation. Built for speed, clarity, and growth.",
   path: "/capabilities",
@@ -61,11 +61,9 @@ export default function Capabilities() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <span className="section-subtitle">What We Build</span>
-            <h1 className="page-hero-title">Core Capabilities</h1>
+            <h1 className="page-hero-title">Services</h1>
             <p className="page-hero-subtitle">
-              We design and build clean, high-performance web platforms and custom software tools engineered to elevate
-              your business presence.
+              Websites, portals, and automation.
             </p>
           </div>
         </div>
@@ -88,11 +86,12 @@ export default function Capabilities() {
                     <Layout className="card-icon" />
                   </div>
                   <h3 className="card-title">Premium Web Presences</h3>
-                  <p className="card-description">
-                    Custom corporate websites and optimized landing pages crafted to turn organic site visitors into
-                    active,
-                    paying clients. (Tailored for restaurants, gym chains, real estate, and modern service ventures).
-                  </p>
+                  <p className="card-description">Marketing sites and landing pages that convert.</p>
+                  <ul className="scan-list">
+                    <li>Corporate sites</li>
+                    <li>Landing pages</li>
+                    <li>Service businesses</li>
+                  </ul>
                   <div className="card-hover-border"></div>
                 </div>
 
@@ -102,11 +101,12 @@ export default function Capabilities() {
                     <LayoutGrid className="card-icon" />
                   </div>
                   <h3 className="card-title">Custom Portals &amp; Dashboards</h3>
-                  <p className="card-description">
-                    Reliable user panels, booking structures, and internal optimization tools built to smooth out your
-                    daily
-                    business workflows and protect your revenue margins.
-                  </p>
+                  <p className="card-description">Tools your team actually uses.</p>
+                  <ul className="scan-list">
+                    <li>Client portals</li>
+                    <li>Booking</li>
+                    <li>Dashboards</li>
+                  </ul>
                   <div className="card-hover-border"></div>
                 </div>
 
@@ -116,10 +116,12 @@ export default function Capabilities() {
                     <Cpu className="card-icon" />
                   </div>
                   <h3 className="card-title">Advanced Automation Layers</h3>
-                  <p className="card-description">
-                    Integrating tailored automated features, interactive components, and smart software interfaces to
-                    eliminate repetitive manual tasks and scale customer volume smoothly.
-                  </p>
+                  <p className="card-description">Cut repetitive work.</p>
+                  <ul className="scan-list">
+                    <li>Workflows</li>
+                    <li>Integrations</li>
+                    <li>Internal tools</li>
+                  </ul>
                   <div className="card-hover-border"></div>
                 </div>
               </div>
@@ -144,11 +146,11 @@ export default function Capabilities() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Need a Custom Solution?</h2>
-              <p className="cta-banner-text">Book a free consultation and let's discuss your project's architecture.</p>
+              <h2 className="cta-banner-title">Need something specific?</h2>
+              <p className="cta-banner-text">Book a 30-minute consult.</p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
-              <span>Schedule Consultation</span>
+              <span>Schedule a consult</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
           </div>

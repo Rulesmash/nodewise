@@ -14,9 +14,9 @@ export default function Footer() {
           />
           <p className="footer-tagline">Smarter Code. Better Solutions.</p>
           <ul className="footer-about" style={{ listStyle: "none", padding: 0 }}>
-            <li>▪ Custom Web Platforms</li>
-            <li>▪ High-Performance Software</li>
-            <li>▪ Business Optimization</li>
+            <li>Custom web platforms</li>
+            <li>Startup MVPs</li>
+            <li>Business software</li>
           </ul>
           <div className="footer-socials">
             <a

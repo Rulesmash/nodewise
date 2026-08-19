@@ -3,7 +3,7 @@ import { SITE } from "@/lib/seo";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE.name} — ${SITE.tagline}`,
+    name: `${SITE.name}: ${SITE.tagline}`,
     short_name: SITE.name,
     description:
       "Agile digital product studio building custom web apps, MVPs, and business software.",

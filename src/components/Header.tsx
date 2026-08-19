@@ -49,7 +49,7 @@ export default function Header() {
     return () => window.removeEventListener("keydown", onKey);
   }, [mobileMenuOpen]);
 
-  // inert ONLY when mobile drawer is closed — never on desktop (was blocking clicks)
+  // inert ONLY when mobile drawer is closed. Never on desktop (was blocking clicks).
   useEffect(() => {
     const nav = navRef.current;
     if (!nav) return;
