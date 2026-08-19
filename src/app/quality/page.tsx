@@ -110,7 +110,7 @@ export default function Quality() {
           <div className="cta-banner">
             <div className="cta-banner-content">
               <h2 className="cta-banner-title">See the bar</h2>
-              <p className="cta-banner-text">Start with Zero to MVP or a scoped build.</p>
+              <p className="cta-banner-text">Start with a landing page or a scoped software build.</p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Start a project</span>

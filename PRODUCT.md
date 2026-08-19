@@ -8,29 +8,29 @@ web
 
 ## Users
 
-Primary: early-stage founders who need a showcase-ready MVP fast so they can demo to users or investors. Secondary (not the homepage conversion target): small and growing businesses shopping transparent INR packages.
+Primary: businesses shopping professional B2B landing pages and custom software on transparent INR packages. Secondary: early-stage founders who still want the timed Zero to MVP offer (₹29,999, 10–14 days), which is kept off the homepage lead.
 
 ## Product Purpose
 
-Nodewise is an agile digital product studio that builds custom web platforms, startup MVPs, and business software engineered for speed and profitability. Success is a founder who understands the Zero to MVP offer, trusts the delivery timeline and ownership transfer, and starts via WhatsApp or consultation.
+Nodewise is an agile digital product studio that builds professional B2B landing pages, custom web platforms, and business software. Success is a buyer who understands published INR pricing for landing pages and software, trusts ownership transfer, and starts via WhatsApp or consultation.
 
 ## Positioning
 
-Fixed-price Zero to MVP (₹29,999, 10–14 days) with full source code and ownership transfer, plus transparent INR package tiers—India-based, worldwide delivery—without enterprise bloat or opaque agency pricing.
+Professional B2B landing pages (12k–15k INR) and business software (25k+, custom platforms quoted), India-based, worldwide delivery, without enterprise bloat or opaque agency pricing. Zero to MVP (₹29,999, 10–14 days) remains a published side offer.
 
 ## Operating Context
 
-Founders evaluate on mobile and desktop marketing site (nodewise.cc), often comparing agencies before a WhatsApp inquire. Contact via WhatsApp (+91 94469 98827), email (contact@nodewise.cc), and LinkedIn. Primary conversion path: homepage → Zero to MVP / packages → WhatsApp or contact.
+Buyers evaluate on mobile and desktop marketing site (nodewise.cc), often comparing agencies before a WhatsApp inquire. Contact via WhatsApp (+91 94469 98827), email (contact@nodewise.cc), and LinkedIn. Primary conversion path: homepage → packages (landing pages / software) → WhatsApp or contact.
 
 ## Capabilities and Constraints
 
 - Builds: custom web platforms, landing pages, startup MVPs, business portals, dashboards, automation software.
-- Offers: Zero to MVP ₹29,999 (10–14 days); Starter 12k–15k INR; Growth 25k+ INR; Enterprise custom.
+- Offers: Landing Pages 12k–15k INR; Business Software 25k+ INR; Custom Platforms quoted; Zero to MVP ₹29,999 (10–14 days) as a side offer.
 - Zero to MVP includes: 30-min consultation, core MVP, live responsive web app, source + docs, ownership, 2 revision rounds. Excludes: complex enterprise integrations, native mobile, massive scalable cloud architecture.
 - Stack in production: Next.js 14, React 18, GSAP, Three.js, Vercel Analytics.
 - Routes: /, /portfolio, /zero-to-mvp, /packages, /capabilities, /process, /about, /quality, /contact.
 - This redesign scope: homepage only. Other routes may inherit tokens later; not rebuilt in this pass.
-- Preserve all existing copy, prices, CTAs, WhatsApp deep links, SEO claims, and route structure on the homepage.
+- Preserve published prices, inclusions, exclusions, WhatsApp, email, and founders. Homepage leads with landing pages and software; Zero to MVP is not the first-viewport offer.
 
 ## Brand Commitments
 
@@ -49,7 +49,7 @@ Founders evaluate on mobile and desktop marketing site (nodewise.cc), often comp
 
 ## Product Principles
 
-1. Lead with the founder job: idea → live showcase MVP with clear price and timeline.
+1. Lead with the B2B job: professional landing pages and business software with published INR prices.
 2. Never invent commercial claims; keep published prices, inclusions, and contact paths exact.
 3. Speed and ownership are the trust signals—show them, do not bury them.
 4. Premium craft is allowed; it must not obscure offer clarity or primary actions.

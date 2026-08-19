@@ -11,12 +11,12 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Nodewise: MVP and Web Consultation",
+  title: "Contact Nodewise: Landing Pages and Software",
   description:
-    "Talk to Nodewise about your MVP or custom web platform. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
+    "Talk to Nodewise about a B2B landing page or business software. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
   path: "/contact",
   keywords: [
-    "contact MVP developers India",
+    "contact web developers India",
     "hire web developers India",
     "schedule software consultation",
     "WhatsApp web agency",
@@ -31,7 +31,7 @@ export default function Contact() {
           webPageJsonLd({
             title: "Contact Nodewise",
             description:
-              "Schedule a technical consultation for web platforms, MVPs, and custom software.",
+              "Schedule a technical consultation for B2B landing pages and business software.",
             path: "/contact",
             type: "ContactPage",
           }),
@@ -81,7 +81,7 @@ export default function Contact() {
             <div className="contact-pitch">
               <h2 className="pitch-title">Start a conversation</h2>
               <p className="pitch-text">
-                Tell us the product. We&apos;ll reply within one business day.
+                Tell us the landing page or software you need. We&apos;ll reply within one business day.
               </p>
               <div className="contact-meta-info">
                 <div className="c-meta-item">
@@ -95,7 +95,7 @@ export default function Contact() {
                 <div className="c-meta-item">
                   <Phone className="meta-icon" />
                   <span><a href="tel:+919446998827"
-                      style={{ color: "inherit", textDecoration: "none" }}>+919446998827</a></span>
+                      style={{ color: "inherit", textDecoration: "none" }}>+91 94469 98827</a></span>
                 </div>
               </div>
             </div>

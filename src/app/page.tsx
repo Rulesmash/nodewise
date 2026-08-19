@@ -1,6 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { ArrowRight, Calendar, Check, X, Clock } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import HeroGlassCards from "@/components/HeroGlassCards";
@@ -21,16 +21,16 @@ const HomeMotion = dynamic(() => import("@/components/HomeMotion"), {
 });
 
 export const metadata: Metadata = buildMetadata({
-  title: "Startup MVP & Custom Web Development in India",
+  title: "B2B Landing Pages and Business Software in India",
   description:
-    "Nodewise builds startup MVPs and custom web platforms. Zero to MVP from ₹29,999 in 10–14 days with full source code and ownership. Transparent pricing. Worldwide delivery.",
+    "Nodewise builds professional B2B landing pages and business software. Landing pages 12k–15k INR. Software from 25k+. Custom platforms quoted. Transparent pricing. Worldwide delivery.",
   path: "/",
   keywords: [
-    "startup MVP India",
-    "hire MVP developers",
+    "B2B landing pages India",
+    "business software development",
     "custom web platforms",
-    "fixed price MVP",
-    "build MVP fast",
+    "INR web development pricing",
+    "professional landing page",
   ],
 });
 
@@ -40,34 +40,35 @@ export default function Home() {
       <JsonLd
         data={[
           webPageJsonLd({
-            title: "Startup MVP & Custom Web Development in India",
+            title: "B2B Landing Pages and Business Software in India",
             description:
-              "Nodewise builds startup MVPs and custom web platforms. Zero to MVP from ₹29,999 in 10–14 days with full ownership.",
+              "Nodewise builds professional B2B landing pages and business software. Published INR pricing. India-based, worldwide delivery.",
             path: "/",
           }),
           breadcrumbJsonLd([{ name: "Home", path: "/" }]),
           serviceJsonLd({
-            name: "Zero to MVP",
+            name: "Landing Pages",
             description:
-              "Live, showcase-ready Minimum Viable Product in 10–14 days with full source code and ownership.",
-            path: "/zero-to-mvp",
-            price: 29999,
+              "Professional B2B landing pages and first-site web presence.",
+            path: "/packages",
+            price: 12000,
+            priceMax: 15000,
           }),
           faqJsonLd([
             {
-              question: "How fast can Nodewise build an MVP?",
+              question: "What does Nodewise build?",
               answer:
-                "Our Zero to MVP package delivers a live, showcase-ready product in 10–14 days, including consultation, core features, source code, and ownership transfer.",
+                "Professional B2B landing pages, custom web platforms, business portals, dashboards, and automation software.",
             },
             {
               question: "What does web development cost at Nodewise?",
               answer:
-                "Starter packages start at ₹12,000–15,000 INR. Growth packages from ₹25,000+. Enterprise architecture is custom-quoted. Zero to MVP is a fixed ₹29,999.",
+                "Landing pages are 12k–15k INR. Business software from 25k+. Custom platforms are quoted. Zero to MVP remains a fixed ₹29,999 timed package.",
             },
             {
-              question: "What does Nodewise build?",
+              question: "Do you still offer Zero to MVP?",
               answer:
-                "Custom web platforms, high-converting landing pages, startup MVPs, business portals, dashboards, and automation software.",
+                "Yes. Zero to MVP is a timed founder package at ₹29,999 in 10–14 days, with source code and ownership. It is listed separately from landing pages and business software.",
             },
           ]),
         ]}
@@ -78,16 +79,16 @@ export default function Home() {
         <div className="container hero-container">
           <div className="hero-content hero-copy">
             <h1 className="hero-title" id="hero-main-title">
-              Ship a live MVP in 10–14 days
+              Landing pages and business software
             </h1>
             <p className="hero-offer" id="hero-offer-line">
-              Zero to MVP from ₹29,999. Full source code and ownership transfer.
+              Professional B2B sites from 12k–15k INR. Software from 25k+. Source you own.
             </p>
           </div>
           <ul className="hero-subtitle" id="hero-sub-text">
-            <li>Demo-ready web app for users or investors</li>
-            <li>Fixed scope and price. India-based, worldwide delivery</li>
-            <li>Consult, build, deploy, two revision rounds</li>
+            <li>Conversion-focused landing pages for companies</li>
+            <li>Custom platforms, portals, dashboards, and automation</li>
+            <li>India-based studio. Worldwide delivery</li>
           </ul>
           <div className="hero-ctas">
             <Link
@@ -99,23 +100,15 @@ export default function Home() {
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
             <a
-              href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
+              href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20a%20B2B%20landing%20page%20or%20business%20software."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary"
               id="btn-hero-start-mvp"
             >
-              <span>Start your MVP</span>
+              <span>Discuss a project</span>
               <span className="sr-only"> (opens WhatsApp in a new tab)</span>
             </a>
-            <Link
-              href="/contact"
-              className="link-cta"
-              id="link-hero-consult"
-            >
-              <span>Schedule a consult</span>
-              <Calendar className="link-icon" aria-hidden="true" />
-            </Link>
           </div>
           <div className="hero-visual">
             <div className="hero-stage" data-size="lg">
@@ -128,132 +121,9 @@ export default function Home() {
       </section>
 
       <section
-        id="zero-to-mvp-highlight"
-        className="mvp-highlight-section"
-        style={{ paddingTop: "5rem", paddingBottom: "2rem" }}
-      >
-        <div className="container">
-          <div className="mvp-highlight-card">
-            <div className="mvp-highlight-content">
-              <p className="mvp-product-name">Zero to MVP</p>
-              <h2 className="section-title" style={{ marginBottom: "1rem" }}>
-                Live MVP in 10–14 days
-              </h2>
-              <p className="mvp-highlight-desc">
-                Showcase-ready product. Fixed ₹29,999. Source code and ownership included.
-              </p>
-
-              <div className="mvp-feature-grid">
-                <div className="mvp-feature-column">
-                  <h3
-                    style={{
-                      color: "var(--text-light)",
-                      marginBottom: "1rem",
-                      fontSize: "1.1rem",
-                    }}
-                  >
-                    What You Get
-                  </h3>
-                  <ul className="mvp-feature-list included">
-                    <li>
-                      <Check className="icon-check" size={16} aria-hidden="true" />{" "}
-                      <span>30-minute idea consultation</span>
-                    </li>
-                    <li>
-                      <Check className="icon-check" size={16} aria-hidden="true" />{" "}
-                      <span>Core MVP with essential features</span>
-                    </li>
-                    <li>
-                      <Check className="icon-check" size={16} aria-hidden="true" />{" "}
-                      <span>Clean, responsive web app (live)</span>
-                    </li>
-                    <li>
-                      <Check className="icon-check" size={16} aria-hidden="true" />{" "}
-                      <span>Full source code + docs</span>
-                    </li>
-                    <li>
-                      <Check className="icon-check" size={16} aria-hidden="true" />{" "}
-                      <span>Complete ownership transferred</span>
-                    </li>
-                    <li>
-                      <Check className="icon-check" size={16} aria-hidden="true" />{" "}
-                      <span>2 rounds of revisions</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="mvp-feature-column">
-                  <h3
-                    style={{
-                      color: "var(--text-light)",
-                      marginBottom: "1rem",
-                      fontSize: "1.1rem",
-                    }}
-                  >
-                    Not Included
-                  </h3>
-                  <ul className="mvp-feature-list excluded">
-                    <li>
-                      <X className="icon-x" size={16} aria-hidden="true" />{" "}
-                      <span>Complex enterprise integrations</span>
-                    </li>
-                    <li>
-                      <X className="icon-x" size={16} aria-hidden="true" />{" "}
-                      <span>Native mobile apps</span>
-                    </li>
-                    <li>
-                      <X className="icon-x" size={16} aria-hidden="true" />{" "}
-                      <span>Massive scalable cloud architecture</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="mvp-highlight-pricing">
-              <div className="mvp-pricing-box">
-                <p
-                  className="mvp-price-big"
-                  style={{ fontSize: "2rem", fontWeight: 700, margin: 0 }}
-                >
-                  ₹29,999
-                </p>
-                <span className="mvp-price-label">(one-time)</span>
-
-                <div className="mvp-timeline-box">
-                  <Clock size={16} aria-hidden="true" />
-                  <span>
-                    <strong>Timeline:</strong> 10–14 days
-                  </span>
-                </div>
-
-                <a
-                  href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary mvp-cta-btn"
-                  id="lnk-home-mvp-whatsapp"
-                >
-                  <span>Start your MVP</span>
-                  <span className="sr-only"> (opens WhatsApp in a new tab)</span>
-                  <ArrowRight className="btn-icon" aria-hidden="true" />
-                </a>
-                <Link
-                  href="/zero-to-mvp"
-                  className="mvp-learn-more-link"
-                  id="lnk-home-mvp-details"
-                >
-                  Full MVP details &rarr;
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
         id="packages"
         className="packages-section"
-        style={{ paddingTop: "2rem", paddingBottom: "4rem" }}
+        style={{ paddingTop: "5rem", paddingBottom: "2rem" }}
       >
         <div className="container">
           <div className="section-header center" data-reveal>
@@ -262,13 +132,12 @@ export default function Home() {
           </div>
           <div className="packages-grid" data-reveal-stagger>
             <div className="package-card" id="package-minimum" data-reveal-item>
-              <span className="package-badge">Minimum</span>
-              <h3 className="package-title">Starter Foundation</h3>
+              <h3 className="package-title">Landing Pages</h3>
               <div className="package-price">
                 12k - 15k <span>INR</span>
               </div>
               <p className="package-desc">
-                First website for a small business.
+                Professional B2B landing pages and a first web presence.
               </p>
 
               <ul className="package-features">
@@ -295,7 +164,7 @@ export default function Home() {
               </ul>
 
               <a
-                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Minimum%20package%20(12-15k%20INR)."
+                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20Landing%20Pages%20(12-15k%20INR)."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary package-btn"
@@ -311,8 +180,7 @@ export default function Home() {
               id="package-standard"
               data-reveal-item
             >
-              <span className="package-badge">Standard</span>
-              <h3 className="package-title">Growth Engine</h3>
+              <h3 className="package-title">Business Software</h3>
               <div className="package-price">
                 25k+ <span>INR</span>
               </div>
@@ -344,7 +212,7 @@ export default function Home() {
               </ul>
 
               <a
-                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Standard%20package%20(25k%2B%20INR)."
+                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20Business%20Software%20(25k%2B%20INR)."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary package-btn"
@@ -360,8 +228,7 @@ export default function Home() {
               id="package-enterprise"
               data-reveal-item
             >
-              <span className="package-badge">Enterprise</span>
-              <h3 className="package-title">Full Architecture</h3>
+              <h3 className="package-title">Custom Platforms</h3>
               <div className="package-price">
                 Custom <span>Pricing</span>
               </div>
@@ -393,7 +260,7 @@ export default function Home() {
               </ul>
 
               <a
-                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Enterprise%20custom%20software%20package."
+                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20Custom%20Platforms."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary package-btn"
@@ -411,9 +278,30 @@ export default function Home() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
+              <h2 className="cta-banner-title">Need a timed MVP instead?</h2>
+              <p className="cta-banner-text">
+                Zero to MVP is ₹29,999 in 10–14 days, with source and ownership.
+              </p>
+            </div>
+            <Link
+              href="/zero-to-mvp"
+              className="btn btn-secondary cta-banner-btn"
+              id="lnk-home-mvp-details"
+            >
+              <span>Zero to MVP details</span>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-banner-section" data-reveal>
+        <div className="container">
+          <div className="cta-banner">
+            <div className="cta-banner-content">
               <h2 className="cta-banner-title">Need a custom quote?</h2>
               <p className="cta-banner-text">
-                Unsure on the tier? We&apos;ll map it in a short call.
+                Unsure whether you need a landing page or software? We&apos;ll map it in a short call.
               </p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">

@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${SITE.name}: ${SITE.tagline}`,
     short_name: SITE.name,
     description:
-      "Agile digital product studio building custom web apps, MVPs, and business software.",
+      "Agile digital product studio building B2B landing pages and business software.",
     start_url: "/",
     display: "standalone",
     background_color: "#0b0c10",

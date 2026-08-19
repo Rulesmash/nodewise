@@ -1,6 +1,6 @@
-import { Check, Clock, Code2, Shield } from "lucide-react";
+import { Building2, Layout, Code2, Shield } from "lucide-react";
 
-type CardIcon = "clock" | "code" | "shield" | "check";
+type CardIcon = "layout" | "code" | "shield" | "building";
 
 const CARD_DATA: {
   id: string;
@@ -10,18 +10,18 @@ const CARD_DATA: {
   meta: string;
   icon: CardIcon | null;
 }[] = [
-  { id: "price", className: "hero-glass-card--price", title: "Zero to MVP", body: "\u20B929,999", meta: "one-time", icon: null },
-  { id: "time", className: "hero-glass-card--time", title: "Timeline", body: "10\u201314 days", meta: "live and showcase-ready", icon: "clock" },
-  { id: "own", className: "hero-glass-card--own", title: "Ownership", body: "Full source", meta: "code + docs transferred", icon: "shield" },
-  { id: "core", className: "hero-glass-card--core", title: "Core MVP", body: "Essential features", meta: "responsive web app", icon: "code" },
+  { id: "price", className: "hero-glass-card--price", title: "Landing", body: "12k\u201315k", meta: "B2B pages, INR", icon: "layout" },
+  { id: "time", className: "hero-glass-card--time", title: "Software", body: "25k+", meta: "sites and automation", icon: "code" },
+  { id: "own", className: "hero-glass-card--own", title: "Ownership", body: "Full source", meta: "no page builders", icon: "shield" },
+  { id: "core", className: "hero-glass-card--core", title: "Platforms", body: "Custom", meta: "quoted multi-user", icon: "building" },
 ];
 
 function Icon({ name }: { name: CardIcon }) {
   const props = { size: 14 as number, "aria-hidden": true as const, className: "hero-glass-card__svg" };
-  if (name === "clock") return <Clock {...props} />;
+  if (name === "layout") return <Layout {...props} />;
   if (name === "code") return <Code2 {...props} />;
   if (name === "shield") return <Shield {...props} />;
-  return <Check {...props} />;
+  return <Building2 {...props} />;
 }
 
 export default function HeroGlassCards() {

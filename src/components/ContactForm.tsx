@@ -5,8 +5,8 @@ import { Send, CheckCircle, Sparkles, X } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
 const PRESET_REQUIREMENTS = [
-  "⚡ Zero to MVP (10–14 Days Development)",
-  "💻 Full Custom Web Platform / Web App"
+  "B2B landing pages (12k–15k INR)",
+  "Business software (25k+ INR)",
 ];
 
 export default function ContactForm() {
@@ -244,7 +244,7 @@ export default function ContactForm() {
                 type="text"
                 id="form-requirements"
                 name="requirements"
-                placeholder={selectedChips.length > 0 ? "Add additional requirements..." : "e.g. Zero to MVP, Web App, Automation..."}
+                placeholder={selectedChips.length > 0 ? "Add additional requirements..." : "e.g. landing page, portal, automation"}
                 spellCheck="false"
                 autoComplete="off"
                 value={requirements}

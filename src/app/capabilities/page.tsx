@@ -38,7 +38,7 @@ export default function Capabilities() {
             { name: "Services", path: "/capabilities" },
           ]),
           serviceJsonLd({
-            name: "Premium Web Presence",
+            name: "B2B Landing Pages",
             description:
               "High-performance marketing sites and brand platforms built for conversion.",
             path: "/capabilities",
@@ -63,7 +63,7 @@ export default function Capabilities() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Services</h1>
             <p className="page-hero-subtitle">
-              Websites, portals, and automation.
+              B2B landing pages, portals, and software.
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function Capabilities() {
                   <div className="card-icon-container">
                     <Layout className="card-icon" />
                   </div>
-                  <h3 className="card-title">Premium Web Presences</h3>
+                  <h3 className="card-title">B2B Landing Pages</h3>
                   <p className="card-description">Marketing sites and landing pages that convert.</p>
                   <ul className="scan-list">
                     <li>Corporate sites</li>

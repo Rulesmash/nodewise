@@ -78,7 +78,7 @@ export default function About() {
             <div className="about-content">
               <h2 className="section-title">Built for results</h2>
               <p className="about-lead-text">
-                Custom web platforms and software, engineered to ship fast.
+                Professional B2B landing pages and business software, engineered to ship fast.
               </p>
               <div className="about-highlights">
                 <div className="about-highlight-item">

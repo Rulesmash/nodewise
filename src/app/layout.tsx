@@ -53,11 +53,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | Startup MVP & Custom Web Development`,
+    default: `${SITE.name} | B2B Landing Pages and Business Software`,
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Nodewise builds startup MVPs and custom web platforms. Zero to MVP from ₹29,999 in 10–14 days with full ownership. Transparent INR pricing. India-based, worldwide delivery.",
+    "Nodewise builds professional B2B landing pages and business software. Landing pages 12k–15k INR. Software from 25k+. Transparent INR pricing. India-based, worldwide delivery.",
   applicationName: SITE.name,
   authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
@@ -82,9 +82,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: SITE.locale,
     url: `${SITE.url}/`,
-    title: `${SITE.name} | Startup MVP & Custom Web Development`,
+    title: `${SITE.name} | B2B Landing Pages and Business Software`,
     description:
-      "Fixed-price MVPs from ₹29,999 in 10–14 days. Custom web platforms and business software. Transparent pricing from India.",
+      "Professional B2B landing pages from 12k–15k INR. Business software from 25k+. Transparent pricing from India.",
     siteName: SITE.name,
     images: [
       {
@@ -97,9 +97,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} | Startup MVP & Custom Web Development`,
+    title: `${SITE.name} | B2B Landing Pages and Business Software`,
     description:
-      "Fixed-price MVPs from ₹29,999 in 10–14 days. Custom web platforms. India-based, worldwide.",
+      "Professional B2B landing pages and business software. India-based, worldwide.",
     images: [SITE.ogImage],
   },
   robots: {
@@ -145,8 +145,8 @@ export default function RootLayout({
         {/*
           THESIS: Category-standard founder homepage elevated by cinematic product motion. Glass telemetry cards orbit a metallic sculpture; refuse generic particle wallpaper as the hero.
           OWN-WORLD: Void charcoal, frosted glass panels, brushed metal 3D, soft cyan instrument light, pill CTAs, Geist + Manrope.
-          STORY: Founder grasps Zero to MVP (₹29,999 / 10–14 days / ownership) and acts via WhatsApp or consultation.
-          FIRST VIEWPORT: Headline + offer + View our work first; Start your MVP secondary. HeroStage is a live Three.js studio sculpture with glass offer cards, not a still image. Mobile stacks copy, CTAs, stage, bullets.
+          STORY: A B2B buyer grasps landing pages (12k–15k) and business software (25k+) and acts via WhatsApp or consultation. Zero to MVP stays available as a timed side offer.
+          FIRST VIEWPORT: Headline + offer + View our work first; Discuss a project secondary. HeroStage is a live Three.js studio sculpture with glass offer cards, not a still image. Mobile stacks copy, CTAs, stage, bullets.
           FORM: Canon category standard; seed 70d60cdf; craft bar Raycast+Arc+Resend; motion pinned to design-inspo video.
           FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
         */}

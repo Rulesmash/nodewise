@@ -36,13 +36,12 @@ export const SITE = {
   ] as const,
   keywords: [
     "Nodewise",
-    "MVP development India",
-    "startup MVP builder",
-    "custom web development",
+    "B2B landing pages India",
     "business software development",
+    "custom web development",
     "digital product studio India",
     "Next.js development",
-    "fixed price MVP",
+    "INR web development pricing",
     "web application development India",
   ] as const,
 } as const;
@@ -160,7 +159,7 @@ export function organizationJsonLd() {
     },
     image: absoluteUrl(SITE.logo),
     description:
-      "Agile digital product studio in India building startup MVPs, custom web platforms, and business software. Fixed-price Zero to MVP from ₹29,999 in 10–14 days. Worldwide delivery.",
+      "Agile digital product studio in India building professional B2B landing pages, custom web platforms, and business software. Transparent INR pricing. Worldwide delivery.",
     slogan: SITE.tagline,
     email: SITE.email,
     telephone: SITE.phone,
@@ -194,24 +193,25 @@ export function organizationJsonLd() {
       worksFor: { "@id": `${SITE.url}/#organization` },
     })),
     knowsAbout: [
-      "MVP Development",
-      "Startup Product Development",
-      "Custom Web Applications",
       "Landing Page Development",
+      "B2B Websites",
+      "Custom Web Applications",
+      "Business Software",
       "Business Portals",
       "Dashboards",
       "Process Automation",
+      "MVP Development",
       "Next.js",
       "React",
     ],
     makesOffer: {
       "@type": "Offer",
-      name: "Zero to MVP",
-      price: "29999",
+      name: "Landing Pages",
+      price: "12000",
       priceCurrency: SITE.priceCurrency,
-      url: absoluteUrl("/zero-to-mvp"),
+      url: absoluteUrl("/packages"),
       description:
-        "Live showcase-ready MVP in 10–14 days with full source code and ownership.",
+        "Professional B2B landing pages from 12k–15k INR.",
     },
     priceRange: "INR",
     currenciesAccepted: "INR",
@@ -461,9 +461,9 @@ export function itemListJsonLd(
 
 export const ROUTES = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" as const, name: "Home" },
-  { path: "/zero-to-mvp", priority: 1.0, changeFrequency: "weekly" as const, name: "Zero to MVP" },
+  { path: "/packages", priority: 1.0, changeFrequency: "weekly" as const, name: "Pricing" },
   { path: "/portfolio", priority: 0.9, changeFrequency: "monthly" as const, name: "Work" },
-  { path: "/packages", priority: 0.9, changeFrequency: "monthly" as const, name: "Pricing" },
+  { path: "/zero-to-mvp", priority: 0.7, changeFrequency: "monthly" as const, name: "Zero to MVP" },
   { path: "/contact", priority: 0.85, changeFrequency: "monthly" as const, name: "Contact" },
   { path: "/capabilities", priority: 0.8, changeFrequency: "monthly" as const, name: "Services" },
   { path: "/process", priority: 0.7, changeFrequency: "monthly" as const, name: "Process" },
@@ -473,15 +473,15 @@ export const ROUTES = [
 
 export const PAGE_SEO = {
   home: {
-    title: "Startup MVP & Custom Web Development in India",
+    title: "B2B Landing Pages and Business Software in India",
     description:
-      "Nodewise builds startup MVPs and custom web platforms. Zero to MVP from ₹29,999 in 10–14 days with full source code and ownership. Transparent pricing. Worldwide delivery.",
+      "Nodewise builds professional B2B landing pages and business software. Landing pages 12k–15k INR. Software from 25k+. Transparent pricing. Worldwide delivery.",
     keywords: [
-      "startup MVP India",
-      "hire MVP developers",
+      "B2B landing pages India",
+      "business software development",
       "custom web platforms",
-      "fixed price MVP",
-      "build MVP fast",
+      "INR web development pricing",
+      "professional landing page",
     ],
   },
   zeroToMvp: {
@@ -497,9 +497,9 @@ export const PAGE_SEO = {
     ],
   },
   portfolio: {
-    title: "Work and Case Studies: MVPs and Landing Pages",
+    title: "Work and Case Studies: Landing Pages and Software",
     description:
-      "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
+      "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing site, FOSS CEAL community platform. Live products and high-converting landing pages.",
     keywords: [
       "web development portfolio India",
       "MVP case studies",
@@ -509,9 +509,9 @@ export const PAGE_SEO = {
     image: "/assets/whitebull-landing.png",
   },
   packages: {
-    title: "Web Development Pricing India: Packages from ₹12k",
+    title: "Web Development Pricing India: Landing Pages from ₹12k",
     description:
-      "Transparent Nodewise pricing: Starter ₹12,000–15,000, Growth from ₹25,000, Enterprise custom. Clear packages for websites, portals and business software.",
+      "Transparent Nodewise pricing: B2B landing pages ₹12,000–15,000, business software from ₹25,000, custom platforms quoted.",
     keywords: [
       "web development cost India",
       "website package price",
@@ -543,7 +543,7 @@ export const PAGE_SEO = {
   about: {
     title: "About Nodewise: Digital Product Studio Founders",
     description:
-      "Meet Nodewise founders Induchoodan V S and Aalif Mohammad R S. A sharp India-based studio building MVPs and custom web software for real business results.",
+      "Meet Nodewise founders Induchoodan V S and Aalif Mohammad R S. A sharp India-based studio building B2B landing pages and custom web software.",
     keywords: [
       "about Nodewise",
       "digital product studio India",
@@ -561,11 +561,11 @@ export const PAGE_SEO = {
     ],
   },
   contact: {
-    title: "Contact Nodewise: MVP and Web Consultation",
+    title: "Contact Nodewise: Landing Pages and Software",
     description:
-      "Talk to Nodewise about your MVP or custom web platform. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
+      "Talk to Nodewise about a B2B landing page or business software. WhatsApp +91 94469 98827, email contact@nodewise.cc, or send a project brief online.",
     keywords: [
-      "contact MVP developers India",
+      "contact web developers India",
       "hire web developers India",
       "schedule software consultation",
       "WhatsApp web agency",

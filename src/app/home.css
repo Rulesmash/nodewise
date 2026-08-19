@@ -60,7 +60,7 @@
   letter-spacing: -0.035em;
   line-height: 1.05;
   margin-bottom: 0.85rem;
-  max-width: 16ch;
+  max-width: 18ch;
   opacity: 1;
   color: var(--text-primary, #f8f9fc);
 }
@@ -246,7 +246,7 @@
 }
 
 .hero-glass-card__label {
-  font-size: clamp(0.58rem, 1.7cqi, 0.68rem);
+  font-size: clamp(0.75rem, 2cqi, 0.8125rem);
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -271,7 +271,7 @@
 
 .hero-glass-card__meta {
   margin: 0.15rem 0 0;
-  font-size: clamp(0.62rem, 1.8cqi, 0.75rem);
+  font-size: clamp(0.75rem, 2cqi, 0.8125rem);
   color: rgba(200, 210, 230, 0.9);
   opacity: 1 !important;
   line-height: 1.25;
@@ -666,9 +666,9 @@ body:has(.home-page) .canvas-container canvas {
     grid-template-columns: 1fr;
     grid-template-areas:
       "copy"
+      "sub"
       "ctas"
-      "visual"
-      "sub";
+      "visual";
     column-gap: 0;
     row-gap: 1.1rem;
     align-items: stretch;

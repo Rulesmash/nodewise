@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 
 const NAV = [
   { href: "/portfolio", label: "Work", id: "nav-lnk-work" },
-  { href: "/zero-to-mvp", label: "Zero to MVP", id: "nav-lnk-mvp" },
   { href: "/packages", label: "Pricing", id: "nav-lnk-packages" },
   { href: "/about", label: "About", id: "nav-lnk-about" },
 ] as const;
@@ -103,9 +102,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`nav-link${
-                  item.href === "/zero-to-mvp" ? " mvp-nav-link" : ""
-                }`}
+                className="nav-link"
                 id={item.id}
                 onClick={closeMenu}
                 aria-current={isActive(item.href) ? "page" : undefined}

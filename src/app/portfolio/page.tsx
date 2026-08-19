@@ -25,11 +25,15 @@ const ProjectCarousel = dynamic(
     ),
   }
 );
+const PortfolioVideoBg = dynamic(
+  () => import("@/components/PortfolioVideoBg"),
+  { ssr: false }
+);
 
 export const metadata: Metadata = buildMetadata({
-  title: "Work and Case Studies: MVPs and Landing Pages",
+  title: "Work and Case Studies: Landing Pages and Software",
   description:
-    "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing MVP, FOSS CEAL community platform. Live MVPs and high-converting landing pages for startups.",
+    "See Nodewise work: Whitebull equity research desk, Titan Residences 3D real estate, Mavenix marketing site, FOSS CEAL community platform. Live products and high-converting landing pages.",
   path: "/portfolio",
   keywords: [
     "web development portfolio India",
@@ -202,6 +206,7 @@ const PROJECTS: Project[] = [
 export default function Portfolio() {
   return (
     <div className="portfolio-page">
+      <PortfolioVideoBg />
       <JsonLd
         data={[
           webPageJsonLd({
@@ -304,17 +309,17 @@ export default function Portfolio() {
             <div className="cta-banner-content">
               <h2 className="cta-banner-title">Need a build like these?</h2>
               <p className="cta-banner-text">
-                Start Zero to MVP from ₹29,999, or tell us what you want to ship.
+                Landing pages from 12k–15k INR, or business software from 25k+.
               </p>
             </div>
             <div className="cta-banner-actions">
               <a
-                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Zero%20to%20MVP%20package%20(%E2%82%B929%2C999)."
+                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20a%20B2B%20landing%20page%20or%20business%20software."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary cta-banner-btn"
               >
-                <span>Start your MVP</span>
+                <span>Discuss a project</span>
                 <span className="sr-only"> (opens WhatsApp in a new tab)</span>
                 <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>

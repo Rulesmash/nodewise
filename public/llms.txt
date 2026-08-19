@@ -1,6 +1,6 @@
 # Nodewise
 
-> India-based digital product studio. We build startup MVPs and custom web platforms. Zero to MVP from ₹29,999 in 10-14 days with full source code and ownership transfer. Transparent INR pricing. Worldwide delivery.
+> India-based digital product studio. We build professional B2B landing pages and business software. Landing pages 12k-15k INR. Software from 25k+. Custom platforms quoted. Transparent INR pricing. Worldwide delivery.
 
 Site: https://nodewise.cc
 Contact: contact@nodewise.cc
@@ -9,20 +9,18 @@ LinkedIn: https://www.linkedin.com/company/nodewise-cc
 
 ## Offer
 
-- Zero to MVP: ₹29,999 one-time, 10-14 days
-- Includes: 30-minute consult, core MVP, live responsive web app, source code, docs, ownership transfer, 2 revision rounds
-- Excludes: complex enterprise integrations, native mobile apps, massive scalable cloud architecture
-- Starter: 12k-15k INR
-- Growth: 25k+ INR
-- Enterprise: custom pricing
+- Landing Pages: 12k-15k INR. B2B landing pages and first web presence.
+- Business Software: 25k+ INR. Custom site, portals, dashboards, light automation.
+- Custom Platforms: quoted. Multi-user software and integrations.
+- Zero to MVP (side offer): ₹29,999 one-time, 10-14 days. Consult, core MVP, live responsive web app, source, docs, ownership, 2 revision rounds. Excludes complex enterprise integrations, native mobile apps, massive scalable cloud architecture.
 
 ## Pages
 
-- [Home](https://nodewise.cc/): Zero to MVP offer and packages
+- [Home](https://nodewise.cc/): Landing pages and business software
 - [Work](https://nodewise.cc/portfolio): Live case studies
-- [Zero to MVP](https://nodewise.cc/zero-to-mvp): Full MVP package details
-- [Pricing](https://nodewise.cc/packages): Starter, Growth, Enterprise
-- [Services](https://nodewise.cc/capabilities): Websites, portals, automation
+- [Pricing](https://nodewise.cc/packages): Landing Pages, Business Software, Custom Platforms
+- [Zero to MVP](https://nodewise.cc/zero-to-mvp): Timed founder MVP package
+- [Services](https://nodewise.cc/capabilities): Landing pages, portals, software
 - [Process](https://nodewise.cc/process): Discovery, build, launch
 - [About](https://nodewise.cc/about): Founders Induchoodan V S and Aalif Mohammad R S
 - [Quality](https://nodewise.cc/quality): Engineering standards

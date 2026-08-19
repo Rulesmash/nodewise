@@ -5,7 +5,7 @@ export default function FloatingWhatsApp() {
     <div className="floating-wa-wrapper">
       <div className="wa-tooltip" aria-hidden="true">Chat with us</div>
       <a
-        href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I'd%20like%20to%20discuss%20a%20custom%20inquiry."
+        href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20a%20B2B%20landing%20page%20or%20business%20software."
         target="_blank"
         rel="noopener noreferrer"
         className="floating-wa-button"

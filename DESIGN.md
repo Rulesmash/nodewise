@@ -1,6 +1,6 @@
 ---
 name: Nodewise
-description: Dark premium digital product studio — cinematic glass + metallic motion on a founder conversion homepage.
+description: Dark premium digital product studio — cinematic glass + metallic motion on a B2B landing-page and software homepage.
 colors:
   bg-main: "#0b0c10"
   bg-surface: "rgba(22, 23, 34, 0.65)"
@@ -73,7 +73,7 @@ components:
 
 Nodewise’s marketing surface is a **dark, category-standard product-studio homepage** elevated by a single authored motion moment: a metallic Three.js sculpture with floating frosted-glass offer cards (price, timeline, ownership). Craft bar: Raycast / Arc / Resend restraint with cinematic camera-orbit motion from the pinned design-inspo video. Homepage-only redesign; other routes inherit shared tokens and chrome.
 
-**Visitor mode:** Persuade (founder → Zero to MVP).
+**Visitor mode:** Persuade (B2B buyer → landing pages / business software). Zero to MVP is a side offer.
 
 **Motion thesis:** Focal entrance = sculpture scale-in + continuous slow orbit + staggered glass-card blur-to-sharp floats (`power3.out` / `cubic-bezier(0.16, 1, 0.3, 1)`). Supporting scroll reveals are quiet. Respect `prefers-reduced-motion`.
 
@@ -123,7 +123,7 @@ Nodewise’s marketing surface is a **dark, category-standard product-studio hom
 
 **Do**
 
-- Lead founders with ₹29,999 / 10–14 days / ownership in both hero glass and MVP section.
+- Lead buyers with landing pages (12k–15k INR) and business software (25k+) in hero glass and packages. Keep Zero to MVP off the first viewport.
 - Keep content visible without JS; motion enhances, never gates.
 - Use transform/opacity/filter for motion; bound WebGL to the hero stage.
 - Preserve all commercial copy, prices, WhatsApp deep links, and SEO claims.

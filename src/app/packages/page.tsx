@@ -11,14 +11,14 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Web Development Pricing India: Packages from ₹12k",
+  title: "Web Development Pricing India: Landing Pages from ₹12k",
   description:
-    "Transparent Nodewise pricing: Starter ₹12,000–15,000, Growth from ₹25,000, Enterprise custom. Clear packages for websites, portals and business software.",
+    "Transparent Nodewise pricing: B2B landing pages ₹12,000–15,000, business software from ₹25,000, custom platforms quoted. Clear packages for sites and software.",
   path: "/packages",
   keywords: [
     "web development cost India",
-    "website package price",
-    "affordable custom software",
+    "B2B landing page price",
+    "business software package",
     "INR web development pricing",
   ],
 });
@@ -31,7 +31,7 @@ export default function Packages() {
           webPageJsonLd({
             title: "Pricing & Packages",
             description:
-              "Transparent INR pricing for starter websites, growth platforms, and enterprise architecture.",
+              "Transparent INR pricing for B2B landing pages, business software, and custom platforms.",
             path: "/packages",
           }),
           breadcrumbJsonLd([
@@ -39,44 +39,44 @@ export default function Packages() {
             { name: "Packages", path: "/packages" },
           ]),
           serviceJsonLd({
-            name: "Starter Foundation",
+            name: "Landing Pages",
             description:
-              "Premium digital footprint for small businesses establishing their first web presence.",
+              "Professional B2B landing pages and first-site web presence.",
             path: "/packages",
             price: 12000,
             priceMax: 15000,
           }),
           serviceJsonLd({
-            name: "Growth Engine",
+            name: "Business Software",
             description:
-              "Conversion-focused web platforms and software tools for growing businesses.",
+              "Custom web platforms, portals, and light automation for growing businesses.",
             path: "/packages",
             price: 25000,
           }),
           offerCatalogJsonLd("Nodewise Service Packages", [
             {
-              name: "Starter Foundation",
-              description: "Premium digital footprint for small businesses.",
+              name: "Landing Pages",
+              description: "Professional B2B landing pages.",
               path: "/packages",
               price: 12000,
               priceMax: 15000,
             },
             {
-              name: "Growth Engine",
-              description: "Conversion-focused platforms for growing businesses.",
+              name: "Business Software",
+              description: "Custom sites, portals, and light automation.",
               path: "/packages",
               price: 25000,
             },
             {
-              name: "Enterprise Architecture",
-              description: "Custom enterprise web architecture and advanced systems.",
+              name: "Custom Platforms",
+              description: "Multi-user software platforms and integrations.",
               path: "/packages",
             },
           ]),
           serviceJsonLd({
-            name: "Enterprise Architecture",
+            name: "Custom Platforms",
             description:
-              "Custom enterprise web architecture and advanced business software systems.",
+              "Custom multi-user software platforms and advanced business systems.",
             path: "/packages",
           }),
         ]}
@@ -87,7 +87,7 @@ export default function Packages() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Pricing</h1>
             <p className="page-hero-subtitle">
-              Three published tiers. Custom if you need more.
+              Landing pages, business software, and custom platforms.
             </p>
           </div>
         </div>
@@ -98,12 +98,10 @@ export default function Packages() {
         <div className="container">
           <div className="packages-grid">
 
-            {/*  Tier 1: Minimum  */}
             <div className="package-card" id="package-minimum">
-              <span className="package-badge">Minimum</span>
-              <h3 className="package-title">Starter Foundation</h3>
+              <h3 className="package-title">Landing Pages</h3>
               <div className="package-price">12k - 15k <span>INR</span></div>
-              <p className="package-desc">First website for a small business.</p>
+              <p className="package-desc">Professional B2B landing pages and a first web presence.</p>
 
               <ul className="package-features">
                 <li><Check aria-hidden="true" /> <span>Basic Web Development</span></li>
@@ -113,7 +111,7 @@ export default function Packages() {
                 <li><Check aria-hidden="true" /> <span>Initial Architecture Consultation</span></li>
               </ul>
 
-              <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Minimum%20package%20(12-15k%20INR)."
+              <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20Landing%20Pages%20(12-15k%20INR)."
                 target="_blank" rel="noopener noreferrer" className="btn btn-secondary package-btn">
                 <span>Inquire via WhatsApp</span>
                 <span className="sr-only"> (opens WhatsApp in a new tab)</span>
@@ -121,10 +119,8 @@ export default function Packages() {
               </a>
             </div>
 
-            {/*  Tier 2: Standard (Highlighted)  */}
             <div className="package-card highlighted" id="package-standard">
-              <span className="package-badge">Standard</span>
-              <h3 className="package-title">Growth Engine</h3>
+              <h3 className="package-title">Business Software</h3>
               <div className="package-price">25k+ <span>INR</span></div>
               <p className="package-desc">Custom site plus light automation.</p>
 
@@ -136,7 +132,7 @@ export default function Packages() {
                 <li><Check aria-hidden="true" /> <span>Light Workflow Automation</span></li>
               </ul>
 
-              <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Standard%20package%20(25k%2B%20INR)."
+              <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20Business%20Software%20(25k%2B%20INR)."
                 target="_blank" rel="noopener noreferrer" className="btn btn-primary package-btn">
                 <span>Inquire via WhatsApp</span>
                 <span className="sr-only"> (opens WhatsApp in a new tab)</span>
@@ -144,10 +140,8 @@ export default function Packages() {
               </a>
             </div>
 
-            {/*  Tier 3: Enterprise  */}
             <div className="package-card" id="package-enterprise">
-              <span className="package-badge">Enterprise</span>
-              <h3 className="package-title">Full Architecture</h3>
+              <h3 className="package-title">Custom Platforms</h3>
               <div className="package-price">Custom <span>Pricing</span></div>
               <p className="package-desc">Multi-user platforms and integrations.</p>
 
@@ -159,7 +153,7 @@ export default function Packages() {
                 <li><Check aria-hidden="true" /> <span>Ongoing Technical Support</span></li>
               </ul>
 
-              <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20the%20Enterprise%20custom%20software%20package."
+              <a href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%27m%20interested%20in%20Custom%20Platforms."
                 target="_blank" rel="noopener noreferrer" className="btn btn-secondary package-btn">
                 <span>Inquire via WhatsApp</span>
                 <span className="sr-only"> (opens WhatsApp in a new tab)</span>
@@ -171,13 +165,30 @@ export default function Packages() {
         </div>
       </section>
 
+      <section className="cta-banner-section">
+        <div className="container">
+          <div className="cta-banner">
+            <div className="cta-banner-content">
+              <h2 className="cta-banner-title">Need a timed MVP instead?</h2>
+              <p className="cta-banner-text">
+                Zero to MVP is ₹29,999 in 10–14 days, with source and ownership.
+              </p>
+            </div>
+            <Link href="/zero-to-mvp" className="btn btn-secondary cta-banner-btn">
+              <span>Zero to MVP details</span>
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/*  CTA Banner  */}
       <section className="cta-banner-section">
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
               <h2 className="cta-banner-title">Need a custom quote?</h2>
-              <p className="cta-banner-text">Unsure on the tier? We&apos;ll map it in a short call.</p>
+              <p className="cta-banner-text">Unsure whether you need a landing page or software? We&apos;ll map it in a short call.</p>
             </div>
             <Link href="/contact" className="btn btn-primary cta-banner-btn">
               <span>Contact Us</span>
