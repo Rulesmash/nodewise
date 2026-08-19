@@ -12,7 +12,7 @@ const nextConfig = {
         source: "/:path*",
         has: [{ type: "host", value: "www.nodewise.cc" }],
         destination: "https://nodewise.cc/:path*",
-        permanent: true,
+        statusCode: 301,
       },
       { source: "/services", destination: "/capabilities", permanent: true },
       { source: "/work", destination: "/portfolio", permanent: true },
