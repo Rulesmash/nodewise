@@ -14,9 +14,9 @@ export default function Footer() {
           />
           <p className="footer-tagline">Smarter Code. Better Solutions.</p>
           <ul className="footer-about" style={{ listStyle: "none", padding: 0 }}>
-            <li>B2B website engineering</li>
-            <li>Web application engineering</li>
-            <li>India studio, worldwide delivery</li>
+            <li>Premium web development</li>
+            <li>Website developers in Kerala</li>
+            <li>AI SEO · worldwide delivery</li>
           </ul>
           <div className="footer-socials">
             <a
@@ -51,6 +51,15 @@ export default function Footer() {
             <Link href="/software-development" className="footer-link">
               Web apps
             </Link>
+            <Link href="/premium-web-development" className="footer-link">
+              Premium web development
+            </Link>
+            <Link href="/website-developers-kerala" className="footer-link">
+              Kerala developers
+            </Link>
+            <Link href="/ai-seo" className="footer-link">
+              AI SEO
+            </Link>
           </div>
           <div className="footer-nav-col">
             <h4 className="footer-col-title">Studio</h4>
@@ -78,7 +87,7 @@ export default function Footer() {
               +91 94469 98827
               <span className="sr-only">(WhatsApp, opens in a new tab)</span>
             </a>
-            <span className="footer-link text-muted">India · Worldwide</span>
+            <span className="footer-link text-muted">Kerala, India · Worldwide</span>
             <span className="footer-link text-muted">
               &copy; {new Date().getFullYear()} Nodewise.
             </span>

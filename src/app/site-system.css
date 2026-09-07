@@ -180,3 +180,43 @@ button.chip[aria-pressed="true"] {
 .quality-section .process-timeline {
   margin-top: 2.5rem;
 }
+
+.faq-section {
+  padding: 3rem 0 4rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 42rem;
+  margin-top: 1.25rem;
+}
+
+.faq-item {
+  padding: 1.15rem 1.25rem;
+}
+
+.faq-question {
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.45rem;
+}
+
+.faq-answer {
+  margin: 0;
+  color: var(--text-secondary, #c5c9db);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.quality-details a {
+  color: #c8dcff;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.footer-link.text-muted {
+  display: block;
+}

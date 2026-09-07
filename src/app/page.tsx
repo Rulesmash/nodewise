@@ -45,7 +45,17 @@ export default function Home() {
             {
               question: "What does Nodewise build?",
               answer:
-                "B2B websites and web applications. Sites are Next.js on Vercel, from ₹20,000 (~$212) for Home, About, and Enquiry. Web applications use Node, PostgreSQL, and auth, at ₹1–1.5 lakh (~$1,058–$1,587). Platforms are quoted.",
+                "Premium web development and web applications from Kerala. Sites are Next.js on Vercel, from ₹20,000 (~$212) for Home, About, and Enquiry. Web applications use Node, PostgreSQL, and auth, at ₹1–1.5 lakh (~$1,058–$1,587). AI SEO is included. Platforms are quoted.",
+            },
+            {
+              question: "Are you website developers in Kerala?",
+              answer:
+                "Yes. Nodewise is a Kerala studio. We build custom Next.js sites and web applications for Kochi, Thiruvananthapuram, statewide Kerala, and worldwide.",
+            },
+            {
+              question: "What is AI SEO on a Nodewise site?",
+              answer:
+                "Structured data, llms.txt, and fast Next.js so Google, ChatGPT, and Perplexity can cite the site. AI SEO ships with the website. There is no separate retainer.",
             },
             {
               question: "Do you use WordPress or page builders?",
@@ -74,17 +84,18 @@ export default function Home() {
         <div className="container hero-container">
           <div className="hero-content hero-copy">
             <h1 className="hero-title" id="hero-main-title">
-              Websites and web applications
+              Premium web development
             </h1>
             <p className="hero-offer" id="hero-offer-line">
-              B2B engineering in Next.js. Sites from ₹20,000 (~$212). Web apps
-              ₹1–1.5 lakh (~$1,058–$1,587). You own the source.
+              Kerala website developers. Next.js sites from ₹20,000 (~$212).
+              Web apps ₹1–1.5 lakh (~$1,058–$1,587). AI SEO included. You own
+              the source.
             </p>
           </div>
           <ul className="hero-subtitle" id="hero-sub-text">
-            <li>Company sites and landing pages, custom-coded</li>
+            <li>Premium web development in custom Next.js, not WordPress</li>
             <li>Web applications with auth, PostgreSQL, and dashboards</li>
-            <li>India studio, worldwide delivery</li>
+            <li>Kerala studio, worldwide delivery</li>
           </ul>
           <div className="hero-ctas">
             <Link
@@ -126,6 +137,57 @@ export default function Home() {
           </div>
           <div data-reveal>
             <PackagesOffer />
+          </div>
+        </div>
+      </section>
+
+      <section className="quality-section" data-reveal>
+        <div className="container">
+          <div className="section-header center">
+            <h2 className="section-title">What teams search for</h2>
+            <p className="section-lead-desc">
+              Premium web development, Kerala website developers, and AI SEO
+              — one studio, published prices.
+            </p>
+          </div>
+          <div className="grid quality-grid">
+            <div className="quality-item">
+              <div className="quality-details">
+                <h3 className="quality-title">
+                  <Link href="/premium-web-development">
+                    Premium web development
+                  </Link>
+                </h3>
+                <p className="quality-description">
+                  Custom Next.js company sites. No theme, no retainer. From
+                  ₹20,000.
+                </p>
+              </div>
+            </div>
+            <div className="quality-item">
+              <div className="quality-details">
+                <h3 className="quality-title">
+                  <Link href="/website-developers-kerala">
+                    Best website developers in Kerala
+                  </Link>
+                </h3>
+                <p className="quality-description">
+                  Kochi, Trivandrum, statewide. Malayalam and English.
+                  Founders build the work.
+                </p>
+              </div>
+            </div>
+            <div className="quality-item">
+              <div className="quality-details">
+                <h3 className="quality-title">
+                  <Link href="/ai-seo">AI SEO</Link>
+                </h3>
+                <p className="quality-description">
+                  Schema, llms.txt, and fast pages so Google, ChatGPT, and
+                  Perplexity can cite you.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   creator: SITE.studioName,
   publisher: SITE.name,
   category: "technology",
-  classification: "Website and web application engineering",
+  classification: "Premium web development, Kerala website developers, AI SEO",
   keywords: [...SITE.keywords],
   referrer: "origin-when-cross-origin",
   formatDetection: {
@@ -97,8 +97,8 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
   },
   other: {
-    "geo.region": "IN",
-    "geo.placename": "India",
+    "geo.region": "IN-KL",
+    "geo.placename": "Kerala",
     "mobile-web-app-capable": "yes",
   },
 };
