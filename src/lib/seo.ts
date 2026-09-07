@@ -270,8 +270,9 @@ export const PAGE_SEO = {
     path: "/portfolio",
     keywords: [
       "website development portfolio",
+      "premium web development work",
+      "Kerala website developers portfolio",
       "web application case studies",
-      "B2B product examples",
     ],
     image: "/assets/whitebull-landing.png",
     imageAlt: "Nodewise work: Whitebull equity research desk",
@@ -289,7 +290,7 @@ export const PAGE_SEO = {
     ],
   },
   about: {
-    title: "Nodewise — Website Developers in Kerala",
+    title: "Website Developers in Kerala",
     description:
       "Kerala studio led by Induchoodan V S and Aalif Mohammad R S. Premium web development and AI SEO in Next.js and Node.",
     path: "/about",

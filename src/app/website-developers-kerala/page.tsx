@@ -92,7 +92,7 @@ export default function WebsiteDevelopersKerala() {
                 <ul className="scan-list">
                   <li>WhatsApp {SITE.phoneDisplay}</li>
                   <li>Same-day reply on business days</li>
-                  <li>India studio, worldwide delivery</li>
+                  <li>Kerala studio, worldwide delivery</li>
                 </ul>
               </div>
             </div>
