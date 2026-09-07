@@ -19,13 +19,26 @@ export const SITE = {
   ogImage: "/assets/logo-full.png",
   foundingDate: "2024",
   dateModified: "2026-09-08",
-  areaServed: ["IN", "Worldwide"] as const,
+  region: "Kerala",
+  country: "India",
+  geoRegion: "IN-KL",
+  geoPlacename: "Kerala",
+  cities: [
+    "Kochi",
+    "Thiruvananthapuram",
+    "Kozhikode",
+    "Thrissur",
+    "Kollam",
+    "Kannur",
+  ] as const,
+  areaServed: ["Kerala", "IN", "Worldwide"] as const,
   priceCurrency: "INR",
   sameAs: ["https://www.linkedin.com/company/nodewise-cc"] as const,
   alternateNames: [
     "Nodewise Software Studio",
     "Nodewise Studio",
     "Nodewise.cc",
+    "Nodewise Kerala",
   ] as const,
   naics: "541511",
   isicV4: "6201",
@@ -44,14 +57,18 @@ export const SITE = {
     },
   ] as const,
   keywords: [
+    "premium web development",
+    "premium web dev",
+    "best website developers in Kerala",
+    "website developers in Kerala",
+    "web developers Kerala",
+    "AI SEO",
+    "AI SEO Kerala",
     "B2B website development",
     "web application development",
     "website engineering India",
-    "custom software development for business",
     "Next.js website development",
-    "B2B web applications",
     "company website development",
-    "software development company India",
     "custom web application development",
     "Nodewise",
   ] as const,
@@ -66,6 +83,9 @@ export const SCHEMA_IDS = {
   websiteDevelopmentService: `${SITE.url}/#website-development-service`,
   softwareDevelopmentService: `${SITE.url}/#software-development-service`,
   offerCatalog: `${SITE.url}/#offer-catalog`,
+  premiumWebDevelopmentService: `${SITE.url}/#premium-web-development-service`,
+  aiSeoService: `${SITE.url}/#ai-seo-service`,
+  keralaStudio: `${SITE.url}/#kerala-studio`,
 } as const;
 
 export type PageSeoInput = {
@@ -102,7 +122,17 @@ const audience = [
   { "@type": "Audience", audienceType: "Startups and new businesses" },
   { "@type": "Audience", audienceType: "Small and medium businesses" },
   { "@type": "BusinessAudience", audienceType: "B2B companies" },
+  { "@type": "Audience", audienceType: "Kerala businesses" },
 ];
+
+export function areaServedNodes() {
+  return [
+    { "@type": "AdministrativeArea", name: "Kerala" },
+    ...SITE.cities.map((name) => ({ "@type": "City", name })),
+    { "@type": "Country", name: "India" },
+    { "@type": "Place", name: "Worldwide" },
+  ];
+}
 
 export function buildMetadata({
   title,
@@ -110,7 +140,7 @@ export function buildMetadata({
   path = "/",
   keywords = [],
   image = SITE.ogImage,
-  imageAlt = `${SITE.name}: B2B website and web application engineering`,
+  imageAlt = `${SITE.name}: premium web development and AI SEO from Kerala`,
   type = "website",
   noIndex = false,
 }: PageSeoInput): Metadata {
@@ -129,7 +159,7 @@ export function buildMetadata({
     creator: SITE.studioName,
     publisher: SITE.name,
     category: "technology",
-    classification: "Website and web application engineering",
+    classification: "Premium web development, Kerala website developers, AI SEO",
     referrer: "origin-when-cross-origin",
     formatDetection: {
       email: false,
@@ -197,39 +227,40 @@ export function buildMetadata({
 
 export const PAGE_SEO = {
   home: {
-    title: "B2B Website and Web Application Engineering",
+    title: "Premium Web Development in Kerala",
     description:
-      "Nodewise engineers Next.js websites and web applications for B2B. Sites from ₹20,000. Web apps ₹1–1.5 lakh. India studio, worldwide.",
+      "Premium web development from Kerala. Next.js sites from ₹20,000, web apps ₹1–1.5 lakh, AI SEO included. Custom-coded. No WordPress.",
     path: "/",
     keywords: [
-      "B2B website development",
-      "web application engineering",
-      "Next.js website development",
-      "custom web application development",
+      "premium web development",
+      "premium web dev",
+      "best website developers in Kerala",
+      "AI SEO",
+      "website developers in Kerala",
     ],
   },
   websiteDevelopment: {
-    title: "B2B Website Engineering in Next.js",
+    title: "Premium Website Development in Next.js",
     description:
-      "Custom-coded Next.js websites for B2B companies. Three pages from ₹20,000. Extra pages priced in the calculator. No WordPress.",
+      "Premium web development: custom Next.js sites from ₹20,000. Kerala studio. Extra pages in the calculator. No WordPress.",
     path: "/website-development",
     keywords: [
+      "premium web development",
+      "premium website development",
       "B2B website development",
-      "company website development",
       "Next.js website development",
-      "business website development India",
     ],
   },
   softwareDevelopment: {
     title: "Web Application Engineering for B2B",
     description:
-      "Portals, dashboards, and internal tools for B2B teams. Next.js, Node, PostgreSQL. ₹1–1.5 lakh. You own the source.",
+      "Portals, dashboards, and internal tools from Kerala website developers. Next.js, Node, PostgreSQL. ₹1–1.5 lakh. You own the source.",
     path: "/software-development",
     keywords: [
       "web application development for business",
       "B2B software development",
       "custom web application development",
-      "software development company India",
+      "software development company Kerala",
     ],
   },
   portfolio: {
@@ -248,34 +279,73 @@ export const PAGE_SEO = {
   packages: {
     title: "Website and Web Application Pricing from ₹20,000",
     description:
-      "Published INR pricing: Next.js sites from ₹20,000, web applications ₹1–1.5 lakh, platforms quoted.",
+      "Published INR pricing from a Kerala studio: Next.js sites from ₹20,000, web applications ₹1–1.5 lakh, platforms quoted.",
     path: "/packages",
     keywords: [
+      "website development cost Kerala",
       "website development cost India",
       "web application pricing India",
-      "B2B website package price",
+      "premium web development cost",
     ],
   },
   about: {
-    title: "Nodewise Engineering Studio",
+    title: "Nodewise — Website Developers in Kerala",
     description:
-      "India studio led by Induchoodan V S and Aalif Mohammad R S. B2B websites and web applications in Next.js and Node.",
+      "Kerala studio led by Induchoodan V S and Aalif Mohammad R S. Premium web development and AI SEO in Next.js and Node.",
     path: "/about",
     keywords: [
       "about Nodewise",
-      "website engineering studio India",
-      "web application founders",
+      "website developers in Kerala",
+      "website engineering studio Kerala",
     ],
   },
   contact: {
-    title: "Start a Website or Web Application Project",
+    title: "Hire Website Developers in Kerala",
     description:
-      "Brief Nodewise on a B2B website, web application, or quoted platform. WhatsApp +91 94469 98827, email contact@nodewise.cc.",
+      "Brief Nodewise on premium web development, a web application, or AI SEO. WhatsApp +91 94469 98827, email contact@nodewise.cc.",
     path: "/contact",
     keywords: [
-      "hire website developers India",
+      "hire website developers in Kerala",
       "hire web application developers",
-      "contact web engineering studio",
+      "contact web engineering studio Kerala",
+    ],
+  },
+  premiumWebDevelopment: {
+    title: "Premium Web Development",
+    description:
+      "Premium web development in custom Next.js. Company sites from ₹20,000. Kerala studio, worldwide delivery. No WordPress, no retainer.",
+    path: "/premium-web-development",
+    keywords: [
+      "premium web development",
+      "premium web dev",
+      "premium website development",
+      "custom coded websites",
+    ],
+  },
+  websiteDevelopersKerala: {
+    title: "Best Website Developers in Kerala",
+    description:
+      "Best website developers in Kerala for custom Next.js sites and web apps. From ₹20,000. Kochi, Trivandrum, statewide. No WordPress.",
+    path: "/website-developers-kerala",
+    keywords: [
+      "best website developers in Kerala",
+      "website developers in Kerala",
+      "web developers Kerala",
+      "Kochi web developers",
+      "Trivandrum web developers",
+    ],
+  },
+  aiSeo: {
+    title: "AI SEO",
+    description:
+      "AI SEO for Google, ChatGPT, and Perplexity. Schema, llms.txt, and fast Next.js so AI search can cite your site. Included with Nodewise websites.",
+    path: "/ai-seo",
+    keywords: [
+      "AI SEO",
+      "AI SEO Kerala",
+      "generative engine optimization",
+      "SEO for ChatGPT",
+      "SEO for Perplexity",
     ],
   },
 } as const;
@@ -333,7 +403,7 @@ function organizationNode() {
     logo: { "@id": SCHEMA_IDS.logo },
     image: { "@id": SCHEMA_IDS.logo },
     description:
-      "India studio engineering B2B websites and web applications. Next.js sites, portals, dashboards, and custom software. Published INR pricing. Worldwide delivery.",
+      "Kerala studio for premium web development and AI SEO. Next.js sites, portals, dashboards, and custom software. Published INR pricing. Worldwide delivery.",
     slogan: SITE.tagline,
     brand: { "@type": "Brand", name: SITE.name, logo: { "@id": SCHEMA_IDS.logo } },
     email: SITE.email,
@@ -344,12 +414,19 @@ function organizationNode() {
     numberOfEmployees: { "@type": "QuantitativeValue", value: 2 },
     address: {
       "@type": "PostalAddress",
+      addressRegion: "Kerala",
       addressCountry: "IN",
     },
-    areaServed: [
-      { "@type": "Country", name: "India" },
-      { "@type": "Place", name: "Worldwide" },
-    ],
+    foundingLocation: {
+      "@type": "AdministrativeArea",
+      name: "Kerala",
+      address: {
+        "@type": "PostalAddress",
+        addressRegion: "Kerala",
+        addressCountry: "IN",
+      },
+    },
+    areaServed: areaServedNodes(),
     audience,
     sameAs: [...SITE.sameAs],
     knowsLanguage: ["en", "hi", "ml"],
@@ -360,7 +437,7 @@ function organizationNode() {
         contactType: "sales",
         email: SITE.email,
         availableLanguage: ["English", "Hindi", "Malayalam"],
-        areaServed: ["IN", "Worldwide"],
+        areaServed: ["Kerala", "IN", "Worldwide"],
         url: SITE.whatsapp,
       },
       {
@@ -373,6 +450,10 @@ function organizationNode() {
     ],
     founder: founderNodes(),
     knowsAbout: [
+      "Premium web development",
+      "Website developers in Kerala",
+      "AI SEO",
+      "Generative engine optimization",
       "B2B website development",
       "Web application engineering",
       "Custom software development",
@@ -385,8 +466,10 @@ function organizationNode() {
       "PostgreSQL",
     ],
     serviceType: [
+      "Premium web development",
       "Website engineering",
       "Web application engineering",
+      "AI SEO",
       "Custom software development",
       "B2B landing pages",
     ],
@@ -396,6 +479,8 @@ function organizationNode() {
       { "@id": SCHEMA_IDS.softwareDevelopmentService },
       { "@id": SCHEMA_IDS.landingPageService },
       { "@id": SCHEMA_IDS.softwareStudioService },
+      { "@id": SCHEMA_IDS.premiumWebDevelopmentService },
+      { "@id": SCHEMA_IDS.aiSeoService },
     ],
     potentialAction: [
       {
@@ -432,11 +517,99 @@ function websiteNode() {
     name: SITE.name,
     alternateName: [...SITE.alternateNames],
     description:
-      "B2B website and web application engineering. Next.js, Node, PostgreSQL.",
+      "Premium web development and AI SEO from Kerala. Next.js, Node, PostgreSQL.",
     publisher: { "@id": SCHEMA_IDS.organization },
     inLanguage: SITE.language,
     copyrightHolder: { "@id": SCHEMA_IDS.organization },
     about: { "@id": SCHEMA_IDS.organization },
+  };
+}
+
+function premiumWebDevelopmentServiceNode() {
+  return {
+    "@type": "Service",
+    "@id": SCHEMA_IDS.premiumWebDevelopmentService,
+    name: "Premium Web Development",
+    alternateName: [
+      "Premium web dev",
+      "Premium website development",
+      "Custom web development",
+    ],
+    serviceType: "Premium Web Development",
+    category: "Website Development",
+    description:
+      "Premium web development in custom Next.js. Company sites and landing pages from ₹20,000 INR. Kerala studio. No WordPress.",
+    url: absoluteUrl("/premium-web-development"),
+    provider: { "@id": SCHEMA_IDS.organization },
+    audience,
+    areaServed: areaServedNodes(),
+    offers: {
+      "@type": "Offer",
+      url: absoluteUrl("/premium-web-development"),
+      priceCurrency: SITE.priceCurrency,
+      availability: "https://schema.org/InStock",
+      seller: { "@id": SCHEMA_IDS.organization },
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: SITE.priceCurrency,
+        minPrice: "20000",
+      },
+    },
+  };
+}
+
+function aiSeoServiceNode() {
+  return {
+    "@type": "Service",
+    "@id": SCHEMA_IDS.aiSeoService,
+    name: "AI SEO",
+    alternateName: [
+      "Generative engine optimization",
+      "SEO for ChatGPT",
+      "SEO for Perplexity",
+      "AI search optimization",
+    ],
+    serviceType: "AI SEO",
+    category: "Search Engine Optimization",
+    description:
+      "AI SEO for Google, ChatGPT, Perplexity, and AI Overviews. Structured data, llms.txt, entity markup, and fast Next.js. Included with Nodewise websites.",
+    url: absoluteUrl("/ai-seo"),
+    provider: { "@id": SCHEMA_IDS.organization },
+    audience,
+    areaServed: areaServedNodes(),
+    offers: {
+      "@type": "Offer",
+      url: absoluteUrl("/ai-seo"),
+      priceCurrency: SITE.priceCurrency,
+      availability: "https://schema.org/InStock",
+      seller: { "@id": SCHEMA_IDS.organization },
+      description:
+        "Included with website engineering from ₹20,000 INR. No separate retainer.",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: SITE.priceCurrency,
+        minPrice: "20000",
+      },
+    },
+  };
+}
+
+function keralaStudioNode() {
+  return {
+    "@type": "Place",
+    "@id": SCHEMA_IDS.keralaStudio,
+    name: "Nodewise Kerala",
+    description:
+      "Kerala studio for premium web development and AI SEO. Website developers serving Kochi, Thiruvananthapuram, Kozhikode, and statewide.",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Kerala",
+      addressCountry: "IN",
+    },
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: "Kerala",
+    },
   };
 }
 
@@ -453,10 +626,7 @@ function landingPageServiceNode() {
     url: absoluteUrl("/website-development"),
     provider: { "@id": SCHEMA_IDS.organization },
     audience,
-    areaServed: [
-      { "@type": "Country", name: "India" },
-      { "@type": "Place", name: "Worldwide" },
-    ],
+    areaServed: areaServedNodes(),
     offers: {
       "@type": "Offer",
       url: absoluteUrl("/website-development"),
@@ -481,6 +651,7 @@ function websiteDevelopmentServiceNode() {
       "Website development for B2B",
       "Company website development",
       "Next.js website engineering",
+      "Website developers in Kerala",
     ],
     serviceType: "Website Engineering",
     category: "Website Development",
@@ -489,10 +660,7 @@ function websiteDevelopmentServiceNode() {
     url: absoluteUrl("/website-development"),
     provider: { "@id": SCHEMA_IDS.organization },
     audience,
-    areaServed: [
-      { "@type": "Country", name: "India" },
-      { "@type": "Place", name: "Worldwide" },
-    ],
+    areaServed: areaServedNodes(),
     offers: {
       "@type": "Offer",
       url: absoluteUrl("/website-development"),
@@ -525,10 +693,7 @@ function softwareDevelopmentServiceNode() {
     url: absoluteUrl("/software-development"),
     provider: { "@id": SCHEMA_IDS.organization },
     audience,
-    areaServed: [
-      { "@type": "Country", name: "India" },
-      { "@type": "Place", name: "Worldwide" },
-    ],
+    areaServed: areaServedNodes(),
     offers: {
       "@type": "Offer",
       url: absoluteUrl("/software-development"),
@@ -559,10 +724,7 @@ function softwareStudioServiceNode() {
     url: absoluteUrl("/software-development"),
     provider: { "@id": SCHEMA_IDS.organization },
     audience,
-    areaServed: [
-      { "@type": "Country", name: "India" },
-      { "@type": "Place", name: "Worldwide" },
-    ],
+    areaServed: areaServedNodes(),
     offers: {
       "@type": "Offer",
       url: absoluteUrl("/software-development"),
@@ -623,6 +785,16 @@ function offerCatalogNode() {
       {
         "@type": "Offer",
         position: 3,
+        itemOffered: { "@id": SCHEMA_IDS.aiSeoService },
+        name: "AI SEO",
+        description:
+          "AI SEO for Google, ChatGPT, and Perplexity. Included with website engineering.",
+        url: absoluteUrl("/ai-seo"),
+        seller: { "@id": SCHEMA_IDS.organization },
+      },
+      {
+        "@type": "Offer",
+        position: 4,
         name: "Custom Platforms",
         description: "Multi-user software platforms and integrations. Quoted.",
         url: absoluteUrl("/packages"),
@@ -659,6 +831,9 @@ export function siteGraphJsonLd() {
       softwareDevelopmentServiceNode(),
       landingPageServiceNode(),
       softwareStudioServiceNode(),
+      premiumWebDevelopmentServiceNode(),
+      aiSeoServiceNode(),
+      keralaStudioNode(),
       offerCatalogNode(),
     ],
   };
@@ -772,10 +947,7 @@ export function serviceJsonLd({
     url: absoluteUrl(path),
     provider: { "@id": SCHEMA_IDS.organization },
     audience,
-    areaServed: [
-      { "@type": "Country", name: "India" },
-      { "@type": "Place", name: "Worldwide" },
-    ],
+    areaServed: areaServedNodes(),
     serviceType: category || name,
     category: category || name,
     offers,
@@ -932,6 +1104,27 @@ export const ROUTES = [
     priority: 1.0,
     changeFrequency: "weekly" as const,
     name: "Home",
+    images: [SITE.ogImage],
+  },
+  {
+    path: "/premium-web-development",
+    priority: 1.0,
+    changeFrequency: "weekly" as const,
+    name: "Premium Web Development",
+    images: [SITE.ogImage],
+  },
+  {
+    path: "/website-developers-kerala",
+    priority: 1.0,
+    changeFrequency: "weekly" as const,
+    name: "Website Developers in Kerala",
+    images: [SITE.ogImage],
+  },
+  {
+    path: "/ai-seo",
+    priority: 1.0,
+    changeFrequency: "weekly" as const,
+    name: "AI SEO",
     images: [SITE.ogImage],
   },
   {
