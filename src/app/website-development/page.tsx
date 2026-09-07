@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import SitePricingCalculator from "@/components/SitePricingCalculator";
+import StackBand from "@/components/StackBand";
 import {
   PAGE_SEO,
   SCHEMA_IDS,
@@ -15,19 +17,19 @@ export const metadata: Metadata = pageMetadata("websiteDevelopment");
 
 const FAQS = [
   {
-    question: "Do you build websites for startups and new businesses?",
+    question: "What is included in a Nodewise website?",
     answer:
-      "Yes. Nodewise builds first websites and landing pages for starting businesses. Website packages are ₹12,000–15,000 INR, with source you own.",
+      "A static Next.js site on Vercel. Three pages to start: Home, About, Enquiry. Responsive layout, enquiry form, basic SEO, and the GitHub repo. Timeline is 1–2 weeks. No WordPress and no retainer.",
   },
   {
     question: "Do you build B2B company websites?",
     answer:
-      "Yes. We build conversion-focused B2B websites and landing pages for companies that need a professional first impression and a clear path to contact.",
+      "Yes. Company sites and landing pages, written in Next.js and shipped on Vercel. Extra pages are priced in the calculator with no cap.",
   },
   {
-    question: "What is included in website development?",
+    question: "Can a new business start with three pages?",
     answer:
-      "A custom-coded site or landing page, responsive layout, basic SEO setup, and a short architecture consult. No page builders. You receive the source.",
+      "Yes. Home, About, and Enquiry start at ₹20,000 (~$212). Add services, work, FAQ, or other pages in the calculator. You own the repository.",
   },
 ];
 
@@ -45,7 +47,7 @@ export default function WebsiteDevelopment() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Website development", path: "/website-development" },
+            { name: "Website engineering", path: "/website-development" },
           ]),
           faqJsonLd(FAQS),
         ]}
@@ -54,10 +56,10 @@ export default function WebsiteDevelopment() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <h1 className="page-hero-title">Website development</h1>
+            <h1 className="page-hero-title">Website engineering</h1>
             <p className="page-hero-subtitle">
-              For startups, new businesses, and B2B companies that need a
-              professional site.
+              Custom Next.js sites for B2B. Three pages from ₹20,000 (~$212).
+              1–2 weeks. No WordPress, no retainer.
             </p>
           </div>
         </div>
@@ -67,44 +69,42 @@ export default function WebsiteDevelopment() {
         <div className="container">
           <div className="grid quality-grid">
             <div className="quality-item">
-              <div className="quality-num">01</div>
               <div className="quality-details">
-                <h2 className="quality-title">Starting businesses</h2>
+                <h2 className="quality-title">Company sites</h2>
                 <p className="quality-description">
-                  A first site that looks credible from day one.
+                  A first site that is a real Next.js app, not a theme.
                 </p>
                 <ul className="scan-list">
-                  <li>Offer, proof, and a clear contact path</li>
-                  <li>Mobile-ready landing pages</li>
-                  <li>Source and ownership included</li>
+                  <li>Home, About, Enquiry as the base</li>
+                  <li>Service and product pages as you add them</li>
+                  <li>Repo and ownership included</li>
                 </ul>
               </div>
             </div>
             <div className="quality-item">
-              <div className="quality-num">02</div>
               <div className="quality-details">
-                <h2 className="quality-title">B2B companies</h2>
+                <h2 className="quality-title">Landing pages</h2>
                 <p className="quality-description">
-                  Sites built to convert buyers, not decorate a brand.
+                  One offer, one enquiry path, shipped on Vercel.
                 </p>
                 <ul className="scan-list">
-                  <li>Service and product landing pages</li>
-                  <li>Corporate sites with a tight offer</li>
-                  <li>SEO setup for search and AI crawlers</li>
+                  <li>Static, fast loads on mobile</li>
+                  <li>Enquiry form, basic SEO</li>
+                  <li>No CMS login to maintain</li>
                 </ul>
               </div>
             </div>
             <div className="quality-item">
-              <div className="quality-num">03</div>
               <div className="quality-details">
-                <h2 className="quality-title">What you get</h2>
+                <h2 className="quality-title">Delivery</h2>
                 <p className="quality-description">
-                  Custom-coded website development from ₹12,000–15,000 INR.
+                  1–2 weeks for the three-page base. Extra pages in the
+                  calculator, no cap.
                 </p>
                 <ul className="scan-list">
-                  <li>No page builders</li>
-                  <li>Fast loads on mobile</li>
-                  <li>You own the code</li>
+                  <li>Next.js on Vercel</li>
+                  <li>No WordPress, no page builders</li>
+                  <li>You run the site after launch</li>
                 </ul>
               </div>
             </div>
@@ -114,60 +114,34 @@ export default function WebsiteDevelopment() {
 
       <section
         className="packages-section"
-        style={{ paddingTop: "1rem", paddingBottom: "3rem" }}
+        style={{ paddingTop: "1rem", paddingBottom: "2rem" }}
       >
         <div className="container">
-          <div className="package-card highlighted" style={{ maxWidth: "36rem" }}>
-            <h2 className="package-title">Website package</h2>
-            <div className="package-price">
-              12k - 15k <span>INR</span>
-            </div>
-            <p className="package-desc">
-              Professional websites and B2B landing pages for new businesses and
-              companies.
-            </p>
-            <ul className="package-features">
-              <li>
-                <Check aria-hidden="true" /> <span>Custom website development</span>
-              </li>
-              <li>
-                <Check aria-hidden="true" /> <span>Responsive landing pages</span>
-              </li>
-              <li>
-                <Check aria-hidden="true" /> <span>Entry-level SEO setup</span>
-              </li>
-              <li>
-                <Check aria-hidden="true" /> <span>Source code you own</span>
-              </li>
-            </ul>
-            <a
-              href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20website%20development%20for%20my%20startup%20or%20B2B%20company."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary package-btn"
-            >
-              <span>Discuss a website</span>
-              <span className="sr-only"> (opens WhatsApp in a new tab)</span>
-              <ArrowRight className="btn-icon" aria-hidden="true" />
-            </a>
-          </div>
+          <SitePricingCalculator />
         </div>
       </section>
+
+      <StackBand
+        offer="sites"
+        title="Site stack"
+        lede="A marketing site is still software. We write Next.js and React, deploy on Vercel, and hand you the repository. No CMS login, no plugin updates, no retainer."
+      />
 
       <section className="cta-banner-section">
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Need software as well?</h2>
+              <h2 className="cta-banner-title">Need a web application?</h2>
               <p className="cta-banner-text">
-                Portals, dashboards, and custom web apps start from ₹25,000.
+                Portals, dashboards, and internal tools are ₹1–1.5 lakh
+                (~$1,058–$1,587).
               </p>
             </div>
             <Link
               href="/software-development"
               className="btn btn-secondary cta-banner-btn"
             >
-              <span>Software development</span>
+              <span>Web application engineering</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
           </div>

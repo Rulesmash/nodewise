@@ -28,7 +28,7 @@ export default function Contact() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Request a project", path: "/contact" },
+            { name: "Start a project", path: "/contact" },
           ]),
           {
             "@context": "https://schema.org",
@@ -39,7 +39,7 @@ export default function Contact() {
             mainEntity: { "@id": SCHEMA_IDS.organization },
             potentialAction: {
               "@type": "CommunicateAction",
-              name: "Request a landing page or software project",
+              name: "Request a website or web application",
               target: [
                 SITE.whatsapp,
                 `mailto:${SITE.email}`,
@@ -49,52 +49,65 @@ export default function Contact() {
           },
         ]}
       />
-      {/*  Page Hero Banner  */}
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <h1 className="page-hero-title">Request a project</h1>
+            <h1 className="page-hero-title">Start a project</h1>
             <p className="page-hero-subtitle">
-              Hire Nodewise for a startup website, B2B site, or custom software.
+              A B2B website, a web application, or a quoted platform.
             </p>
           </div>
         </div>
       </section>
 
-      {/*  Section: Contact / Consultation Booking  */}
-      <section id="contact" className="contact-section" style={{ paddingTop: "2rem" }}>
+      <section
+        id="contact"
+        className="contact-section"
+        style={{ paddingTop: "2rem" }}
+      >
         <div className="container">
           <div className="card contact-form-card grid">
             <div className="contact-pitch">
-              <h2 className="pitch-title">Start a conversation</h2>
+              <h2 className="pitch-title">Send a brief</h2>
               <p className="pitch-text">
-                Tell us the landing page or software you need. We&apos;ll reply within one business day.
+                Describe the site or application. We reply within one
+                business day.
               </p>
               <div className="contact-meta-info">
                 <div className="c-meta-item">
                   <CheckCircle className="meta-icon" />
-                  <span>Free Initial Architecture Review</span>
+                  <span>Scope confirmed before you pay</span>
                 </div>
                 <div className="c-meta-item">
                   <Clock className="meta-icon" />
-                  <span>Replies within 1 business day</span>
+                  <span>Reply within 1 business day</span>
                 </div>
                 <div className="c-meta-item">
                   <Phone className="meta-icon" />
-                  <span><a href="tel:+919446998827"
-                      style={{ color: "inherit", textDecoration: "none" }}>+91 94469 98827</a></span>
+                  <span>
+                    <a
+                      href="tel:+919446998827"
+                      style={{ color: "inherit", textDecoration: "none" }}
+                    >
+                      +91 94469 98827
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
 
-            <Suspense fallback={<div className="contact-form-container"><p style={{ color: "var(--text-muted)" }}>Loading consultation form...</p></div>}>
+            <Suspense
+              fallback={
+                <div className="contact-form-container">
+                  <p style={{ color: "var(--text-muted)" }}>Loading form…</p>
+                </div>
+              }
+            >
               <ContactForm />
             </Suspense>
           </div>
         </div>
       </section>
-
-    
     </>
   );
 }

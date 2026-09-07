@@ -15,7 +15,7 @@ body {
   overflow-y: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   /* —— Header / drawer —— */
   .main-header {
     padding-top: env(safe-area-inset-top, 0px);
@@ -38,13 +38,16 @@ body {
     min-width: var(--touch);
     min-height: var(--touch);
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 6px;
     padding: 0;
     margin: 0;
     border: none;
     background: transparent;
     cursor: pointer;
+    overflow: visible;
     z-index: 120;
     position: relative;
   }
@@ -52,14 +55,26 @@ body {
   .mobile-toggle .bar {
     width: 22px;
     height: 2px;
+    margin: 0;
+    flex-shrink: 0;
     display: block;
     background: var(--text-primary);
     border-radius: 1px;
+    transform-origin: center;
     transition: transform 0.25s ease, opacity 0.2s ease;
   }
 
-  .mobile-toggle .bar + .bar {
-    margin-top: 5px;
+  .mobile-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .mobile-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .mobile-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   /* Drawer: transform so it never expands document width */
@@ -144,7 +159,9 @@ body {
   body.nav-open .mobile-toggle {
     z-index: 5020;
   }
+}
 
+@media (max-width: 768px) {
   /* —— Layout density —— */
   section {
     padding: 3.25rem 0;
@@ -227,43 +244,6 @@ body {
 
   .package-btn {
     min-height: var(--touch);
-  }
-
-  /* —— MVP highlight —— */
-  .mvp-highlight-card {
-    flex-direction: column !important;
-    background-color: #12141c !important;
-  }
-
-  .mvp-highlight-content,
-  .mvp-highlight-pricing {
-    flex: 0 0 auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 1.35rem 1.2rem !important;
-    border-right: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  .mvp-highlight-pricing {
-    background-color: #0e1018 !important;
-  }
-
-  .mvp-pricing-box {
-    background: #181c28 !important;
-    opacity: 1 !important;
-  }
-
-  .mvp-feature-grid {
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .mvp-price-big {
-    font-size: 2.15rem !important;
-    opacity: 1 !important;
-    color: #fff !important;
   }
 
   /* —— Contact —— */
@@ -379,6 +359,10 @@ body {
     max-width: 100%;
   }
 
+  .hero-stage-canvas {
+    max-width: none;
+  }
+
   table {
     display: block;
     overflow-x: auto;
@@ -400,8 +384,6 @@ body {
     font-size: 1.7rem;
   }
 
-  .mvp-highlight-content,
-  .mvp-highlight-pricing,
   .contact-pitch,
   .contact-form-container,
   .package-card {

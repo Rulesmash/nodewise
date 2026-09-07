@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   creator: SITE.studioName,
   publisher: SITE.name,
   category: "technology",
-  classification: "Website development and custom software development",
+  classification: "Website and web application engineering",
   keywords: [...SITE.keywords],
   referrer: "origin-when-cross-origin",
   formatDetection: {
@@ -117,7 +117,7 @@ export default function RootLayout({
         {/*
           THESIS: Category-standard founder homepage elevated by cinematic product motion. Glass telemetry cards orbit a metallic sculpture; refuse generic particle wallpaper as the hero.
           OWN-WORLD: Void charcoal, frosted glass panels, brushed metal 3D, soft cyan instrument light, pill CTAs, Geist + Manrope.
-          STORY: A B2B buyer grasps landing pages (12k–15k) and business software (25k+) and acts via WhatsApp or consultation. Zero to MVP stays available as a timed side offer.
+          STORY: A B2B buyer grasps Next.js websites (from ₹20,000) and web applications (₹1–1.5 lakh) and acts via WhatsApp or a brief.
           FIRST VIEWPORT: Headline + offer + View our work first; Discuss a project secondary. HeroStage is a live Three.js studio sculpture with glass offer cards, not a still image. Mobile stacks copy, CTAs, stage, bullets.
           FORM: Canon category standard; seed 70d60cdf; craft bar Raycast+Arc+Resend; motion pinned to design-inspo video.
           FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md

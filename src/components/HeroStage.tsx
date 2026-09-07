@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib.js";
 
 function makeBrushedMaps(size: number) {
   const rough = document.createElement("canvas");
@@ -36,20 +37,28 @@ function makeBrushedMaps(size: number) {
 function composeStage(
   camera: THREE.PerspectiveCamera,
   sculpture: THREE.Group,
-  w: number,
-  h: number
+  canvasW: number,
+  canvasH: number,
+  visualW: number,
+  visualH: number,
+  ndcX: number,
+  ndcY: number
 ) {
-  const short = Math.min(w, h);
-  const aspect = w / Math.max(h, 1);
-  const compact = short < 420;
-  camera.fov = compact ? 32 : 32;
-  const z = compact ? 3.75 : 4.65;
-  camera.position.set(0, 0.02, z + Math.max(0, 1.05 - aspect) * 0.35);
-  camera.lookAt(0, 0, 0);
+  const aspect = canvasW / Math.max(canvasH, 1);
+  camera.fov = 32;
   camera.aspect = aspect;
+  const fitR = 1.4;
+  const targetPx = Math.min(visualW, visualH) * 1.18;
+  const dOverV = Math.min(0.7, Math.max(0.2, targetPx / Math.max(canvasH, 1)));
+  const viewH = (2 * fitR) / dOverV;
+  const z = viewH / (2 * Math.tan((camera.fov * Math.PI) / 360));
+  camera.position.set(0, 0.02, z);
+  camera.lookAt(0, 0, 0);
   camera.updateProjectionMatrix();
-  sculpture.position.set(0, 0, 0);
-  return short < 280 ? 1.22 : short < 360 ? 1.32 : short < 440 ? 1.42 : 1.18;
+  const worldH = 2 * z * Math.tan((camera.fov * Math.PI) / 360);
+  const worldW = worldH * aspect;
+  sculpture.position.set(ndcX * worldW * 0.5, ndcY * worldH * 0.5, 0);
+  return 1;
 }
 
 function buildStudioEnv(renderer: THREE.WebGLRenderer) {
@@ -58,12 +67,12 @@ function buildStudioEnv(renderer: THREE.WebGLRenderer) {
   env.add(
     new THREE.Mesh(
       new THREE.SphereGeometry(16, 16, 12),
-      new THREE.MeshBasicMaterial({ color: 0x07080c, side: THREE.BackSide })
+      new THREE.MeshBasicMaterial({ color: 0x16181f, side: THREE.BackSide })
     )
   );
   const softbox = new THREE.Mesh(
     new THREE.PlaneGeometry(10, 7),
-    new THREE.MeshBasicMaterial({ color: 0xe7edf6 })
+    new THREE.MeshBasicMaterial({ color: 0xf4f6fa })
   );
   softbox.position.set(3.8, 7.4, 5.6);
   softbox.lookAt(0, 0, 0);
@@ -106,8 +115,14 @@ export default function HeroStage() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const stage = canvas.parentElement;
-    if (!stage) return;
+    const slot = canvas.parentElement;
+    if (!slot) return;
+    const section =
+      (slot.closest(".hero-section") as HTMLElement | null) || slot;
+    const visual =
+      (section.querySelector(".hero-visual") as HTMLElement | null) || slot;
+    const stage =
+      (section.querySelector(".hero-stage") as HTMLElement | null) || slot;
 
     let cancelled = false;
     let frame = 0;
@@ -139,12 +154,10 @@ export default function HeroStage() {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, coarse ? 1.25 : 1.75));
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.08;
+      renderer.toneMappingExposure = 1.22;
 
-      if (!coarse) {
-        envMap = buildStudioEnv(renderer);
-        scene.environment = envMap;
-      }
+      envMap = buildStudioEnv(renderer);
+      scene.environment = envMap;
 
       const maps = makeBrushedMaps(coarse ? 128 : 256);
       roughnessMap = maps.roughnessMap;
@@ -160,7 +173,7 @@ export default function HeroStage() {
         roughnessMap,
         normalMap,
         normalScale: new THREE.Vector2(0.18, 0.18),
-        envMapIntensity: coarse ? 0.6 : 1.65,
+        envMapIntensity: coarse ? 1.05 : 1.7,
         clearcoat: 0.62,
         clearcoatRoughness: 0.12,
       });
@@ -170,7 +183,7 @@ export default function HeroStage() {
         metalness: 1,
         roughness: 0.22,
         roughnessMap,
-        envMapIntensity: coarse ? 0.5 : 1.45,
+        envMapIntensity: coarse ? 0.9 : 1.5,
         clearcoat: 0.4,
         clearcoatRoughness: 0.22,
       });
@@ -199,42 +212,77 @@ export default function HeroStage() {
 
       sculpture.rotation.set(0.18, 0.35, -0.08);
 
-      const key = new THREE.DirectionalLight(0xf4f5f6, 2.4);
+      RectAreaLightUniformsLib.init();
+      const lightRig = new THREE.Group();
+      scene.add(lightRig);
+
+      const keyPlane = new THREE.RectAreaLight(0xf4f7fc, coarse ? 16 : 12, 6.2, 4.4);
+      keyPlane.position.set(2.2, 3.5, 4.0);
+      keyPlane.lookAt(0, 0, 0);
+      lightRig.add(keyPlane);
+
+      const fillPlane = new THREE.RectAreaLight(0xd5dbe6, coarse ? 6 : 4.2, 3.4, 5.0);
+      fillPlane.position.set(-3.4, 1.1, 2.6);
+      fillPlane.lookAt(0, 0, 0);
+      lightRig.add(fillPlane);
+
+      const key = new THREE.DirectionalLight(0xf4f5f6, 1.35);
       key.position.set(3.4, 5.2, 5.0);
-      scene.add(key);
-      const fill = new THREE.DirectionalLight(0xc8cacd, 0.85);
+      lightRig.add(key);
+      const fill = new THREE.DirectionalLight(0xc8cacd, 0.55);
       fill.position.set(-5.0, 1.2, 2.2);
-      scene.add(fill);
-      const back = new THREE.DirectionalLight(0xe6e7e9, 0.9);
+      lightRig.add(fill);
+      const back = new THREE.DirectionalLight(0xe6e7e9, 0.95);
       back.position.set(0.2, 2.4, -5.6);
-      scene.add(back);
-      scene.add(new THREE.HemisphereLight(0xdedfe1, 0x09090b, 0.32));
+      lightRig.add(back);
+      scene.add(new THREE.HemisphereLight(0xe4e7ee, 0x12141a, 0.48));
 
       let baseScale = 1;
+      const restPos = { x: 0, y: 0 };
       const resize = () => {
-        const w = stage.clientWidth;
-        const h = stage.clientHeight;
+        const w = slot.clientWidth;
+        const h = slot.clientHeight;
         if (w < 1 || h < 1 || !renderer) return;
-        baseScale = composeStage(camera, sculpture, w, h);
+        if (w > 4096 || h > 4096) return;
+        const vw = visual.clientWidth || w;
+        const vh = visual.clientHeight || h;
+        const sRect = slot.getBoundingClientRect();
+        const vRect = visual.getBoundingClientRect();
+        const ndcX =
+          sRect.width > 0
+            ? ((vRect.left + vRect.width / 2) - (sRect.left + sRect.width / 2)) /
+              (sRect.width / 2)
+            : 0;
+        const ndcY =
+          sRect.height > 0
+            ? -((vRect.top + vRect.height / 2) - (sRect.top + sRect.height / 2)) /
+              (sRect.height / 2)
+            : 0;
+        baseScale = composeStage(camera, sculpture, w, h, vw, vh, ndcX, ndcY);
         sculpture.scale.setScalar(baseScale);
+        restPos.x = sculpture.position.x;
+        restPos.y = sculpture.position.y;
+        lightRig.position.set(restPos.x, restPos.y, 0);
         renderer.setSize(w, h, false);
-        stage.dataset.size = Math.min(w, h) < 320 ? "xs" : Math.min(w, h) < 420 ? "sm" : Math.min(w, h) < 520 ? "md" : "lg";
+        const short = Math.min(vw, vh);
+        stage.dataset.size = short < 320 ? "xs" : short < 420 ? "sm" : short < 520 ? "md" : "lg";
       };
 
       const pointer = { x: 0, y: 0 };
       const targetRot = { x: 0.06, y: -0.2 };
       const handlePointer = (e: PointerEvent) => {
-        const rect = stage.getBoundingClientRect();
+        const rect = slot.getBoundingClientRect();
         pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
         pointer.y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
       };
       onPointer.current = handlePointer;
-      if (!coarse) stage.addEventListener("pointermove", handlePointer);
+      if (!coarse) section.addEventListener("pointermove", handlePointer);
 
-      const cardNodes = Array.from(stage.querySelectorAll<HTMLElement>(".hero-glass-card"));
+      const cardNodes = Array.from(section.querySelectorAll<HTMLElement>(".hero-glass-card"));
       resize();
       ro = new ResizeObserver(resize);
-      ro.observe(stage);
+      ro.observe(slot);
+      if (visual !== slot) ro.observe(visual);
 
       let last = performance.now();
       let phase = 0;
@@ -262,12 +310,14 @@ export default function HeroStage() {
         phase += dt;
 
         if (!reduceMotion) {
-          const short = Math.min(stage.clientWidth, stage.clientHeight);
+          const short = Math.min(visual.clientWidth, visual.clientHeight);
           const amp = short < 360 ? 3 : short < 480 ? 4.5 : 6;
           targetRot.x = 0.06 + pointer.y * (coarse ? 0 : 0.07);
           sculpture.rotation.y += 0.14 * dt;
           sculpture.rotation.x += (targetRot.x - sculpture.rotation.x) * Math.min(1, 2.2 * dt);
-          sculpture.position.y = Math.sin(phase * 0.55) * 0.05;
+          sculpture.position.x = restPos.x;
+          sculpture.position.y = restPos.y + Math.sin(phase * 0.55) * 0.05;
+          lightRig.position.set(sculpture.position.x, sculpture.position.y, 0);
           rings.forEach((mesh) => {
             const [sx, sy, sz] = mesh.userData.spin as [number, number, number];
             mesh.rotation.x += sx * dt;
@@ -295,7 +345,7 @@ export default function HeroStage() {
         window.removeEventListener("pageshow", syncClock.current);
         window.removeEventListener("focus", syncClock.current);
       }
-      if (onPointer.current) stage.removeEventListener("pointermove", onPointer.current);
+      if (onPointer.current) section.removeEventListener("pointermove", onPointer.current);
       renderer?.dispose();
       sphereGeo?.dispose();
       ringGeos.forEach((g) => g.dispose());

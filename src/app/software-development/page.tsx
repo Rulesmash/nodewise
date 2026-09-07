@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import StackBand from "@/components/StackBand";
 import {
   PAGE_SEO,
   SCHEMA_IDS,
@@ -10,24 +11,25 @@ import {
   pageMetadata,
   webPageJsonLd,
 } from "@/lib/seo";
+import { PRICE_COPY, SOFTWARE_WHATSAPP_HREF } from "@/lib/pricing";
 
 export const metadata: Metadata = pageMetadata("softwareDevelopment");
 
 const FAQS = [
   {
-    question: "Do you build custom software for startups?",
+    question: "What web applications do you build?",
     answer:
-      "Yes. Nodewise builds web apps, portals, dashboards, and light automation for starting teams. Custom software starts from ₹25,000 INR, with source you own.",
+      "Portals, dashboards, internal tools, and light workflow automation. The package is ₹1–1.5 lakh (~$1,058–$1,587), with Next.js, Node, PostgreSQL, auth, and source you own.",
   },
   {
-    question: "Do you build software for B2B companies?",
+    question: "Who is this for?",
     answer:
-      "Yes. We build internal tools, client portals, operational dashboards, and workflow software for B2B teams that have outgrown spreadsheets.",
+      "B2B teams that have outgrown spreadsheets and need software that matches how the business actually runs.",
   },
   {
-    question: "What is not included in the software package?",
+    question: "What is not in this package?",
     answer:
-      "Complex enterprise integrations, native mobile apps, and massive scalable cloud architecture are quoted separately. Zero to MVP remains a fixed ₹29,999 timed package.",
+      "Native mobile apps, heavy enterprise integrations, realtime AI, and custom models are quoted as platforms. A static marketing site is the website offer from ₹20,000 (~$212).",
   },
 ];
 
@@ -45,7 +47,7 @@ export default function SoftwareDevelopment() {
           }),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
-            { name: "Software development", path: "/software-development" },
+            { name: "Web application engineering", path: "/software-development" },
           ]),
           faqJsonLd(FAQS),
         ]}
@@ -54,10 +56,10 @@ export default function SoftwareDevelopment() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <h1 className="page-hero-title">Software development</h1>
+            <h1 className="page-hero-title">Web application engineering</h1>
             <p className="page-hero-subtitle">
-              Custom software for startups and B2B companies that need tools
-              their teams actually use.
+              Portals, dashboards, and internal tools. Next.js, Node, and
+              PostgreSQL. ₹1–1.5 lakh (~$1,058–$1,587). You own the source.
             </p>
           </div>
         </div>
@@ -67,44 +69,44 @@ export default function SoftwareDevelopment() {
         <div className="container">
           <div className="grid quality-grid">
             <div className="quality-item">
-              <div className="quality-num">01</div>
               <div className="quality-details">
-                <h2 className="quality-title">Portals and dashboards</h2>
+                <h2 className="quality-title">Portals</h2>
                 <p className="quality-description">
-                  Client portals, booking, and operational views.
+                  Client access with roles, auth, and records that stay in
+                  your database.
                 </p>
                 <ul className="scan-list">
-                  <li>Multi-user access</li>
-                  <li>Internal tools</li>
-                  <li>Clear reporting</li>
+                  <li>Supabase Auth</li>
+                  <li>Admin and client views</li>
+                  <li>Booking and account flows</li>
                 </ul>
               </div>
             </div>
             <div className="quality-item">
-              <div className="quality-num">02</div>
               <div className="quality-details">
-                <h2 className="quality-title">Web applications</h2>
+                <h2 className="quality-title">Dashboards</h2>
                 <p className="quality-description">
-                  Custom web apps that match how your business actually works.
+                  Operational views on PostgreSQL, not a spreadsheet export
+                  pasted into a page.
+                </p>
+                <ul className="scan-list">
+                  <li>Plotly charts when the data needs them</li>
+                  <li>Internal tools for the team that runs the work</li>
+                  <li>APIs your other systems can call</li>
+                </ul>
+              </div>
+            </div>
+            <div className="quality-item">
+              <div className="quality-details">
+                <h2 className="quality-title">Workflows</h2>
+                <p className="quality-description">
+                  Light automation: webhooks, REST, and jobs that remove
+                  repeat work.
                 </p>
                 <ul className="scan-list">
                   <li>Scoped to a real bottleneck</li>
-                  <li>Built to ship, not to bloat</li>
                   <li>Code your team can extend</li>
-                </ul>
-              </div>
-            </div>
-            <div className="quality-item">
-              <div className="quality-num">03</div>
-              <div className="quality-details">
-                <h2 className="quality-title">Automation</h2>
-                <p className="quality-description">
-                  Cut repetitive work without an enterprise rewrite.
-                </p>
-                <ul className="scan-list">
-                  <li>Workflow software</li>
-                  <li>Light integrations</li>
-                  <li>Quoted platforms when you outgrow the base</li>
+                  <li>Realtime, RAG, and models quoted as platforms</li>
                 </ul>
               </div>
             </div>
@@ -114,26 +116,30 @@ export default function SoftwareDevelopment() {
 
       <section
         className="packages-section"
-        style={{ paddingTop: "1rem", paddingBottom: "3rem" }}
+        style={{ paddingTop: "1rem", paddingBottom: "2rem" }}
       >
         <div className="container">
-          <div className="package-card highlighted" style={{ maxWidth: "36rem" }}>
-            <h2 className="package-title">Software package</h2>
+          <div
+            className="package-card highlighted"
+            style={{ maxWidth: "36rem" }}
+          >
+            <h2 className="package-title">{PRICE_COPY.softwareTitle}</h2>
             <div className="package-price">
-              25k+ <span>INR</span>
+              {PRICE_COPY.softwareRangeShort} <span>INR</span>
+              <span className="price-usd">{PRICE_COPY.softwareRangeUsd}</span>
             </div>
             <p className="package-desc">
-              Custom software development for startups and B2B companies. You
-              own the source.
+              A web application with a real backend. Not a static site with a
+              login painted on.
             </p>
             <ul className="package-features">
               <li>
                 <Check aria-hidden="true" />{" "}
-                <span>Full custom web development</span>
+                <span>Next.js, Node APIs, PostgreSQL</span>
               </li>
               <li>
                 <Check aria-hidden="true" />{" "}
-                <span>Dashboards and portals</span>
+                <span>Supabase Auth, dashboards, portals</span>
               </li>
               <li>
                 <Check aria-hidden="true" />{" "}
@@ -141,16 +147,16 @@ export default function SoftwareDevelopment() {
               </li>
               <li>
                 <Check aria-hidden="true" />{" "}
-                <span>Ownership and documentation</span>
+                <span>4–8 weeks typical. Ownership and docs</span>
               </li>
             </ul>
             <a
-              href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20custom%20software%20development%20for%20my%20startup%20or%20B2B%20company."
+              href={SOFTWARE_WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary package-btn"
             >
-              <span>Discuss software</span>
+              <span>Discuss a web app</span>
               <span className="sr-only"> (opens WhatsApp in a new tab)</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </a>
@@ -158,20 +164,26 @@ export default function SoftwareDevelopment() {
         </div>
       </section>
 
+      <StackBand
+        offer="software"
+        title="Application stack"
+        lede="This is an application: Node APIs, PostgreSQL, auth, and dashboards. Realtime voice, RAG, and custom models sit on the quoted platforms tier."
+      />
+
       <section className="cta-banner-section">
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
               <h2 className="cta-banner-title">Need a website first?</h2>
               <p className="cta-banner-text">
-                Startup and B2B websites start at ₹12,000–15,000.
+                Next.js sites start at ₹20,000 (~$212) for three pages.
               </p>
             </div>
             <Link
               href="/website-development"
               className="btn btn-secondary cta-banner-btn"
             >
-              <span>Website development</span>
+              <span>Website engineering</span>
               <ArrowRight className="btn-icon" aria-hidden="true" />
             </Link>
           </div>

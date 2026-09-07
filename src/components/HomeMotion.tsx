@@ -18,11 +18,7 @@ function solidifyHome() {
       "#hero-main-title",
       "#hero-sub-text",
       ".hero-ctas",
-      ".mvp-highlight-card",
-      ".mvp-highlight-content",
-      ".mvp-highlight-pricing",
-      ".mvp-pricing-box",
-      ".mvp-price-big",
+      ".site-pricing",
       "[data-reveal]",
       "[data-reveal-item]",
       ".package-card",
@@ -89,8 +85,7 @@ export default function HomeMotion() {
       gsap.utils
         .toArray<HTMLElement>(".home-page [data-reveal]")
         .forEach((el) => {
-          // Skip MVP card entirely. Critical conversion block stays static.
-          if (el.classList.contains("mvp-highlight-card")) return;
+          if (el.classList.contains("site-pricing")) return;
 
           gsap.from(el, {
             y: 20,

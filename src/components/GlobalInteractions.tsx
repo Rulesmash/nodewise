@@ -210,9 +210,9 @@ export default function GlobalInteractions() {
 
     const portfolioShowcases: any = {
       "case-01": {
-        meta: "Case Study 01 // 3D Interactive Real Estate",
-        title: "Titan Residences: Interactive 3D Luxury Real Estate Prototype",
-        description: "An immersive digital showcase designed for Titan Residences. The interactive platform features 3D floor plan hotspots, a live sky-mansion showroom, dynamic day-to-night lighting simulation, and real-time residential availability tracking.",
+        meta: "3D Interactive Real Estate",
+        title: "Titan Residences",
+        description: "Floor plans, amenities, and views in the browser.",
         link: "https://titan-bigs.vercel.app",
         images: [
           "/assets/titan-hero.png",
@@ -223,9 +223,9 @@ export default function GlobalInteractions() {
         ]
       },
       "case-02": {
-        meta: "Case Study 02 // MVP & Basic Landing Page",
-        title: "Mavenix: High-Conversion Digital Marketing Agency MVP",
-        description: "A modern, high-performance landing page engineered for Mavenix Studio. Perfect for MVP builders and businesses requiring a basic yet premium landing page. It focuses on turning small businesses into big brands through custom strategy audits and sleek conversion funnels.",
+        meta: "Marketing site",
+        title: "Mavenix Studio",
+        description: "A marketing site with a clear offer and a path to enquiry.",
         link: "https://mavenixstudio.netlify.app/",
         images: [
           "/assets/mavenix-hero.png",
@@ -234,9 +234,9 @@ export default function GlobalInteractions() {
         ]
       },
       "case-03": {
-        meta: "Case Study 03 // Open Source Community Hub",
-        title: "FOSS CEAL: Open Source College Club Platform",
-        description: "A custom hub engineered for the FOSS CEAL club at the College of Engineering Attingal. The platform hosts training portals for Design/Figma (Create 101) and Development/AI (Train 303), interactive event directories, and download hubs for brand kits.",
+        meta: "Open Source Community Hub",
+        title: "FOSS CEAL",
+        description: "Club hub for training, events, resources, and brand kits.",
         link: "https://foss.ceal.in/",
         images: [
           "/assets/fossceal-landing.png",

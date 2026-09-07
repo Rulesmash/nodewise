@@ -83,9 +83,12 @@ export default function ProjectCarousel({
         const offset = circularOffset(i, target, len);
         const abs = Math.abs(offset);
         const isCenter = offset === 0;
-        const xSpread = reduceMotion ? 52 : 36;
+        const compact =
+          typeof window !== "undefined" &&
+          window.matchMedia("(max-width: 640px)").matches;
+        const xSpread = reduceMotion ? (compact ? 38 : 52) : compact ? 24 : 36;
         const z = isCenter ? 120 : 40 - abs * 44;
-        const rotY = reduceMotion ? 0 : offset * -30;
+        const rotY = reduceMotion ? 0 : offset * (compact ? -18 : -30);
         const scale = isCenter ? 1 : Math.max(0.72, 0.9 - abs * 0.1);
         const opacity = abs > 1 ? 0 : isCenter ? 1 : 0.55;
 
@@ -102,6 +105,9 @@ export default function ProjectCarousel({
         }
 
         const props = {
+          // Zero parsed CSS x/y so translate(-50%, -50%) is not applied twice
+          x: 0,
+          y: 0,
           xPercent: -50 + offset * xSpread,
           yPercent: -50,
           z,

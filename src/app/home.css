@@ -17,10 +17,12 @@
 }
 
 .home-page .hero-section {
+  position: relative;
   min-height: min(100vh, 920px);
   padding-top: 7.5rem;
   padding-bottom: 4rem;
-  align-items: center;
+  align-items: flex-start;
+  overflow: visible;
 }
 
 .home-page .hero-container {
@@ -32,26 +34,35 @@
     "ctas visual";
   column-gap: clamp(2rem, 4vw, 3.5rem);
   row-gap: 0;
-  align-items: center;
+  align-items: start;
+  position: relative;
+  z-index: 2;
 }
 
 .home-page .hero-copy {
   grid-area: copy;
-  align-self: end;
+  align-self: start;
+  position: relative;
+  z-index: 2;
 }
 
 .home-page .hero-subtitle {
   grid-area: sub;
+  position: relative;
+  z-index: 2;
 }
 
 .home-page .hero-ctas {
   grid-area: ctas;
   align-self: start;
+  position: relative;
+  z-index: 2;
 }
 
 .home-page .hero-visual {
   grid-area: visual;
-  align-self: center;
+  align-self: start;
+  z-index: 0;
 }
 
 .home-page .hero-title {
@@ -126,7 +137,7 @@
 }
 
 .home-page .hero-visual {
-  /* Fluid stage: scales with viewport, never overflows column */
+  /* Layout box for glass cards only — 3D lives on the section, behind copy */
   width: 100%;
   max-width: 100%;
   aspect-ratio: 1 / 1.05;
@@ -134,24 +145,36 @@
   min-height: clamp(240px, 42vw, 320px);
   max-height: min(560px, 70vh);
   position: relative;
+  overflow: visible;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
   container-type: inline-size;
   container-name: hero-stage;
 }
 
-/* —— Hero stage (3D + glass) —— */
+/* —— Hero stage (glass HUD) —— */
 .hero-stage {
   position: absolute;
   inset: 0;
-  border-radius: clamp(12px, 2.5cqi, 20px);
-  overflow: hidden;
+  border-radius: 0;
+  overflow: visible;
   isolation: isolate;
-  background:
-    radial-gradient(ellipse 50% 42% at 50% 48%, rgba(180, 184, 190, 0.07) 0%, transparent 68%),
-    linear-gradient(180deg, #0a0a0c 0%, #070708 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow:
-    0 clamp(12px, 3cqi, 24px) clamp(32px, 8cqi, 80px) rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-stage-canvas-slot {
+  position: absolute;
+  top: -6%;
+  right: 0;
+  bottom: -42%;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
 }
 
 .hero-stage-canvas {
@@ -159,9 +182,13 @@
   inset: 0;
   width: 100% !important;
   height: 100% !important;
+  max-width: none !important;
+  max-height: none;
   display: block;
+  z-index: 0;
   /* Allow the page to scroll when a finger starts on the canvas */
   touch-action: pan-y;
+  pointer-events: none;
 }
 
 @media (pointer: coarse) {
@@ -174,19 +201,7 @@
   }
 }
 
-.hero-stage-glow {
-  pointer-events: none;
-  position: absolute;
-  inset: -15%;
-  background: radial-gradient(circle at 50% 50%, rgba(210, 212, 216, 0.08), transparent 55%);
-  mix-blend-mode: screen;
-  animation: heroGlowPulse 8s var(--ease-out-expo) infinite alternate;
-}
 
-@keyframes heroGlowPulse {
-  from { opacity: 0.55; transform: scale(0.96); }
-  to { opacity: 1; transform: scale(1.04); }
-}
 
 .hero-glass-layer {
   position: absolute;
@@ -365,14 +380,6 @@
   }
 }
 
-/* —— MVP highlight —— */
-.home-page .mvp-highlight-section {
-  background: transparent;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
-.home-page .mvp-highlight-section,
 .home-page .packages-section,
 .home-page .cta-banner-section {
   position: relative;
@@ -382,122 +389,10 @@
 /* Content must never flash invisible — motion is transform-only */
 .home-page [data-reveal],
 .home-page [data-reveal-item],
-.home-page .mvp-highlight-card,
-.home-page .mvp-highlight-content,
-.home-page .mvp-highlight-pricing,
-.home-page .mvp-pricing-box,
-.home-page .mvp-price-big,
-.home-page .mvp-feature-list,
-.home-page .mvp-feature-list li {
+.home-page .site-pricing,
+.home-page .package-card {
   opacity: 1 !important;
   visibility: visible !important;
-}
-
-.home-page .mvp-highlight-card {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  border-radius: var(--home-radius);
-  /* Solid base — pure glass reads as empty on dark mobile backgrounds */
-  background-color: #12141c !important;
-  background-image: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.03) 50%,
-    rgba(100, 140, 200, 0.04) 100%
-  ) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  box-shadow:
-    0 28px 80px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-  opacity: 1 !important;
-}
-
-.home-page .mvp-highlight-content {
-  flex: 1.5 1 auto;
-  min-width: 0;
-  padding: clamp(1.75rem, 4vw, 3.25rem);
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  opacity: 1;
-}
-
-.home-page .mvp-highlight-content .section-title {
-  font-size: clamp(1.65rem, 3vw, 2.15rem);
-  letter-spacing: -0.03em;
-  max-width: 22ch;
-}
-
-.home-page .mvp-product-name {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-header);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(220, 230, 255, 0.92);
-  margin-bottom: 0.85rem;
-}
-
-.home-page .mvp-product-name::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #5b9cff;
-  box-shadow: 0 0 12px rgba(91, 156, 255, 0.7);
-}
-
-.home-page .mvp-highlight-pricing {
-  flex: 1 1 auto;
-  min-width: 0;
-  padding: clamp(1.75rem, 4vw, 3.25rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1 !important;
-  background-color: #0e1018 !important;
-  background-image: radial-gradient(
-    ellipse 90% 80% at 50% 0%,
-    rgba(120, 160, 255, 0.12),
-    transparent 68%
-  ) !important;
-}
-
-.home-page .mvp-pricing-box {
-  padding: 1.5rem 1.25rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: #181c28 !important;
-  backdrop-filter: none !important;
-  width: 100%;
-  opacity: 1 !important;
-}
-
-.home-page .mvp-highlight-content,
-.home-page .mvp-highlight-pricing,
-.home-page .mvp-price-big,
-.home-page .mvp-feature-list li {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.home-page .mvp-price-big {
-  font-size: clamp(2.25rem, 4vw, 3rem);
-  letter-spacing: -0.03em;
-}
-
-.home-page .mvp-timeline-box {
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.home-page .mvp-cta-btn {
-  width: 100%;
-  justify-content: center;
 }
 
 /* —— Packages —— */
@@ -551,6 +446,10 @@
   box-shadow:
     0 28px 64px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.home-page .site-pricing:hover {
+  transform: none;
 }
 
 .home-page .package-card.highlighted {
@@ -624,22 +523,24 @@
   transform: translateY(-2px);
 }
 
-/* Soften global particle field under the hero stage */
-.home-page ~ * .canvas-container,
+body:has(.home-page) {
+  background-color: #14161d;
+}
+
 body:has(.home-page) .canvas-container {
-  opacity: 0.45;
+  opacity: 1;
+  background:
+    radial-gradient(ellipse 70% 52% at 62% 16%, rgba(170, 186, 210, 0.12), transparent 58%),
+    radial-gradient(ellipse 50% 42% at 12% 88%, rgba(255, 255, 255, 0.04), transparent 55%),
+    #14161d;
 }
 
 body:has(.home-page) .canvas-container canvas {
-  opacity: 0.55;
+  opacity: 1;
 }
 
 /* —— Reduced motion —— */
 @media (prefers-reduced-motion: reduce) {
-  .hero-stage-glow {
-    animation: none;
-  }
-
   .hero-glass-card {
     opacity: 1;
     transform: none;
@@ -655,9 +556,21 @@ body:has(.home-page) .canvas-container canvas {
 /* —— Responsive —— */
 @media (max-width: 960px) {
   .home-page .hero-section {
+    --hero-visual-h: min(340px, 46vh);
     padding-top: calc(4.75rem + env(safe-area-inset-top, 0px));
-    padding-bottom: 2rem;
+    padding-bottom: 0;
     min-height: auto;
+    overflow: visible;
+  }
+
+  .hero-stage-canvas-slot {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    height: calc(
+      4.75rem + env(safe-area-inset-top, 0px) + var(--hero-visual-h) + 0.5rem
+    );
     overflow: hidden;
   }
 
@@ -665,12 +578,12 @@ body:has(.home-page) .canvas-container canvas {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
+      "visual"
       "copy"
       "sub"
-      "ctas"
-      "visual";
+      "ctas";
     column-gap: 0;
-    row-gap: 1.1rem;
+    row-gap: 0.85rem;
     align-items: stretch;
   }
 
@@ -679,6 +592,10 @@ body:has(.home-page) .canvas-container canvas {
   .home-page .hero-subtitle,
   .home-page .hero-visual {
     align-self: stretch;
+  }
+
+  .home-page .hero-copy {
+    padding-top: 1.75rem;
   }
 
   .home-page .hero-title {
@@ -729,20 +646,25 @@ body:has(.home-page) .canvas-container canvas {
 
   .home-page .hero-visual {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     width: 100%;
     max-width: none;
     margin-inline: 0;
     aspect-ratio: 1 / 1.04;
     height: auto;
-    min-height: 220px;
-    max-height: min(300px, 40vh);
-    overflow: hidden;
-    border-radius: clamp(12px, 3vw, 16px);
+    min-height: 240px;
+    max-height: min(340px, 46vh);
+    overflow: visible;
+    border: none;
+    border-radius: 0;
+    background: none;
   }
 
   .hero-stage {
-    border-radius: 16px;
+    border-radius: 0;
+    overflow: visible;
+    border: none;
+    background: none;
   }
 
   .hero-stage,
@@ -794,43 +716,27 @@ body:has(.home-page) .canvas-container canvas {
   }
 }
 
-@media (max-width: 1024px) {
-  .home-page .mvp-highlight-card {
-    flex-direction: column;
-  }
 
-  /* Kill desktop flex-grow that leaves hollow empty panels when stacked */
-  .home-page .mvp-highlight-content,
-  .home-page .mvp-highlight-pricing {
-    flex: 0 0 auto !important;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .home-page .mvp-highlight-content {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1.5rem 1.25rem;
-  }
-
-  .home-page .mvp-highlight-pricing {
-    padding: 1.35rem 1.25rem;
-  }
-
-  .home-page .mvp-feature-grid {
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-}
 
 @media (max-width: 640px) {
   .home-page .hero-section {
+    --hero-visual-h: min(320px, 44vh);
     padding-top: calc(4.35rem + env(safe-area-inset-top, 0px));
-    padding-bottom: max(2.25rem, calc(1.25rem + env(safe-area-inset-bottom, 0px)));
+    padding-bottom: 0;
+  }
+
+  .hero-stage-canvas-slot {
+    height: calc(
+      4.35rem + env(safe-area-inset-top, 0px) + var(--hero-visual-h) + 0.5rem
+    );
   }
 
   .home-page .hero-container {
-    row-gap: 0.95rem;
+    row-gap: 0.75rem;
+  }
+
+  .home-page .hero-copy {
+    padding-top: 1.5rem;
   }
 
   .home-page .hero-title {
@@ -839,16 +745,8 @@ body:has(.home-page) .canvas-container canvas {
   }
 
   .home-page .hero-visual {
-    min-height: 200px;
-    max-height: min(280px, 38vh);
+    min-height: 220px;
+    max-height: min(320px, 44vh);
   }
 
-  .home-page .mvp-highlight-content,
-  .home-page .mvp-highlight-pricing {
-    padding: 1.25rem 1.1rem;
-  }
-
-  .home-page .mvp-price-big {
-    font-size: 2.15rem !important;
-  }
 }

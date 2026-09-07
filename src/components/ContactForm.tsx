@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Send, CheckCircle, Sparkles, X } from "lucide-react";
+import { Send, CheckCircle, X } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
 const PRESET_REQUIREMENTS = [
-  "B2B landing pages (12k–15k INR)",
-  "Business software (25k+ INR)",
+  "Website (from ₹20,000 / $212)",
+  "Web application (₹1–1.5 lakh / $1,058–$1,587)",
+  "Custom platform (quote)",
 ];
 
 export default function ContactForm() {
@@ -116,12 +117,12 @@ export default function ContactForm() {
     setErrorMessage("");
 
     const formData = new FormData();
-    formData.append("_subject", "Nodewise - New Consultation Request");
+    formData.append("_subject", "Nodewise project brief");
     formData.append("_captcha", "false");
     formData.append("_template", "table");
     formData.append("name", name);
     formData.append("contact", contact);
-    formData.append("requirements", combinedRequirements || "General Consultation Request");
+    formData.append("requirements", combinedRequirements || "Project inquiry");
 
     try {
       const response = await fetch("https://formsubmit.co/ajax/contact@nodewise.cc", {
@@ -175,7 +176,7 @@ export default function ContactForm() {
           autoComplete="on"
         >
           {/* FormSubmit Configuration */}
-          <input type="hidden" name="_subject" value="Nodewise - New Consultation Request" />
+          <input type="hidden" name="_subject" value="Nodewise project brief" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
 
@@ -214,8 +215,8 @@ export default function ContactForm() {
           {/* Project Requirements (with Autocomplete & Suggestions) */}
           <div className="form-group autocomplete-container" ref={containerRef}>
             <label htmlFor="form-requirements" className="flex-between">
-              <span>Project Requirements / Scope</span>
-              <span className="label-hint"><Sparkles size={12} className="inline-icon" /> Select or type custom</span>
+              <span>What you need</span>
+              <span className="label-hint">Select an offer or type</span>
             </label>
 
             {/* Selected Chips / Badges */}
@@ -244,7 +245,7 @@ export default function ContactForm() {
                 type="text"
                 id="form-requirements"
                 name="requirements"
-                placeholder={selectedChips.length > 0 ? "Add additional requirements..." : "e.g. landing page, portal, automation"}
+                placeholder={selectedChips.length > 0 ? "Add detail…" : "e.g. company site, client portal"}
                 spellCheck="false"
                 autoComplete="off"
                 value={requirements}
@@ -279,7 +280,7 @@ export default function ContactForm() {
 
             {/* Quick Select Presets / Tag Cloud */}
             <div className="quick-presets-section">
-              <span className="presets-label">Popular Requirements:</span>
+              <span className="presets-label">Offers</span>
               <div className="preset-chips-cloud">
                 {PRESET_REQUIREMENTS.map((preset, idx) => {
                   const isSelected = selectedChips.includes(preset);
@@ -313,7 +314,7 @@ export default function ContactForm() {
             id="btn-submit-consult"
             disabled={status === "submitting"}
           >
-            <span>{status === "submitting" ? "Sending Request..." : "Send Consultation Request"}</span>
+            <span>{status === "submitting" ? "Sending…" : "Send brief"}</span>
             <Send className="btn-icon" />
           </button>
         </form>

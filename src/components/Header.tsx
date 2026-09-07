@@ -6,11 +6,13 @@ import { useEffect, useRef, useState } from "react";
 
 const NAV = [
   { href: "/portfolio", label: "Work", id: "nav-lnk-work" },
+  { href: "/website-development", label: "Websites", id: "nav-lnk-websites" },
+  { href: "/software-development", label: "Web apps", id: "nav-lnk-software" },
   { href: "/packages", label: "Pricing", id: "nav-lnk-packages" },
-  { href: "/about", label: "About", id: "nav-lnk-about" },
+  { href: "/about", label: "Studio", id: "nav-lnk-about" },
 ] as const;
 
-const MOBILE_MQ = "(max-width: 768px)";
+const MOBILE_MQ = "(max-width: 1100px)";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -78,7 +80,7 @@ export default function Header() {
           href="/"
           className="logo"
           id="nav-logo-link"
-          aria-label="Nodewise software studio home"
+          aria-label="Nodewise home"
           onClick={closeMenu}
         >
           <img

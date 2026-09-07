@@ -14,9 +14,9 @@ export default function Footer() {
           />
           <p className="footer-tagline">Smarter Code. Better Solutions.</p>
           <ul className="footer-about" style={{ listStyle: "none", padding: 0 }}>
-            <li>Website development for startups</li>
-            <li>Custom software for B2B</li>
-            <li>Landing pages and platforms</li>
+            <li>B2B website engineering</li>
+            <li>Web application engineering</li>
+            <li>India studio, worldwide delivery</li>
           </ul>
           <div className="footer-socials">
             <a
@@ -25,7 +25,7 @@ export default function Footer() {
               rel="me noopener noreferrer"
               className="footer-social-link"
               id="footer-linkedin"
-              aria-label="Nodewise software studio on LinkedIn"
+              aria-label="Nodewise on LinkedIn"
             >
               <Linkedin className="footer-social-icon" aria-hidden="true" />
               <span className="sr-only">(opens in a new tab)</span>
@@ -42,32 +42,20 @@ export default function Footer() {
             <Link href="/portfolio" className="footer-link">
               Work
             </Link>
-            <Link href="/zero-to-mvp" className="footer-link">
-              Zero to MVP
-            </Link>
             <Link href="/packages" className="footer-link">
               Pricing
             </Link>
             <Link href="/website-development" className="footer-link">
-              Website development
+              Websites
             </Link>
             <Link href="/software-development" className="footer-link">
-              Software development
+              Web apps
             </Link>
           </div>
           <div className="footer-nav-col">
-            <h4 className="footer-col-title">Company</h4>
+            <h4 className="footer-col-title">Studio</h4>
             <Link href="/about" className="footer-link">
               About
-            </Link>
-            <Link href="/process" className="footer-link">
-              Process
-            </Link>
-            <Link href="/capabilities" className="footer-link">
-              Services
-            </Link>
-            <Link href="/quality" className="footer-link">
-              Quality
             </Link>
             <Link href="/contact" className="footer-link">
               Contact

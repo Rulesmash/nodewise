@@ -1,6 +1,6 @@
 ---
 name: Nodewise
-description: Dark premium digital product studio — cinematic glass + metallic motion on a B2B landing-page and software homepage.
+description: Dark premium engineering studio. Cinematic glass and metallic motion on a B2B website and web application homepage.
 colors:
   bg-main: "#0b0c10"
   bg-surface: "rgba(22, 23, 34, 0.65)"
@@ -67,13 +67,13 @@ components:
     padding: "1.75rem 1.6rem"
 ---
 
-# Design System — Nodewise
+# Design System: Nodewise
 
 ## Overview
 
 Nodewise’s marketing surface is a **dark, category-standard product-studio homepage** elevated by a single authored motion moment: a metallic Three.js sculpture with floating frosted-glass offer cards (price, timeline, ownership). Craft bar: Raycast / Arc / Resend restraint with cinematic camera-orbit motion from the pinned design-inspo video. Homepage-only redesign; other routes inherit shared tokens and chrome.
 
-**Visitor mode:** Persuade (B2B buyer → landing pages / business software). Zero to MVP is a side offer.
+**Visitor mode:** Persuade (B2B buyer → websites / web applications).
 
 **Motion thesis:** Focal entrance = sculpture scale-in + continuous slow orbit + staggered glass-card blur-to-sharp floats (`power3.out` / `cubic-bezier(0.16, 1, 0.3, 1)`). Supporting scroll reveals are quiet. Respect `prefers-reduced-motion`.
 
@@ -89,14 +89,13 @@ Nodewise’s marketing surface is a **dark, category-standard product-studio hom
 
 - **Display/UI:** Geist (local variable) via `--font-header`.
 - **Body:** Manrope via `--font-body`.
-- Tight tracking on large titles (−0.03 to −0.035em). No decorative kickers; product names (e.g. “Zero to MVP”) sit as real labels with a live instrument dot.
+- Tight tracking on large titles (−0.03 to −0.035em). No decorative kickers; product names sit as real labels with a live instrument dot.
 
 ## Layout
 
 - Max content width ~1200px (`.container`).
 - Hero: two-column desktop (copy | HeroStage); single column mobile with copy first, stage second.
-- MVP: split glass panel (features | price rail).
-- Packages: three equal glass cards; Standard tier subtly highlighted with cool edge light.
+- Packages: engineered-site calculator (page chips + live INR) above two software/platform cards.
 - Spacing: generous section gaps; tighter within cards.
 
 ## Elevation & Depth
@@ -116,14 +115,14 @@ Nodewise’s marketing surface is a **dark, category-standard product-studio hom
 - **Primary button:** solid light pill, dark text, lift on hover.
 - **Secondary / outline:** glass border, pill.
 - **Package card:** glass body, badge pill, feature list with lucide checks.
-- **MVP highlight:** large glass composite with pricing box nested inside.
-- **ProjectCarousel (portfolio):** 3D coverflow of project screenshots — circular offsets, rotateY depth, soft side blur, drag/keyboard/dots, autoplay pause on hover; glass chrome window chrome; active card opens live URL.
+- **Site pricing calculator:** live page-count quote on a highlighted package card.
+- **ProjectCarousel (portfolio):** 3D coverflow of project screenshots. Circular offsets, rotateY depth, soft side blur, drag/keyboard/dots, autoplay pause on hover. Glass window chrome. Active card opens the live URL.
 
 ## Do's and Don'ts
 
 **Do**
 
-- Lead buyers with landing pages (12k–15k INR) and business software (25k+) in hero glass and packages. Keep Zero to MVP off the first viewport.
+- Lead buyers with websites (from ₹20,000) and web applications (₹1–1.5 lakh) in hero glass and packages.
 - Keep content visible without JS; motion enhances, never gates.
 - Use transform/opacity/filter for motion; bound WebGL to the hero stage.
 - Preserve all commercial copy, prices, WhatsApp deep links, and SEO claims.

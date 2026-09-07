@@ -1,6 +1,6 @@
 # Nodewise
 
-> India-based studio for website development and custom software development. We work with startups, new businesses, and B2B companies that need a professional site or internal software. Landing pages 12k-15k INR. Software from 25k+. Custom platforms quoted. Transparent INR pricing. Worldwide delivery.
+> India studio for B2B website and web application engineering. We write Next.js, Node, and Python. No WordPress. Sites from ₹20,000 INR. Web applications ₹1–1.5 lakh. Custom platforms quoted. Published INR pricing. Worldwide delivery.
 
 Site: https://nodewise.cc
 Contact: contact@nodewise.cc
@@ -9,16 +9,22 @@ LinkedIn: https://www.linkedin.com/company/nodewise-cc
 
 ## Who we help
 
-- Starting businesses that need a first website or landing page
-- B2B companies that need a conversion-focused site
-- Teams that need custom software, portals, dashboards, or light automation
+- B2B companies that need a company site or landing page
+- Teams that need a web application: portal, dashboard, or internal tool
 
 ## Offer
 
-- Website development: 12k-15k INR. B2B websites, landing pages, and first web presence.
-- Custom software development: 25k+ INR. Web apps, portals, dashboards, light automation.
-- Custom platforms: quoted. Multi-user software and integrations.
-- Zero to MVP (side offer): ₹29,999 one-time, 10-14 days. Consult, core MVP, live responsive web app, source, docs, ownership, 2 revision rounds. Excludes complex enterprise integrations, native mobile apps, massive scalable cloud architecture.
+- Websites: ₹20,000 for Home, About, and Enquiry. Extra pages priced in the calculator with no cap (₹22,000 / ₹23,500 / ₹25,000 then +₹1,500 per page). Next.js on Vercel, no WordPress, no maintenance retainer. Source and repo handed over.
+- Web applications: ₹1–1.5 lakh INR. Next.js, Node APIs, PostgreSQL, Supabase Auth, dashboards, portals, light automation.
+- Custom platforms: quoted. Multi-user systems, WebSockets, Python, RAG, Gemini/Mistral, realtime voice, custom models.
+
+## Stack
+
+- Frontend: Next.js, React, HTML/CSS, responsive UI, Plotly
+- Backend: Node.js, Next.js route handlers, Python, WebSockets, REST APIs, webhooks
+- Data: PostgreSQL, Supabase, Supabase Auth, OTP auth, session/cache
+- Cloud: Vercel, Supabase Cloud, VPS
+- AI (platforms): Mistral, Gemini, Gemini Live, OpenAI Realtime, Ultravox, speech-to-speech, RAG, fine-tuning
 
 ## How to request work
 
@@ -29,17 +35,13 @@ LinkedIn: https://www.linkedin.com/company/nodewise-cc
 
 ## Pages
 
-- [Home](https://nodewise.cc/): Website and software development for startups and B2B
-- [Website development](https://nodewise.cc/website-development): Sites and landing pages for new businesses and B2B companies
-- [Software development](https://nodewise.cc/software-development): Custom software, portals, dashboards, and web apps
+- [Home](https://nodewise.cc/): B2B website and web application engineering
+- [Website engineering](https://nodewise.cc/website-development): Custom Next.js sites
+- [Web application engineering](https://nodewise.cc/software-development): Portals, dashboards, internal tools
 - [Work](https://nodewise.cc/portfolio): Live case studies
-- [Pricing](https://nodewise.cc/packages): Website, software, and platform packages
-- [Zero to MVP](https://nodewise.cc/zero-to-mvp): Timed founder MVP package
-- [Services](https://nodewise.cc/capabilities): Landing pages, portals, software
-- [Process](https://nodewise.cc/process): Discovery, build, launch
-- [About](https://nodewise.cc/about): Founders Induchoodan V S and Aalif Mohammad R S
-- [Quality](https://nodewise.cc/quality): Engineering standards
-- [Contact](https://nodewise.cc/contact): Consult form
+- [Pricing](https://nodewise.cc/packages): Site calculator, web apps, platforms
+- [Studio](https://nodewise.cc/about): Founders Induchoodan V S and Aalif Mohammad R S
+- [Contact](https://nodewise.cc/contact): Project brief
 
 ## Optional
 

@@ -1,4 +1,5 @@
 import { Building2, Layout, Code2, Shield } from "lucide-react";
+import { PRICE_COPY } from "@/lib/pricing";
 
 type CardIcon = "layout" | "code" | "shield" | "building";
 
@@ -10,10 +11,10 @@ const CARD_DATA: {
   meta: string;
   icon: CardIcon | null;
 }[] = [
-  { id: "price", className: "hero-glass-card--price", title: "Landing", body: "12k\u201315k", meta: "B2B pages, INR", icon: "layout" },
-  { id: "time", className: "hero-glass-card--time", title: "Software", body: "25k+", meta: "sites and automation", icon: "code" },
-  { id: "own", className: "hero-glass-card--own", title: "Ownership", body: "Full source", meta: "no page builders", icon: "shield" },
-  { id: "core", className: "hero-glass-card--core", title: "Platforms", body: "Custom", meta: "quoted multi-user", icon: "building" },
+  { id: "price", className: "hero-glass-card--price", title: "Sites", body: PRICE_COPY.siteRangeShortBoth, meta: "Next.js \u00b7 1\u20132 wks", icon: "layout" },
+  { id: "time", className: "hero-glass-card--time", title: "Web apps", body: PRICE_COPY.softwareRangeGlass, meta: "portals and tools", icon: "code" },
+  { id: "own", className: "hero-glass-card--own", title: "Ownership", body: "Full source", meta: "no WordPress", icon: "shield" },
+  { id: "core", className: "hero-glass-card--core", title: "Platforms", body: "Quoted", meta: "AI \u00b7 realtime", icon: "building" },
 ];
 
 function Icon({ name }: { name: CardIcon }) {

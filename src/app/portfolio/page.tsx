@@ -89,9 +89,9 @@ const PROJECTS: Project[] = [
     id: "case-01",
     name: "Titan Residences",
     meta: "3D Interactive Real Estate",
-    title: "Interactive 3D showcase for a luxury residence brand",
+    title: "Browser 3D for a residence brand",
     description:
-      "Buyers explore floor plans, amenities, and views in the browser. No sales call required.",
+      "Floor plans, amenities, and views in the browser. No sales call required.",
     tags: ["3D Web", "Real Estate", "Live product"],
     url: "https://titan-bigs.vercel.app",
     host: "titan-bigs.vercel.app",
@@ -126,10 +126,10 @@ const PROJECTS: Project[] = [
   {
     id: "case-02",
     name: "Mavenix Studio",
-    meta: "MVP & Landing Page",
-    title: "Launch-ready marketing site for a digital studio",
+    meta: "Marketing site",
+    title: "Studio site: offer, services, contact",
     description:
-      "Landing MVP: offer, services, and a clear path to contact. Credible from day one.",
+      "A marketing site with a clear offer and a path to enquiry.",
     tags: ["MVP", "Landing page", "Marketing"],
     url: "https://mavenixstudio.netlify.app/",
     host: "mavenixstudio.netlify.app",
@@ -223,9 +223,9 @@ export default function Portfolio() {
       <section className="page-hero page-hero--compact">
         <div className="container">
           <div className="page-hero-content">
-            <h1 className="page-hero-title">Selected work</h1>
+            <h1 className="page-hero-title">Work</h1>
             <p className="page-hero-subtitle">
-              Live products you can open and click through.
+              Live sites and applications. Open them and click through.
             </p>
           </div>
         </div>
@@ -295,14 +295,15 @@ export default function Portfolio() {
         <div className="container">
           <div className="cta-banner">
             <div className="cta-banner-content">
-              <h2 className="cta-banner-title">Need a build like these?</h2>
+              <h2 className="cta-banner-title">Need a similar build?</h2>
               <p className="cta-banner-text">
-                Landing pages from 12k–15k INR, or business software from 25k+.
+                Websites from ₹20,000 (~$212). Web applications ₹1–1.5 lakh
+                (~$1,058–$1,587).
               </p>
             </div>
             <div className="cta-banner-actions">
               <a
-                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20a%20B2B%20landing%20page%20or%20business%20software."
+                href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20a%20B2B%20website%20or%20web%20application."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary cta-banner-btn"
@@ -312,7 +313,7 @@ export default function Portfolio() {
                 <ArrowRight className="btn-icon" aria-hidden="true" />
               </a>
               <Link href="/contact" className="btn btn-secondary cta-banner-btn">
-                <span>Get in touch</span>
+                <span>Send a brief</span>
               </Link>
             </div>
           </div>

@@ -3,13 +3,13 @@ import React from "react";
 export default function FloatingWhatsApp() {
   return (
     <div className="floating-wa-wrapper">
-      <div className="wa-tooltip" aria-hidden="true">Chat with us</div>
+      <div className="wa-tooltip" aria-hidden="true">WhatsApp</div>
       <a
-        href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20a%20B2B%20landing%20page%20or%20business%20software."
+        href="https://wa.me/919446998827?text=Hi%20Nodewise%2C%20I%20need%20a%20B2B%20website%20or%20web%20application."
         target="_blank"
         rel="noopener noreferrer"
         className="floating-wa-button"
-        aria-label="Chat on WhatsApp"
+        aria-label="Discuss a project on WhatsApp"
       >
         <span className="sr-only">(opens WhatsApp in a new tab)</span>
         <svg
