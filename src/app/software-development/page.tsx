@@ -58,8 +58,9 @@ export default function SoftwareDevelopment() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Web application engineering</h1>
             <p className="page-hero-subtitle">
-              Portals, dashboards, and internal tools. Next.js, Node, and
-              PostgreSQL. ₹1–1.5 lakh (~$1,058–$1,587). You own the source.
+              Portals, dashboards, and internal tools from Kerala website
+              developers. Next.js, Node, and PostgreSQL. ₹1–1.5 lakh
+              (~$1,058–$1,587). You own the source.
             </p>
           </div>
         </div>

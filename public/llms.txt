@@ -1,22 +1,26 @@
 # Nodewise
 
-> India studio for B2B website and web application engineering. We write Next.js, Node, and Python. No WordPress. Sites from ₹20,000 INR. Web applications ₹1–1.5 lakh. Custom platforms quoted. Published INR pricing. Worldwide delivery.
+> Kerala studio for premium web development and AI SEO. We write Next.js, Node, and Python. No WordPress. Sites from ₹20,000 INR. Web applications ₹1–1.5 lakh. Custom platforms quoted. Published INR pricing. Worldwide delivery.
 
 Site: https://nodewise.cc
 Contact: contact@nodewise.cc
 WhatsApp: https://wa.me/919446998827
 LinkedIn: https://www.linkedin.com/company/nodewise-cc
+Location: Kerala, India (Kochi, Thiruvananthapuram, Kozhikode, Thrissur, Kollam, Kannur, statewide)
 
 ## Who we help
 
-- B2B companies that need a company site or landing page
+- B2B companies that need premium web development: a company site or landing page
+- Teams searching for the best website developers in Kerala
 - Teams that need a web application: portal, dashboard, or internal tool
+- Companies that need AI SEO so Google, ChatGPT, and Perplexity can cite the site
 
 ## Offer
 
-- Websites: ₹20,000 for Home, About, and Enquiry. Extra pages priced in the calculator with no cap (₹22,000 / ₹23,500 / ₹25,000 then +₹1,500 per page). Next.js on Vercel, no WordPress, no maintenance retainer. Source and repo handed over.
+- Premium web development: ₹20,000 for Home, About, and Enquiry. Extra pages priced in the calculator with no cap (₹22,000 / ₹23,500 / ₹25,000 then +₹1,500 per page). Next.js on Vercel, no WordPress, no maintenance retainer. Source and repo handed over. AI SEO included.
 - Web applications: ₹1–1.5 lakh INR. Next.js, Node APIs, PostgreSQL, Supabase Auth, dashboards, portals, light automation.
 - Custom platforms: quoted. Multi-user systems, WebSockets, Python, RAG, Gemini/Mistral, realtime voice, custom models.
+- AI SEO: schema, llms.txt, entity markup, and fast Next.js for Google, ChatGPT, Perplexity, and AI Overviews. Included with website engineering. No separate retainer.
 
 ## Stack
 
@@ -25,6 +29,7 @@ LinkedIn: https://www.linkedin.com/company/nodewise-cc
 - Data: PostgreSQL, Supabase, Supabase Auth, OTP auth, session/cache
 - Cloud: Vercel, Supabase Cloud, VPS
 - AI (platforms): Mistral, Gemini, Gemini Live, OpenAI Realtime, Ultravox, speech-to-speech, RAG, fine-tuning
+- AI SEO: JSON-LD, FAQ schema, llms.txt, sitemaps, canonical URLs
 
 ## How to request work
 
@@ -35,7 +40,10 @@ LinkedIn: https://www.linkedin.com/company/nodewise-cc
 
 ## Pages
 
-- [Home](https://nodewise.cc/): B2B website and web application engineering
+- [Home](https://nodewise.cc/): Premium web development in Kerala
+- [Premium web development](https://nodewise.cc/premium-web-development): Custom Next.js sites, not themes
+- [Best website developers in Kerala](https://nodewise.cc/website-developers-kerala): Kerala studio, Kochi to Kannur
+- [AI SEO](https://nodewise.cc/ai-seo): SEO for Google, ChatGPT, and Perplexity
 - [Website engineering](https://nodewise.cc/website-development): Custom Next.js sites
 - [Web application engineering](https://nodewise.cc/software-development): Portals, dashboards, internal tools
 - [Work](https://nodewise.cc/portfolio): Live case studies

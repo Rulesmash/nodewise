@@ -30,6 +30,17 @@ const nextConfig = {
       { source: "/mvp", destination: "/packages", permanent: true },
       { source: "/zero-to-mvp", destination: "/packages", permanent: true },
       { source: "/hire", destination: "/contact", permanent: true },
+      { source: "/premium-web-dev", destination: "/premium-web-development", permanent: true },
+      { source: "/premium-website-development", destination: "/premium-web-development", permanent: true },
+      { source: "/kerala", destination: "/website-developers-kerala", permanent: true },
+      { source: "/web-developers-kerala", destination: "/website-developers-kerala", permanent: true },
+      { source: "/website-developers-in-kerala", destination: "/website-developers-kerala", permanent: true },
+      { source: "/best-website-developers-kerala", destination: "/website-developers-kerala", permanent: true },
+      { source: "/kochi-web-developers", destination: "/website-developers-kerala", permanent: true },
+      { source: "/trivandrum-web-developers", destination: "/website-developers-kerala", permanent: true },
+      { source: "/ai-search-optimization", destination: "/ai-seo", permanent: true },
+      { source: "/generative-engine-optimization", destination: "/ai-seo", permanent: true },
+      { source: "/llm-seo", destination: "/ai-seo", permanent: true },
     ];
   },
   async headers() {

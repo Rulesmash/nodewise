@@ -37,8 +37,9 @@ export default function Packages() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Pricing</h1>
             <p className="page-hero-subtitle">
-              Next.js sites from ₹20,000 (~$212). Web applications ₹1–1.5
-              lakh (~$1,058–$1,587). Platforms quoted. No WordPress.
+              Premium web development from Kerala. Next.js sites from ₹20,000
+              (~$212). Web applications ₹1–1.5 lakh (~$1,058–$1,587). AI SEO
+              included. No WordPress.
             </p>
           </div>
         </div>

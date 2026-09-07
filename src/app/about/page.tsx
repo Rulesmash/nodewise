@@ -81,7 +81,8 @@ export default function About() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">The studio</h1>
             <p className="page-hero-subtitle">
-              Two founders. B2B websites and web applications. India, worldwide.
+              Two founders. Premium web development from Kerala. AI SEO
+              included. Worldwide delivery.
             </p>
           </div>
         </div>
@@ -96,14 +97,28 @@ export default function About() {
             <div className="about-content">
               <h2 className="section-title">What we do</h2>
               <p className="about-lead-text">
-                Nodewise is a software studio. We write Next.js and Node. We
-                do not use WordPress or page builders. You receive the
-                repository and run the product.
+                Nodewise is a Kerala software studio. We write Next.js and
+                Node. We do not use WordPress or page builders. You receive
+                the repository and run the product.
               </p>
               <ul className="scan-list">
-                <li>Custom architecture. No theme, no plugin stack.</li>
-                <li>Vercel deploys. Fast loads, no retainer to patch.</li>
-                <li>Scope and price before we write code.</li>
+                <li>
+                  Custom architecture.{" "}
+                  <Link href="/premium-web-development">
+                    Premium web development
+                  </Link>
+                  , no theme.
+                </li>
+                <li>
+                  Vercel deploys. Fast loads,{" "}
+                  <Link href="/ai-seo">AI SEO</Link>, no retainer to patch.
+                </li>
+                <li>
+                  <Link href="/website-developers-kerala">
+                    Website developers in Kerala
+                  </Link>
+                  . Scope and price before we write code.
+                </li>
               </ul>
             </div>
           </div>

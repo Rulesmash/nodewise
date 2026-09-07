@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${SITE.studioName}: ${SITE.tagline}`,
     short_name: SITE.name,
     description:
-      "India studio. B2B website and web application engineering.",
+      "Kerala studio. Premium web development, website developers in Kerala, and AI SEO.",
     start_url: "/",
     display: "standalone",
     background_color: "#0b0c10",

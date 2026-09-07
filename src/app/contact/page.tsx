@@ -54,7 +54,8 @@ export default function Contact() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Start a project</h1>
             <p className="page-hero-subtitle">
-              A B2B website, a web application, or a quoted platform.
+              Hire website developers in Kerala for premium web development,
+              a web application, or AI SEO.
             </p>
           </div>
         </div>

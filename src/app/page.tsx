@@ -38,6 +38,8 @@ export default function Home() {
               { "@id": SCHEMA_IDS.softwareStudioService },
               { "@id": SCHEMA_IDS.websiteDevelopmentService },
               { "@id": SCHEMA_IDS.softwareDevelopmentService },
+              { "@id": SCHEMA_IDS.premiumWebDevelopmentService },
+              { "@id": SCHEMA_IDS.aiSeoService },
             ],
           }),
           breadcrumbJsonLd([{ name: "Home", path: "/" }]),

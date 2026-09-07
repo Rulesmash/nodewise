@@ -19,7 +19,7 @@ const FAQS = [
   {
     question: "What is included in a Nodewise website?",
     answer:
-      "A static Next.js site on Vercel. Three pages to start: Home, About, Enquiry. Responsive layout, enquiry form, basic SEO, and the GitHub repo. Timeline is 1–2 weeks. No WordPress and no retainer.",
+      "Premium web development: a static Next.js site on Vercel. Three pages to start: Home, About, Enquiry. Responsive layout, enquiry form, AI SEO, and the GitHub repo. Timeline is 1–2 weeks. No WordPress and no retainer.",
   },
   {
     question: "Do you build B2B company websites?",
@@ -56,10 +56,10 @@ export default function WebsiteDevelopment() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <h1 className="page-hero-title">Website engineering</h1>
+            <h1 className="page-hero-title">Premium website engineering</h1>
             <p className="page-hero-subtitle">
-              Custom Next.js sites for B2B. Three pages from ₹20,000 (~$212).
-              1–2 weeks. No WordPress, no retainer.
+              Premium web development in Next.js. Three pages from ₹20,000
+              (~$212). Kerala studio. 1–2 weeks. No WordPress, no retainer.
             </p>
           </div>
         </div>
@@ -72,7 +72,11 @@ export default function WebsiteDevelopment() {
               <div className="quality-details">
                 <h2 className="quality-title">Company sites</h2>
                 <p className="quality-description">
-                  A first site that is a real Next.js app, not a theme.
+                  A first site that is{" "}
+                  <Link href="/premium-web-development">
+                    premium web development
+                  </Link>
+                  : a real Next.js app, not a theme.
                 </p>
                 <ul className="scan-list">
                   <li>Home, About, Enquiry as the base</li>
@@ -89,7 +93,10 @@ export default function WebsiteDevelopment() {
                 </p>
                 <ul className="scan-list">
                   <li>Static, fast loads on mobile</li>
-                  <li>Enquiry form, basic SEO</li>
+                  <li>
+                    Enquiry form,{" "}
+                    <Link href="/ai-seo">AI SEO</Link>
+                  </li>
                   <li>No CMS login to maintain</li>
                 </ul>
               </div>
@@ -104,7 +111,12 @@ export default function WebsiteDevelopment() {
                 <ul className="scan-list">
                   <li>Next.js on Vercel</li>
                   <li>No WordPress, no page builders</li>
-                  <li>You run the site after launch</li>
+                  <li>
+                    <Link href="/website-developers-kerala">
+                      Kerala website developers
+                    </Link>
+                    , you run the site after launch
+                  </li>
                 </ul>
               </div>
             </div>

@@ -211,10 +211,16 @@ button.chip[aria-pressed="true"] {
   line-height: 1.5;
 }
 
+.quality-details a,
+.quality-title a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(200, 220, 255, 0.45);
+  text-underline-offset: 0.18em;
+}
+
 .quality-details a {
   color: #c8dcff;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
 }
 
 .footer-link.text-muted {
