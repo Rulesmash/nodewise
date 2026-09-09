@@ -95,7 +95,7 @@ export default function Home() {
             </p>
           </div>
           <ul className="hero-subtitle" id="hero-sub-text">
-            <li>Premium web development in custom Next.js, not WordPress</li>
+            <li>Premium web development in custom Next.js. No WordPress</li>
             <li>Web applications with auth, PostgreSQL, and dashboards</li>
             <li>Kerala studio, worldwide delivery</li>
           </ul>
@@ -149,7 +149,7 @@ export default function Home() {
             <h2 className="section-title">What teams search for</h2>
             <p className="section-lead-desc">
               Premium web development, Kerala website developers, and AI SEO
-              — one studio, published prices.
+              from one studio, with published prices.
             </p>
           </div>
           <div className="grid quality-grid">

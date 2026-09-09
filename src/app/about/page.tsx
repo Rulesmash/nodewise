@@ -98,20 +98,20 @@ export default function About() {
               <h2 className="section-title">What we do</h2>
               <p className="about-lead-text">
                 Nodewise is a Kerala software studio. We write Next.js and
-                Node. We do not use WordPress or page builders. You receive
-                the repository and run the product.
+                Node. You receive the repository and run the product. No
+                WordPress or page builders.
               </p>
               <ul className="scan-list">
                 <li>
                   Custom architecture.{" "}
                   <Link href="/premium-web-development">
                     Premium web development
-                  </Link>
-                  , no theme.
+                  </Link>{" "}
+                  in Next.js.
                 </li>
                 <li>
                   Vercel deploys. Fast loads,{" "}
-                  <Link href="/ai-seo">AI SEO</Link>, no retainer to patch.
+                  <Link href="/ai-seo">AI SEO</Link>, no retainer.
                 </li>
                 <li>
                   <Link href="/website-developers-kerala">
@@ -191,7 +191,7 @@ export default function About() {
       <section id="process" className="quality-section">
         <div className="container">
           <div className="section-header center">
-            <h2 className="section-title">How an engagement runs</h2>
+            <h2 className="section-title">How we work</h2>
             <p className="section-lead-desc">
               Scope, build, handover. Typical site: 1–2 weeks. Typical web
               app: 4–8 weeks.

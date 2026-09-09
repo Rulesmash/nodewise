@@ -24,7 +24,7 @@ const FAQS = [
   {
     question: "Who is this for?",
     answer:
-      "B2B teams that have outgrown spreadsheets and need software that matches how the business actually runs.",
+      "B2B teams that need portals, dashboards, or internal tools, and have moved past spreadsheets.",
   },
   {
     question: "What is not in this package?",
@@ -87,8 +87,7 @@ export default function SoftwareDevelopment() {
               <div className="quality-details">
                 <h2 className="quality-title">Dashboards</h2>
                 <p className="quality-description">
-                  Operational views on PostgreSQL, not a spreadsheet export
-                  pasted into a page.
+                  Operational views on live PostgreSQL data.
                 </p>
                 <ul className="scan-list">
                   <li>Plotly charts when the data needs them</li>
@@ -130,8 +129,8 @@ export default function SoftwareDevelopment() {
               <span className="price-usd">{PRICE_COPY.softwareRangeUsd}</span>
             </div>
             <p className="package-desc">
-              A web application with a real backend. Not a static site with a
-              login painted on.
+              A web application with a real backend: auth, APIs, and a
+              database.
             </p>
             <ul className="package-features">
               <li>

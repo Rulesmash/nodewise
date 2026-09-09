@@ -18,12 +18,12 @@ const FAQS = [
   {
     question: "What is premium web development at Nodewise?",
     answer:
-      "Premium web development means a custom Next.js site, not a WordPress theme or page builder. You get the source, the GitHub repo, and a site that is fast on mobile. Three pages start at ₹20,000.",
+      "Premium web development means a custom Next.js site. You get the source, the GitHub repo, and a site that is fast on mobile. Three pages start at ₹20,000.",
   },
   {
     question: "How is this different from cheap website builders?",
     answer:
-      "Builders rent you a template. We write the product. There is no plugin stack, no monthly theme fee, and no lock-in. You own the code after handover.",
+      "We write the product in Next.js. There is no plugin stack, no monthly theme fee, and no lock-in. You own the code after handover.",
   },
   {
     question: "Do you build premium websites from Kerala?",
@@ -62,8 +62,8 @@ export default function PremiumWebDevelopment() {
           <div className="page-hero-content">
             <h1 className="page-hero-title">Premium web development</h1>
             <p className="page-hero-subtitle">
-              Custom Next.js, not a theme. Kerala studio. Sites from ₹20,000
-              (~$212). You own the source.
+              Custom Next.js. Kerala studio. Sites from ₹20,000 (~$212). You
+              own the source.
             </p>
           </div>
         </div>
@@ -76,8 +76,8 @@ export default function PremiumWebDevelopment() {
               <div className="quality-details">
                 <h2 className="quality-title">Custom-coded</h2>
                 <p className="quality-description">
-                  Premium web development is software. We write Next.js and
-                  React. No WordPress, no Elementor, no rented template.
+                  We write Next.js and React. No WordPress, no Elementor, no
+                  rented template.
                 </p>
                 <ul className="scan-list">
                   <li>Home, About, Enquiry as the base</li>
@@ -91,7 +91,7 @@ export default function PremiumWebDevelopment() {
                 <h2 className="quality-title">Published price</h2>
                 <p className="quality-description">
                   Three pages from ₹20,000. Extra pages in the calculator,
-                  no cap. No discovery fee to hear a number.
+                  no cap. No discovery fee to get a price.
                 </p>
                 <ul className="scan-list">
                   <li>1–2 weeks for the three-page base</li>
@@ -102,10 +102,10 @@ export default function PremiumWebDevelopment() {
             </div>
             <div className="quality-item">
               <div className="quality-details">
-                <h2 className="quality-title">Built to rank</h2>
+                <h2 className="quality-title">Search-ready</h2>
                 <p className="quality-description">
                   Fast loads, schema, and AI SEO so Google and AI search can
-                  cite the site. Included, not upsold.
+                  cite the site. Included in the website package.
                 </p>
                 <ul className="scan-list">
                   <li>Core Web Vitals on Next.js</li>

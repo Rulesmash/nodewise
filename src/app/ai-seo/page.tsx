@@ -23,7 +23,7 @@ const FAQS = [
   {
     question: "Do you sell AI SEO as a retainer?",
     answer:
-      "No. AI SEO ships with Nodewise websites. Schema, llms.txt, canonicals, and fast Next.js are part of premium web development from ₹20,000 — not a monthly add-on.",
+      "No. AI SEO ships with Nodewise websites. Schema, llms.txt, canonicals, and fast Next.js are part of premium web development from ₹20,000. There is no monthly add-on.",
   },
   {
     question: "How is AI SEO different from classic SEO?",
@@ -63,7 +63,7 @@ export default function AiSeo() {
             <h1 className="page-hero-title">AI SEO</h1>
             <p className="page-hero-subtitle">
               Sites engineered for Google, ChatGPT, Perplexity, and AI
-              Overviews. Included with the website — no retainer.
+              Overviews. Included with the website. No retainer.
             </p>
           </div>
         </div>
@@ -89,15 +89,14 @@ export default function AiSeo() {
             </div>
             <div className="quality-item">
               <div className="quality-details">
-                <h2 className="quality-title">Speed is ranking</h2>
+                <h2 className="quality-title">Fast pages</h2>
                 <p className="quality-description">
-                  AI SEO fails on a slow theme. Premium web development on
-                  Next.js keeps Core Web Vitals in range so Google and
-                  crawlers stay.
+                  Slow themes hurt AI SEO. Premium web development on Next.js
+                  keeps Core Web Vitals in range so Google and crawlers stay.
                 </p>
                 <ul className="scan-list">
                   <li>Static Next.js on Vercel</li>
-                  <li>No WordPress plugin tax</li>
+                  <li>No WordPress plugins</li>
                   <li>
                     <Link href="/premium-web-development">
                       Premium web development
@@ -108,11 +107,10 @@ export default function AiSeo() {
             </div>
             <div className="quality-item">
               <div className="quality-details">
-                <h2 className="quality-title">Local + generative</h2>
+                <h2 className="quality-title">Google and AI search</h2>
                 <p className="quality-description">
-                  Kerala businesses need both: “website developers in
-                  Kerala” in Google, and a clean entity so ChatGPT can name
-                  the studio.
+                  Kerala businesses need local Google results and a clean
+                  entity so ChatGPT can name the studio.
                 </p>
                 <ul className="scan-list">
                   <li>Kerala NAP and geo markup</li>

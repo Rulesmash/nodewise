@@ -76,7 +76,7 @@ export default function WebsiteDevelopment() {
                   <Link href="/premium-web-development">
                     premium web development
                   </Link>
-                  : a real Next.js app, not a theme.
+                  : a custom Next.js app.
                 </p>
                 <ul className="scan-list">
                   <li>Home, About, Enquiry as the base</li>
@@ -136,7 +136,7 @@ export default function WebsiteDevelopment() {
       <StackBand
         offer="sites"
         title="Site stack"
-        lede="A marketing site is still software. We write Next.js and React, deploy on Vercel, and hand you the repository. No CMS login, no plugin updates, no retainer."
+        lede="We write Next.js and React, deploy on Vercel, and hand you the repository. No CMS login, no plugin updates, no retainer."
       />
 
       <section className="cta-banner-section">

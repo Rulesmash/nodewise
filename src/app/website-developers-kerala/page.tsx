@@ -19,7 +19,7 @@ const FAQS = [
   {
     question: "Who are the best website developers in Kerala?",
     answer:
-      "The useful test is not a slogan. Look for custom code, published prices, source you own, and a studio that answers in Malayalam or English. Nodewise is a Kerala studio that writes Next.js sites from ₹20,000 — no WordPress.",
+      "Look for custom code, published prices, source you own, and a studio that answers in Malayalam or English. Nodewise is a Kerala studio that writes Next.js sites from ₹20,000. No WordPress.",
   },
   {
     question: "Where in Kerala do you work?",
@@ -98,18 +98,17 @@ export default function WebsiteDevelopersKerala() {
             </div>
             <div className="quality-item">
               <div className="quality-details">
-                <h2 className="quality-title">What “best” means here</h2>
+                <h2 className="quality-title">Custom code and ownership</h2>
                 <p className="quality-description">
                   Teams searching for the best website developers in Kerala
-                  usually want custom code, a real price, and ownership.
-                  That is the job.
+                  usually want custom code, a published price, and ownership.
                 </p>
                 <ul className="scan-list">
                   <li>
                     <Link href="/premium-web-development">
                       Premium web development
-                    </Link>
-                    , not a theme
+                    </Link>{" "}
+                    in custom Next.js
                   </li>
                   <li>Published INR packages, no retainer</li>
                   <li>Source and repo handed over</li>

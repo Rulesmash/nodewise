@@ -129,7 +129,7 @@ export default function SitePricingCalculator() {
         </li>
         <li>
           <Check size={16} aria-hidden="true" />
-          <span>Static and fast. No page builders, no plugin tax.</span>
+          <span>Static and fast. No page builders, no plugins.</span>
         </li>
         <li>
           <Check size={16} aria-hidden="true" />

@@ -20,7 +20,6 @@ export default function PackagesOffer() {
           </div>
           <p className="package-desc">
             Portals, dashboards, and internal tools with auth and a database.
-            Not a static brochure.
           </p>
           <ul className="package-features">
             <li>
